@@ -7,7 +7,6 @@ import { HomeMasterComponent } from './master/home-master/home-master.component'
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
-
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
