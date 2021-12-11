@@ -1,0 +1,33 @@
+<div class="content1">
+
+	<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+            <span class="mv-17"><a  routerLink="/finance">Finance</a><span class="mv-18">/</span></span>
+            
+            <span class="mv-17"><a  routerLink="/finance/vouchers">Vouchers</a><span class="mv-18">/</span></span>
+            <span class="mv-17">Payment Management</span>
+        </div>
+    </mat-toolbar>
+</div>
+	
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">Payment Management</h2>
+	</div>
+
+			
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" class="">
+				<img mat-card-sm-image src="./assets/images/p-salary.png" alt="Complaints">
+				<mat-card-title>Payments</mat-card-title>
+			</mat-card>	
+	
+		<mat-card fxFlex="33%" routerLink="/finance/proposedpayment/" class="">
+			<img mat-card-sm-image src="./assets/images/paid-salary.png" alt="Complaints">
+			<mat-card-title>Proposed Payments</mat-card-title>
+		</mat-card>	
+
+	
+
+	</div>
+	<router-outlet></router-outlet>

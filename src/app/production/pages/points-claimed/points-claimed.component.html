@@ -1,0 +1,206 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Add Manual Points Claim</h2>
+    </mat-toolbar>
+
+<div class="layout">
+
+
+    <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+    
+    <mat-card class="">
+      <div fxFlex="100%" fxLayout='row' class="tp-rw" fxLayoutGap="1%" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+        
+        <div fxFlex="50%" class="table tabless" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutAlign="left">
+            <div fxFlex="100%" fxLayout='row' class="" fxLayoutGap="1%" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+            <strong>Claimed By</strong><span class="example-spacer"></span>
+ <button mat-button color="primary" class="acc-btn" [disableRipple]="true" (click)="openDialog()">Add account</button>
+        </div>
+
+              <mat-form-field class="example-full-width align" appearance="outline">
+                   
+                    <input matInput required placeholder="Enter Your Mobile Number">
+                     <button mat-raised-button matSuffix class="n14">Go</button>
+                  </mat-form-field>
+         
+               <div class="non-edit" >
+                <h2>CP Outlet</h2>
+                <p><b> C-130, 2nd Floor, Noida Sect 2,UP - 201301, <br> State Code - 09</b></p>
+                <p>Mobile : <b>+91-8802457896 </b></p>
+                <p>Email : <b>abcpvtltd@gmail.com</b></p>
+                <p>GSTIN :<b> ADJFN6889655O6</b></p>
+                <p>Erp ID : <b> <a class="blue">6723</a></b></p>
+                <p>Alias :<b> CP Outlet</b></p>
+            </div>
+        </div>
+
+        <div fxFlex="50%" class="table tabless" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutAlign="left">
+
+        	  <div fxFlex="100%" fxLayout='row' class="" fxLayoutGap="1%" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+            <strong>Invited By</strong>
+        </div>
+            <mat-form-field class="example-full-width align grey" appearance="outline">
+                <input type="text"
+                       
+                        matInput
+                        disabled="disabled">
+               
+               </mat-form-field>
+
+               <div class="non-edit" >
+                <h2>CP Outlet</h2>
+                <p><b> C-130, 2nd Floor, Noida Sect 2,UP - 201301, <br> State Code - 09</b></p>
+                <p>Mobile : <b>+91-8802457896 </b></p>
+                <p>Email : <b>abcpvtltd@gmail.com</b></p>
+                <p>GSTIN :<b> ADJFN6889655O6</b></p>
+                <p>Erp ID : <b> <a class="blue">6723</a></b></p>
+                <p>Alias :<b> CP Outlet</b></p>
+            </div>
+        </div>
+
+        
+        
+
+      </div>
+    
+       </mat-card>
+    
+    </div>  
+
+	 <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+    
+
+    <mat-card class="">
+
+   
+
+    	<div class="table">         
+        
+        <table class="table-2 tables" cellpadding="0" cellspacing="0">
+            <tr>
+
+                <th class="wd-30">Sr.</th>
+                <th>Item</th>
+                <th class="wd-80">Qty</th>
+                <th class="wd-80">Reward Points</th>
+                <th class="wd-80">Total Reward Points</th>
+                <th class="wd-30">Action</th>
+            </tr>
+
+            <tr *ngFor="let item of row2; let i = index" class="sr-no">
+                 <td class="grey wd-30"></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width name2 align" appearance="outline">
+                    <input matInput>
+                    </mat-form-field>
+                </td>
+               
+
+
+                <td class="wd-50 namee pd-0">
+                   <mat-form-field class="example-full-width align" appearance="outline">
+                    <input matInput> 
+                    </mat-form-field>
+                </td>
+
+              
+
+                <td class="grey wd-80">
+                   100
+                </td>
+
+
+                <td class="grey wd-80">
+                  1,000
+                </td>
+
+               
+
+                <td class="wd-30 wd-80">   
+                </td>
+            </tr>
+
+
+
+            <tr *ngFor="let item of row3; let i = index" class="sr-no">
+                <td class="grey wd-30"></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width name2 align" appearance="outline">
+                    <input matInput> 
+                    </mat-form-field>
+                </td>
+               
+
+
+                <td class="wd-50 namee pd-0">
+                   <mat-form-field class="example-full-width name2 align" appearance="outline">
+                    <input matInput
+                          inputmode="numeric"
+                          type="text" 
+                         (keypress)="numberOnly($event)"> 
+                    </mat-form-field>
+                </td>
+
+              
+
+                <td class="grey wd-80">
+                   100
+                </td>
+
+
+                <td class="grey wd-80">
+                  1,000
+                </td>
+
+               
+
+                <td class="wd-30">   
+                <span class="material-icons green" (click)="addTable2()">add_to_photos</span>
+
+                <span class="material-icons red" (click) = "deleteRow2(i)">delete</span>
+            </td>
+            </tr>
+
+              <tr align="" class="total-row">
+                    <td colspan="2" class="grey pd-10 wd-30" align="left">Total</td>
+                    <td class="grey wd-50"></td>
+                    <td class="grey wd-80">500</td>
+                    <td class="grey wd-80">5,000</td>
+                    <td class="greywd-30"></td>
+                </tr>
+
+        </table>
+
+    </div>
+
+
+</mat-card>
+
+
+</div>
+
+
+<div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+      <div fxFlex="100%">
+        <form class="example-form">
+        
+          <mat-form-field class="example-full-width textarea" appearance="outline">
+            <mat-label>Long Narration</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+    
+        </form>
+    
+    </div>
+    <div fxFlex="100%" align="right"><button mat-raised-button color="primary">Submit</button></div>
+
+    </mat-card>
+
+    </div>
+
+
+
+</div>
+</div>

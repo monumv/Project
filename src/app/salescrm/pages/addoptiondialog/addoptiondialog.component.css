@@ -1,0 +1,39 @@
+
+.table-2{ counter-reset: serial-number;border-left: 1px solid #d3d3d3;}
+.table-2 .sr-no td:first-child:before { counter-increment: serial-number; 
+ content: counter(serial-number); }
+
+
+.table-2{
+    width: 100%;
+    margin: 15px 0px;
+    border-top: 1px solid #d3d3d3;
+}
+
+.table-2 input{
+    margin: 0;
+    line-height: 0px;
+    border: none !important;
+}
+.mat-dialog-title { margin-bottom: 0px; }
+.table-2 .material-icons{font-size: 17px;}
+
+.table-2 th, .table-2 td {
+   
+    padding: 0 10px;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+}
+.table-2 th {background: #dedede !important;     padding: 3px 10px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 13px;}
+
+.action-btnn { height: 35px; }
+.example-form .mat-form-field { width: 100% }
+
+
+
+@media only screen and (max-width:786px) {
+  .dlgbx { width: 100% !important }
+}

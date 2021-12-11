@@ -1,0 +1,96 @@
+
+<h3 mat-dialog-title align="center">
+
+	<mat-card fxFlex='100%' fxLayout='row' fxLayout.xs='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+		<b>ICICI Pay</b> <span class="example-spacer"></span>
+		<mat-icon mat-dialog-close mat-raised-button>close</mat-icon>
+	</mat-card>
+	</h3>
+<div mat-dialog-content>
+
+        <div fxFlex='100%' fxLayoutAlign="left" class="head">
+          <p>You have selected <span class="blue">5 vouchers</span> for payment.</p>
+        </div>
+
+
+ <div class="heade">
+
+       
+        <div fxFlex='100%' fxLayoutAlign="end" class="head text-right">
+          <strong class="green strong">INR 5,000</strong><p> Amount to Pay</p>
+        </div>
+
+       </div>
+
+    
+
+<div fxFlex.md="100%" fxFlex.lg="100%" fxFlex.sm="100%" fxFlex="100%" fxLayout='row' class="tp-rw" fxLayoutGap="1%" fxLayout.xs='column' fxFlex="100%"  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+
+
+      <form class="example-form">
+
+      	
+
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button value="1">IMPS</mat-radio-button>
+  <mat-radio-button value="2">NEFT</mat-radio-button>
+  <mat-radio-button value="3">RTGS</mat-radio-button>
+  <mat-radio-button value="4">Same Bank</mat-radio-button>
+</mat-radio-group>
+
+
+<mat-form-field class="example-full-width">
+	   <mat-label>From Account</mat-label>
+    <input matInput value="" required="required"> 
+</mat-form-field>
+<div class="balance">
+<mat-form-field class="example-full-width" appearance="fill">
+	   <mat-label>Your A/c Balance</mat-label>
+    <input matInput value="2,50,000" > 
+</mat-form-field>
+</div>
+<mat-form-field class="example-full-width">
+	   <mat-label>Transaction Remarks</mat-label>
+    <input matInput value="" required="required"> 
+</mat-form-field>
+
+  <section class="example-section">
+      <mat-checkbox class="example-margin" checked="checked">I have read and accepted the <a>Terms & Conditions</a></mat-checkbox>
+   
+    </section>
+
+
+
+
+    <mat-accordion class="example-headers-align">
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+       <button mat-button color="primary">Send OTP</button>
+      </mat-panel-title>     
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>Enter OTP</mat-label>
+      <input matInput>
+    </mat-form-field>
+	
+    
+    <mat-action-row>
+    	<button mat-button color="primary">Resend OTP</button>
+       <button mat-raised-button>Cancel</button>
+          <button mat-raised-button target="_blank" color="primary" mat-dialog-close (click)="openDialog()">Pay Now</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  
+ </mat-accordion>
+
+
+</form>
+
+    </div>
+
+
+</div>
+

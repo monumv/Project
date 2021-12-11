@@ -1,0 +1,37 @@
+<div class="content1">    
+    <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+          <mat-toolbar>
+        <div class="mv-19">
+          <span class="mv-17"><a routerLink="/distribution">Distribution Dashboard <span class="mv-18">/</span> </a></span>
+          <span class="mv-17">Sale Orders</span>
+        </div>
+      </mat-toolbar>
+    
+    </div><br>
+	
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">Sale Order</h2>
+	</div>
+	
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+		<mat-card fxFlex="33%" routerLink="/distribution/indirectorder" class="border">
+			<img mat-card-sm-image src="./assets/images/salary-slip.png" alt="Complaints">
+			<mat-card-title>Indirect Order</mat-card-title>
+		</mat-card>
+	
+		<mat-card fxFlex="33%" routerLink="/distribution/directorder" class="border">
+			<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+			<mat-card-title>Direct Order</mat-card-title>
+		</mat-card>
+	
+		<mat-card fxFlex="33%" routerLink="/distribution/branchtobranch" class="border">
+			<img mat-card-sm-image src="./assets/images/experience.png" alt="Complaints">
+			<mat-card-title>Branch Order</mat-card-title>
+		</mat-card>
+	</div>
+
+	
+	</div>
+	<router-outlet></router-outlet>
+	

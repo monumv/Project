@@ -1,0 +1,43 @@
+.contents .mat-drawer-inner-container {padding-top: 7px !important;
+    overflow: initial !important;}
+.contents .mat-sidenav { top: 64px !important }
+.contents .mat-drawer-container{ height: 100% !important;    background: #fff;}
+.contents {height: 100%;}
+.contents .mat-drawer-content {padding: 30px 20px;}
+.contents .mat-expansion-panel:not([class*=mat-elevation-z]) {box-shadow: none;}
+.callout.callout_info { margin-right: 0;   background: #e3edf2;  border:1px solid  #5bc0de;
+   margin-left: 0px;    padding: 20px; margin-bottom: 35px;}
+.callout.callout .callout-heading { color: #46b8da;
+    margin-bottom: calc(1.33rem * .5);    font-weight: 500;}
+.callout.callout_info ul {padding-left: 18px;}
+.contents .mat-drawer { width: 250px;top: 64px !important; }
+.contents .heading { font-weight: 600;    margin-bottom: 10px; }
+.CodeTabs {color: #333; color: var(--md-code-text,#333);
+    border-radius: var(--md-code-radius,var(--markdown-radius,3px))!important;
+    overflow: hidden;}
+.CodeTabs-inner {background: #f6f8fa;padding: 20px;}
+.CodeTabs-inner ul { padding-left: 22px;}
+.CodeTabs-inner li { list-style: none }
+.CodeTabs-toolbar button {background: #f6f8fa;white-space: nowrap;
+    -webkit-transition: .123s ease;transition: .123s ease;
+    -webkit-appearance: none;-moz-appearance: none;
+    appearance: none;display: inline-block;line-height: 2;
+    padding: .5em 1em;border: none;outline: none;font-size: .75em;
+    cursor: pointer;
+}
+.CodeTabs-toolbar {background:#ebedef }
+.cm-string {color: #b35e14;}
+.CodeTabs_initial {margin-bottom: 25px;}
+.table { margin-bottom: 25px; }
+.table table {border:1px solid #aeb4ba; border-right: none; border-bottom: none;}
+.table table th { background:#f6f8fa; padding:9px 14px;border-bottom:1px solid #aeb4ba;
+border-right:1px solid #aeb4ba }
+.table table td { padding:9px 14px;border-bottom:1px solid #aeb4ba;border-right:1px solid #aeb4ba}
+.toogle-btn{ display: none; }
+@media only screen and (max-width:786px) {
+.toogle-btn{     display: inline-block; }
+
+.contents .mat-drawer {
+    top: 55px !important;
+}
+}

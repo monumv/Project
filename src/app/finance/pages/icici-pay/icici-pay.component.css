@@ -1,0 +1,52 @@
+.mat-dialog-content .mat-form-field-infix { width: 180px !important;}
+.mat-dialog-content .mat-form-field { display:block !important; width: 100% !important;}
+.mat-dialog-content{
+    width: 500px;
+}
+.mat-dialog-title{
+    text-align: left;
+}
+.mat-dialog-title mat-card { width: auto !important }
+
+.mat-dialog-content{
+    width: auto !important;
+    padding:0px 30px;
+    display: block !important;
+}
+ .mat-radio-group{margin-bottom: 9px;
+    display: block;}
+mat-card .mat-icon { cursor: pointer; }
+
+@media only screen and (max-width:786px) { 
+      .example-spacer {  flex: 1 1 auto;} 
+  .mat-dialog-content .mat-radio-label { margin-bottom: 10px !important; }
+.example-section .mat-checkbox-layout {
+    white-space: break-spaces !important;} 
+      .mat-dialog-title mat-card { display: flex !important; }
+    } 
+
+ .example-spacer {  flex: 1 1 auto;} 
+.heade { margin-bottom: 20px; border-bottom: 1px dashed #d1d1d1 }
+.green { color: green; }
+.strong { display: block;font-size: 18px;}
+.head { display: block !important }
+.text-right { text-align: right; }
+
+.mat-radio-button { margin-right: 25px; }
+.example-section { margin-bottom: 25px; }
+.mat-action-row {    padding: 0px 8px 16px 0px !important;    border-top-width: 0 !important;}
+.mat-dialog-content .mat-expansion-panel-header-title { margin-right: 0px !important; }
+.mat-dialog-content .mat-expansion-panel-header.mat-expanded {
+    height: 35px !important;
+}
+.mat-dialog-content .mat-expansion-panel-header { padding: 0px 0px !important; }
+.mat-dialog-content .mat-expansion-panel-header button { width: 100%; text-align: left }
+.mat-dialog-content .mat-expansion-panel-body {
+    padding: 0 24px 0px !important;
+} 
+.mat-dialog-content .mat-accordion {    margin-bottom: 30px !important;
+    display: block !important;}
+
+   .mat-dialog-title mat-card { display: flex !important; }
+   .balance .mat-input-element{ color: rgba(255,0,0,.87) !important; font-weight: 500 !important }
+   .blue { color: #3f51b5; font-weight: 500; }

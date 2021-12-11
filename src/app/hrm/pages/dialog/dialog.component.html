@@ -1,0 +1,589 @@
+<div *ngIf="data.dialogObj.dialogType=='holiday'">
+
+<mat-card><h2 mat-dialog-title>Add Holiday List</h2></mat-card>
+<div mat-dialog-content>
+	<mat-form-field>
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+      <mat-label>Holiday Name</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Holiday Groups</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input type="text" placeholder="Salary Day" aria-label="Number" matInput [formControl]="myControl"
+      [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button (click)="closeDialog()" color="primary" mat-raised-button mat-dialog-close
+    routerLink="/hrm/modulerights">Submit</button>
+</div>
+
+
+</div>
+
+
+<div *ngIf="data.dialogObj.dialogType=='weekly'">
+
+<mat-card><h2 mat-dialog-title>Add Weekly Off List</h2></mat-card>
+<div mat-dialog-content>
+  <mat-form-field>
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+      <mat-label>Day Name</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Weekly Off Group</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input type="text" placeholder="Salary Day" aria-label="Number" matInput [formControl]="myControl"
+      [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button (click)="closeDialog()" color="primary" mat-raised-button mat-dialog-close
+    routerLink="/hrm/modulerights">Submit</button>
+</div>
+
+</div>
+
+
+<div *ngIf="data.dialogObj.dialogType=='da'">
+<div fxLayout='row' class="action-bar" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+    <mat-card fxFlex="100%">
+    <div fxLayout='row' fxFlex="100%" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%">
+        <div fxFlex="100%" class="heading">
+            <h2 class="mat-h2">Dearness Allowance (DA)</h2>
+        </div>
+
+    </div>
+    </mat-card>
+</div>
+<div class="txt-body">
+<div mat-dialog-content>
+
+        <form class="example-form">
+           <mat-form-field class="example-full-width">
+           <input type="text"
+                   placeholder="Select Employee"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControl"
+                 [matAutocomplete]="autoTest">
+          <mat-autocomplete #autoTest="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+
+        <mat-form-field class="dt">
+        <mat-label>Select Claim Date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Food Expenses">
+                          <span matSuffix class="green">INR</span>
+                </mat-form-field>
+
+                 <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Hotel Expenses">
+                          <span matSuffix class="green">INR</span>
+                </mat-form-field>
+
+                 <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Travel Expenses">
+                          <span matSuffix class="green">INR</span>
+                </mat-form-field>
+
+                 <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Other Expenses">
+                          <span matSuffix class="green">INR</span>
+                </mat-form-field>
+
+                <table>
+                  
+                  <tr>
+                    <td><b>Total</b></td>
+                    <td align="right"><b>INR 4,000</b></td>
+
+                  </tr>
+                </table>
+                    <label class="labl">Upload Documents</label>
+                        <input type="file">
+<br>
+                         <div fxLayout='row' class="head" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+              <p class="img-box"><img mat-card-sm-image src="./assets/images/man.jpg" alt="Complaints"></p>
+
+             <p class="img-box"><img mat-card-sm-image src="./assets/images/man.jpg" alt="Complaints"></p>
+            </div>
+             <div fxLayout='row' class="head" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+              <p class="img-box"><img mat-card-sm-image src="./assets/images/man.jpg" alt="Complaints"></p>
+
+             <p class="img-box"><img mat-card-sm-image src="./assets/images/man.jpg" alt="Complaints"></p>
+            </div>
+                       
+
+                 <mat-form-field class="example-full-width remarks">
+            <mat-label>Remarks</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+
+
+
+        </form>
+
+
+</div>
+</div>
+<div mat-dialog-actions>
+  
+                   
+<button mat-raised-button color="primary" mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Submit</small></button>
+                         
+<button mat-raised-button mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Cancel</small></button>
+   
+</div>
+
+</div>
+
+
+<div *ngIf="data.dialogObj.dialogType=='ta'">
+<div fxLayout='row' class="action-bar" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+    <mat-card fxFlex="100%">
+    <div fxLayout='row' fxFlex="100%" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%">
+        <div fxFlex="100%" class="heading">
+            <h2 class="mat-h2">Traveling Allowance (TA)</h2>
+        </div>
+
+
+    </div>
+    </mat-card>
+</div>
+<div class="txt-body">
+<div mat-dialog-content>
+
+        <form class="example-form">
+
+        <mat-form-field class="example-full-width">
+           <input type="text"
+                   placeholder="Select Employee"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControl"
+                 [matAutocomplete]="autoTest">
+          <mat-autocomplete #autoTest="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width disable">
+                        <input matInput placeholder="Actual Distance Travelled" Value="12 Km" disabled="">
+                </mat-form-field>
+
+                <div fxLayout='row' class="head" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+              <p class="img-box"><span>Punch In <span class="green">9:30 AM</span></span> <br>  <img mat-card-sm-image src="./assets/images/man.jpg" alt="Complaints"></p>
+
+              <p class="img-box"><span>Punch Out <span class="green">6:30 PM</span></span> <br> <img mat-card-sm-image src="./assets/images/man.jpg" alt="Complaints"></p>
+            </div>
+
+              <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Enter Claim Distance" >
+                         <span matSuffix class="green">Kms</span>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width disable">
+                        <input matInput placeholder="Claim Amount @ INR 4/Km"disabled value="1,000">
+                          <span matSuffix class="green">INR</span>
+                </mat-form-field>
+
+                   <mat-form-field class="example-full-width">
+            <mat-label>Remarks</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+
+
+
+
+        </form>
+
+
+</div>
+</div>
+<div mat-dialog-actions>
+  
+                   
+<button mat-raised-button color="primary" mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Submit</small></button>
+                         
+<button mat-raised-button mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Cancel</small></button>
+   
+</div>
+
+  </div>
+
+
+
+
+
+<div *ngIf="data.dialogObj.dialogType=='department'">
+  <h2 mat-dialog-title>Add Department</h2>
+<mat-dialog-content class="mat-typography">
+ <form class="example-form">
+
+
+     <mat-form-field class="example-full-width" appearance="">
+       <input type="text"
+             matInput
+           placeholder="Select Employee"
+             [formControl]="myControls"
+             [matAutocomplete]="autoTest">
+      <mat-autocomplete #autoTest="matAutocomplete">
+        <mat-option *ngFor="let option of optionss" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+<mat-form-field>
+  <mat-label>Select HOD</mat-label>
+  <mat-select disableRipple>
+    <mat-option value="1">Vivek Gupta </mat-option>
+    <mat-option value="2">Sachin Chauhan</mat-option>
+    <mat-option value="3">Mohit Kwatra</mat-option>
+    <mat-option value="4">Amit Kwatra </mat-option>
+
+  </mat-select>
+</mat-form-field>
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Department Name</mat-label>
+    <input matInput placeholder="Enter Department Name" value="">
+  </mat-form-field>
+
+
+
+</form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+
+
+<section>
+  <div class="example-button-row">
+    <button mat-button mat-dialog-close mat-raised-button color="white">Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial mat-raised-button color="white">Submit</button>
+  </div>
+</section>
+<mat-divider></mat-divider>
+</mat-dialog-actions>
+</div>
+
+<div *ngIf="data.dialogObj.dialogType=='module'">
+<h1 mat-dialog-title>Select Designation</h1>
+<div mat-dialog-content>
+ <mat-form-field class="example-full-width" appearance="">
+       <input type="text"
+             matInput
+           placeholder="Select Designation"
+             [formControl]="myControlss"
+             [matAutocomplete]="autoo">
+      <mat-autocomplete #autoo="matAutocomplete">
+        <mat-option *ngFor="let option of optionsss" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button (click)="closeDialog()" color="primary" mat-raised-button mat-dialog-close
+    routerLink="/hrm/modulerights">Submit</button>
+</div>
+</div>
+
+
+
+<div *ngIf="data.dialogObj.dialogType=='page'">
+
+<h1 mat-dialog-title>Select Module</h1>
+<div mat-dialog-content>
+   
+
+  <mat-form-field class="example-full-width" appearance="">
+       <input type="text"
+             matInput
+           placeholder="Select Module"
+             [formControl]="myControlse"
+             [matAutocomplete]="autos">
+      <mat-autocomplete #autos="matAutocomplete">
+        <mat-option *ngFor="let option of optionsse" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close color="primary" (click)="closeDialog()" routerLink="/hrm/pagerights">Submit</button>
+</div>
+
+  </div>
+
+
+
+
+<div *ngIf="data.dialogObj.dialogType=='addgoal'">
+
+<h1 mat-dialog-title>Add Goal</h1>
+<div mat-dialog-content>
+   
+
+     <mat-form-field class="example-full-width" appearance="">
+       <input type="text"
+             matInput
+           placeholder="Select Employee"
+             [formControl]="myControls"
+             [matAutocomplete]="autoTest">
+      <mat-autocomplete #autoTest="matAutocomplete">
+        <mat-option *ngFor="let option of optionss" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+  <mat-form-field>
+  <mat-label>Start Date</mat-label>
+  <input matInput [matDatepicker]="picker2">
+  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+  <mat-datepicker #picker2></mat-datepicker>
+</mat-form-field>
+
+
+  <mat-form-field>
+  <mat-label>Target End Date</mat-label>
+  <input matInput [matDatepicker]="picker3">
+  <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+  <mat-datepicker #picker3></mat-datepicker>
+</mat-form-field>
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Goal Description</mat-label>
+    <textarea matInput placeholder="" maxlength="220"></textarea>
+  </mat-form-field>
+
+
+<mat-form-field>
+  <mat-label>KRA</mat-label>
+  <mat-select disableRipple>
+    <mat-option value="1">Sales</mat-option>
+    <mat-option value="2">Sales</mat-option>
+    <mat-option value="3">Sales</mat-option>
+    <mat-option value="4">Sales</mat-option>
+
+  </mat-select>
+</mat-form-field>
+
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Weightage%</mat-label>
+    <input matInput placeholder="" value="" (keypress)="numberOnly($event)">
+  </mat-form-field>
+
+
+<mat-form-field>
+  <mat-label>Assessment Unit</mat-label>
+  <mat-select disableRipple>
+    <mat-option value="1">Task Days</mat-option>
+    <mat-option value="2">Task Count</mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+  <mat-form-field>
+  <mat-label>Set Target Days</mat-label>
+  <input matInput [matDatepicker]="picker4">
+  <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+  <mat-datepicker #picker4></mat-datepicker>
+</mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Set Target Tasks</mat-label>
+    <input matInput placeholder="" value="" (keypress)="numberOnly($event)">
+  </mat-form-field>
+
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close color="primary" (click)="closeDialog()" routerLink="/hrm/pagerights">Submit</button>
+</div>
+
+  </div>
+
+
+
+
+
+<div *ngIf="data.dialogObj.dialogType=='dailyattendence'">
+<div fxLayout='row' class="action-bar" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+    <mat-card fxFlex="100%">
+    <div fxLayout='row' fxFlex="100%" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%">
+        <div fxFlex="100%" class="heading">
+            <h2 class="mat-h2">Add/Update Daily Attendance</h2>
+        </div>
+
+
+    </div>
+    </mat-card>
+</div>
+<div class="txt-body">
+<div mat-dialog-content>
+
+        <form class="example-form">
+
+        <mat-form-field class="example-full-width">
+           <input type="text"
+                   placeholder="Select Employee"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControl"
+                 [matAutocomplete]="autoTesto">
+          <mat-autocomplete #autoTesto="matAutocomplete">
+
+
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+  <mat-form-field>
+  <mat-label>Attendance Date</mat-label>
+  <input matInput [matDatepicker]="picker5">
+  <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+  <mat-datepicker #picker5></mat-datepicker>
+</mat-form-field>
+
+
+                <div fxLayout='row' class="heads" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+            
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Checkin Time" Value="" type="datetime-local">
+                </mat-form-field>
+             
+                  <mat-form-field class="example-full-width" style="margin-left: 10px;">
+                        <input matInput placeholder="Checkout Time" Value="" type="datetime-local">
+                </mat-form-field>
+            </div>
+
+        <mat-form-field class="example-full-width">
+           <input type="text"
+                   placeholder="Select Status"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControles"
+                 [matAutocomplete]="autoTeste">
+          <mat-autocomplete #autoTeste="matAutocomplete">
+
+
+            <mat-option *ngFor="let option of optionssss" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+          <mat-radio-group aria-label="Select an option" class="leavetype">
+            <mat-radio-button value="1">Full Day</mat-radio-button>
+            <mat-radio-button value="2">Half Day</mat-radio-button>
+            <mat-radio-button value="3">Short Day</mat-radio-button>
+          </mat-radio-group>
+
+   <div fxLayout='row' class="heads" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+            
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Paid Leave Day" Value="" type="text" required="required">
+                </mat-form-field>
+             
+                  
+                 <mat-form-field class="example-full-width" style="margin-left: 10px;">
+           <input type="text"
+                   placeholder="Select Present Day"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControless"
+                 [matAutocomplete]="autoTests">
+          <mat-autocomplete #autoTests="matAutocomplete">
+
+
+            <mat-option *ngFor="let option of optionsn" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+            </div>
+
+
+
+          
+
+
+
+        </form>
+
+
+</div>
+</div>
+<div mat-dialog-actions>
+  
+                   
+<button mat-raised-button color="primary" mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Submit</small></button>
+                         
+<button mat-raised-button mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Cancel</small></button>
+   
+</div>
+
+  </div>
+
+

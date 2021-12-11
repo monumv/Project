@@ -1,0 +1,261 @@
+
+<mat-sidenav #sidenav1 id="rightFilterNav" mode="side" position="end" role="" class="sidenav-wv">
+    <div class="mv-6">
+        <form class="example-form">
+            <h2 class="mv-2">Filter</h2>
+
+           
+          <span class="material-icons close-btn" (click)="sidenav1.toggle()"> close </span>
+
+          	 <mat-form-field class="example-full-width">
+    <mat-label>Buyer's A/c</mat-label>
+    <input type="text"
+           placeholder="Party A/c"
+           aria-label="Party A/c"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <mat-form-field>
+  <mat-label>From Date</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>To Date</mat-label>
+  <input matInput [matDatepicker]="picker2">
+  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+  <mat-datepicker #picker2></mat-datepicker>
+</mat-form-field>
+
+         
+            
+           
+            <mat-dialog-actions align="start">
+                <section>
+                    <div class="example-button-row mv-5">
+                        <button mat-button mat-dialog-close mat-raised-button color="white"
+                            (click)="sidenav1.toggle()" class="btn-primary">Apply</button>
+                        <button mat-button [mat-dialog-close]="true" cdkFocusInitial mat-raised-button
+                            color="white">Clear</button>
+                    </div>
+                </section>
+            </mat-dialog-actions>
+        </form>
+    </div>
+</mat-sidenav>
+
+<div class="content1">
+
+<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+            <span class="mv-17"><a  routerLink="/finance">Finance</a><span class="mv-18">/</span></span>
+            <span class="mv-17"><a  routerLink="/finance/whitebillsreport/">Whitebills Reports</a><span class="mv-18">/</span></span>
+            <span class="mv-17">Outstanding Collection Report</span>
+        </div>
+    </mat-toolbar>
+
+</div>
+    
+    
+    <div fxLayout='row' fxLayout.xs='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        
+        <div class="content" fxFlex="100%">
+        <mat-card>
+            <div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+                <h2 class="mat-h2">Outstanding Collection Report</h2>
+            </div>
+    
+            <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+                   
+                    <button mat-stroked-button ><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_downward</mat-icon><small>Export</small></button>
+                   
+                    <button mat-stroked-button (click)="sidenav1.toggle()"><span class="material-icons">filter_list</span></button>
+                </div>
+    
+    
+    
+            </div>
+    
+    
+    
+        </mat-card>
+    
+        </div>
+    </div>
+     
+          <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+        <mat-card fxFlex="100%" fxLayout='row' class="chart" fxLayout.xs='column'fxLayout.sm='column' fxLayoutGap="3%">
+         
+        
+            <div fxFlex="33%">
+                 <h2 class="mat-h2">Outstanding Amt & Counts</h2>
+               <div class="chart-block">
+                   <div style="display: block">
+      <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+        [legend]="barChartLegend" [chartType]="barChartType"
+       ></canvas>
+    </div>
+                </div>
+            </div>
+        </mat-card>
+
+  
+</div>
+
+
+    
+    <div fxLayout='row' class="content content2" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="center">
+    
+    <mat-card fxFlex="100%">
+    
+
+        <mat-card>
+          <div class="topbar"> 
+         
+    
+            <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                
+        <div class="paging" fxFlex="100%" layout-align="end" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="end" fxLayoutAlign.sm="start">
+          
+            <mat-paginator style-paginator showFirstLastButtons
+                          [length]="7130"
+                          [pageSize]="10"
+                          pageSizeOptions
+                          [pageSizeOptions]="[5, 10, 25, 100]">
+            </mat-paginator>
+            
+        
+          
+        </div>
+    
+    
+    
+            </div>
+    </div>
+    
+    
+        </mat-card>
+    
+    
+    <div class="table">
+   <table>
+   	<tr>
+   		<th>Sr.</th>
+   		<th>Vch. Date</th>
+   		<th>Vch. No.</th>
+   		<th>Buyer A/c Name</th>
+   		<th>Bill Amt.	</th>
+   		<th>Paid Amt.	</th>
+   		<th>Pending Amt.</th>
+   		<th>By Days</th>
+   		<th>Sale Person Name</th>
+   	</tr>
+   	<tr>
+   		<td>1</td>
+   		<td>26-Mar-2021</td>
+   		<td class="blue">330/2020-21	</td>
+   		<td class="blue">ABC Pvt. Ltd.</td>
+   		<td>5,00,000</td>
+   		<td>2,00,000</td>
+   		<td class="red">3,00,000</td>
+   		<td class="red">25</td>
+   		<td>Suman Sharma</td>
+   	</tr>
+   	<tr>
+   		<td>2</td>
+   		<td>26-Mar-2021</td>
+   		<td class="blue">330/2020-21	</td>
+   		<td class="blue">ABC Pvt. Ltd.</td>
+   		<td class="att">5,00,000</td>
+   		<td class="att">2,00,000</td>
+   		<td class="red att">3,00,000</td>
+   		<td class="red">25</td>
+   		<td>Suman Sharma</td>
+   	</tr>
+   	<tr>
+   		<td colspan="9" class="pdd-0">
+   			<table>
+   				<tr>
+   					<td></td>
+			   		<td></td>
+			   		<td></td>
+			   		<td></td>
+			   		<td class="att"><b>5,00,000</b></td>
+			   		<td class="att"><b>2,00,000</b></td>
+			   		<td class="red att"><b>3,00,000</b></td>
+			   		<td></td>
+			   		<td></td>
+   				</tr>
+
+   			</table>
+   		</td>
+
+   	</tr>
+   </table>
+
+    <table>
+   
+   	<tr>
+   		<td>1</td>
+   		<td>26-Mar-2021</td>
+   		<td class="blue">330/2020-21	</td>
+   		<td class="blue">ABC Pvt. Ltd.</td>
+   		<td>5,00,000</td>
+   		<td>2,00,000</td>
+   		<td class="red">3,00,000</td>
+   		<td class="red">25</td>
+   		<td>Suman Sharma</td>
+   	</tr>
+   	<tr>
+   		<td>2</td>
+   		<td>26-Mar-2021</td>
+   		<td class="blue">330/2020-21	</td>
+   		<td class="blue">ABC Pvt. Ltd.</td>
+   		<td class="att">5,00,000</td>
+   		<td class="att">2,00,000</td>
+   		<td class="red att">3,00,000</td>
+   		<td class="red">25</td>
+   		<td>Suman Sharma</td>
+   	</tr>
+   	<tr class="bd-0">
+   		<td colspan="9" class="pdd-0">
+   			<table>
+   				<tr>
+   					<td></td>
+			   		<td></td>
+			   		<td></td>
+			   		<td></td>
+			   		<td class="att"><b>5,00,000</b></td>
+			   		<td class="att"><b>2,00,000</b></td>
+			   		<td class="red att"><b>3,00,000</b></td>
+			   		<td></td>
+			   		<td></td>
+   				</tr>
+
+   			</table>
+   		</td>
+
+   	</tr>
+   </table>
+    
+    </div>
+    
+    </mat-card>
+    
+    </div>
+    
+    
+    
+    </div>
+    <router-outlet></router-outlet>

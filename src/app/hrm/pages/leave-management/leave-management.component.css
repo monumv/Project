@@ -1,0 +1,21 @@
+mat-card {padding: 8px;margin-right:3% !important}
+.row mat-card:last-child { margin-right: 0% !important}
+mat-card img { float: left }
+mat-card-title { float: left; display: inline-block; font-size: 18px; 
+	font-weight: normal; line-height: 85px; }
+.mat-toolbar {margin-top: 23px; height: 45px !important;}
+.row { margin-bottom: 15px; }
+.border{ border-right: 8px solid #2a8605;}
+.content { padding: 0 20px; background-color:#f2f2f2  }
+.breadcrumb{ margin-bottom: 23px; background: transparent; visibility: hidden; }
+@media only screen and (max-width:786px) {
+	mat-card {margin-right:0% !important}
+}
+
+
+.mv-19 { padding-left: 15px;}
+.mv-17 { padding: 0px;  font-size: 13px;} 
+.mv-18 { padding: 0px 5px;}
+.mv-17 a {text-decoration: none;font-size: 13px;color: #4285F4;}
+.crumb{ margin-bottom: 20px }
+.crumb {margin-top: 23px; background: #e9e9e9  !important;height: 45px !important; box-shadow: none;}

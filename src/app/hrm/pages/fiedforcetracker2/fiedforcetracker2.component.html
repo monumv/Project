@@ -1,0 +1,81 @@
+
+<div class="map">
+
+ <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d14041.466319587267!2d77.27732487108013!3d28.37799394953421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.3732778!2d77.2814408!4m5!1s0x390cdd4de69f9bc1%3A0x3ec2771951e9b77!2s2J%2C%20SFP%20Snack%20Sack%2C%20107%2C%20NIT%202%2C%20Block%20J%2C%20New%20Industrial%20Twp%202%2C%20New%20Industrial%20Town%2C%20Faridabad%2C%20Haryana%20121001!3m2!1d28.385149199999997!2d77.2881618!5e0!3m2!1sen!2sin!4v1636460453763!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+
+
+   <div class="employee-search2">
+    <div class="username">
+   <mat-icon routerLink="/hrm/fieldforcetracker">arrow_back</mat-icon> <p>    Manish Kumar</p></div>
+     <mat-icon [@rotatedState]='state' (click)="drawer.toggle()">close</mat-icon>
+    
+
+</div>
+
+
+   <mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened="opened">
+      <div class="cont-block">
+         
+          <div class="listingg">
+
+             <div><mat-icon>radio_button_unchecked</mat-icon>
+             <mat-form-field class="example-full-width">
+              <input matInput placeholder="" value="NIT 5 Market">
+            </mat-form-field>
+          </div>
+          <div><mat-icon>fmd_good</mat-icon>
+              <mat-form-field class="example-full-width">
+              <input matInput value="Abdul Gaffar Khan Market">
+            </mat-form-field>
+
+          </div>
+          </div>
+      </div>
+
+      <div class="route">
+
+        <div class="rt-blk">
+          <div><mat-icon>directions_car </mat-icon></div>
+          <div class="place">Nelson Mandela Marg and Vasant kund Road <small>Fastest Route Despite the usual traffic</small></div>
+
+          <div class="time">8 Min
+          <small>1.9 Km</small>            
+          </div>
+
+        </div>
+
+        <div class="rt-blk">
+          <div><mat-icon>directions_car </mat-icon></div>
+          <div class="place">via Nelson Mandela Marg and Bhagwan mahavir Road</div>
+
+          <div class="time">10 Min
+          <small>2.6 Km</small>            
+          </div>
+
+        </div>
+
+
+        <div class="rt-blk">
+          <div><mat-icon>directions_car </mat-icon></div>
+          <div class="place">via Abdul Gaffar khan/Marg Vasant Kunj Road</div>
+
+          <div class="time">16 Min
+          <small>1.3 Km</small>            
+          </div>
+
+        </div>
+
+
+      </div>
+
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+
+  </div>
+
+</mat-drawer-container>
+</div>

@@ -1,0 +1,376 @@
+<div class="content1">
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+      <div class="example-button-row">
+      	  <button mat-stroked-button [matMenuTriggerFor]="menu"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">thumb_up</mat-icon><small>Approve</small></button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item routerLink="/finance/markdelevered">Mark Delivered</button>
+                        <button mat-menu-item routerLink="/finance/cancel">Cancel</button>
+                        
+                      </mat-menu>
+        <button mat-stroked-button><span class="material-icons">
+          print</span> <small>Print</small></button>
+        <button mat-stroked-button><span class="material-icons">
+           thumb_down_off_alt </span> <small>Roll Back</small></button>
+        <button mat-stroked-button><span class="material-icons">
+            thumb_down_off_alt</span> <small>Refund</small></button>
+        <button mat-stroked-button><span class="material-icons">
+          email</span> <small>Email</small></button>
+      </div>
+    </mat-toolbar>
+      <div class="pdd-20">
+      <div fxLayout='row' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+      
+      <mat-card class="mat-card2">
+      
+      <div fxLayout='row' fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="right">
+      
+        <div fxFlex="50%" align="left">
+          <img src="./assets/images/Dial-ERP-Logo.svg" class="logo">
+        </div>
+      
+        <div fxFlex="50%" align="left">
+          <h2 class="mat-h2 heading">Sale Order</h2>
+        </div>
+      
+      </div>
+      
+      
+      
+      
+      <div fxLayout='row' class="top-row border-b" fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="right">
+      
+      
+          <div fxFlex="100%" fxFlex.sm="50%" fxFlex.xs="50%">
+              
+              <div fxFlex="100%">
+                  <h4> <b><small>Bill From </small> <br>GetON Infotech Pvt Ltd</b>
+                  </h4>
+                  <p>
+                      C-130, 2nd Floor<br>
+                      Sector - 2, Noida<br>
+                      Uttar Pradesh -201301, State Code - 09<br>
+                      Mobile : 9971122333<br>
+                      <span class="blue">ERP Id : 434314</span><br>
+                      Alias Name : 1012
+                  </p>
+              </div>
+          </div>
+      
+         
+      
+      </div>
+      
+      <div fxLayout='row' class="top-row" fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="right">
+      
+      
+          <div fxFlex="100%" fxFlex.sm="50%" fxFlex.xs="50%">
+              
+              <div fxFlex="100%">
+                  <h4> <b><small>Bill To </small> <br>GetON Infotech Pvt Ltd</b>
+                  </h4>
+                  <p>
+                      C-130, 2nd Floor<br>
+                      Sector - 2, Noida<br>
+                      Uttar Pradesh -201301, State Code - 09<br>
+                      Mobile : 9971122333<br>
+                      <span class="blue">ERP Id : 434314</span>
+                  </p>
+              </div>
+          </div>
+      
+    
+      
+      </div>
+      
+      
+      
+      
+      
+      
+      <div class="table t-table">
+        <table cellspacing="0" cellpadding="0">
+            <tr>
+              <th>Invoice Number</th>
+              <th>Bill Date</th>
+              <th>Due Date</th>
+              <th>Sale Order No.</th>
+              <th>Currency</th>
+              <th>Conversion</th>
+              <th>Pay Mode</th>
+            </tr>
+      
+            <tr>
+              <td>1/2020-21/B0939</td>
+              <td>09 July, 2020</td>
+              <td>10 July, 2020</td>
+              <td>Direct</td>
+              <td>INR</td>
+              <td>1</td>
+              <td>Wallet</td>
+            </tr>
+        </table>
+      </div>
+      
+        <div class="table f-table">
+            <table class="details">
+                <tr align="center">
+                    <td>No. of Items : 10</td>
+                    <td>POS Order Id : 2105</td>
+                    <td>Time : 19:12</td>
+                </tr>
+            </table>
+        <table mat-table [dataSource]="datas" class="mat-elevation-z8">
+      
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef class="wd-20"> Sr. </th>
+          <td mat-cell *matCellDef="let element" class="pd-20 grey pd-10"> {{element.position}} </td>
+        </ng-container>
+      
+         <ng-container matColumnDef="code">
+          <th mat-header-cell *matHeaderCellDef class="wd-20"> SKU </th>
+          <td mat-cell *matCellDef="let element" class="blue"> {{element.code}} </td>
+        </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef class=""> Item </th>
+          <td mat-cell *matCellDef="let element" class="wd-200 blue"> {{element.name}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="qty" class="wd-30">
+          <th mat-header-cell *matHeaderCellDef class="wd-30 border"> Qty </th>
+          <td mat-cell *matCellDef="let element" class="border"><span><b> {{element.qty}} </b></span> </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="unit">
+          <th mat-header-cell *matHeaderCellDef class="wd-100"> Price <small>inclusive Taxes</small> </th>
+          <td mat-cell *matCellDef="let element" class="grey pd-20 wd-100">
+          {{element.unit}}
+        </td>
+        </ng-container>
+      
+      
+        <ng-container matColumnDef="cost">
+          <th mat-header-cell *matHeaderCellDef class="wd-20"> Tax% </th>
+          <td mat-cell *matCellDef="let element"> 
+           {{element.cost}}
+        </td>
+        </ng-container>
+      
+      
+        <ng-container matColumnDef="warranty">
+          <th mat-header-cell *matHeaderCellDef class="wd-30 border grey">UOM Qty</th>
+          <td mat-cell *matCellDef="let element" class="border wd-30 grey"> 
+             <span> {{element.warranty}}</span>
+        </td>
+        </ng-container>
+      
+      <ng-container matColumnDef="claim">
+          <th mat-header-cell *matHeaderCellDef class="wd-30 grey">Pack Size</th>
+          <td mat-cell *matCellDef="let element" class="wd-30 grey"> 
+             <span> {{element.claim}}  </span>   
+      
+          </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="mrp">
+          <th mat-header-cell *matHeaderCellDef class="wd-20 grey">Mrp</th>
+          <td mat-cell *matCellDef="let element" class="wd-70 grey"> 
+              {{element.mrp}}     
+      
+          </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="amt">
+          <th mat-header-cell *matHeaderCellDef class="wd-100 right-align">Amount <small>inclusive Taxes</small></th>
+          <td mat-cell *matCellDef="let element" class="wd-100 right-align"> 
+              {{element.amt}}     
+      
+          </td>
+        </ng-container>
+      
+      
+       
+      
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+      </div>
+      
+      <div fxLayout='row' class="total" fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="right">
+      
+          <div fxFlex="75%">
+          <span class="charges">  Delivery Charges</span>
+          </div>
+          <div fxFlex="13%" fxFlex.lg="13%" fxFlex.md="13%"  align="right" fxFlex.sm="18%" fxFlex.xs="18%">
+            <p class="pr-20">18%</p>
+          </div>
+          <div fxFlex="12%" fxFlex.md="12%" fxFlex.lg="12%" fxFlex.sm="7%" fxFlex.xs="7%" align="right">
+            <p class="pr-20">500</p>
+          </div>
+        
+        </div>
+      <div fxLayout='row' class="total" fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="right">
+      
+        <div fxFlex="80%">
+          Sub Total
+        </div>
+      
+        <div fxFlex="20%" align="right">
+          <p class="pr-20">8,000</p>
+        </div>
+      
+      </div>
+      <div fxLayout='row' class="total" fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="right">
+      
+        <div fxFlex="91%" align="right">
+          <b>Bill Amount :</b>
+        </div>
+      
+        <div fxFlex="9%" align="right">
+          <b class="pr-20">8,000</b>
+        </div>
+      
+      </div>
+      
+      
+      
+      <div fxLayout='row' class="total" fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="right">
+      
+          <div fxFlex="50%">
+          <p>Amount Chargable in words <br> One Thousand Five Hundred Rupees Only</p>
+        </div>
+      
+       <div fxFlex="50%" align="right">
+          <p>Paid Amount : 0.00   <br> Balance Due : 8,000</p>
+        </div>
+      
+      </div>
+      
+      
+      <div fxLayout='row' class="" fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="right">
+      
+        <div fxFlex="100%">
+            <table class="hsn-table" cellpadding="0" cellspacing="0">
+      
+              <tr align="center">
+                <td rowspan="2">HSN/SAC</td>
+                <td rowspan="2">Taxable Value</td>
+                <td colspan="2">CGST</td>
+                <td colspan="2">IGST</td>
+              </tr>
+      
+               <tr align="center">
+                <td class="tax-table2">Rate </td>
+                <td>Amount</td>
+                <td class="tax-table2">Rate </td>
+                <td>Amount</td>
+              </tr>
+               <tr align="center">
+                <td>99731</td>
+                <td>2,000</td>
+                <td class="tax-table2">9%</td>
+                <td>500</td>
+                <td class="tax-table2">9%</td>
+                <td>500</td>
+              </tr>
+               <tr align="center">
+                <td>99731</td>
+                <td>2,000</td>
+                <td class="tax-table2">9%</td>
+                <td>500</td>
+                <td class="tax-table2">9%</td>
+                <td>500</td>
+              </tr>
+               <tr align="center">
+                <td>99731</td>
+                <td>2,000</td>
+                <td class="tax-table2">9%</td>
+                <td>500</td>
+                <td class="tax-table2">9%</td>
+                <td>500</td>
+              </tr>
+               <tr align="center">
+                <td>Total</td>
+                <td>6,000</td>
+                <td class="tax-table2">Total</td>
+                <td>1,500</td>
+                <td class="tax-table2">Total</td>
+                <td>1,500</td>
+              </tr>
+      
+            </table>
+        </div>
+      
+       
+      
+      </div>
+      
+      
+      <div fxLayout='row' class="bottom" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%">
+      
+        <div fxFlex="50%" fxFlex.md="46%" fxFlex.sm="46%" fxFlex.xs="46%" align="left" class="b-details">
+          <p><span>A/c Name </span> :  <b>GetOn Infotect Pvt. Ltd.</b><br>
+            <span>Current A/c No </span> : 50100538172058<br>
+            <span>Bank</span> : HDFC Bank<br>
+            <span>IFSC Code</span> : HDFC000647<br>
+          </p>
+      
+           <p><span>Amount Payable </span> :  <b>INR 14,000</b><br>
+            <span>Tax Deductions 2% </span> :  <b>INR 100</b>
+         </p>
+        
+        </div>
+      
+         <div fxFlex="50%" fxFlex.md="54%" fxFlex.sm="54%" fxFlex.xs="54%" fxLayout='column' class="bottom" fxLayout.xs='column' fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%">
+      
+          <div class="fxFlex=100%" align="right">
+              <p class="bold"><b>Geton Infotech Pvt Ltd</b></p>
+          </div>
+      
+          <div class="fxFlex=100%" fxLayout='row' class="top-space" fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%">
+      
+             <div fxFlex="33.3%" align="right">
+               <p>Vivek Gupta (Director) <b>Prepared By</b></p>
+             </div>
+      
+             <div fxFlex="33.3%" align="right">
+               <p>Rajesh Sharma <b>Verified By</b></p>
+             </div>
+      
+            <div fxFlex="33.3%" align="right">
+               <p>Vivek Gupta <b>Authorised By</b></p>
+             </div>
+      
+      
+          </div>
+      
+         
+        </div>
+      
+      
+      </div>
+      
+      
+      
+      <div fxLayout='row' class="footer" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="center">
+      
+        <div fxFlex="100%">
+          <p>This is a Computer Generated Performa Invoice. Signature is not Required
+      </p>
+        </div>
+      
+      </div>
+      
+      </mat-card>
+      
+      </div>
+      
+      </div>
+      
+      
+      </div>
+      

@@ -1,0 +1,48 @@
+<div class="content1">
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<mat-toolbar class="breadcrumb">Marketing Dashboard</mat-toolbar>
+
+</div>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">Marketing Dashboard</h2>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="/marketing/bannerlist" class="">
+		<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+		<mat-card-title>Banner List</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/marketing/bannergroups" class="">
+		<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+		<mat-card-title>Banner Groups</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/marketing/bannertype" class="">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>Banner Types</mat-card-title>
+	</mat-card>
+</div>
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="/marketing/targetaudience" class="">
+		<img mat-card-sm-image src="./assets/images/monthly.png" alt="Complaints">
+		<mat-card-title>Target Audience</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/marketing/itemlist" class="">
+		<img mat-card-sm-image src="./assets/images/detailed-monthly.png" alt="Complaints">
+		<mat-card-title>Items List in Banner</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/marketing/invitearn" class="">
+		<img mat-card-sm-image src="./assets/images/salary-slip.png" alt="Complaints">
+		<mat-card-title>Invite and Earn</mat-card-title>
+	</mat-card>
+</div>
+
+
+
+</div>
+<router-outlet></router-outlet>

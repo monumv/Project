@@ -1,0 +1,33 @@
+<div class="content1">
+
+<div class="mv-26">
+    <mat-toolbar>
+      <div class="mv-19">
+        <span class="mv-17"><a routerLink="/salescrm">Sales CRM Dashboard  </a><span class="mv-18">/</span></span>
+        <span class="mv-17"><a routerLink="/salescrm/crm-settings">CRM Settings  </a><span class="mv-18">/</span></span>
+
+        <span class="mv-17">CRM Pipelines</span>
+      </div>
+    </mat-toolbar>
+  </div><br>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+  <h2 class="mat-h2">CRM Pipelines</h2>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+  <mat-card fxFlex="33%" routerLink="/salescrm/pipelinetemplate" class="">
+    <img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+    <mat-card-title>Pipeline Templates</mat-card-title>
+  </mat-card>
+  <mat-card fxFlex="33%" class="">
+    <img mat-card-sm-image src="./assets/images/expenses2.png" alt="Complaints">
+    <mat-card-title>Pipeline Data</mat-card-title>
+  </mat-card>
+
+  
+</div>
+
+
+</div>
+<router-outlet></router-outlet>

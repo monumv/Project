@@ -1,0 +1,7 @@
+.mat-dialog-content .mat-form-field { width: 420px !important;}
+.mat-dialog-content .mat-form-field { display:block !important;}
+
+.action-btn .mat-raised-button { margin-left: 25px; }
+
+
+a { color: blue }

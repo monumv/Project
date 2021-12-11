@@ -1,0 +1,48 @@
+<div class="content1">
+
+	<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+            <span class="mv-17"><a  routerLink="/finance">Finance</a><span class="mv-18">/</span></span>
+            
+            <span class="mv-17"><a  routerLink="/finance/vouchers">Vouchers</a><span class="mv-18">/</span></span>
+            <span class="mv-17"><a  routerLink="/finance/receiptmanagement">Receipt Management</a><span class="mv-18">/</span></span>
+            <span class="mv-17">Proposed Receipts</span>
+        </div>
+    </mat-toolbar>
+</div>
+	
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">Proposed Receipts</h2>
+	</div>
+
+			
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" class="">
+				<img mat-card-sm-image src="./assets/images/p-salary.png" alt="Complaints">
+				<mat-card-title>Claimed</mat-card-title>
+			</mat-card>	
+	
+		<mat-card fxFlex="33%" class="">
+			<img mat-card-sm-image src="./assets/images/paid-salary.png" alt="Complaints">
+			<mat-card-title>Approved</mat-card-title>
+		</mat-card>	
+
+	<mat-card fxFlex="33%" class="">
+			<img mat-card-sm-image src="./assets/images/experience.png" alt="Complaints">
+			<mat-card-title>Rejected</mat-card-title>
+		</mat-card>
+	
+
+	</div>
+
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="31.2%" class="">
+				<img mat-card-sm-image src="./assets/images/salary-slip.png" alt="Complaints">
+				<mat-card-title>Claimed</mat-card-title>
+			</mat-card>	
+	
+	
+
+	</div>
+	<router-outlet></router-outlet>

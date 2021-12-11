@@ -1,0 +1,49 @@
+.logo { width: 180px; margin:0px 0px 3px 17px;  }
+mat-sidenav { width: 220px; background: #f4f4f4; padding: 10px 0;}
+mat-sidenav  button { margin: 0 auto; display:block; background: #ffce00!important; padding: 5px 25px;}
+mat-sidenav h3 { margin:24px 0px -2px 22px; font-weight: bold;}
+.mat-list-text { padding-left:0px !important;}
+.mat-list-base .mat-list-item .mat-list-icon { font-size:20px;}
+mat-list-item { height:34px !important}
+mat-toolbar { background:#fff}
+.mat-toolbar .mat-button { background: #fff; border:1px solid #000;
+    padding: 1px 14px; font-size: 17px; margin-left: 10px}
+.example-spacer {  flex: 1 1 auto;}
+.mat-menu-item { line-height: 22px; height: 34px;}
+.mat-menu-item .material-icons { float:left; margin-right:10px;}
+
+@media only screen and (max-width:959px) {
+
+	.mnu, .search, .mat-paginator { display:none; }
+	.meno { margin-left: -18px !important }
+	.head-toolbar {-webkit-box-shadow: 1px 1px 4px 1px #666666 !important; 
+box-shadow: 1px 1px 4px 1px #666666 !important; position: fixed; 
+width: calc(100% - 0px) !important; z-index: 9999 !important}
+.header { width: 100% !important; }
+}
+
+@media only screen and (max-width:1280px) {
+.search .mat-form-field {
+    width: auto !important;
+} .mat-paginator { display:none; }
+
+
+
+}
+
+.header { width: calc(100% - 215px);
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;}
+.head-toolbar { position: fixed; z-index: 999; z-index: 9999;  }
+h2 { margin-right: 10%; }
+
+ mat-sidenav .compose-btn, mat-sidenav .mat-nav-list, mat-sidenav h3 { margin-left: 26px !important; }
+
+ mat-sidenav .compose-btn { margin-bottom: 10px !important }
+ mat-sidenav h3 { margin-bottom: 0px !important }
+
+.mat-menu-item { height: 30px !important;    line-height: 20px !important; }

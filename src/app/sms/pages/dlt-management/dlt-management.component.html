@@ -1,0 +1,49 @@
+<div class="content1">
+
+<div class="mv-26">
+		<mat-toolbar>
+			<div class="mv-19">
+				<span class="mv-17"><a routerLink="/sms">SMS Dashboard  </a><span class="mv-18">/</span></span>
+				<span class="mv-17">DLT Management</span>
+			</div>
+		</mat-toolbar>
+	</div><br>
+
+
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">DLT Management</h2>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="../dlt-entity/" class="">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>DTL Entity ID</mat-card-title>
+	</mat-card>
+	<mat-card fxFlex="33%" routerLink="../sender-id/" class="">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>Sender ID</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="../template-id/" class="">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>Template ID</mat-card-title>
+	</mat-card>
+
+	
+	
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+
+	<mat-card fxFlex="31.5%" routerLink="../operator/" class="">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>Operator</mat-card-title>
+	</mat-card>
+	
+</div>
+
+
+</div>
+<router-outlet></router-outlet>

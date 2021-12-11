@@ -1,0 +1,127 @@
+<mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #drawer fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+          [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
+          <img src="./assets/images/Dial-ERP-Logo.svg" class="logo">
+
+          <button mat-raised-button (click)="openDialog()" class="compose-btn">COMPOSE</button>
+
+          <h3>Envelops</h3>
+          <mat-nav-list >
+            <mat-list-item routerLink="/email/mails">
+              <mat-icon matListIcon>mail</mat-icon>
+              <a matLine>Inbox</a>
+            </mat-list-item>
+      
+            <mat-list-item>
+              <mat-icon matListIcon>near_me</mat-icon>
+              <a matLine>Sent</a>
+            </mat-list-item>
+      
+            <mat-list-item>
+              <mat-icon matListIcon>drafts</mat-icon>
+              <a matLine>Draft</a>
+            </mat-list-item>
+      
+            <mat-list-item >
+              <mat-icon matListIcon>delete</mat-icon>
+              <a matLine>Deleted</a>
+            </mat-list-item>
+      
+          </mat-nav-list>
+
+          <h3>Quick view</h3>
+          <mat-nav-list >
+            <mat-list-item>
+              <mat-icon matListIcon>star</mat-icon>
+              <a matLine>Starred</a>
+            </mat-list-item>
+      
+            <mat-list-item>
+              <mat-icon matListIcon>label</mat-icon>
+              <a matLine>Labels</a>
+            </mat-list-item>
+      
+          </mat-nav-list>
+          
+        </mat-sidenav>
+      
+        <mat-sidenav-content>
+          <mat-toolbar class="head-toolbar">
+        	<div class="header">
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async" class="meno">
+              <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+            <h2>Inbox</h2>
+<span class="example-spacer"></span>
+            
+           
+
+            
+ <div fxShow="true" layout-align="end">
+
+ <button mat-button [matMenuTriggerFor]="menu2"><span class="material-icons">compare_arrows</span><small class="mnu">  Switch</small> <span class="material-icons">keyboard_arrow_down</span> </button>
+<mat-menu #menu2="matMenu" class="right-panel">
+  <button mat-menu-item routerLink="/salescrm"><span class="material-icons">
+app_settings_alt</span>Sales Crm</button>
+  <button mat-menu-item routerLink="/hrm"><span class="material-icons">
+subject</span> Hrm</button>
+  <button mat-menu-item routerLink="/finance"><span class="material-icons">
+money</span> Finance</button>
+  <button mat-menu-item routerLink="/distribution"><span class="material-icons">
+store</span> Distribution</button>
+
+<button mat-menu-item routerLink="/marketing"><span class="material-icons">
+store</span> Marketing</button>
+
+<button mat-menu-item routerLink="/production"><span class="material-icons">
+store</span> Production</button>
+
+<button mat-menu-item routerLink="/dispatch"><span class="material-icons">
+store</span> Logistics</button>
+
+
+<button mat-menu-item routerLink="/ivrmodule"><span class="material-icons">
+store</span> IVR</button>
+
+
+  <button mat-menu-item routerLink="/support-crm"><span class="material-icons">
+help_outline</span> Support Crm</button>
+<button mat-menu-item routerLink="/email"><span class="material-icons">
+  mail</span> Email</button>
+  <button mat-menu-item><span class="material-icons">
+sms</span> SMS</button>
+</mat-menu>
+ 
+
+ <button mat-button [matMenuTriggerFor]="menu"><span class="material-icons">person_outline</span><small class="mnu"> Admin</small>  <span class="material-icons">keyboard_arrow_down</span></button>
+
+<mat-menu #menu="matMenu" class="right-panel">
+  <button mat-menu-item><span class="material-icons">person</span> Employee</button>
+  <button mat-menu-item><span class="material-icons">work_outline</span>Department</button>
+  <button mat-menu-item><span class="material-icons">dynamic_feed</span> Sub-Department</button>
+  <button mat-menu-item><span class="material-icons">subject</span> Management Level</button>
+  <button mat-menu-item><span class="material-icons">branding_watermark</span> Designation</button>
+  <button mat-menu-item routerLink="/myaccount"><span class="material-icons">account_balance</span> My Company</button>
+  <button mat-menu-item class="seprator"><span class="material-icons">amp_stories</span> My Profile</button>
+  <button mat-menu-item routerLink="/myaccount"><span class="material-icons">settings</span>My Account</button>
+  <button mat-menu-item><span class="material-icons">
+corporate_fare</span> Help Center</button>
+  <button mat-menu-item><span class="material-icons">exit_to_app</span> Logout</button>
+</mat-menu>
+
+
+
+   </div>
+           
+       </div> 
+          </mat-toolbar>
+
+     
+
+          <div class="ylb-app-content">
+
+              <router-outlet></router-outlet>
+          </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+      

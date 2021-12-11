@@ -1,0 +1,104 @@
+body { background: #f2f2f2 }
+.fixed-header {position: fixed; top: 0; right: 0; left: 0; z-index: 9;
+    box-shadow: 0 2px 4px rgba(0,0,0,.24);}
+.mat-h2 { margin:0 auto !important; }
+.content { padding: 0px 20px; background:#f2f2f2; }
+.layout {
+    background: #f2f2f2;
+    padding-top: 50px;
+    width: 100%;
+    margin: auto;
+    margin-top: 60px;
+}
+mat-card { width: 100% }
+.n14 {
+    font-size: 16px;
+    color: rgba(0,0,0,.5) !important;
+    float: right;
+    padding: 0px;
+    height: 32px;
+    min-width: 50px;
+}
+.mat-form-field {
+    width: 100%;
+}
+table .n14, .tabless .n14 {
+    font-size: 14px;
+    color: rgba(0,0,0,.5) !important;
+    padding: 0px;
+    height: 20px;
+    min-width: 38px;
+    line-height: 23px;
+    }
+.tabless .mat-form-field-appearance-outline .mat-form-field-outline  {color: rgba(0,0,0,.12) !important;}
+table { margin-bottom: 30px;}
+.table { border-collapse: collapse !important;width:100%;}
+.table .mat-form-field-wrapper { padding-bottom: 0em !important }
+.table .mat-form-field-appearance-outline .mat-form-field-infix { line-height: 29px; padding:6px 0px 0px 0px;}
+.table .mat-form-field-infix { border-top: none; }
+.table input.mat-input-element { line-height: 30px; }
+.table .mat-form-field-appearance-outline .mat-form-field-wrapper { margin:0px 0px; }
+.table .mat-form-field-appearance-outline .mat-form-field-flex { margin-top: -5px !important; }
+.table .mat-form-field-appearance-outline .mat-form-field-outline  {color: rgba(256,256,256,.9); right: -1px; bottom:-1px; top: .35em !important}
+.table .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-datepicker-toggle-default-icon, .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+width: 12px !important; height: 12px !important;}
+.table .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button {
+ width: 15px !important; height: 15px !important;}
+.table .mat-form-field-appearance-outline .mat-form-field-outline-start, .table .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    border-radius: 0px 0 0 0px;  }
+.table-2{ counter-reset: serial-number; border:1px solid #d3d3d3; border-bottom: none;    width: 100%;}
+.table-2 .sr-no td:first-child:before { counter-increment: serial-number; 
+ content: counter(serial-number); }
+ table th {background: #dedede !important;white-space: nowrap; padding: 8px 14px;text-align: left;}
+ table td {white-space: nowrap; padding: 0px 14px; border-right: 1px solid #d3d3d3; border-bottom: 1px solid #d3d3d3;overflow: hidden; }
+ table td:last-child { border-right: none; }
+ .pd-0 { padding: 0px 0px; }
+ .table .material-icons { font-size: 17px;position: relative;
+top: 3px;margin-left: 3px;}
+.grey { background:#f4f4f4}
+.green { color: green }
+.red { color: red; }
+.wd-30 { width: 30px; }
+
+@media only screen and (max-width: 786px) { 
+.name2 .mat-form-field-infix { width: 165px !important; }
+    .table { overflow-x: scroll; }
+    mat-card { width: auto !important }
+.tabless ~ .tabless{ margin-top: 30px; }
+    .tabless .mat-form-field {
+    width: 99% !important;}
+ .tabless {overflow: hidden;}
+ .acc-btn { height: 20px !important; }  
+ .example-spacer {  flex: 1 1 auto;} 
+                                     
+}
+.ct-area { padding: 30px 0px; }
+
+
+.non-edit {
+    text-align: left;
+    margin-top: 10px;
+}
+.non-edit h2 {
+    font-size: 16px;
+    margin-bottom: 2px;
+    line-height: 25px;
+}
+.non-edit p {
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+.at-comp{ margin-bottom: 30px; }
+
+.tabless .mat-form-field {
+    width: 52%;
+}
+.total-row .grey {
+    background: #d1cfcf !important;
+}
+
+.total-row td {
+    padding: 5px 14px !important;
+    font-weight: bold;
+}
+.acc-btn { height: 20px; line-height: 20px !important; margin-left: 23% !important}

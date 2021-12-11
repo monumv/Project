@@ -1,0 +1,33 @@
+
+
+.red { color: red;}
+.mat-form-field-infix {padding: 0px 0px !important;  border-top:0px !important; width: 382px !important }
+.mat-form-field-wrapper { padding-bottom:0px !important}
+input { border-width: 0px !important; line-height: 22px; width: 100%;}
+ .pd-10{ padding: 0px 5px;}
+ .mat-checkbox-inner-container { margin-right: 0px;}
+ .mat-dialog-actions { margin-bottom: 0px !important; flex-wrap: inherit !important;}
+ .butns { display: block !important;}
+ .butns button { float:right; margin-left:15px; } 
+ .mat-dialog-content { max-height: 100% !important;overflow: inherit !important;}
+ @media only screen and (max-width:786px) {   
+    .mat-form-field-infix { width: 100% !important}
+ .mat-dialog-content { max-height: 100% !important; overflow: inherit !important;}
+ .mat-form-field-appearance-outline .mat-form-field-outline { height: 33px !important;;}
+input.mat-input-element { line-height:31px; margin-top:2px;} 
+}
+ .action-bar { margin-bottom: 10px;}
+ table { border-top:1px solid #d3d3d3;border-right:none !important; border-left: 1px solid #d3d3d3; box-shadow:none;}
+ table td,  table th { border-right: 1px solid #d3d3d3 t}
+ table td:last-child,  table th:last-child { border-right:none !important}
+ td.mat-cell.pd-0 { padding: 0px 0px 0px 0px !important;}
+ .mat-table {box-shadow: none;}
+ input.mat-input-element { line-height: 28px; margin-top:2px;}
+ .mat-form-field-appearance-outline .mat-form-field-outline {
+    height: 33px; top:1px;}
+    .mat-form-field{ margin-left: -1px !important}
+    .mat-form-field-appearance-outline .mat-form-field-wrapper {height:30px; margin:0px 0px !important;}
+    .mat-form-field-appearance-outline .mat-form-field-flex { margin-top:-2px !important}
+    .mat-form-field-appearance-outline .mat-form-field-outline-start,     .mat-form-field-appearance-outline .mat-form-field-outline-end {border-radius: 0px !important}
+    .name3 { width:310px;}
+    .close { background:none; border:none !important;}

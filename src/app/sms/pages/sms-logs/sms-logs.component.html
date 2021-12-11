@@ -1,0 +1,332 @@
+
+<mat-sidenav #sidenav1 id="rightFilterNav" mode="side" position="end" role="" class="sidenav-wv">
+    <div class="mv-6">
+        <form class="example-form">
+            <h2 class="mv-2">Filter</h2>
+
+           
+          <span class="material-icons close-btn" (click)="sidenav1.toggle()"> close </span>
+
+<div class="filter-text">
+<mat-form-field>
+  <mat-label>Select an option</mat-label>
+  <mat-select disableRipple>
+    <mat-option value="1">Last 15 minutes</mat-option>
+    <mat-option value="2">Last 6 hours</mat-option>
+    <mat-option value="3">Last 24 hours</mat-option>
+    <mat-option value="4">Today so far</mat-option>
+    <mat-option value="5">Yesterday</mat-option>
+    <mat-option value="6">Last 7 days</mat-option>
+    <mat-option value="7">Last 30 days</mat-option>
+    <mat-option value="8">This week so far</mat-option>
+    <mat-option value="9">Last week</mat-option>
+    <mat-option value="10">Last month</mat-option>
+    <mat-option value="11">Custom</mat-option>
+  </mat-select>
+</mat-form-field>
+
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="Start Date/Time" appearance="outline" type="datetime-local" >
+  </mat-form-field>
+
+
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="End Date/Time" appearance="outline" type="datetime-local" >
+  </mat-form-field>
+
+
+<mat-form-field>
+  <mat-label>Status</mat-label>
+  <mat-select disableRipple>
+    <mat-option value="1">Delivered</mat-option>
+    <mat-option value="2">Pending</mat-option>
+    <mat-option value="3">Rejected</mat-option>
+    <mat-option value="4">Undeliverable</mat-option>
+    <mat-option value="5">Expired</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Accounts</mat-label>
+  <mat-select [formControl]="toppings" multiple>
+    <mat-select-trigger>
+      {{toppings.value ? toppings.value[0] : ''}}
+      <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+        (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger>
+    <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+ <mat-form-field class="example-full-width">
+    <mat-label>Users</mat-label>
+    <input type="text"
+           placeholder="Users"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+
+
+<mat-form-field>
+  <mat-label>Channels</mat-label>
+  <mat-select [formControl]="channels" multiple>
+    <mat-select-trigger>
+      {{channels.value ? channels.value[0] : ''}}
+      <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+        (+{{channels.value.length - 1}} {{channels.value?.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger>
+    <mat-option *ngFor="let topping of channelsList" [value]="topping">{{topping}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="Destination" appearance="outline" type="text" >
+  </mat-form-field>
+           
+
+ <mat-form-field class="example-full-width">
+    <mat-label>From</mat-label>
+    <input type="text"
+           placeholder="Froms"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+
+<mat-form-field>
+  <mat-label>Communication</mat-label>
+  <mat-select [formControl]="communication" multiple>
+    <mat-select-trigger>
+      {{communication.value ? communication.value[0] : ''}}
+      <span *ngIf="communication.value?.length > 1" class="example-additional-selection">
+        (+{{communication.value.length - 1}} {{communication.value?.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger>
+    <mat-option *ngFor="let topping of communicationList" [value]="topping">{{topping}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Countries</mat-label>
+    <input type="text"
+           placeholder="Countries"
+           aria-label="Number"
+           matInput
+           [formControl]="myControls"
+           [matAutocomplete]="autoTest">
+    <mat-autocomplete #autoTest="matAutocomplete">
+      <mat-option *ngFor="let option of optionss" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+
+<mat-form-field>
+  <mat-label>Networks</mat-label>
+  <mat-select [formControl]="network" multiple>
+    <mat-select-trigger>
+      {{network.value ? network.value[0] : ''}}
+      <span *ngIf="network.value?.length > 1" class="example-additional-selection">
+        (+{{network.value.length - 1}} {{network.value?.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger>
+    <mat-option *ngFor="let topping of networkList" [value]="topping">{{topping}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+ <mat-form-field class="example-full-width">
+    <input matInput placeholder="Message Id" appearance="outline" type="text" >
+  </mat-form-field>
+
+</div>
+
+            <mat-dialog-actions align="start">
+                <section>
+                    <div class="example-button-row mv-5">
+                        <button mat-button mat-dialog-close mat-raised-button color="white"
+                            (click)="sidenav1.toggle()" class="btn-primary">Apply</button>
+                        <button mat-button [mat-dialog-close]="true" cdkFocusInitial mat-raised-button
+                            color="white">Clear</button>
+                    </div>
+                </section>
+            </mat-dialog-actions>
+        </form>
+    </div>
+</mat-sidenav>
+
+    
+    <div class="content1">
+    
+    <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="crumb">
+            <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/sms">SMS Dashboard</a><span class="mv-18">/</span></span>
+                <span class="mv-17">Sent SMS Logs</span>
+            </div>
+        </mat-toolbar>
+    </div>
+        
+    <div fxLayout='row' fxLayout.xs='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+            <div class="content" fxFlex="100%">
+            <mat-card>
+                <div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+                    <h2 class="mat-h2">Sent SMS Logs</h2>
+                </div>
+        
+                <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                    <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+                        <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">add</mat-icon><small>Add</small></button>
+                        <button mat-stroked-button><mat-icon  role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_upward</mat-icon><small>Import</small></button>
+                        <button mat-stroked-button ><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_downward</mat-icon><small>Export</small></button>
+                        <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">delete_outline</mat-icon><small>Delete</small></button>
+                        <button mat-stroked-button (click)="sidenav1.toggle()"><span class="material-icons">filter_list</span></button>
+                    </div>
+        		</div>
+        </mat-card>
+
+
+        
+            </div>
+        </div>
+        
+        
+        <div fxLayout='row' class="content content2" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="center">
+        
+        <mat-card fxFlex="100%">
+        	<mat-card>
+              <div class="topbar"> 
+                  <div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+                    <mat-chip-list  fxFlex="100%" aria-label="Fish selection">
+                        <mat-chip>28-July-2020</mat-chip>
+                      </mat-chip-list>
+                </div>
+                
+                <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                    
+            <div class="paging" fxFlex="100%" layout-align="end" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="end" fxLayoutAlign.sm="start">
+              
+                <mat-paginator fxFlex="100%" style-paginator showFirstLastButtons
+                              [length]="7130"
+                              [pageSize]="10"
+                              pageSizeOptions
+                              [pageSizeOptions]="[5, 10, 25, 100]">
+                </mat-paginator>
+                
+            
+              
+            </div>
+        
+        
+        
+                </div>
+        </div>
+        
+        
+            </mat-card>
+        
+        
+        <div class="table">
+        <table mat-table [dataSource]="datass" class="mat-elevation-z8">
+        
+          
+        
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> Sr. </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+        
+          
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef class="date" >Date/Time</th>
+            <td mat-cell *matCellDef="let element" class="date" >{{element.date}} <br>
+            	<span class="mv-27">{{element.time}} </span>
+             </td>
+          </ng-container>
+
+          <ng-container matColumnDef="vch">
+            <th mat-header-cell *matHeaderCellDef  >Mobile No.	</th>
+            <td mat-cell *matCellDef="let element" >{{element.vch}}  </td>
+          </ng-container>
+         
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="document">
+            <th mat-header-cell *matHeaderCellDef  class="date"> Sender Id</th>
+            <td mat-cell *matCellDef="let element"  class="date green">{{element.document}} <br>
+            	<span class="mv-27">{{element.account}} </span> </td>
+          </ng-container>
+
+          <ng-container matColumnDef="demo">
+            <th mat-header-cell *matHeaderCellDef  >To</th>
+            <td mat-cell *matCellDef="let element" >{{element.demo}}  </td>
+          </ng-container>
+        
+
+
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Status</th>
+            <td mat-cell *matCellDef="let element" class="green"> {{element.status}} </td>
+          </ng-container>
+
+           <ng-container matColumnDef="count">
+            <th mat-header-cell *matHeaderCellDef>Sms Count</th>
+            <td mat-cell *matCellDef="let element" class=""> {{element.count}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef>Description</th>
+            <td mat-cell *matCellDef="let element" class=""> {{element.description}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="icon">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element">
+
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" class="action">
+        
+            <button mat-menu-item>
+                <mat-icon>visibility</mat-icon>
+                <span>View Details</span>
+              </button>
+
+        
+        </mat-menu>
+        </td>
+      </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+              (click)="selection.toggle">
+          </tr>
+        </table>
+        </div>
+        
+        </mat-card>
+        
+        </div>
+        
+        
+        
+        </div>
+        <router-outlet></router-outlet>

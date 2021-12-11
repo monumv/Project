@@ -1,0 +1,346 @@
+
+
+<mat-sidenav #sidenav1 id="rightFilterNav" mode="side" position="end" role="" class="sidenav-wv">
+        <div class="mv-6">
+            <form class="example-form">
+                <h2 class="mv-2">Filter</h2>
+      
+               
+              <span class="material-icons close-btn" (click)="sidenav1.toggle()"> close </span>
+      
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Search" appearance="outline" >
+                  </mat-form-field>
+                
+               
+                <mat-dialog-actions align="start">
+                    <section>
+                        <div class="example-button-row mv-5">
+                            <button mat-button mat-dialog-close mat-raised-button color="white"
+                                (click)="sidenav1.toggle()" class="btn-primary">Apply</button>
+                            <button mat-button [mat-dialog-close]="true" cdkFocusInitial mat-raised-button
+                                color="white">Clear</button>
+                        </div>
+                    </section>
+                </mat-dialog-actions>
+            </form>
+        </div>
+      </mat-sidenav>
+      
+      
+      <div class="content1">
+      
+      <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+          <mat-toolbar class="crumb">
+              <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/service-crm">Dashboard</a><span class="mv-18">/</span></span>
+                <span class="mv-17"><a  routerLink="/service-crm/complaints">Complaints</a><span class="mv-18">/</span></span>
+                <span class="mv-17"> Open Complaints</span>
+              </div>
+          </mat-toolbar>
+      
+      </div>
+       
+    
+          
+          <div fxLayout='row' fxLayout.xs='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+              
+              <div class="content" fxFlex="100%" >
+              <mat-card fxLayout='row' fxLayout.xs='row' fxLayout.sm='row'>
+                  <div fxFlex="100%" class="heading" >
+                      <h2 class="mat-h2">Complaint Number <span class="blue">201004-1 </span>| Age: <span class="red">33 Hrs</span> | Status : <span class="green">Open</span></h2>
+                  </div>
+          
+                  <div fxFlex="100%" class="heading">
+                      <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+                     
+                      <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">schedule</mat-icon> <small>Reschedule</small></button>
+
+
+                     <button mat-stroked-button (click)="openDialog('close')"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">thumb_up_alt</mat-icon> <small>Close Complaint</small></button>
+                         
+                  <button mat-stroked-button (click)="openDialog('cancel')"><mat-icon  role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">thumb_down_alt</mat-icon> <small>Cancel</small></button>
+                  
+                  <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">delete_outline</mat-icon> <small>Delete</small></button>
+          
+          
+          
+                  </div>
+          </div>
+          
+          
+              </mat-card>
+          
+              </div>
+          </div>
+          
+        
+
+          <div fxLayout='row' class="content content2" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutGap="3%" fxLayoutAlign="center">
+          
+           <mat-card fxFlex="66%">
+
+            <div fxLayout='row' class="head" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+              <p><b>Complaint Details</b></p>
+               <span class="example-spacer"></span>
+              <p class="blue"><b>Edit</b></p>
+            </div>
+             <div class="table">
+            <table class="" cellpadding="0" cellspacing="0">
+                <tr class="border">
+                    <td class="mat-header-cell cells">Item</td>
+                    <td class="pd-0 blue">
+                       Bluemount RO 25 Ltr. Water Purifier
+                    </td>
+                </tr>
+
+                <tr class="border">
+                    <td class="mat-header-cell cells">Serial No.</td>
+                    <td class="pd-0">
+                       578903
+                    </td>
+                </tr>
+
+                 <tr class="border">
+                    <td class="mat-header-cell cells">Warranty Status</td>
+                    <td class="pd-0 green">
+                       In Warranty
+                    </td>
+                </tr>
+                 <tr class="border">
+                    <td class="mat-header-cell cells">Problem</td>
+                    <td class="pd-0">
+                       Filter Repair
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+            <div fxLayout='row' class="head" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+              <p><b>Assignment Details</b></p>
+               <span class="example-spacer"></span>
+              <p class="blue" (click)="openDialog('transfer')"><b>Transfer</b></p>
+            </div>
+             <div class="table">
+            <table class="" cellpadding="0" cellspacing="0">
+                <tr class="border">
+                    <td class="mat-header-cell cells">Service Center</td>
+                    <td class="pd-0 blue">
+                       Akash Service Center (783)
+                    </td>
+                </tr>
+
+                <tr class="border">
+                    <td class="mat-header-cell cells">Service Engineer</td>
+                    <td class="pd-0 blue">
+                       Rakesh Kumar (784)
+                    </td>
+                </tr>
+
+                 <tr class="border">
+                    <td class="mat-header-cell cells red">Visit Schedule</td>
+                    <td class="pd-0 red">
+                       15-Oct-2020 | 12:20
+                    </td>
+                </tr>
+            </table>
+
+            </div>
+
+
+            <div fxLayout='row' class="head" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+              <p><b>Customer Contact</b></p>
+            </div>
+             <div class="table">
+            <table class="" cellpadding="0" cellspacing="0">
+                <tr class="border">
+                    <td class="mat-header-cell cells">Name</td>
+                    <td class="pd-0 blue">
+                       Pratik Kumar (783)
+                    </td>
+                </tr>
+
+                <tr class="border">
+                    <td class="mat-header-cell cells">Mobile</td>
+                    <td class="pd-0">
+                       +91-7045362769
+                    </td>
+                </tr>
+
+                 <tr class="border">
+                    <td class="mat-header-cell cells">Email</td>
+                    <td class="pd-0">
+                       pratikkumar@gmail.com
+                    </td>
+                </tr>
+            </table>
+
+            </div>
+
+
+            <div fxLayout='row' class="head" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+              <p><b>Visit Address</b></p>
+               <span class="example-spacer"></span>
+              <p class="blue"><b>Edit</b></p>
+            </div>
+             <div class="table">
+            <table class="" cellpadding="0" cellspacing="0">
+                <tr class="border">
+                    <td class="mat-header-cell cells">Address</td>
+                    <td class="pd-0">
+                       C-130, 2nd Floor, Sec-02, Noida Uttar Pradesh, 201301
+                    </td>
+                </tr>
+
+            </table>
+
+            </div>
+
+
+            <div fxLayout='row' class="head" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+              <p><b>Service Bill</b></p>
+               <span class="example-spacer"></span>
+              <p class="blue"><b>Edit</b></p>
+            </div>
+             <div class="table">
+            <table class="" cellpadding="0" cellspacing="0">
+
+
+                <tr class="border">
+                    <td class="mat-header-cell cells">Billing Name</td>
+                    <td class="pd-0 blue">
+                       Pratik Kumar (783)
+                    </td>
+                </tr>
+
+                 <tr class="border">
+                    <td class="mat-header-cell cells">Billing Address</td>
+                    <td class="pd-0">
+                       C-130, 2nd Floor, Sec-02, Noida Uttar Pradesh, 201301
+                    </td>
+                </tr>
+                <tr class="border">
+                    <td class="mat-header-cell cells">Service Order No.</td>
+                    <td class="pd-0 blue">
+                       57809
+                    </td>
+                </tr>
+
+                <tr class="border">
+                    <td class="mat-header-cell cells">Billed</td>
+                    <td class="pd-0">
+                      INR 2,000
+                    </td>
+                </tr>
+
+                 <tr class="border">
+                    <td class="mat-header-cell cells">Paid</td>
+                    <td class="pd-0">
+                        INR 1,500
+                    </td>
+                </tr>
+
+                <tr class="border">
+                    <td class="mat-header-cell cells">Balance</td>
+                    <td class="pd-0">
+                        INR 500
+                    </td>
+                </tr>
+            </table>
+
+            </div>
+
+        </mat-card>
+        
+
+        <mat-card fxFlex="33%" class="">
+           <div fxLayout='row' class="head" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+          <p><b>Timeline</b></p>
+        </div>
+
+
+
+         <div fxLayout='row' class="timeline" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+
+
+         <div class="history-tl-container">
+  <ul class="tl">
+    <li class="tl-item" ng-repeat="item in retailer_history">
+     
+      <div class="item-title green">Complaint Raised</div>
+      <div class="item-detail red">I am looking for a service engineer to resolve my issue. Product Name : Bluemount RO
+Product Unit : 01</div>
+
+
+       <div fxLayout='row' fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+        <p>By Satyam Sharma</p>
+         <span class="example-spacer"></span>
+        <p class="grey">04-Oct-2020 | 12:25</p>
+      </div>
+
+    </li>
+    <li class="tl-item" ng-repeat="item in retailer_history">
+      
+      <div class="item-title green">Complaint Accepted</div>
+     <div class="item-detail red">Dear Customer, Your request 200926-03914 is
+registered with us & will be attended shortly.
+Please wait for authorised engineer detail SMS &
+keep your invoice/warranty card handy for verification.</div>
+
+
+       <div fxLayout='row' fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+        <p>By system</p>
+         <span class="example-spacer"></span>
+        <p class="grey">04-Oct-2020 | 12:25</p>
+      </div>
+    </li>
+    <li class="tl-item" ng-repeat="item in retailer_history">
+      
+      <div class="item-title green">Complaint Assigned</div>
+      <div class="item-detail red">Dear Customer, Your request 1/02092020 is assigned to
+RAhul Kumar .Engineer will visit on 27/09/2020
+tentatively at 11:21 AM. Please use registered number
+to contact him. Thank You. </div>
+
+
+       <div fxLayout='row' fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+        <p>By system</p>
+         <span class="example-spacer"></span>
+        <p class="grey">04-Oct-2020 | 12:25</p>
+      </div>
+    </li>
+
+  </ul>
+
+</div>
+
+         </div>
+
+<div class="add-comment" fxLayout='row' fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center" fxLayoutgap="2%">
+<div fxFlex="60%" class="block">
+    <mat-form-field appearance="outline">
+  <mat-label>Add Private Comments</mat-label>
+  <textarea matInput></textarea>
+</mat-form-field>
+
+</div>
+
+<div fxFlex="35%" class="block block2">
+   <button mat-mini-fab disabled  color="" aria-label="Example icon button with a delete icon">
+          <mat-icon>attachment</mat-icon>
+        </button>
+
+ 
+ <button mat-raised-button color="primary">Submit</button>
+
+</div>
+</div>
+        </mat-card>
+          
+          </div>
+          
+          
+          
+          </div>
+          <router-outlet></router-outlet>

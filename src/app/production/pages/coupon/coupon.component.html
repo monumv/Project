@@ -1,0 +1,40 @@
+<div class="content1">
+
+     <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+            <span class="mv-17"><a  routerLink="/production">Production Dashboard</a><span class="mv-18">/</span></span>
+             <span class="mv-17"><a  routerLink="/production/rewards">Rewards Management</a><span class="mv-18">/</span></span>
+            <span class="mv-17">Coupon Management</span>
+        </div>
+    </mat-toolbar>
+</div>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <h2 class="mat-h2">Coupon Points Management</h2>
+    </div>
+
+            
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+          <mat-card fxFlex="33%" routerLink="/production/couponbatchlist/" class="">
+                <img mat-card-sm-image src="./assets/images/p-salary.png" alt="Complaints">
+                <mat-card-title>Coupon Batchs</mat-card-title>
+            </mat-card> 
+            <mat-card fxFlex="33%" class="" routerLink="/production/couponcode/">
+                <img mat-card-sm-image src="./assets/images/p-salary.png" alt="Complaints">
+                <mat-card-title>Coupon Created</mat-card-title>
+            </mat-card>
+
+            <mat-card fxFlex="33%" class="" routerLink="/production/claim/">
+                <img mat-card-sm-image src="./assets/images/approved-salary.png" alt="Complaints">
+                <mat-card-title>Coupon Claimed</mat-card-title>
+            </mat-card>
+
+    
+        </div>
+
+          
+    
+    </div>
+    <router-outlet></router-outlet>

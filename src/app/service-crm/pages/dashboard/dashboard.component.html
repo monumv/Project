@@ -1,0 +1,71 @@
+<div class="content1">
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<mat-toolbar class="breadcrumb">Sertvice CRM </mat-toolbar>
+
+</div>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">Service CRM </h2>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="/service-crm/complaints" class="border">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>Complaints</mat-card-title>
+	</mat-card>
+	<mat-card fxFlex="33%" class="border" routerLink="/service-crm/feedbacks">
+		<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+		<mat-card-title>Feedbacks</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" class="border" routerLink="/service-crm/crmsettings">
+		<img mat-card-sm-image src="./assets/images/settings.png" alt="Complaints">
+		<mat-card-title>Service Masters</mat-card-title>
+	</mat-card>
+
+</div>
+
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="/service-crm/routeplanner" class="border">
+		<img mat-card-sm-image src="./assets/images/city.png" alt="Complaints">
+		<mat-card-title>Service Route Planner</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/service-crm/foclaims" class="border">
+		<img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+		<mat-card-title>FOC Spares Claims</mat-card-title>
+	</mat-card>
+		<mat-card fxFlex="33%" class="border" routerLink="/service-crm/chargesdue">
+		<img mat-card-sm-image src="./assets/images/p-salary.png" alt="Complaints">
+		<mat-card-title>Service Payouts</mat-card-title>
+	</mat-card>
+
+</div>
+
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+		<mat-card fxFlex="33%" class="border" routerLink="/service-crm/chargesclaims">
+		<img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+		<mat-card-title>Wallet Withdrawls</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" class="border" routerLink="/service-crm/servicecatelogue">
+		<img mat-card-sm-image src="./assets/images/full-final.png" alt="Complaints">
+		<mat-card-title>Service Catalog Management</mat-card-title>
+	</mat-card>
+
+		<mat-card fxFlex="33%" class="border" routerLink="/service-crm/complaint-management">
+		<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+		<mat-card-title>Complaint Management</mat-card-title>
+	</mat-card>
+
+
+</div>
+
+
+
+
+</div>
+<router-outlet></router-outlet>

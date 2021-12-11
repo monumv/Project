@@ -1,0 +1,62 @@
+<div class="content1">
+
+	<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+            <span class="mv-17"><a  routerLink="/finance">Finance</a><span class="mv-18">/</span></span>
+
+            <span class="mv-17"><a  routerLink="/finance/vouchers">Vouchers</a><span class="mv-18">/</span></span>
+            <span class="mv-17">Purchase Management</span>
+        </div>
+    </mat-toolbar>
+</div>
+	
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">Purchase Management</h2>
+	</div>
+
+			
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="/finance/sale/" class="">
+				<img mat-card-sm-image src="./assets/images/p-salary.png" alt="Complaints">
+				<mat-card-title>Purchase</mat-card-title>
+			</mat-card>	
+	
+		<mat-card fxFlex="33%" routerLink="" class="">
+			<img mat-card-sm-image src="./assets/images/paid-salary.png" alt="Complaints">
+			<mat-card-title>Purchase Orders</mat-card-title>
+		</mat-card>
+
+		<mat-card fxFlex="33%" routerLink="/finance/saleorderindirect/" class="border">
+			<img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+			<mat-card-title>Purchase Orders (Indirect)</mat-card-title>
+		</mat-card>
+				
+
+		</div>
+	
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+		
+	<mat-card fxFlex="31.5%" routerLink="" class="">
+		<img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+		<mat-card-title>Purchase Order (Branch)</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="31.5%" routerLink="/finance/salesreturncr/" class="">
+			<img mat-card-sm-image src="./assets/images/experience.png" alt="Complaints">
+			<mat-card-title>Purchase Return</mat-card-title>
+		</mat-card>
+
+
+	
+	</div>
+
+
+
+
+		
+
+	
+
+	</div>
+	<router-outlet></router-outlet>

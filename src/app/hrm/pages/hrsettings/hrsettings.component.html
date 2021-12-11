@@ -1,0 +1,45 @@
+
+<div class="content1">
+
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="breadcrumb">HRM Dashboard</mat-toolbar>
+    
+    </div>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <h2 class="mat-h2">HR Settings</h2>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="33%" routerLink="/hrm/attendacegroup" class="">
+            <img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+            <mat-card-title>Attendance Group</mat-card-title>
+        </mat-card>
+    
+        <mat-card fxFlex="33%" routerLink="/hrm/attendancestatus" class="">
+            <img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+            <mat-card-title>Attendance Status</mat-card-title>
+        </mat-card>
+
+         <mat-card fxFlex="33%" routerLink="/hrm/biometrix" class="">
+            <img mat-card-sm-image src="./assets/images/biometrix.png" alt="Complaints">
+            <mat-card-title>BioMatrix Devices</mat-card-title>
+        </mat-card>
+
+    </div>
+
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="31.5%" routerLink="/hrm/shift" class="">
+            <img mat-card-sm-image src="./assets/images/daily-attendance.png" alt="Complaints">
+            <mat-card-title>Shift</mat-card-title>
+        </mat-card>
+    
+       
+
+    </div>
+
+  
+   
+  
+    </div>
+    <router-outlet></router-outlet>

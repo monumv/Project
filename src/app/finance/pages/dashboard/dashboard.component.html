@@ -1,0 +1,81 @@
+<div class="content1">
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<mat-toolbar class="breadcrumb">My App</mat-toolbar>
+
+</div>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">Finance</h2>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+	<mat-card fxFlex="33%" routerLink="/finance/vouchers/" class="border">
+		<img mat-card-sm-image src="./assets/images/salary-slip.png" alt="Complaints">
+		<mat-card-title>Vouchers</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/finance/account-management/" class="border">
+		<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+		<mat-card-title>Account Management</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/finance/itemmanagement/" class="border">
+		<img mat-card-sm-image src="./assets/images/experience.png" alt="Complaints">
+		<mat-card-title>Item Management</mat-card-title>
+	</mat-card>
+</div>
+
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+		<mat-card fxFlex="33%" routerLink="/finance/stockinhand/" class="border">
+			<img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+			<mat-card-title>Stock In Hand</mat-card-title>
+		</mat-card>
+	
+		<mat-card fxFlex="33%" routerLink="/finance/itemparty/" class="border">
+			<img mat-card-sm-image src="./assets/images/joining.png" alt="Complaints">
+			<mat-card-title>Item Party Ledger</mat-card-title>
+		</mat-card>
+	
+		<mat-card fxFlex="33%" class="">
+			<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+			<mat-card-title>Rewards Party Ledger</mat-card-title>
+		</mat-card>
+	</div>
+
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+		<mat-card fxFlex="31.5%" routerLink="/finance/financesettings/" class="border">
+			<img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+			<mat-card-title>Finance Setting</mat-card-title>
+		</mat-card>
+
+		<mat-card fxFlex="31.5%" routerLink="/finance/proposals/" class="border">
+			<img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+			<mat-card-title>Proposals</mat-card-title>
+		</mat-card>
+
+			<mat-card fxFlex="31.5%" routerLink="/finance/whitebillsreport/" class="border">
+			<img mat-card-sm-image src="./assets/images/experience.png" alt="Complaints">
+			<mat-card-title>Whitebills Reports</mat-card-title>
+		</mat-card>
+	
+		
+	</div>
+
+
+
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+	<mat-card fxFlex="31.5%" routerLink="/finance/reports/" class="border">
+		<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+		<mat-card-title>Reports</mat-card-title>
+	</mat-card>
+
+	</div>
+
+</div>
+<router-outlet></router-outlet>

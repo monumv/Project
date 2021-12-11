@@ -1,0 +1,56 @@
+<div class="transport">
+	<div class="row">
+		<h5><mat-icon> business</mat-icon> Mangal Transport</h5>
+		<p><mat-icon> location_on</mat-icon> Shop No.115 Noida (UP) 201301</p>
+		<h6><mat-icon> highlight</mat-icon> <a href="">Transpoter</a></h6>
+		<p>ERP ID : <span>1022</span></p>
+		<p>Alias Name : <span>15425416</span></p>
+	</div>
+</div><!-- transport -->
+
+<mat-accordion class="example-headers-align" multi>
+	<mat-expansion-panel>
+		<mat-expansion-panel-header>
+			<mat-panel-title>
+				 Drop Locations
+			</mat-panel-title>
+			<mat-panel-description>
+				20
+			</mat-panel-description>
+		</mat-expansion-panel-header>
+		<app-drop-location></app-drop-location>
+	</mat-expansion-panel>
+
+	<mat-expansion-panel>
+		<mat-expansion-panel-header>
+			<mat-panel-title>
+				Items Loaded
+			</mat-panel-title>
+			<mat-panel-description>
+				50
+			</mat-panel-description>
+		</mat-expansion-panel-header>
+		<app-preview-loaded-vehical></app-preview-loaded-vehical>
+	</mat-expansion-panel>
+
+	<mat-expansion-panel>
+		<mat-expansion-panel-header>
+			<mat-panel-title>
+				Items Pending
+			</mat-panel-title>
+			<mat-panel-description>
+				50
+			</mat-panel-description>
+		</mat-expansion-panel-header>
+		<app-itemspending></app-itemspending>
+	</mat-expansion-panel>
+
+
+	<app-loaditems></app-loaditems>
+</mat-accordion>
+
+<div class="mv-141">
+<button mat-raised-button matStepperPrevious>Back</button>
+<button mat-raised-button color="accent">Generate Bills</button>
+			</div>
+

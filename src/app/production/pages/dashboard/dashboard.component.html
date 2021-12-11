@@ -1,0 +1,55 @@
+<div class="content1">
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<mat-toolbar class="breadcrumb">Production Dashboard</mat-toolbar>
+
+</div>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">Production Dashboard</h2>
+</div>
+
+<div class="contents" fxLayout.xs='column'  fxLayout.sm='column'fxLayoutGap="3%" fxLayoutAlign="left">
+	
+<div  class="card">
+	<mat-card routerLink="/production/inhouse" class="border">
+		<img mat-card-sm-image src="./assets/images/assets.png" alt="Complaints">
+		<mat-card-title>Production Planning</mat-card-title>
+	</mat-card>
+</div>
+<div  class="card">
+	<mat-card routerLink="/production/barcode" class="border">
+		<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+		<mat-card-title>Barcode Management</mat-card-title>
+	</mat-card>
+</div>
+
+	
+<div  class="card">
+	<mat-card routerLink="/production/production" class="border">
+		<img mat-card-sm-image src="./assets/images/monthly.png" alt="Complaints">
+		<mat-card-title>Production Reports</mat-card-title>
+	</mat-card>
+</div>
+
+<div  class="card">
+	<mat-card routerLink="/production/bom" class="">
+		<img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+		<mat-card-title>BOM</mat-card-title>
+	</mat-card>
+</div>
+
+
+<div  class="card">
+	<mat-card routerLink="/production/rewards" class="border">
+		<img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+		<mat-card-title>Rewards Management</mat-card-title>
+	</mat-card>
+</div>
+
+
+
+</div>
+
+</div>
+<router-outlet></router-outlet>

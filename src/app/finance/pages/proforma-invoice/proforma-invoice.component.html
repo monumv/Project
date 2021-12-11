@@ -1,0 +1,526 @@
+<div class="content1" style="font-family: arial">
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center" style="position: fixed;z-index: 99; top: 0; right: 0; left: 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);background: #f5f5f5;height: 64px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    color: rgba(0,0,0,.87);
+}">
+      <div class="example-button-row" style="
+    margin: 0 auto!important; ">
+        <button mat-stroked-button (click)="printComponent('divPrint')" style=" margin-right: 10px;
+    padding: 0 8px;  line-height: 30px;"><span class="material-icons">
+          print</span> <small>Print</small></button>
+        <button mat-stroked-button style=" margin-right: 10px;
+    padding: 0 8px;  line-height: 30px;"><span class="material-icons">
+          create </span> <small>Edit</small></button>
+        <button mat-stroked-button style=" margin-right: 10px;
+    padding: 0 8px;  line-height: 30px;"><span class="material-icons">
+            delete_outline</span> <small>Delete</small></button>
+        <button mat-stroked-button style=" margin-right: 10px;
+    padding: 0 8px;  line-height: 30px;"><span class="material-icons" (click)="sendDataToEmail('divPrint')">
+          email</span> <small>Email</small></button>
+      </div>
+    </mat-toolbar>
+      <div class="pdd-20">
+      <div fxLayout='row' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center" id="divPrint" style="padding:102px 0px 60px 0px; background-color: #f2f2f2;justify-content:center; ">
+      
+      <div style="background-color: #fff;
+    border:1px solid #000; margin:0 auto !important;
+    border-radius: 0;
+    width:900px; padding: 0 !important;
+">
+      <mat-card style="padding:0px; background: #fff">
+      <div>
+      <div  style="
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch; width: 100%
+">
+      
+        <div  align="left" style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 50%; width: 100%">
+          <img src="http://pintmail.com/erp-landing/assets/img/Dial-ERP-Logo.svg" class="logo" style ="width: 180px;">
+        </div>
+      
+        <div align="left" style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 50%; width: 100%">
+          <h2 style="
+    float: right;
+    padding-right: 10px;
+    font-weight: 600;
+    font-size: 23px;
+    margin-top: 10px; font-family: arial">Tax Invoice</h2>
+        </div>
+      
+      </div>
+      
+      
+      
+      
+      <div style="
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch; border-bottom: 1px solid #000; width: 100%
+">
+      
+      
+          <div style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 50%; width: 100%
+">
+              
+              <div style="padding-left: 10px;">
+                  <h4 style="margin-bottom: 8px;font-size: 16px;line-height: 17px;"> 
+                    <b style="font-weight: 600; font-family: arial">
+                      <small>Bill From</small> 
+                      <br>GetON Infotech Pvt Ltd</b>
+                  </h4>
+                  <p style="font-size: 15px;line-height: 17px; font-family: arial">
+                      C-130, 2nd Floor<br>
+                      Sector - 2, Noida<br>
+                      Uttar Pradesh -201301, State Code - 09<br>
+                       <span style="display:inline-block; width: 52px;">Email</span> : info@geton.co.in<br>
+                      <span style="display:inline-block; width: 52px;">Mobile</span> : 9971122333<br>
+                      <span style="display:inline-block; width: 52px;">ErpID</span> : 434314<br>
+                      <span style="display:inline-block; width: 52px;">Alias</span> : Geton<br>
+                      <span style="display:inline-block; width: 52px;">GST</span> : GDFG5784954FGJ
+                  </p>
+              </div>
+          </div>
+      
+          <div style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 50%; width: 100%
+">
+              
+              <div>
+                  <h4 style="margin-bottom: 8px;font-size: 16px;line-height: 17px;"> <b style="font-weight: 600; font-family: arial"><small>Ship From </small> <br>GetON Infotech Pvt Ltd</b>
+                  </h4>
+                  <p style="font-size: 15px;line-height: 17px; font-family: arial">
+                      C-130, 2nd Floor<br>
+                      Sector - 2, Noida<br>
+                      Uttar Pradesh -201301, State Code - 09<br>
+                       <span style="display:inline-block; width: 52px;">Email</span> : info@geton.co.in<br>
+                      <span style="display:inline-block; width: 52px;">Mobile</span> : 9971122333<br>
+                      <span style="display:inline-block; width: 52px;">ErpID</span> : 434314<br>
+                      <span style="display:inline-block; width: 52px;">Alias</span> : Geton<br>
+                      <span style="display:inline-block; width: 52px;">GST</span> : GDFG5784954FGJ
+                  </p>
+              </div>
+          </div>
+      
+      </div>
+      
+      <div  style="
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch;
+">
+      
+      
+          <div style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 50%;padding-left: 10px; width: 100%
+" >
+              
+              <div>
+                  <h4 style="margin-bottom: 8px;font-size: 16px;line-height: 17px;"> <b style="font-weight: 600; font-family: arial"><small>Bill To </small> <br>GetON Infotech Pvt Ltd</b>
+                  </h4>
+                  <p style="font-size: 15px;line-height: 17px; font-family: arial">
+                      C-130, 2nd Floor<br>
+                      Sector - 2, Noida<br>
+                      Uttar Pradesh -201301, State Code - 09<br>
+                       <span style="display:inline-block; width: 52px;">Email</span> : info@geton.co.in<br>
+                      <span style="display:inline-block; width: 52px;">Mobile</span> : 9971122333<br>
+                      <span style="display:inline-block; width: 52px;">ErpID</span> : 434314<br>
+                      <span style="display:inline-block; width: 52px;">Alias</span> : Geton<br>
+                      <span style="display:inline-block; width: 52px;">GST</span> : GDFG5784954FGJ
+                  </p>
+              </div>
+          </div>
+      
+          <div  style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 50%; width: 100%
+">
+              
+              <div>
+                  <h4 style="margin-bottom: 8px;font-size: 16px;line-height: 17px;"> <b style="font-weight: 600; font-family: arial"><small>Ship To</small> <br>GetON Infotech Pvt Ltd</b>
+                  </h4>
+                  <p style="font-size: 15px;line-height: 17px; font-family: arial">
+                      C-130, 2nd Floor<br>
+                      Sector - 2, Noida<br>
+                      Uttar Pradesh -201301, State Code - 09<br>
+                       <span style="display:inline-block; width: 52px;">Email</span> : info@geton.co.in<br>
+                      <span style="display:inline-block; width: 52px;">Mobile</span> : 9971122333<br>
+                      <span style="display:inline-block; width: 52px;">ErpID </span> : 434314<br>
+                      <span style="display:inline-block; width: 52px;">Alias</span> : Geton<br>
+                      <span style="display:inline-block; width: 52px;">GST</span> : GDFG5784954FGJ
+                  </p>
+              </div>
+          </div>
+      
+      </div>
+      
+      
+      
+      
+      
+      
+      <div class="table t-table" style="    
+     text-align: center !important;border-top: 1px solid #000 !important; border-bottom: 1px solid #000 !important;">
+        <table cellspacing="0" cellpadding="0" style=" width: 100%; font-size: 15px;">
+            <tr>
+              <th style="font-weight: normal;border-right: 1px solid #000; font-family: arial;">Invoice No.</th>
+              <th style="font-weight: normal;border-right: 1px solid #000; font-family: arial;">Invoice Date</th>
+              <th style="font-weight: normal;border-right: 1px solid #000; font-family: arial;">Due Date</th>
+              <th style="font-weight: normal;border-right: 1px solid #000; font-family: arial;">Platform  </th>
+              <th style="font-weight: normal;border-right: 1px solid #000; font-family: arial;">Currency</th>
+              <th style="font-weight: normal;border-right: 1px solid #000; font-family: arial;">Conversion</th>
+              <th style="font-weight: normal;border-right: 1px solid #000">Pay Terms</th>
+              <th style="font-weight: normal;">Price</th>
+            </tr>
+      
+            <tr align="center">
+              <td style=" border-right: 1px solid #000; font-family: arial">PI/1/HO1</td>
+              <td style="border-right:1px solid #000;font-family: arial">28-Oct-2020</td>
+              <td style="border-right:1px solid #000; font-family: arial">29-Oct-2020</td>
+              <td style="border-right:1px solid #000;font-family: arial">Web</td>
+              <td style="border-right:1px solid #000;font-family: arial">INR</td>
+              <td style="border-right:1px solid #000;font-family: arial">1</td>
+              <td style="border-right:1px solid #000;">COD</td>
+              <td style="">Incl. Taxes</td>
+            </tr>
+        </table>
+      </div>
+      
+        <div class="table f-table">
+            <table class="details" style="font-size: 15px; width: 100%;">
+                <tr align="center">
+                    <td style="padding: 3px 0px; font-family: arial">No. of Items : 10</td>
+                    <td style="padding: 3px 0px; font-family: arial">POS Order Id : 2105</td>
+                    <td style="padding: 3px 0px; font-family: arial">Time : 19:12</td>
+                </tr>
+            </table>
+        
+
+      <table class="c-table" cellspacing="0" cellpadding="0" style="
+    border-top: 1px solid #000; border-bottom: 1px solid #000; width: 100%; font-size: 15px;">
+        <tr align="left">
+          <th style="border-bottom:1px solid #000;color: #000;padding: 3px 4px; font-weight:600; font-family: arial">Sr.</th>
+          <th style="border-bottom: 1px solid #000;color: #000;padding: 3px 4px; font-weight:600; font-family: arial">SKU</th>
+          <th style="border-bottom: 1px solid #000;color: #000;padding: 3px 4px; font-weight:600; font-family: arial">Item</th>
+          <th style="border-bottom: 1px solid #000;color: #000;padding: 3px 4px; font-weight:600; font-family: arial">HSN</th>
+          <th style="border-bottom: 1px solid #000;color: #000;padding: 3px 4px; font-weight:600; font-family: arial">Qty</th>
+          <th style="border-bottom: 1px solid #000;color: #000;padding: 3px 4px;font-weight:600; font-family: arial">Price</th>
+          <th style="border-bottom: 1px solid #000;color: #000;padding: 3px 4px; font-weight:600; font-family: arial">Tax%</th>
+          <th style="border-bottom: 1px solid #000;color: #000;padding: 3px 10px 3px 4px; font-weight:600;  text-align: right; font-family: arial">Amount</th>
+        </tr>
+        <tr style="border-bottom: 1px solid #000">
+          <td style="border-bottom:1px solid #000;padding: 3px 4px; font-family: arial">1</td>
+          <td style="border-bottom:1px solid #000;padding: 3px 4px; font-family: arial">74854</td>
+          <td style="border-bottom:1px solid #000;padding: 3px 4px; font-family: arial">Milkfood Rich Desi Danedar Ghee (Carton) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+          <td style="border-bottom:1px solid #000;padding: 3px 4px; font-family: arial">HSN123</td>
+          <td style="border-bottom:1px solid #000;padding: 3px 4px; font-family: arial">10 EA</td>
+          <td style="border-bottom:1px solid #000;padding: 3px 4px; font-family: arial">28</td>
+          <td style="border-bottom:1px solid #000;padding: 3px 4px; font-family: arial">18%</td>
+          <td style="border-bottom:1px solid #000;padding: 3px 16px 3px 4px; text-align: right; font-family: arial">1500</td>
+        </tr>
+        <tr>
+          <td style="padding: 3px 4px; font-family: arial">2</td>
+          <td style="padding: 3px 4px; font-family: arial">74854</td>
+          <td style="padding: 3px 4px; font-family: arial">Milkfood Rich Desi Danedar Ghee (Carton) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+          <td style="padding: 3px 4px; font-family: arial">HSN123</td>
+          <td style="padding: 3px 4px; font-family: arial">10 EA</td>
+          <td style="padding: 3px 4px; font-family: arial">28</td>
+          <td style="padding: 3px 4px; font-family: arial">18%</td>
+          <td style="padding: 3px 16px 3px 4px; text-align: right; font-family: arial">1500</td>
+        </tr>
+      </table>
+      
+      </div>
+      
+     
+      <div style="
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 3px 6px;
+    font-size: 15px;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch;width: 100%">
+      
+        <div style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 80%; width: 100%">
+        <p style="margin-top:0px; margin-bottom: 0px; font-family: arial">  Sub Total</p>
+        </div>
+      
+        <div align="right" style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 20%; width: 100%">
+          <p style="font-size: 15px;margin-bottom: 0px;padding-right: 9px; margin-top: 0px; float: right; font-family: arial">8,000</p>
+        </div>
+      
+      </div>
+        <div style="
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 3px 6px;
+    font-size: 15px;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch;width: 100%">
+      
+        <div style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 80%; width: 100%">
+          <p style="margin-top:0px; margin-bottom: 0px; font-family: arial">GST</p>
+        </div>
+      
+        <div align="right" style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 20%; width: 100%">
+          <p style="font-size: 15px;margin-bottom: 0px;padding-right: 9px; margin-top: 0px; float: right; font-family: arial">500</p>
+        </div>
+      
+      </div>
+      <div style="
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 3px 6px;
+    font-size: 15px;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch;width: 100%">
+      
+        <div align="right" style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 91%; width: 100%">
+          <b style="float: right; font-family: arial">Bill Amount :</b>
+        </div>
+      
+        <div align="right" style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 9%; width: 100%">
+          <b style="padding-right: 9px; font-weight: 600; float: right; font-family: arial">8,500</b>
+        </div>
+      
+      </div>
+      
+      
+      
+      <div  style="
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 3px 6px;
+    font-size: 15px;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch;width: 100%">
+      
+          <div style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 50%; width: 100%">
+          <p style="font-size: 15px;margin-bottom: 0px;padding-right: 9px; margin-top: 0px; font-family: arial">Amount Chargable in words <br> One Thousand Five Hundred Rupees Only</p>
+        </div>
+      
+       <div style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 50%; width: 100%" align="right">
+          <p style="font-size: 15px;margin-bottom: 0px;padding-right: 9px;margin-top: 0px; float: right; font-family: arial">Paid Amount : <span>500</span>   <br> Balance Due : <span>8,000</span></p>
+        </div>
+      
+      </div>
+      
+      
+      <div style="
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch; width: 100%">
+      
+        <div style="    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 100%; width: 100%">
+            <table class="hsn-table" cellpadding="0" cellspacing="0" style="
+    width: 100%; margin-right: 15px; font-size: 15px;">
+      
+              <tr align="center">
+                <td rowspan="2" style="border-bottom: 1px solid #000;border-right: 1px solid #000; font-family: arial">HSN/SAC</td>
+                <td style="border-bottom: 1px solid #000;border-right: 1px solid #000; font-family: arial" rowspan="2">Taxable Value</td>
+                <td style="border-bottom: 1px solid #000;border-right: 1px solid #000; font-family: arial" colspan="2">CGST</td>
+                <td style="border-bottom: 1px solid #000;border-right:none; font-family: arial" colspan="2">IGST</td>
+              </tr>
+      
+               <tr align="center">
+                <td style="border-bottom: 1px solid #000;border-right: none !important; font-family: arial">Rate </td>
+                <td style="border-bottom: 1px solid #000;border-right: 1px solid #000; font-family: arial">Amount</td>
+                <td  style="border-bottom: 1px solid #000;border-right: none !important; font-family: arial">Rate </td>
+                <td style="border-bottom: 1px solid #000; font-family: arial">Amount</td>
+              </tr>
+              
+               <tr align="center">
+                <td style="
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000; font-family: arial">99731</td>
+                <td style="
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000; font-family: arial">2,000</td>
+                <td style="
+    border-bottom: 1px solid #000; font-family: arial;
+    border-right:none">9%</td>
+                <td style="
+    border-bottom: 1px solid #000; border-right: 1px solid #000; font-family: arial">500</td>
+                <td style="
+    border-bottom: 1px solid #000; font-family: arial;
+    border-right: none">9%</td>
+                <td style="
+    border-bottom: 1px solid #000; font-family: arial
+   ">500</td>
+              </tr>
+               <tr align="center">
+                <td style="
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000; font-family: arial">Total</td>
+                <td style="
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000; font-family: arial">6,000</td>
+                <td style="
+    border-bottom: 1px solid #000;
+    border-right:none; font-family: arial">Total</td>
+                <td style="
+    border-bottom: 1px solid #000; border-right: 1px solid #000; font-family: arial
+   ">1,500</td>
+                <td style="
+    border-bottom: 1px solid #000;
+    border-right:none; font-family: arial">Total</td>
+                <td style="
+    border-bottom: 1px solid #000; font-family: arial
+   ">1,500</td>
+              </tr>
+      
+            </table>
+        </div>
+      
+       
+      
+      </div>
+      
+       <div style="
+    border-bottom: 1px solid #000; padding: 3px 6px; font-size: 15px;">
+      
+        <div style="width: 100%; font-family: arial">
+          Lorem ipsum dolar sit amet Lorem ipsum dolar sit amet Lorem ipsum dolar sit amet Lorem ipsum dolar sit amet Lorem ipsum dolar sit amet
+        </div>
+      
+       
+      
+      </div> 
+      <div style="
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch; border-bottom: 1px solid #000;margin-top: 9px; padding-right: 10px; font-size: 15px;
+">
+      
+        <div style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 50%; padding: 0px 0px 0px 10px; font-size: 15px; width: 100%">
+          <p style=" margin-bottom: 0px;line-height: 17px; margin-top: 0px; font-family: arial"><span style="width: 150px; display:inline-block">A/c Name </span> :  <b style="font-weight: 600">GetOn Infotect Pvt. Ltd.</b><br>
+            <span style="width: 150px; display:inline-block">Current A/c No </span> : 50100538172058<br>
+            <span style="width: 150px; display:inline-block">Bank</span> : HDFC Bank<br>
+            <span style="width: 150px; display:inline-block">IFSC Code</span> : HDFC000647<br>
+          </p>
+      
+           <p style=" margin-bottom: 0px;line-height: 17px; margin-top: 0px; font-family: arial"><span style="width: 150px; display:inline-block">Amount Payable </span> :  <b style="font-weight: 600">INR 14,000</b> </p>
+           <p style=" margin-bottom: 9px;line-height: 17px; margin-top: 0px; font-family: arial"> <span style="width: 150px; display:inline-block">Tax Deductions 2% </span> :  <b style="font-weight: 600">INR 100</b></p>
+        
+        </div>
+      
+         <div  style="
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 50%; padding-right: 10px;  font-size: 15px; width: 100%">    
+
+
+          <div align="right" style="float: right">
+              <p style=" margin-bottom: 0px;  line-height: 17px; margin-top: 0px;"><b style="display: block; font-weight: 600 !important; font-family: arial">Geton Infotech Pvt Ltd</b></p>
+          </div>
+      
+          <div style="
+    padding-top: 84px;
+  
+    box-sizing: border-box;
+    text-align: right; width: 100%; font-size: 15px;">
+      
+      
+      
+            <div align="right" style=" margin-right: 1%;  flex: 1 1 100%;
+    box-sizing: border-box;  max-width: 100%; font-family: arial">
+               <p style="margin-bottom: 0px;line-height: 17px; display: block">Authorised Signatory</p>
+             </div>
+      
+      
+          </div>
+      
+         
+        </div>
+      
+      
+      </div>
+      
+      
+      
+      <div style="padding-bottom: 6px">
+      
+        
+          <p style="text-align: center; margin: 6px 0px 0px 0px;font-size: 15px; font-family: arial">This is a Computer Generated Performa Invoice. Signature is not Required
+      </p>
+        
+      
+      </div>
+    </div>
+      </mat-card>
+      </div>
+      </div>
+      
+      </div>
+      
+      
+      </div>
+      

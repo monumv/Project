@@ -1,0 +1,52 @@
+<mat-card><h2 mat-dialog-title>Create Template</h2></mat-card><br>
+<div mat-dialog-content>
+	
+
+<mat-form-field appearance="">
+  <mat-label>Select Entity ID*</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+      <mat-label>Template ID*</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Template Name</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+<mat-form-field appearance="">
+  <mat-label>Select Type</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food1 of foods1" [value]="food1.value">
+      {{food1.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Sender ID</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="">
+    <mat-label>Template Enable Unicode*</mat-label>
+    <input matInput #message maxlength="256" placeholder="Ex. I need help with...">
+    <mat-hint align="start"><strong>Template Enable Unicode</strong> </mat-hint>
+    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+  </mat-form-field>
+
+
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close>Cancel</button>
+  <button color="primary" mat-raised-button mat-dialog-close>Save Entity</button>
+</div>

@@ -1,0 +1,35 @@
+<div class="content1">
+
+<div class="mv-26">
+		<mat-toolbar>
+			<div class="mv-19">
+				<span class="mv-17"><a routerLink=""> Dial ERP Dashboard </a><span class="mv-18">/</span></span>
+				<span class="mv-17">Sales CRM Dashboard</span>
+			</div>
+		</mat-toolbar>
+	</div><br>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">Sales CRM Dashboard</h2>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="./deals" class="border">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>Deals</mat-card-title>
+	</mat-card>
+	<mat-card fxFlex="33%" routerLink="./crm-settings" class="border">
+		<img mat-card-sm-image src="./assets/images/expenses2.png" alt="Complaints">
+		<mat-card-title>CRM Settings</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="./crmreports" class="border">
+		<img mat-card-sm-image src="./assets/images/joining.png" alt="Complaints">
+		<mat-card-title>CRM Reports</mat-card-title>
+	</mat-card>
+	
+</div>
+
+
+</div>
+<router-outlet></router-outlet>

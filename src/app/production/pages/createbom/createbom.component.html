@@ -1,0 +1,321 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Create BOM</h2>
+    </mat-toolbar>
+    
+    <div fxLayout='column' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+    
+    <mat-card class="mat-card2">
+    
+    
+    <div class="tabless table2 table3 table-1">
+       
+        <table class="">
+             <tr class="border">
+                <td class="mat-header-cell cells">BOM ID</td>
+                <td class="grey pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput disabled=""> 
+                    </mat-form-field>
+                </td>
+            </tr>
+        
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Select Item To Produce</td>
+                <td class="pd-0">  
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControl"
+                           [matAutocomplete]="auto">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Item Warranty Months <span class="req">*</span></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+      <tr class="border">
+                <td class="mat-header-cell cells">BOM Version</td>
+                <td class="grey pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput disabled=""> 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">BOM Description</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+  
+            
+        </table>
+    
+    
+        
+    
+    </div>
+    </mat-card>
+   
+
+
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutAlign="center">
+
+    <div fxFlex="100%">
+
+        <div class="table">         
+            
+            <table class="table-2" cellpadding="0" cellspacing="0">
+                <tr>
+
+                   
+                    <th class="wd-150">Master Pack</th>
+                    <th class="wd-150">Master Pack Qty</th>
+                    <th class="wd-150">Pack</th>
+                    <th class="wd-150">Pack Qty</th>
+                    <th class="wd-150">Item Qty </th>
+                    <th class="wd-150">Base Unit</th>
+                    <th class="wd-150">UOM Qty</th>
+                    <th class="wd-150">Print Barcode</th>
+                </tr>
+                <tr>
+                    
+                     <td class="wd-150">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControls"
+                           [matAutocomplete]="autoTest">
+                    <mat-autocomplete #autoTest="matAutocomplete">
+                      <mat-option *ngFor="let option of optionss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                    </td>
+
+                   
+                    <td class="name4 grey wd-150">
+                         <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput disabled="disabled" > 
+                    </mat-form-field>
+                    </td>
+
+                    <td class="name4 wd-150" >
+                         <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControle"
+                           [matAutocomplete]="autoTeste">
+                    <mat-autocomplete #autoTeste="matAutocomplete">
+                      <mat-option *ngFor="let option of optionse" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                    </td>
+
+
+                    <td class="name4 wd-150">
+                       <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                    </td>
+
+                    <td class="name4 wd-150">
+                         <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+
+
+                    <td class="name4 grey wd-150">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput disabled="disabled"> 
+                    </mat-form-field>
+                    </td>
+                    <td class="grey name4 wd-150">
+                         <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput disabled="disabled"> 
+                    </mat-form-field>
+                    </td>
+                    <td class="name4 wd-150">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControles"
+                           [matAutocomplete]="autoTestes">
+                    <mat-autocomplete #autoTestes="matAutocomplete">
+                      <mat-option *ngFor="let option of optionses" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                    </td>
+ 				
+                </tr>
+
+
+                   
+            </table>
+
+        </div>
+
+
+        
+    </div>
+   
+</mat-card>
+
+
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutAlign="center">
+
+    <div fxFlex="100%">
+
+        <div class="table">         
+            
+            <table class="table-2" cellpadding="0" cellspacing="0">
+                <tr>
+
+                    <th class="pd-10 wd-20">Sr.</th>
+                    <th class="">Material Name</th>
+                    <th class="">Qty</th>
+                    <th class=""> Consumption Unit</th>
+                    <th class="">Consumption Unit In Base Unit</th>
+                    <th class="">BaseUnit </th>
+                    <th class="">UOM Qty</th>
+                    <th class="">Cost/Base Unit</th>
+                    <th class="">Amt</th>
+                    <th class="">Warranty Months</th>
+                    <th class="">Claims Allowed</th>
+                    <th class="pd-10">Action </th>
+                </tr>
+                <tr *ngFor="let item of row; let i = index" class="sr-no">
+                     <td class="auto-t pd-10 grey border-b-1 wd-20">&nbsp;</td>
+                    
+
+                     <td class="name2">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                        </mat-form-field>
+                    </td>
+
+                   
+                    <td class="name4">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="" > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="name4" >
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value=""> 
+                        </mat-form-field>
+                    </td>
+
+
+                    <td class="name4">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value=""  > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="name4 grey">
+                        <mat-form-field class="example-full-width name4" appearance="outline">
+                         <input matInput value="" disabled="disabled" >
+                        </mat-form-field>
+                    </td>
+
+
+                    <td class="name4 grey">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                          <input matInput value="" disabled="disabled" >
+                        </mat-form-field>
+                    </td>
+                    <td class="grey name4">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                          <input matInput value="" disabled="disabled" >
+                        </mat-form-field>
+                    </td>
+                    <td class="name4 grey">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="" disabled="disabled" > 
+                        </mat-form-field>
+                    </td>
+ 					 <td class="name4">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value=""  > 
+                        </mat-form-field>
+                    </td>  
+                    <td class="name4">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value=""  > 
+                        </mat-form-field>
+                    </td>
+       <td class="border-b-1 pd-10">   
+       <span class="material-icons green" (click)="addTable()">add_to_photos</span>
+
+       <span class="material-icons red" (click) = "deleteRow(i)">delete</span>
+   </td>
+
+                </tr>
+
+
+                   <tr align="center" class="total-row">
+                    <td colspan="2" class="grey pd-10" align="left">Total</td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                </tr>
+            </table>
+
+        </div>
+
+
+        
+    </div>
+    <div fxFlex="100%" align="center"><button mat-raised-button color="primary">Create</button></div>
+</mat-card>
+
+      
+    </div>
+    
+    
+
+
+    
+            
+
+    
+
+    </div>

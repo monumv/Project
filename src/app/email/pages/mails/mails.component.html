@@ -1,0 +1,171 @@
+<mat-toolbar class="extoolbar">
+          <div class="" fxLayout='row' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="center" fxFlex="100%">
+          
+            <div class="example-form search" fxFlex="70%">
+
+              <mat-form-field class="example-form-field" appearance="outline" [matMenuTriggerFor]="profile">
+ 
+  <input matInput type="text" [(ngModel)]="value" placeholder="search">
+  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" [disableRipple]="true">
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+</mat-form-field>
+</div>
+
+<mat-menu #profile="matMenu" [overlapTrigger]="false" class="searchbar" >
+  <form class="example-form search" (keydown.tab)="$event.stopPropagation()" >
+
+   
+ 
+
+  <mat-form-field class="example-full-width" (click)="$event.stopPropagation(); false;">
+    <mat-label>From Id</mat-label>
+    <input matInput value="">
+  </mat-form-field>
+
+   <mat-form-field class="example-full-width" (click)="$event.stopPropagation(); false;">
+    <mat-label>To Id</mat-label>
+    <input matInput value="">
+  </mat-form-field>
+
+
+  <table class="example-full-width" cellspacing="0" (click)="$event.stopPropagation(); false;"><tr>
+    <td> <mat-form-field>
+  <mat-label>From Date</mat-label>
+  <input matInput [matDatepicker]="picker1">
+  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+  <mat-datepicker #picker1></mat-datepicker>
+</mat-form-field>
+</td>
+    <td><mat-form-field>
+  <mat-label>To Date</mat-label>
+  <input matInput [matDatepicker]="picker11">
+  <mat-datepicker-toggle matSuffix [for]="picker11"></mat-datepicker-toggle>
+  <mat-datepicker #picker11></mat-datepicker>
+</mat-form-field></td>
+  </tr></table>
+
+            </form>
+</mat-menu>
+
+ 
+<span class="example-spacer"></span>
+<mat-paginator [length]="100"
+              [pageSize]="10" fxFlex="30%">
+</mat-paginator>
+ 
+           
+       </div> 
+
+          </mat-toolbar>
+
+<div class="example-container mat-elevation-z8">
+  <mat-toolbar class="toolbar pagina">
+
+  <mat-toolbar-row> 
+
+     <div fxLayout='row' fxFlex="91%" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+
+     <div class="icons" fxFlex="100%" fxLayoutAlign="left">
+      <span>1-50 of 307</span>
+  </div>   
+
+ </div>
+
+
+     
+      
+   
+  </mat-toolbar-row>
+
+</mat-toolbar>
+        <table mat-table [dataSource]="dataSource">
+                <ng-container matColumnDef="star">
+                        <th mat-header-cell *matHeaderCellDef class="star"> </th>
+                        <td mat-cell *matCellDef="let element" routerLink="/email/viewemail" class="star"><span class="material-icons star">
+                                star_border</span> </td>
+                      </ng-container>
+
+                <!-- Checkbox Column -->
+                <ng-container matColumnDef="select">
+                  <th mat-header-cell *matHeaderCellDef class="mb-none4">
+                    <mat-checkbox (change)="$event ? masterToggle() : null"
+                                  [checked]="selection.hasValue() && isAllSelected()"
+                                  [indeterminate]="selection.hasValue() && !isAllSelected()"
+                                  [aria-label]="checkboxLabel()">
+                    </mat-checkbox>
+                  </th>
+                  <td mat-cell *matCellDef="let row" routerLink="/email/viewemail" class="mb-none4">
+                    <mat-checkbox (click)="$event.stopPropagation()"
+                                  (change)="$event ? selection.toggle(row) : null"
+                                  [checked]="selection.isSelected(row)"
+                                  [aria-label]="checkboxLabel(row)">
+                    </mat-checkbox>
+                  </td>
+                </ng-container>
+              
+                <!-- Position Column -->
+               
+
+                   <!-- Position Column -->
+                   <ng-container matColumnDef="to">
+                        <th mat-header-cell *matHeaderCellDef class="subject">To </th>
+                        <td mat-cell *matCellDef="let element" routerLink="/email/viewemail" class="subject"> {{element.to}} </td>
+                      </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="label">
+                  <th mat-header-cell *matHeaderCellDef class="mb-none2"> label </th>
+                  <td mat-cell *matCellDef="let element" routerLink="/email/viewemail" class="mb-none2"> <mat-chip-list ><mat-chip>Inbox</mat-chip></mat-chip-list> </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="subject" class="description">
+                  <th mat-header-cell *matHeaderCellDef> Subject </th>
+                  <td mat-cell *matCellDef="let element" routerLink="/email/viewemail" class="description"> {{element.subject}} <br> <p>Lorem ipsum dolor sit amet, consectetur</p> </td>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="status">
+                  <th mat-header-cell *matHeaderCellDef class="mb-none3"> Status </th>
+                  <td mat-cell *matCellDef="let element" routerLink="/email/viewemail" class="mb-none3"> <span class="material-icons yellow">
+                        query_builder</span> </td>
+                </ng-container>
+
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef class="mb-none4"> ID </th>
+                    <td mat-cell *matCellDef="let element" routerLink="/email/viewemail" class="mb-none4"> {{element.id}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="sent">
+                <th mat-header-cell *matHeaderCellDef class="time"> Sent </th>
+                <td mat-cell *matCellDef="let element" routerLink="/email/viewemail" class="time"><span class="material-icons blue extra">
+                        attachment</span>  {{element.sent}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+                </tr>
+               
+              </table>
+
+                    
+
+<div fxLayout='row' class="bottom-bar" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%">
+   <div fxFlex="33%">
+          <span>0.01 GB (0%) of 30 GB used <br> Manage</span>
+        </div>
+
+   <div class="text-center" fxFlex="33%">
+          <span>Program Policies <br>Powered by DialERP</span>
+        </div>
+         <div class="text-right" fxFlex="33%">
+          <span>Last account activity: 2 hours ago <br>Details</span>
+        </div>
+</div>
+
+      </div>
+
+
+<router-outlet></router-outlet>

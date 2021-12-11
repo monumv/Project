@@ -1,0 +1,50 @@
+<div class="content1">
+
+	<div class="mv-26">
+		<mat-toolbar>
+			<div class="mv-19">
+				<span class="mv-17"><a routerLink="/salescrm">Sales CRM Dashboard  </a><span class="mv-18">/</span></span>
+				<span class="mv-17">Deals</span>
+			</div>
+		</mat-toolbar>
+	</div><br>
+
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">Deals</h2>
+	</div>
+
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+		<mat-card fxFlex="33%" routerLink="/salescrm/open-deal/" class="">
+			<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+			<mat-card-title>Open Deal</mat-card-title>
+		</mat-card>
+
+		<mat-card fxFlex="33%" routerLink="/salescrm/won-deal/" class="">
+			<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+			<mat-card-title>Won Deal</mat-card-title>
+		</mat-card>
+
+		<mat-card fxFlex="31.5%" routerLink="/salescrm/dropped-deal/" class="">
+			<img mat-card-sm-image src="./assets/images/relieving.png" alt="Complaints">
+			<mat-card-title>Dropped Deal</mat-card-title>
+		</mat-card>
+
+	</div>
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+		
+
+		<mat-card fxFlex="31.5%" routerLink="/salescrm/crmreminders/" class="">
+			<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+			<mat-card-title>CRM Reminders</mat-card-title>
+		</mat-card>
+
+
+	</div>
+
+
+</div>
+<router-outlet></router-outlet>
+
+
+

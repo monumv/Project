@@ -1,0 +1,25 @@
+<div class="content1">
+
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="breadcrumb">IVR Management</mat-toolbar>
+    
+    </div>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <h2 class="mat-h2">IVR Management</h2>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="31%" routerLink="/supaeradmin-module/ivrnumbers" class="border">
+            <img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+            <mat-card-title>IVR Numbers</mat-card-title>
+        </mat-card>
+          
+        <mat-card fxFlex="31%" routerLink="/supaeradmin-module/ivresponses" class="border">
+            <img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+            <mat-card-title>IVR Responses</mat-card-title>
+        </mat-card>
+    
+    </div>
+    </div>
+    <router-outlet></router-outlet>

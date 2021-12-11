@@ -1,0 +1,44 @@
+<div class="content1">
+
+        <div class="mv-26">
+            <mat-toolbar>
+                <div class="mv-19">
+                    <span class="mv-17"><a routerLink="/salescrm">Sales CRM Dashboard  </a><span class="mv-18">/</span></span>
+                    <span class="mv-17"><a routerLink="../crm-settings">CRM Settings </a><span class="mv-18">/</span></span>
+                    <span class="mv-17">Lead Plugins</span>
+                </div>
+            </mat-toolbar>
+        </div><br>
+    
+        <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+            <h2 class="mat-h2">Lead Plugins</h2>
+        </div>
+    
+        <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+            <mat-card fxFlex="33%" routerLink="../justdial/" class="">
+                <img mat-card-sm-image src="./assets/images/complaints.png" alt="JustDial">
+                <mat-card-title>JustDial</mat-card-title>
+            </mat-card>
+            <mat-card fxFlex="33%" routerLink="../indiamart/" class="">
+                <img mat-card-sm-image src="./assets/images/complaints.png" alt="Indiamart">
+                <mat-card-title>Indiamart</mat-card-title>
+            </mat-card>
+    
+            <mat-card fxFlex="33%" routerLink="../facebook/">
+                <img mat-card-sm-image src="./assets/images/complaints.png" alt="Facebook">
+                <mat-card-title>Facebook</mat-card-title>
+            </mat-card>
+            
+        </div>
+
+ <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+            <mat-card fxFlex="31.5%" routerLink="../web-api/" class="">
+                <img mat-card-sm-image src="./assets/images/complaints.png" alt="web-api">
+                <mat-card-title>Web Api's</mat-card-title>
+            </mat-card>
+            
+            
+        </div>    
+    
+    </div>
+    <router-outlet></router-outlet>

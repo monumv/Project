@@ -1,0 +1,675 @@
+<div *ngIf="data.dialogObj.dialogType=='qdata'">
+
+<mat-card><h2 mat-dialog-title>Edit Q&A</h2></mat-card>
+<div mat-dialog-content>
+	
+  
+	<mat-form-field class="example-full-width">
+      <mat-label>Pipeline</mat-label>
+      <input matInput value="pipeline 1" disabled="disabled">
+    </mat-form-field>
+
+
+
+
+
+	<mat-form-field class="example-full-width">
+      <mat-label>Question Id</mat-label>
+      <input matInput (keypress)="numberOnly($event)">
+    </mat-form-field>
+
+
+	<mat-form-field class="example-full-width">
+      <mat-label>Question</mat-label>
+      <input matInput required="required">
+    </mat-form-field>
+
+<mat-form-field>
+  <mat-label>Question Type</mat-label>
+  <select matNativeControl>
+    <option value="qa">Q&A</option>
+    <option value="Activate">Activate</option>
+    <option value="Drop">Drop</option>
+    <option value="Reschedule">Reschedule</option>
+    <option value="Popup">Popup</option>
+  </select>
+</mat-form-field>
+
+
+<mat-form-field>
+  <mat-label>Field Type</mat-label>
+  <select matNativeControl>
+    <option value="Radio">Radio</option>
+    <option value="Camera Image">Camera Image</option>
+    <option value="Call">Call</option>
+    <option value="Date & Time">Date & Time</option>
+    <option value="Checkbox">Checkbox</option>
+    <option value="Popup">Popup</option>
+    <option value="Short Answer">Short Answer</option>
+    <option value="QR Scan URL">QR Scan URL</option>
+  </select>
+</mat-form-field>
+
+
+<div fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+		<div fxFlex='70%'>
+		    <mat-form-field class="example-full-width">
+		      <mat-label>Response 1</mat-label>
+		      <input matInput required="required">
+		    </mat-form-field>
+		</div>
+		<div fxFlex='30%'>
+		     <mat-form-field class="example-full-width">
+		      <mat-label>Next Question <span class="req">*</span></mat-label>
+		      <input matInput (keypress)="numberOnly($event)" required="required">
+		    </mat-form-field>
+		</div>
+
+</div>
+
+
+<div fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+		<div fxFlex='70%'>
+		    <mat-form-field class="example-full-width">
+		      <mat-label>Response 2</mat-label>
+		      <input matInput>
+		    </mat-form-field>
+		</div>
+		<div fxFlex='30%'>
+		     <mat-form-field class="example-full-width">
+		      <mat-label>Next Question></mat-label>
+		      <input matInput (keypress)="numberOnly($event)">
+		    </mat-form-field>
+		</div>
+
+</div>
+
+
+<div fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+		<div fxFlex='70%'>
+		    <mat-form-field class="example-full-width">
+		      <mat-label>Response 3</mat-label>
+		      <input matInput>
+		    </mat-form-field>
+		</div>
+		<div fxFlex='30%'>
+		     <mat-form-field class="example-full-width">
+		      <mat-label>Next Question</mat-label>
+		      <input matInput (keypress)="numberOnly($event)">
+		    </mat-form-field>
+		</div>
+
+</div>
+
+
+<div fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+		<div fxFlex='70%'>
+		    <mat-form-field class="example-full-width">
+		      <mat-label>Response 4</mat-label>
+		      <input matInput>
+		    </mat-form-field>
+		</div>
+		<div fxFlex='30%'>
+		     <mat-form-field class="example-full-width">
+		      <mat-label>Next Question</mat-label>
+		      <input matInput (keypress)="numberOnly($event)">
+		    </mat-form-field>
+		</div>
+
+</div>
+
+</div>
+<div mat-dialog-actions>
+  <button (click)="closeDialog()" color="primary" mat-raised-button mat-dialog-close>Submit</button>
+  <button (click)="closeDialog()" mat-raised-button mat-dialog-close>Cancel</button>
+</div>
+
+
+</div>
+
+
+<div *ngIf="data.dialogObj.dialogType=='leadsource'">
+
+<mat-card><h2 mat-dialog-title>Lead Source Status</h2></mat-card>
+
+<div mat-dialog-content>
+	<mat-list class="leadlist">
+  <mat-list-item><p>Beatplan Pro App Signup</p><p class="red">406</p></mat-list-item>
+  <mat-list-item><p>Indiamart</p><p class="red">287</p></mat-list-item>
+  <mat-list-item><p>Justdial Web</p><p class="red">108</p></mat-list-item>
+  <mat-list-item><p>Mobile CRM App</p><p class="red">79</p></mat-list-item>
+  <mat-list-item><p>Justdial ERP</p><p class="red">58</p></mat-list-item>
+  <mat-list-item><p>Justdial CRM</p><p class="red">46</p></mat-list-item>
+  <mat-list-item><p>Service CRM App Signup</p><p class="red">37</p></mat-list-item>
+  <mat-list-item><p>Personal Reference</p><p class="red">36</p></mat-list-item>
+  <mat-list-item><p>Signup Lead</p><p class="red">27</p></mat-list-item>
+  <mat-list-item><p>IVR Call</p><p class="red">8</p></mat-list-item>
+  <mat-list-item><p>Facebook</p><p class="red">6</p></mat-list-item>
+  <mat-list-item><p>Contact Us</p><p class="red">6</p></mat-list-item>
+  <mat-list-item><p>MobileCRM IOS App Signup</p><p class="red">4</p></mat-list-item>
+  
+</mat-list>
+</div>
+
+
+</div>
+
+<div *ngIf="data.dialogObj.dialogType=='crmforms'">
+<mat-card>
+<div fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+<div fxFlex='55%'>
+	<h2 mat-h2 class="heading">Add/Update - Gpay Revisit</h2>
+</div>
+<div fxFlex='45%' fxLayoutAlign="end">
+ <div class="example-button-row" fxLayoutGap="1%" fxFlex='100%'>
+	<button mat-raised-button (click)="addTable2()" class="action-btnn"><mat-icon>add</mat-icon> Add</button>
+
+	<button mat-raised-button  (click) = "deleteRow2(i)" class="action-btnn"><mat-icon>delete_outline</mat-icon> Remove</button>
+</div>
+</div>
+</div>
+	</mat-card>
+
+<div mat-dialog-content>
+
+
+
+    <div>         
+        
+        <table class="table-2 tables" cellpadding="0" cellspacing="0">
+            <tr>
+
+                <th class="pd-10 wd-20"> <mat-checkbox ></mat-checkbox></th>
+                <th>Field Name</th>
+                <th> Field Type</th>
+                <th></th>
+                <th> Is Compulsory</th>
+            </tr>
+            <tr *ngFor="let item of row2; let i = index" class="">
+                 <td class="auto-t pd-10 border-b-1 wd-20"> <mat-checkbox ></mat-checkbox></td>
+                <td><input matInput placeholder="Merchant Id">
+                </td>
+               
+
+
+                <td class="">
+                 
+  <select required>
+    <option value="Textbox">Textbox</option>
+    <option value="DateTime">DateTime</option>
+    <option value="Dropdown">Dropdown</option>
+    <option value="Date">Date</option>
+    <option value="Time">Time</option>
+    <option value="Textarea">Textarea</option>
+    <option value="Numeric">Numeric</option>
+    <option value="Decimal">Decimal</option>
+  </select>
+
+                </td>
+
+               <td class="">
+               <a (click)="openDialog()">Add Value</a>
+               </td>
+
+                
+                   <td class="fieldnamee"><input matInput placeholder="Y">
+                </td>
+
+
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+<div mat-dialog-actions >
+	<div class="example-button-row" fxLayoutGap="1%" fxFlex='100%' fxLayoutAlign="end">
+	<button mat-raised-button mat-dialog-close>Submit</button>
+  <button mat-raised-button mat-dialog-close>Cancel</button>
+</div>
+</div>
+
+
+	</div>
+
+
+
+<div *ngIf="data.dialogObj.dialogType=='updatetargets'">
+<mat-card>
+<div fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+<div fxFlex='100%'>
+	<h2 mat-h2 class="heading">Update Targets</h2>
+</div>
+</div>
+	</mat-card>
+
+<div mat-dialog-content>
+
+	<h3>Targets For</h3>
+<div class="topbox" fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-form-field>
+  <mat-label>Month</mat-label>
+  <select matNativeControl required>
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="August">August</option>
+    <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+    <option value="December">December</option>
+  </select>
+</mat-form-field>
+
+
+	<mat-form-field>
+  <mat-label>Year</mat-label>
+  <select matNativeControl required>
+    <option value="2001">2001</option>
+    <option value="2002">2002</option>
+    <option value="2003">2003</option>
+    <option value="2004">2004</option>
+    <option value="2005">2005</option>
+    <option value="2006">2006</option>
+    <option value="2007">2007</option>
+    <option value="2008">2008</option>
+    <option value="2009">2009</option>
+    <option value="2010">2010</option>
+    <option value="2011">2011</option>
+    <option value="2012">2012</option>
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+  </select>
+</mat-form-field>
+    <button mat-raised-button color="primary" class="action-btnn">GO</button>
+</div>
+
+    <div>         
+        
+        <table class="table-2 tables" cellpadding="0" cellspacing="0">
+            <tr>
+
+                <th class="pd-10 wd-20"> Sr.</th>
+                <th>Proposed Sal</th>
+                <th>Target Sal Ratio</th>
+                <th>Target Amt</th>
+                <th>Won Amt</th>
+                <th>Pending Target Amt</th>
+                <th>Open Deal Value</th>
+                <th>Open Prob Value</th>
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20">1</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                <td><input matInput placeholder="Target Amt">
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20">2</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                <td><input matInput placeholder="Target Amt">
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20">3</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                <td><input matInput placeholder="Target Amt">
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20">4</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                <td><input matInput placeholder="Target Amt">
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20">5</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                <td><input matInput placeholder="Target Amt">
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20">6</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                <td><input matInput placeholder="Target Amt">
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20">7</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                <td><input matInput placeholder="Target Amt">
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20">8</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                <td><input matInput placeholder="Target Amt">
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+                 <td>1,00,000</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+<div mat-dialog-actions >
+	<div class="example-button-row" fxLayoutGap="1%" fxFlex='100%' fxLayoutAlign="end">
+	<button mat-raised-button mat-dialog-close>Submit</button>
+  <button mat-raised-button mat-dialog-close>Cancel</button>
+</div>
+</div>
+
+
+	</div>
+
+
+
+
+<div *ngIf="data.dialogObj.dialogType=='viawizard'" style="width: 700px;">
+<mat-card>
+<div fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+
+<div fxFlex='70%'>
+    <h2 mat-h2 class="heading">Transfer Leads Wizard</h2>
+</div>
+<div fxFlex='30%' fxLayoutAlign="end">
+ <div class="example-button-row" fxLayoutGap="1%" fxFlex='100%' fxLayoutAlign="end">
+    <button mat-raised-button class="action-btnn"><mat-icon>delete_outline</mat-icon> Remove</button>
+</div>
+</div>
+</div>
+    </mat-card>
+
+<div mat-dialog-content>
+    <div style="margin-top: 30px;" fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+         <mat-form-field class="example-full-width">
+            <mat-label>Pipeline ID</mat-label>
+            <input matInput placeholder="" value="">
+          </mat-form-field>
+
+         <mat-form-field>
+          <mat-label>Meeting Date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+
+    <div style="" fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+         <mat-form-field class="example-full-width">
+
+  <mat-label>Meeting Time(hh)</mat-label>
+  <select matNativeControl required>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+  </select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Meeting Time(mm)</mat-label>
+  <select matNativeControl required>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    <option value="32">32</option>
+    <option value="33">33</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">16</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>
+    <option value="48">48</option>
+    <option value="49">49</option>
+    <option value="50">50</option>
+    <option value="51">51</option>
+    <option value="52">52</option>
+    <option value="53">53</option>
+    <option value="54">54</option>
+    <option value="55">55</option>
+    <option value="56">56</option>
+    <option value="57">57</option>
+    <option value="58">58</option>
+    <option value="59">59</option>
+  </select>
+</mat-form-field>
+</div>
+
+
+    <div style="" fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+         <mat-form-field class="example-full-width">
+            <mat-label>Meeting Name</mat-label>
+            <input matInput placeholder="" value="" maxlength="100">
+          </mat-form-field>
+
+         <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="" value="">
+          </mat-form-field>
+</div>
+
+    <div style="" fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+         <mat-form-field class="example-full-width">
+            <mat-label>Location</mat-label>
+            <input matInput placeholder="" value="">
+          </mat-form-field>
+
+         <mat-form-field class="example-full-width">
+            <mat-label>Longititude</mat-label>
+            <input matInput placeholder="" value="">
+          </mat-form-field>
+</div>
+
+    <div style="" fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+         <mat-form-field class="example-full-width">
+            <mat-label>Latitude</mat-label>
+            <input matInput placeholder="" value="">
+          </mat-form-field>
+</div>
+
+<div class="topbox" fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+     <mat-form-field class="example-full-width">
+    <input type="text"
+           placeholder="Search Employee"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+
+    <button mat-raised-button class="action-btnn">Add</button>
+</div>
+
+    <div>         
+        
+        <table class="table-2 tables" cellpadding="0" cellspacing="0" style="width: 100%">
+            <tr>
+
+                <th class="pd-10 wd-20"> <mat-checkbox></mat-checkbox></th>
+                <th>Employee</th>
+                <th>Designation</th>
+                <th>Mobile</th>
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20"><mat-checkbox></mat-checkbox></td>
+                 <td>Nikhil Choudhary</td>
+                 <td>Telesales</td>
+                 <td>+91-9999999999</td>
+
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20"><mat-checkbox></mat-checkbox></td>
+                 <td>Nikhil Choudhary</td>
+                 <td>Telesales</td>
+                 <td>+91-9999999999</td>
+
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20"><mat-checkbox></mat-checkbox></td>
+                 <td>Nikhil Choudhary</td>
+                 <td>Telesales</td>
+                 <td>+91-9999999999</td>
+
+            </tr>
+            <tr class="">
+                 <td class="pd-10 border-b-1 wd-20"><mat-checkbox></mat-checkbox></td>
+                 <td>Nikhil Choudhary</td>
+                 <td>Telesales</td>
+                 <td>+91-9999999999</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+<div mat-dialog-actions class="dlaction">
+    <div class="stats" fxFlex='50%'>
+        <p>Selected : <b>100</b></p>
+        <p>Processed : <b class="red">80</b></p>
+        <p>Pending : <b class="yellow">20</b></p>
+    </div>
+    <div class="example-button-row" fxLayoutGap="1%" fxFlex='50%' fxLayoutAlign="end">
+  <button mat-raised-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button mat-dialog-close color="primary">Transfer</button>
+</div>
+</div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+

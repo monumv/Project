@@ -1,0 +1,56 @@
+mat-card { padding: 8px !important;margin:9px 0px !important;}
+   .mat-h2{ margin-bottom: 0px !important; }
+   @media only screen and (max-width:786px) { 
+     
+       mat-card {display: block !important;}
+     
+    }     
+   .content2 mat-card { display: block !important; }
+   .heading { margin-bottom: 0px }
+  
+   .content { padding: 0px 20px; }
+.mv-19 { padding-left: 15px;}
+.mv-17 { padding: 0px;  font-size: 13px;} 
+.mv-18 { padding: 0px 5px;}
+.mv-17 a {text-decoration: none;font-size: 13px;color: #4285F4;}
+.crumb{ margin-bottom: 20px }
+.crumb {margin-top: 23px; background: #e9e9e9  !important;height: 45px !important; box-shadow: none;}
+.action .mat-menu-item { height: 33px !important; line-height: 33px;}
+.mat-menu-item .mat-icon-no-color {color:#000 !important;}
+.mat-icon-button { width: 29px !important;background: #fff;}
+tr.mat-row { height: 29px !important;}
+.green { color:rgba(52,150,39,.87) !important}
+
+.btn-primary { color: #fff; background-color: #2a8605; border-color: #2a8605;}
+.blue {color: #4285F4}
+.example-tree-invisible {
+  display: none;
+}
+.mat-icon-button.mat-button-disabled.mat-button-disabled .mat-icon {background: #fff;
+    color: #999; border:1px solid rgba(0,0,0,.26) !important; }
+.example-tree ul, ul .mat-tree-node li  {border-left: none !important;}
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;    border-left: 1px dashed #000;
+}
+
+ .example-tree ul{padding-left:31px;}   
+.mat-tree .mat-icon-button .mat-icon {
+    border: 1px solid #000;height: 17px;
+    width: 17px; line-height: 17px;border-radius: 3px;
+}
+.mat-tree-node {
+    min-height: 37px;    margin-left: -15px;
+}
+
+.mat-tree-node:hover, .dis:hover { background: #eee !important }
+.mat-tree-node:hover .mat-icon-button, .dis:hover .mat-icon-button.mat-button-disabled.mat-button-disabled { background: transparent; }
+.mat-tree { margin-left: 35px; }
+
+.mat-tree .material-icons { font-size: 14px; }
+.mat-tree-node .mat-icon { border-radius: 3px;background: #000;
+    color: #fff; }
+
+ul .dis { margin-left: -15px; background: transparent}

@@ -1,0 +1,439 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Mark Delivered</h2>
+    </mat-toolbar>
+
+<div class="layout">
+
+
+    <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+    
+    <mat-card class="">
+        <div fxFlex="100%" fxLayout='row' class="tp-rw" fxLayoutGap="1%" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+        
+            <div fxFlex="50%" class="table" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutAlign="left">
+                <strong>Bill From </strong>
+                <mat-form-field class="example-full-width align" appearance="outline">
+                    <input type="text"
+                            aria-label="Number"
+                            matInput
+                            [formControl]="myControl"
+                            [matAutocomplete]="auto">
+                     <mat-autocomplete #auto="matAutocomplete">
+                       <mat-option *ngFor="let option of options" [value]="option">
+                         {{option}}
+                       </mat-option>
+                     </mat-autocomplete>
+                   </mat-form-field>
+    
+                   <div class="non-edit" >
+                    <h2>CP Outlet</h2>
+                    <p><b> C-130, 2nd Floor, Noida Sect 2,UP - 201301, <br> State Code - 09</b></p>
+                    <p>Mobile : <b>+91-8802457896 </b></p>
+                    <p>Email : <b>abcpvtltd@gmail.com</b></p>
+                    <p>GSTIN :<b> ADJFN6889655O6</b></p>
+                    <p>Erp ID : <b> <a class="blue">6723</a></b></p>
+                    <p>Alias :<b> CP Outlet</b></p>
+                </div>
+            </div>
+    
+            
+            <div fxFlex="50%" class="table" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutAlign="left">
+                <strong>Bill To</strong>
+                <mat-form-field class="example-full-width align" appearance="outline">
+                    <input type="text"
+                            aria-label="Number"
+                            matInput
+                            [formControl]="myControl"
+                            [matAutocomplete]="auto">
+                     <mat-autocomplete #auto="matAutocomplete">
+                       <mat-option *ngFor="let option of options" [value]="option">
+                         {{option}}
+                       </mat-option>
+                     </mat-autocomplete>
+                   </mat-form-field>
+    
+                   <div class="non-edit" >
+                    <h2>CP Outlet</h2>
+                    <p><b> C-130, 2nd Floor, Noida Sect 2,UP - 201301, <br> State Code - 09</b></p>
+                    <p>Mobile : <b>+91-8802457896 </b></p>
+                    <p>Email : <b>abcpvtltd@gmail.com</b></p>
+                    <p>GSTIN :<b> ADJFN6889655O6</b></p>
+                    <p>Erp ID : <b> <a class="blue">6723</a></b></p>
+                    <p>Alias :<b> CP Outlet</b></p>
+                </div>
+            </div>
+    
+            
+    
+          </div>
+    <div fxFlex="100%">
+    <div class="table">
+        <table class="horiz-table" cellpadding="0" cellspacing="0">
+             <tr class="border">
+
+                <th class="mat-header-cell">Order No.</th>
+
+                <th class="mat-header-cell">Order Date</th>
+
+                <th class="mat-header-cell">Delivery Date</th>
+
+               
+                <th class="mat-header-cell">Currency</th>
+                
+                <th class="mat-header-cell">Conversion</th>
+                <th class="mat-header-cell">Pay Terms</th>
+
+                <th class="mat-header-cell">Price</th>                
+               
+            </tr>
+            <tr>
+
+                <td class="pd-0 grey">                    
+                 <div class="auto">                
+                  <mat-form-field class="example-full-width" appearance="outline">                    
+                    <input matInput value="210428-SOI-0476" disabled>
+                 </mat-form-field>
+                </div>
+                </td> 
+
+                 <td class="pd-0 grey dates">
+                    <mat-form-field class="example-full-width align" appearance="outline">
+                    <input matInput [matDatepicker]="picker" disabled>
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                </td>
+
+                <td class="grey pd-0 dates">
+                    <mat-form-field class="example-full-width align" appearance="outline">
+                    <input matInput [matDatepicker]="pickers" disabled>
+                      <mat-datepicker-toggle matSuffix [for]="pickers"></mat-datepicker-toggle>
+                      <mat-datepicker #pickers></mat-datepicker>
+                </mat-form-field>
+                </td>
+
+              
+                <td class="pd-0 grey">  
+                 <mat-form-field class="example-full-width" appearance="outline">                    
+                    <input matInput value="INR" disabled>
+                 </mat-form-field>
+                </td>
+
+                <td class="pd-0 br-1 grey">
+                	 <mat-form-field class="example-full-width" appearance="outline">                    
+                    <input matInput value="1" disabled>
+                 </mat-form-field>
+
+                </td> 
+
+                <td class="pd-0 grey">
+                     <mat-form-field appearance="outline" class="align" disabled>
+					  <mat-select disableRipple disabled>
+					    <mat-option value="1">Prepaid</mat-option>
+					    <mat-option value="2">Postpaid</mat-option>
+					  </mat-select>
+					</mat-form-field>
+                </td>
+                <td class="pd-0 grey">
+                   <mat-form-field appearance="outline" class="align"disabled>
+					  <mat-select disableRipple disabled>
+					    <mat-option value="1">Inclusive Tax</mat-option>
+					    <mat-option value="2">Exclusive Tax</mat-option>
+					  </mat-select>
+					</mat-form-field>
+                </td>
+              
+            </tr>
+
+        </table>
+
+        
+    </div>
+    </div>
+    </mat-card>
+    
+    </div>  
+    
+      <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+
+    <div fxFlex="100%">
+
+        <div class="table">         
+            
+            <table class="table-2" cellpadding="0" cellspacing="0">
+                <tr>
+
+                    <th class="pd-10 wd-20">Sr.</th>
+                    <th class="wd-30">TID</th>
+                    <th class="wd-60">Code </th>
+                    <th>Item Name</th>
+                    <th class="wd-60">MRP</th>
+                    <th class="wd-60">Order <br>Qty</th>
+                    <th class="wd-60">Price </th>
+                    <th class="wd-60">Tax (%)</th>
+                    <th class="wd-60">Amount<br> (INR)</th>
+                    <th class="wd-60">Delivered Qty </th>
+                    <th class="wd-60">Cancel Qty </th>
+                    <th class="wd-60">Bal Qty </th>
+                    <th>Short Narration </th>
+                </tr>
+                <tr *ngFor="let item of row; let i = index" class="sr-no">
+                     <td class="auto-t pd-10 grey border-b-1 wd-20">&nbsp;</td>
+                     <td class="grey wd-30">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput disabled="disabled" > 
+                        </mat-form-field>
+                    </td>
+
+                   
+                    <td class="grey wd-60">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="" disabled > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="grey wd-60">
+                        <mat-form-field class="example-full-width name" appearance="outline">
+                        <input matInput value="" disabled=""> 
+                        </mat-form-field>
+                    </td>
+
+
+                    <td class="wd-30 grey ">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="0"  disabled  > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="grey wd-60">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5" disabled > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="grey wd-60">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="0" disabled > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="grey wd-60">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="1" disabled > 
+                        </mat-form-field>
+                    </td>
+                    
+                    <td class="grey wd-60">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="1" disabled > 
+                        </mat-form-field>
+                    </td>
+ 
+
+                    <td class="wd-60">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="3" > 
+                        </mat-form-field>
+                    </td>
+
+
+                    <td class="wd-60">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="1" > 
+                        </mat-form-field>
+                    </td>
+
+
+                    <td class="grey wd-60">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="1" disabled > 
+                        </mat-form-field>
+                    </td>
+                  
+                    <td>
+                        <mat-form-field class="example-full-width align" appearance="outline">
+                        <input matInput> 
+                        </mat-form-field>
+                    </td>
+
+                </tr>
+
+
+                   <tr align="center" class="total-row">
+                    <td colspan="2" class="grey pd-10" align="left">Total</td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey">0</td>
+                    <td class="grey">25</td>
+                    <td class="grey">0</td>
+                    <td class="grey">5</td>
+                    <td class="grey">0</td>
+                    <td class="grey">15</td>
+                    <td class="grey">5</td>
+                    <td class="grey">5</td>
+                    <td class="grey"></td>
+                </tr>
+            </table>
+
+        </div>
+
+
+        
+    </div>
+</mat-card>
+</div>
+
+
+<div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+    <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+
+<div fxFlex="100%">
+
+    <div class="table">         
+        
+        <table class="table-2 tables" cellpadding="0" cellspacing="0">
+            <tr>
+
+                <th class="pd-10 wd-20">Sr.</th>
+                <th>Charge Name</th>
+                <th class="wd-60">Tax (%)</th>
+                <th class="wd-60">Net Amt. <br> (INR)</th>
+                <th>Short Narration </th>
+                <th class="pd-10">Action</th>
+            </tr>
+            <tr *ngFor="let item of row2; let i = index" class="sr-no">
+                 <td class="auto-t pd-10 grey border-b-1 wd-20">&nbsp;</td>
+                <td class="grey">
+                    <mat-form-field class="example-full-width name2 align" appearance="outline">
+                    <input matInput disabled="disabled"> 
+                    </mat-form-field>
+                </td>
+               
+
+
+                <td class="grey wd-60">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <input matInput value="1" disabled > 
+                    </mat-form-field>
+                </td>
+
+              
+
+                <td class="wd-60">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <input matInput value="1" > 
+                    </mat-form-field>
+                </td>
+
+
+                <td>
+                    <mat-form-field class="example-full-width align" appearance="outline">
+                    <input matInput> 
+                    </mat-form-field>
+                </td>
+
+                <td class="border-b-1 pd-10">   
+                <span class="material-icons green" (click)="addTable2()">add_to_photos</span>
+
+                <span class="material-icons red" (click) = "deleteRow2(i)">delete</span>
+            </td>
+            </tr>
+
+
+               <tr align="center" class="total-row">
+                <td colspan="2" class="grey pd-10" align="left">Total</td>
+                <td class="grey">3</td>
+                <td class="grey">3</td>
+                <td class="grey"></td>
+                <td class="grey"></td>
+            </tr>
+        </table>
+
+    </div>
+
+
+    
+</div>
+</mat-card>
+</div>
+
+  <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+ <div fxFlex="70%">
+ </div>
+    <div fxFlex="30%">
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center" class="card">
+    	<mat-list role="list">
+			  <mat-list-item role="listitem">
+			  	
+			  	<div fxLayout='row' fxFlex="100%">
+					<div fxFlex="70%"><b>Sub Total</b></div>
+					<div fxFlex="30%" align="right">00.00</div>
+			  	</div>
+
+			  </mat-list-item>
+			  <mat-list-item role="listitem">
+			  	
+			  	<div fxLayout='row' fxFlex="100%">
+					<div fxFlex="70%"><b>Total Bill Amt.	</b></div>
+					<div fxFlex="30%" align="right"><b>00.00</b></div>
+			  	</div>
+			  </mat-list-item>
+			  <mat-list-item role="listitem">
+			  	
+			  	<div fxLayout='row' fxFlex="100%">
+					<div fxFlex="70%"><b>CGST</b></div>
+					<div fxFlex="30%" align="right">00.00</div>
+			  	</div>
+			  </mat-list-item>
+			    <mat-list-item role="listitem">
+			  	
+			  	<div fxLayout='row' fxFlex="100%">
+					<div fxFlex="70%"><b>SGST </b></div>
+					<div fxFlex="30%" align="right">00.00</div>
+			  	</div>
+			  </mat-list-item>
+			</mat-list>
+</mat-card>
+    </div>
+
+</div>
+
+  <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+      <div fxFlex="100%">
+        <form class="example-form">
+        
+          <mat-form-field class="example-full-width textarea" appearance="outline">
+            <mat-label>Long Narration</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+    
+        </form>
+    
+    </div>
+    <div fxFlex="100%" fxLayout='row' class="tx-ded" fxLayout.xs='row'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%">
+   
+        <div fxFlex="100%" class="deductions">
+            <span>TDS
+                <mat-form-field class="example-full-width" appearance="outline">
+                <input matInput value="18%" > 
+                </mat-form-field> : 2,000
+            </span>
+        </div>
+        <div fxFlex="100%" align="right"><button mat-raised-button color="primary">Create</button></div>
+        
+    </div>
+
+    </mat-card>
+
+    </div>
+
+    
+
+
+    </div>
+    
+    </div>

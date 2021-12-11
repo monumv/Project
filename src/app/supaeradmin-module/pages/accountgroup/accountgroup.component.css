@@ -1,0 +1,63 @@
+.crumb {
+    margin-top: 23px;
+    background: #e9e9e9 !important;
+    height: 45px !important;
+    box-shadow: none;
+}
+.crumb {
+    margin-bottom: 20px;
+}
+.mat-h2 { margin-bottom: 0px !important }
+mat-card { padding: 8px;margin: 15px 0px !important;}
+.mat-h2{ margin-bottom: 0px; }
+@media only screen and (max-width:786px) { 
+	.example-button-row {display: block !important;}
+	.example-button-row button small { display: none; }
+	.example-button-row button{ margin-top: 8px !important }
+	mat-card {display: block !important;}
+ 	.table { overflow-x: scroll}
+} 
+.chart .mat-h2 { font-size: 14px !important; text-align: center !important }
+tr.mat-header-row { background: #dedede !important;  }
+.mat-header-cell { height: 47px; font-size: 13px; font-weight: 600; color: #000; }
+.content2 mat-card { display: block !important; }
+.heading { margin-bottom: 0px }
+table { width: 100%; box-shadow: none;}
+.content { padding: 0px 20px; }
+.mv-19 { padding-left: 15px;}
+.mv-17 { padding: 0px;  font-size: 13px;} 
+.mv-18 { padding: 0px 5px;}
+.mv-17 a {text-decoration: none;font-size: 13px;color: #4285F4;}
+.crumb{ margin-bottom: 20px }
+
+
+tr.mat-header-row { height: 44px; font-size: 20px; font-weight: bold !important;  background: #dedede; }
+.table {width: 100%;}
+.table-responsive {width: 100%; border-collapse: collapse;}
+.table-responsive thead {background: #dedede;}
+.table-responsive thead th { display: table-cell; padding: 9px 10px }
+.table-responsive tbody td { border-bottom: 1px solid #eee; padding: 5px 10px; }
+
+
+.mat-expansion-panel-header { padding:0;}
+.pd0{padding: 5px 0 !important}
+table { width: 100%;}
+table td { width: calc(27.2%/2); padding: 4px 10px;}
+table th { width: calc(30%/2);}
+tr.example-detail-row { height: 0;}
+.mat-expansion-panel { border-radius: 0px !important; border-bottom: 1px solid #eee; box-shadow:none; }
+.table .mat-expansion-panel-body, .mat-expansion-panel-header { padding: 0px 0px !important }
+.mat-expansion-indicator{ display: none !important }
+.mat-expansion-panel-header  { height: 37px !important }
+.mat-expansion-panel:not([class*=mat-elevation-z]) { box-shadow: none !important }
+.bold { font-weight: 600 }
+a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #4285F4;
+}
+
+.mat-expansion-panel-header.mat-expanded:focus, 
+.mat-expansion-panel-header.mat-expanded:hover {background : rgba(0,0,0,.04) !important}
+.green { color: green }
+.red { color: red }

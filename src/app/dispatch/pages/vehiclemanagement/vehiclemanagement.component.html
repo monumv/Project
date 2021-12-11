@@ -1,0 +1,27 @@
+<div class="content1">
+
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="breadcrumb">Vehicle Management</mat-toolbar>
+    
+    </div>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <h2 class="mat-h2">Vehicle Management</h2>
+    </div>
+    
+    <div fxLayout='row' fxLayoutGap="3%" class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+        <mat-card fxFlex="33%" routerLink="/dispatch/vehiclelist" class="">
+            <img mat-card-sm-image src="./assets/images/salary-slip.png" alt="Complaints">
+            <mat-card-title>Vehicle List</mat-card-title>
+        </mat-card>
+        <mat-card fxFlex="33%" routerLink="/dispatch/vehiclegroups" class="">
+            <img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+            <mat-card-title>Vehicle Groups</mat-card-title>
+        </mat-card>
+        <mat-card fxFlex="33%" routerLink="/dispatch/drivers" class="">
+            <img mat-card-sm-image src="./assets/images/assets.png" alt="Complaints">
+            <mat-card-title>Drivers</mat-card-title>
+        </mat-card>
+    </div>
+    </div>
+    <router-outlet></router-outlet>

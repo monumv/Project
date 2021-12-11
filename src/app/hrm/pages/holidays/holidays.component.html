@@ -1,0 +1,36 @@
+
+<div class="content1">
+
+    <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="crumb">
+              <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/hrm">HRM</a><span class="mv-18">/</span></span>
+                 <span class="mv-17"><a  routerLink="/hrm/leave-management">Leave Management</a><span class="mv-18">/</span></span>
+                 <span class="mv-17"><a  routerLink="/hrm/leave-settings">Leave Settings</a><span class="mv-18">/</span></span>
+                <span class="mv-17">Holidays</span>
+              </div>
+          </mat-toolbar>
+    
+    </div>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <h2 class="mat-h2">Holidays</h2>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="33%" routerLink="/hrm/holiday-list" class="">
+            <img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+            <mat-card-title>Holiday List</mat-card-title>
+        </mat-card>
+    
+        <mat-card fxFlex="33%" class="" routerLink="/hrm/holiday-group">
+            <img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+            <mat-card-title>Holiday Groups</mat-card-title>
+        </mat-card>
+      
+    </div>
+    
+    
+  
+    </div>
+    <router-outlet></router-outlet>

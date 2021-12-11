@@ -1,0 +1,179 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Create Journal</h2>
+
+
+    </mat-toolbar>
+
+<div class="layout">
+
+
+    <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+    
+    <mat-card class="">
+    <div fxFlex="100%">
+    <div class="table">
+        <table class="horiz-table" cellpadding="0" cellspacing="0">
+             <tr class="border">
+
+                <th class="mat-header-cell">Voucher No.</th>
+
+                <th class="mat-header-cell">Date</th>
+
+                <th class="mat-header-cell">Gst Nature</th>
+
+                             
+            </tr>
+            <tr>
+
+                <td class="pd-0">                    
+                 <div class="auto">                
+                  <mat-form-field class="example-full-width" appearance="outline">                    
+                    <input matInput value="210428-SOI-0476">
+                 </mat-form-field>
+                </div>
+                </td> 
+
+                 <td class="pd-0 dates">
+                    <mat-form-field class="example-full-width align" appearance="outline">
+                    <input matInput [matDatepicker]="picker">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                </td>
+
+                
+                <td class="pd-0">
+                   <mat-form-field appearance="outline" class="align"disabled>
+					  <mat-select disableRipple>
+					    <mat-option value="1">Not Applicable/Non GST</mat-option>
+					  
+					  </mat-select>
+					</mat-form-field>
+                </td>
+              
+            </tr>
+
+        </table>
+
+        
+    </div>
+    </div>
+    </mat-card>
+    
+    </div>  
+    
+      <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+
+    <div fxFlex="100%">
+
+        <div class="table">         
+            
+            <table class="table-2" cellpadding="0" cellspacing="0">
+                <tr>
+
+                    <th class="pd-10 wd-20">Sr.</th>
+                    <th class="">D/C	</th>
+                    <th class="">Account </th>
+                    <th>Debit (INR)	</th>
+                    <th class="">Credit (INR)	</th>
+                    <th>Short Narration </th>
+                    <th class="pd-10">Action </th>
+                </tr>
+                <tr *ngFor="let item of row; let i = index" class="sr-no">
+                     <td class="auto-t pd-10 grey border-b-1 wd-20">&nbsp;</td>
+                     <td class="name3">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                        </mat-form-field>
+                    </td>
+
+                   
+                    <td class="name2">
+                        <mat-form-field class="example-full-width name2" appearance="outline">
+                        <input matInput value="" > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="name4" >
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value=""> 
+                        </mat-form-field>
+                    </td>
+
+
+                    <td class="name4">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value=""  > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="name2">
+                        <mat-form-field class="example-full-width name2" appearance="outline">
+                        <input matInput value="" > 
+                        </mat-form-field>
+                    </td>
+
+
+
+       <td class="border-b-1 pd-10">   
+       <span class="material-icons green" (click)="addTable()">add_to_photos</span>
+
+       <span class="material-icons red" (click) = "deleteRow(i)">delete</span>
+   </td>
+
+                </tr>
+
+
+                   <tr align="center" class="total-row">
+                    <td colspan="2" class="grey pd-10" align="left">Total</td>
+                    <td class="grey"></td>
+                    <td class="grey">0</td>
+                    <td class="grey">0</td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                </tr>
+            </table>
+
+        </div>
+
+
+        
+    </div>
+</mat-card>
+</div>
+
+
+
+  <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+      <div fxFlex="100%">
+        <form class="example-form">
+        
+          <mat-form-field class="example-full-width textarea" appearance="outline">
+            <mat-label>Long Narration</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+    
+        </form>
+    
+    </div>
+    <div fxFlex="100%" fxLayout='row' class="tx-ded" fxLayout.xs='row'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%">
+   
+        
+        <div fxFlex="100%" align="right"><button mat-raised-button color="primary">Submit</button></div>
+        
+    </div>
+
+    </mat-card>
+
+    </div>
+
+    
+
+
+    </div>
+    
+    </div>

@@ -1,0 +1,50 @@
+
+<div class="content1">
+
+    <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="crumb">
+              <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/supaeradmin-module">Superadmin</a><span class="mv-18">/</span></span>
+                <span class="mv-17">Subscribers</span>
+              </div>
+          </mat-toolbar>
+    
+    </div>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <h2 class="mat-h2">Subscribers</h2>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="33%" routerLink="" class="">
+            <img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+            <mat-card-title>Leads </mat-card-title>
+        </mat-card>
+    
+        <mat-card fxFlex="33%" class="" routerLink="">
+            <img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+            <mat-card-title>Demo </mat-card-title>
+        </mat-card>
+        <mat-card fxFlex="33%" class="" routerLink="">
+            <img mat-card-sm-image src="./assets/images/attendance.png" alt="Complaints">
+            <mat-card-title>Active Subscribers</mat-card-title>
+        </mat-card>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="31%" class="">
+            <img mat-card-sm-image src="./assets/images/settings.png" alt="Complaints">
+            <mat-card-title>Expired Subscribers</mat-card-title>
+        </mat-card>
+
+         <mat-card fxFlex="31%" class="" routerLink="/supaeradmin-module/susbscriberslist">
+            <img mat-card-sm-image src="./assets/images/department.png" alt="Complaints">
+            <mat-card-title>All Subscribers</mat-card-title>
+        </mat-card>
+    
+       
+    </div>
+   
+  
+    </div>
+    <router-outlet></router-outlet>

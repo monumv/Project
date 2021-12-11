@@ -1,0 +1,57 @@
+
+<div class="content1">
+
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="breadcrumb">HRM Dashboard</mat-toolbar>
+    
+    </div>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <h2 class="mat-h2">HR Masters</h2>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="33%" routerLink="/hrm/department" class="">
+            <img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+            <mat-card-title>Department</mat-card-title>
+        </mat-card>
+    
+        <mat-card fxFlex="33%" routerLink="/hrm/subdepartment" class="">
+            <img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+            <mat-card-title>Expenses Sub Department</mat-card-title>
+        </mat-card>
+        <mat-card fxFlex="33%" routerLink="/hrm/managementlevel" class="">
+            <img mat-card-sm-image src="./assets/images/attendance.png" alt="Complaints">
+            <mat-card-title>Management Level</mat-card-title>
+        </mat-card>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="33%" routerLink="/hrm/designation" class="">
+            <img mat-card-sm-image src="./assets/images/settings.png" alt="Complaints">
+            <mat-card-title>Designation</mat-card-title>
+        </mat-card>
+    
+        <mat-card fxFlex="33%" routerLink="/hrm/employees" class="">
+            <img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+            <mat-card-title>Employees</mat-card-title>
+        </mat-card>
+        <mat-card fxFlex="33%" routerLink="/hrm/division" class="">
+            <img mat-card-sm-image src="./assets/images/joining.png" alt="Complaints">
+            <mat-card-title>Division</mat-card-title>
+        </mat-card>
+    </div>
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+     
+        
+
+          <mat-card fxFlex="31.5%" routerLink="/hrm/organogram/" class="">
+            <img mat-card-sm-image src="./assets/images/relieving.png" alt="Complaints">
+            <mat-card-title>Organogram</mat-card-title>
+        </mat-card>
+    </div>
+
+     
+  
+    </div>
+    <router-outlet></router-outlet>

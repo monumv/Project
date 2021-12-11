@@ -1,0 +1,20 @@
+.g-ico{ width: 21px !important; float: left !important; margin-top: 7px !important; }
+.country { width: 100% !important; }
+.g-signup {width: 232px; margin:0 auto;  padding: 6px 27px; border-radius: 34px; }
+.terms { margin-top: 22px; }
+.terms, .login { font-size: 13px; color: rgb(118, 118, 118); }
+.mat-raised-button {margin-top: 10px; }
+.mat-h2 { margin-bottom: 12px !important; }
+.form { justify-content: center !important; align-items: center !important; }
+
+.amt{
+    display: block;
+    margin: 9px 0px;
+    font-size: 15px; }
+    .cash {
+    display: block;
+    margin:20px 0px 0px 0px;
+    text-decoration: none;}
+    .card p {    margin-bottom: 7px;}
+
+    .card button { background:#ff4f4f; }

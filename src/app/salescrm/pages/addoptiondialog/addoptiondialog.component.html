@@ -1,0 +1,48 @@
+<div class="dlgbx" style="width: 500px;">
+<mat-card>
+<div fxLayout='row' class="" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+<div fxFlex='55%'>
+	<h1 mat-dialog-title>Options</h1>
+</div>
+<div fxFlex='45%' fxLayoutAlign="end">
+	<button mat-raised-button (click)="addTable3()" class="action-btnn">Add</button>
+
+</div>
+</div>
+</mat-card>	
+
+
+<div mat-dialog-content>
+
+
+
+    <div class="">         
+        
+        <table class="table-2 tables" cellpadding="0" cellspacing="0">
+          
+            <tr *ngFor="let item of row3; let i = index" class="sr-no">
+                 <td class="auto-t pd-10 border-b-1 wd-20">&nbsp;</td>
+                <td><input matInput placeholder="">
+                </td>
+               
+              
+                <td class="border-b-1 pd-10">   
+               
+                <span class="material-icons red" (click) = "deleteRow3(i)">delete</span>
+            </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+<div mat-dialog-actions >
+	<div class="example-button-row" fxLayoutGap="1%" fxFlex='100%' fxLayoutAlign="end">
+	<button mat-raised-button mat-dialog-close>Submit</button>
+  <button mat-raised-button mat-dialog-close>Cancel</button>
+</div>
+</div>
+
+
+</div>

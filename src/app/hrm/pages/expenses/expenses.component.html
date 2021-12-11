@@ -1,0 +1,50 @@
+
+<div class="content1">
+
+    <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="crumb">
+              <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/hrm">HRM</a><span class="mv-18">/</span></span>
+                <span class="mv-17">Expenses Reimbursement</span>
+              </div>
+          </mat-toolbar>
+    
+    </div>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <h2 class="mat-h2">Expenses Reimbursement</h2>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="33%" routerLink="/hrm/claimed" class="">
+            <img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+            <mat-card-title>Claimed</mat-card-title>
+        </mat-card>
+    
+        <mat-card fxFlex="33%" class="" routerLink="/hrm/approved">
+            <img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+            <mat-card-title>Approved</mat-card-title>
+        </mat-card>
+        <mat-card fxFlex="33%" class="" routerLink="/hrm/cancelled">
+            <img mat-card-sm-image src="./assets/images/attendance.png" alt="Complaints">
+            <mat-card-title>Cancelled</mat-card-title>
+        </mat-card>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="31%" class="" routerLink="/hrm/paid">
+            <img mat-card-sm-image src="./assets/images/settings.png" alt="Complaints">
+            <mat-card-title>Paid</mat-card-title>
+        </mat-card>
+
+         <mat-card fxFlex="31%" class="" routerLink="/hrm/ratelist">
+            <img mat-card-sm-image src="./assets/images/department.png" alt="Complaints">
+            <mat-card-title>TA Rate List</mat-card-title>
+        </mat-card>
+    
+       
+    </div>
+   
+  
+    </div>
+    <router-outlet></router-outlet>

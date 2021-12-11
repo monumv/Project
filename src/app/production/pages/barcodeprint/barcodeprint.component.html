@@ -1,0 +1,113 @@
+
+<mat-sidenav #sidenav1 id="rightFilterNav" mode="side" position="end" role="" class="sidenav-wv">
+  <div class="mv-6">
+      <form class="example-form">
+          <h2 class="mv-2">Filter</h2>
+
+         
+        <span class="material-icons close-btn" (click)="sidenav1.toggle()"> close </span>
+
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Search" appearance="outline" >
+            </mat-form-field>
+          
+         
+          <mat-dialog-actions align="start">
+              <section>
+                  <div class="example-button-row mv-5">
+                      <button mat-button mat-dialog-close mat-raised-button color="white"
+                          (click)="sidenav1.toggle()" class="btn-primary">Apply</button>
+                      <button mat-button [mat-dialog-close]="true" cdkFocusInitial mat-raised-button
+                          color="white">Clear</button>
+                  </div>
+              </section>
+          </mat-dialog-actions>
+      </form>
+  </div>
+</mat-sidenav>
+
+
+<div class="content1">
+
+    <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="crumb">
+            <div class="mv-19">
+              <span class="mv-17"><a  routerLink="/production">Production Dashboard</a><span class="mv-18">/</span></span>
+              <span class="mv-17"><a  routerLink="/production/barcode">Barcode Management</a><span class="mv-18">/</span></span>
+                <span class="mv-17">Barcode Print</span>
+            </div>
+        </mat-toolbar>
+    
+    </div>
+    
+    
+    <div fxLayout='row' fxLayout.xs='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        
+        <div class="content" fxFlex="100%">
+        <mat-card>
+            <div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+                <h2 class="mat-h2">Barcode Print</h2>
+            </div>
+    
+            <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+                    <button mat-stroked-button [matMenuTriggerFor]="menu2"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">add</mat-icon><small>Add</small></button>
+                    
+                    <mat-menu #menu2="matMenu" class="right-panel">
+                      <button mat-menu-item>Add Barcode (Against Work Order)</button>
+                      <button mat-menu-item> Add Barcode (Against Purchase Order)</button>
+                    </mat-menu>
+                    <button mat-stroked-button><mat-icon  role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_upward</mat-icon><small>Import</small></button>
+                    <button mat-stroked-button ><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_downward</mat-icon><small>Export</small></button>
+                    <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">delete_outline</mat-icon><small>Delete</small></button>
+                    <button mat-stroked-button (click)="sidenav1.toggle()"><span class="material-icons">filter_list</span></button>
+                </div>
+    
+    
+    
+            </div>
+    
+    
+    
+        </mat-card>
+    
+        </div>
+    </div>
+    
+    
+    <div fxLayout='row' class="content content2" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="center">
+    
+    
+  		<div class="barcode">
+    <mat-card>
+  			 <div><img src="./assets/images/barcode.png" class="code"></div>
+  			   <div fxLayout='row' class="barcode-content" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="center">
+
+  			   	<div fxFlex='43%'>
+  			   		 <div><img src="./assets/images/bluemount-logo.png" class="barcode-logo"></div>
+  			   		<p><b>Code : BM38</b></p>
+  			   		<p> <b>Quantity :1 No.</b></p>
+  			   		<p> <b>Code :17,990.00</b></p>
+  			   		<p>(Inclusive of all taxes)</p>
+  			   	</div>
+  			   	<div fxFlex='57%'>
+  			   		<h3>For Sales Contact:</h3>
+  			   		<h3>Manager Sales.</h3>
+  			   		<p><b>Blue Mount Udyog Pvt. Ltd.</b></p>
+  			   		<p> <b>B-96, Pushpanjai Enclave</b></p>
+  			   		<p> <b>Pitampura, New Delhi-110034, India </b></p>
+  			   		<p> <b>Tel No. : +91 11 49 49 1515</b></p>
+  			   		<p> <b>Email : purity@bluemountro.com</b></p>
+  			   		<p>Manufacturing Month : April 2021</p>
+  			   	</div>
+  		</div>
+  		<p class="model">Model : Advance style Alkaline Ro + Uv + UF Water Purifier</p>
+    </mat-card>
+    </div>
+    
+    </div>
+    
+    
+    
+    </div>
+    <router-outlet></router-outlet>

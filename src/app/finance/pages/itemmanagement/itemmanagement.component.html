@@ -1,0 +1,100 @@
+<div class="content1">
+
+	<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+          <mat-toolbar class="crumb">
+              <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/finance">Finance Dashboard</a><span class="mv-18">/</span></span>
+                <span class="mv-17">Item Management</span>
+              </div>
+          </mat-toolbar>
+      </div>
+	
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">Item Management</h2>
+	</div>
+
+			
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="/finance/items" class="">
+				<img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+				<mat-card-title>Item</mat-card-title>
+			</mat-card>
+			<mat-card fxFlex="33%" routerLink="/finance/itemvariants" class="">
+				<img mat-card-sm-image src="./assets/images/approved-salary.png" alt="Complaints">
+				<mat-card-title>Item Variants</mat-card-title>
+			</mat-card>
+	
+			
+		<mat-card fxFlex="33%" routerLink="/finance/itemgroups/" class="">
+			<img mat-card-sm-image src="./assets/images/assets.png" alt="Complaints">
+			<mat-card-title>Item Group</mat-card-title>
+		</mat-card>
+		</div>
+	
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+		
+		<mat-card fxFlex="33%" routerLink="/finance/unit/" class="">
+			<img mat-card-sm-image src="./assets/images/detailed-monthly.png" alt="Complaints">
+			<mat-card-title> Unit</mat-card-title>
+		</mat-card>
+				
+		<mat-card fxFlex="33%" routerLink="/finance/unirgroups/" class="">
+			<img mat-card-sm-image src="./assets/images/experience.png" alt="Complaints">
+			<mat-card-title>Unit Groups</mat-card-title>
+		</mat-card>
+
+		
+	<mat-card fxFlex="33%" routerLink="/finance/itemsize/" class="">
+		<img mat-card-sm-image src="./assets/images/joining.png" alt="Complaints">
+		<mat-card-title>Item size</mat-card-title>
+	</mat-card>
+	
+	
+	</div>
+
+
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+		
+	<mat-card fxFlex="33%" routerLink="/finance/itemcolor/" class="">
+		<img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+		<mat-card-title>Item Color</mat-card-title>
+	</mat-card>
+
+		<mat-card fxFlex="33%" routerLink="/finance/packmanagement/" class="border">
+			<img mat-card-sm-image src="./assets/images/relieving.png" alt="Complaints">
+			<mat-card-title> Pack Management</mat-card-title>
+		</mat-card>
+				
+		<mat-card fxFlex="33%" routerLink="/finance/pricesettings/" class="border">
+			<img mat-card-sm-image src="./assets/images/experience.png" alt="Complaints">
+			<mat-card-title>Price Setting</mat-card-title>
+		</mat-card>
+	
+	</div>
+
+		<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+			
+	<mat-card fxFlex="33%" routerLink="/finance/hsnlist/" class="">
+		<img mat-card-sm-image src="./assets/images/confirmation-letter.png" alt="Complaints">
+		<mat-card-title>HSN/SAC List</mat-card-title>
+	</mat-card>
+
+		<mat-card fxFlex="33%" routerLink="/finance/brands/" class="">
+		<img mat-card-sm-image src="./assets/images/confirmation-letter.png" alt="Complaints">
+		<mat-card-title>Brands</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/finance/registered-item/" class="border">
+		<img mat-card-sm-image src="./assets/images/confirmation-letter.png" alt="Complaints">
+		<mat-card-title>Registered Item</mat-card-title>
+	</mat-card>
+	
+
+	</div>
+
+	
+
+	</div>
+	<router-outlet></router-outlet>

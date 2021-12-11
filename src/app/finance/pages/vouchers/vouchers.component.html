@@ -1,0 +1,86 @@
+<div class="content1">
+
+	<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+            <span class="mv-17"><a  routerLink="/finance">Finance</a><span class="mv-18">/</span></span>
+            <span class="mv-17">Vouchers</span>
+        </div>
+    </mat-toolbar>
+</div>
+	
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">Vouchers</h2>
+	</div>
+
+			
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="/finance/salemanagement/" class="border">
+				<img mat-card-sm-image src="./assets/images/p-salary.png" alt="Complaints">
+				<mat-card-title>Sale Management</mat-card-title>
+			</mat-card>	
+	
+		<mat-card fxFlex="33%" routerLink="/finance/purchasemanagement/" class="border">
+			<img mat-card-sm-image src="./assets/images/paid-salary.png" alt="Complaints">
+			<mat-card-title>Purchase Management</mat-card-title>
+		</mat-card>
+
+		<mat-card fxFlex="33%" routerLink="/finance/receiptmanagement/" class="border">
+			<img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+			<mat-card-title> Receipt Mangement</mat-card-title>
+		</mat-card>
+				
+
+		</div>
+	
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+		
+	<mat-card fxFlex="33%" routerLink="/finance/paymen-management/" class="border">
+		<img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+		<mat-card-title>Payment Mangement</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/finance/journal/" class="">
+			<img mat-card-sm-image src="./assets/images/experience.png" alt="Complaints">
+			<mat-card-title>Journal</mat-card-title>
+		</mat-card>
+
+
+	<mat-card fxFlex="33%" routerLink="/finance/debit-note-without-item/" class="">
+		<img mat-card-sm-image src="./assets/images/salary-slip.png" alt="Complaints">
+		<mat-card-title>Dr. Note (w/o Items)</mat-card-title>
+	</mat-card>
+		
+	
+	
+	</div>
+
+
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+
+	<mat-card fxFlex="33%" routerLink="/finance/credit-note-without-item/" class="">
+		<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+		<mat-card-title>Cr. Note (w/o Items)</mat-card-title>
+	</mat-card>
+	
+		
+	<mat-card fxFlex="31%" routerLink="/finance/issuedtoparty/" class="">
+		<img mat-card-sm-image src="./assets/images/relieving.png" alt="Complaints">
+		<mat-card-title>Item Issued to Party</mat-card-title>
+	</mat-card>
+
+
+<mat-card fxFlex="31%" routerLink="/finance/receivedfromparty/">
+		<img mat-card-sm-image src="./assets/images/relieving.png" alt="Complaints">
+		<mat-card-title>Item Received to Party</mat-card-title>
+	</mat-card>
+
+	
+	</div>
+
+		
+
+	
+
+	</div>
+	<router-outlet></router-outlet>

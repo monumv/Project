@@ -1,0 +1,189 @@
+
+<mat-sidenav #sidenav1 id="rightFilterNav" mode="side" position="end" role="" class="sidenav-wv">
+    <div class="mv-6">
+        <form class="example-form">
+            <h2 class="mv-2">Filter</h2>
+
+           
+          <span class="material-icons close-btn" (click)="sidenav1.toggle()"> close </span>
+
+<div class="filter-text">
+
+
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="Search" appearance="outline" >
+  </mat-form-field>
+
+
+
+</div>
+
+            <mat-dialog-actions align="start">
+                <section>
+                    <div class="example-button-row mv-5">
+                        <button mat-button mat-dialog-close mat-raised-button color="white"
+                            (click)="sidenav1.toggle()" class="btn-primary">Apply</button>
+                        <button mat-button [mat-dialog-close]="true" cdkFocusInitial mat-raised-button
+                            color="white">Clear</button>
+                    </div>
+                </section>
+            </mat-dialog-actions>
+        </form>
+    </div>
+</mat-sidenav>
+
+    
+    <div class="content1">
+    
+    <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="crumb">
+            <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/sms">SMS Dashboard</a><span class="mv-18">/</span></span>
+                <span class="mv-17">Templates</span>
+            </div>
+        </mat-toolbar>
+    </div>
+        
+    <div fxLayout='row' fxLayout.xs='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+            <div class="content" fxFlex="100%">
+            <mat-card>
+                <div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+                    <h2 class="mat-h2">Templates</h2>
+                </div>
+        
+                <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                    <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+                        <button mat-stroked-button (click)="openDialog()"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">add</mat-icon><small>Add</small></button>
+                        <button mat-stroked-button><mat-icon  role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_upward</mat-icon><small>Import</small></button>
+                        <button mat-stroked-button ><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_downward</mat-icon><small>Export</small></button>
+                        <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">delete_outline</mat-icon><small>Delete</small></button>
+                        <button mat-stroked-button (click)="sidenav1.toggle()"><span class="material-icons">filter_list</span></button>
+                    </div>
+        		</div>
+        </mat-card>
+
+
+        
+            </div>
+        </div>
+        
+        
+        <div fxLayout='row' class="content content2" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="center">
+        
+        <mat-card fxFlex="100%">
+        	
+        <mat-tab-group mat-align-tabs="start">
+  <mat-tab label="SMS">
+  	
+
+
+  </mat-tab>
+</mat-tab-group>
+        
+         <div class="cont" fxLayout='row' fxLayout.xs='column' fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%">
+
+         	  <div fxFlex="100%">
+         	  	<strong>+91-9818564567</strong>
+         	  	<div class="block">
+         	  	<div class="temp">
+         	  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+
+         	  		<div class="overlay">
+         	  			<div class="" fxLayout='row' fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row'             fxLayoutWrap fxLayoutGap="3%">
+
+						<div fxFlex="100%">
+                			 <mat-checkbox class="example-margin"></mat-checkbox>
+                		</div>
+
+                		<div fxFlex="100%" fxLayoutAlign="end">
+                			<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+							  <mat-icon>more_vert</mat-icon>
+							</button>
+							<mat-menu #menu="matMenu">
+							  <button mat-menu-item>
+							 
+							    <span> Create Broadcast</span>
+							  </button>
+							  <button mat-menu-item disabled>
+							   
+							    <span>Edit</span>
+							  </button>
+							  <button mat-menu-item>						   
+							    <span>Duplicate</span>
+							  </button>
+
+							  <button mat-menu-item>						   
+							    <span>Manage Tags</span>
+							  </button>
+
+
+							  <button mat-menu-item>						   
+							    <span color="warn">Delete</span>
+							  </button>
+							</mat-menu>
+                		</div>
+
+            			</div>
+
+            			<div>
+
+            				 <div class="example-button-row">
+							    <button mat-raised-button color="primary">Use</button>
+							    <button mat-raised-button>Edit</button>
+							</div>
+            			</div>
+
+         	  		</div>
+
+         	  	</div>
+         	  	<div class="bottom-bar" fxLayout='row' fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row'
+                fxLayoutWrap fxLayoutGap="3%">
+
+                		<div fxFlex="70%" fxLayout='row' fxLayout.xs='row' fxLayout.sm='row' fxLayout.md='row'
+                fxLayoutWrap fxLayoutGap="3%">
+
+                			  <button mat-icon-button disabled >
+						        <mat-icon>schedule</mat-icon>
+						      </button>
+
+
+                			  <button mat-icon-button disabled >
+                			  	2
+						        <mat-icon>speaker_notes</mat-icon>
+						      </button>
+
+						       <button mat-icon-button disabled >
+                			  	0
+						        <mat-icon>more</mat-icon>
+						      </button>
+                		</div>
+
+                		<div fxFlex="30%" fxLayoutAlign="end">
+                			<p>#114214</p>
+                		</div>
+
+         	  	</div>
+         	  </div>
+         	  </div>
+
+         	  <div fxFlex="100%">
+         	  	
+         	  </div>
+
+         	  <div fxFlex="100%">
+         	  	
+         	  </div>
+         	    <div fxFlex="100%">
+         	  	
+         	  </div>
+
+            </div>
+        
+        </mat-card>
+        
+        </div>
+        
+        
+        
+        </div>
+        <router-outlet></router-outlet>

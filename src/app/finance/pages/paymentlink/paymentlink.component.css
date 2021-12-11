@@ -1,0 +1,33 @@
+
+.mat-card { margin-bottom: 20px; }
+
+@media only screen and (max-width: 786px) {
+ .fixed-header { height: 90px !important }
+ .pdd-20 {
+    width: 88% !important;}
+ }
+ .fixed-header {position: fixed; top: 0; right: 0; left: 0; z-index: 9;
+    box-shadow: 0 2px 4px rgba(0,0,0,.24);}
+.paymentlink h2 { margin:0 auto; }
+.pdd-20 {
+    padding-top: 113px;
+    width: 38%;
+    margin: 0 auto;}
+    .payment-cont { text-align: center; }
+
+.payment-cont p {font-size: 26px;}
+.payment-cont button {
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+.payment-cont img {
+    width: 70%;
+}
+.t-table{margin-top: 20px;}
+.t-table th, .t-table td { padding: 5px 5px; border-right: 1px solid #d3d3d3}
+.t-table th:last-child, .t-table td:last-child { border-right: none !important; }
+.t-table td{ font-weight: normal;
+    border-bottom: 1px solid #d3d3d3; }
+.t-table th{ font-weight: bold;border-bottom: 1px solid #d3d3d3; text-align: left; background: #d3d3d3 }
+.t-table table {border: 1px solid #d3d3d3; width: 100%;border-bottom: none !important; }

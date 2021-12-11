@@ -1,0 +1,88 @@
+<div *ngIf="data.dialogObj.dialogType=='addbarcode'">
+<mat-card><h3 mat-dialog-title ><b>Add Barcode (Against Purchase Order)</b></h3></mat-card>
+<div mat-dialog-content>
+
+        <div class="tabless table2 table3 table-1">
+                <table>
+                    <tr class="border">
+                        <td class="mat-header-cell cells">Branch</td>
+                        <td class="pd-0">
+                                <mat-form-field class="example-full-width align" appearance="outline">
+                                        <input type="text"
+                                                aria-label="Number"
+                                                matInput
+                                                [formControl]="myControl"
+                                                [matAutocomplete]="auto">
+                                         <mat-autocomplete #auto="matAutocomplete">
+                                           <mat-option *ngFor="let option of options" [value]="option">
+                                             {{option}}
+                                           </mat-option>
+                                         </mat-autocomplete>
+                                       </mat-form-field>
+                        </td>
+                    </tr>
+            
+                
+            
+                    <tr class="border">
+                        <td class="mat-header-cell cells">Work Order</td>
+                        <td class="pd-0">
+                                <mat-form-field class="example-full-width" appearance="outline">
+                                        <input matInput value=""  > 
+                                        </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+    
+<div class="table">         
+   
+    <table class="table-2 tables" cellpadding="0" cellspacing="0">
+        <tr>
+
+            <th class="pd-10 wd-20">Sr.</th>
+            <th>Item</th>
+            <th>Item Qty.</th>
+            <th>BOM</th>
+        </tr>
+        <tr *ngFor="let item of row2; let i = index" class="sr-no">
+             <td class="auto-t pd-10 grey border-b-1 wd-20">&nbsp;</td>
+          
+           
+
+
+          
+
+            <td class="grey">
+                <mat-form-field class="example-full-width name2" appearance="outline">
+                <input matInput value="" disabled > 
+                </mat-form-field>
+            </td>
+
+
+            <td class="grey">
+                <mat-form-field class="example-full-width align" appearance="outline">
+                <input matInput disabled> 
+                </mat-form-field>
+            </td>
+
+            <td>
+                <mat-form-field class="example-full-width align name2" appearance="outline">
+                <input matInput> 
+                </mat-form-field>
+            </td>
+
+          
+        </tr>
+
+
+    </table>
+</div>
+</div>
+<div align="right">
+    <button mat-raised-button (click)="closeDialog()">Cancel</button>
+    <button mat-raised-button>Submit</button>
+</div>
+
+</div>

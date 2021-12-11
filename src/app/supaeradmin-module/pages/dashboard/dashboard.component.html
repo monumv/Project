@@ -1,0 +1,47 @@
+<div class="content1">
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<mat-toolbar class="breadcrumb">SuperAdmin Dashboard </mat-toolbar>
+
+</div>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">SuperAdmin Dashboard</h2>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="/supaeradmin-module/accmanagement" class="border">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>Accounts Management</mat-card-title>
+	</mat-card>
+	<mat-card fxFlex="33%" routerLink="./default-settings" class="border">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>Default Settings</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/supaeradmin-module/ivrmanagement" class="border">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>IVR Management</mat-card-title>
+	</mat-card>
+
+
+</div>
+
+
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+	<mat-card fxFlex="31.5%" routerLink="/supaeradmin-module/customers" class="border">
+		<img mat-card-sm-image src="./assets/images/department.png" alt="Complaints">
+		<mat-card-title>Customers</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="31.5%" routerLink="/supaeradmin-module/susbscribers" class="border">
+		<img mat-card-sm-image src="./assets/images/department.png" alt="Complaints">
+		<mat-card-title>Subscribers</mat-card-title>
+	</mat-card>
+
+
+</div>
+</div>
+<router-outlet></router-outlet>

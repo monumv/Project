@@ -1,0 +1,172 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Add Goal</h2>
+    </mat-toolbar>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+    
+    <mat-card class="mat-card2">
+    
+    
+    <div class="tabless table2 table3 table-1">
+      <strong>Goal Details</strong>
+    <table>
+            <tr class="border">
+                <td class="mat-header-cell cells">Select Employee</td>
+                <td class="pd-0">  
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControl"
+                           [matAutocomplete]="auto">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                    <button mat-mini-fab matSuffix color="primary" class="go"><mat-icon>east</mat-icon></button>
+                  </mat-form-field>
+                </td>
+            </tr>
+
+ <tr class="border">
+                <td class="mat-header-cell cells">Assessment Month</td>
+                <td class="pd-0">  
+                    <mat-form-field class="example-full-width" appearance="outline">
+           <input matInput value="" > 
+           </mat-form-field>
+                </td>
+            </tr>
+
+
+        </table>
+    
+        
+    
+      
+    
+    
+    </div>
+    <div class="table">
+
+    
+        
+            <table class="table-2" cellpadding="0" cellspacing="0">
+                <tr>
+
+                    <th class="pd-10 wd-20">Sr.</th>
+                    <th class="wd-60">KRA</th>
+                    <th class="wd-60">Assessment Unit</th>
+                    <th class="wd-60">Start Date</th>
+                    <th class="wd-60">Target End<br> Date</th>
+                    <th class="wd-60">Target Days</th>
+                    <th class="wd-60">Target Tasks</th>
+                    <th class="wd-60">Weightage%</th>
+                    <th class="name2">Goal Description	</th>
+                    <th class="pd-10">Action</th>
+                </tr>
+               
+
+       <tr *ngFor="let item of row; let i = index" class="sr-no">
+        <td class="auto-t pd-10 grey border-b-1 wd-20">&nbsp;</td>
+       <td class="">
+           <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+       </td>
+       <td class="wd-60">
+         <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControle"
+                           [matAutocomplete]="autoTeste">
+                    <mat-autocomplete #autoTeste="matAutocomplete">
+                      <mat-option *ngFor="let option of optionse" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+       </td>
+       <td class="wd-60">
+               <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="picker">
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+       </td>
+
+       <td class="wd-60">
+           <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="pickers">
+                          <mat-datepicker-toggle matSuffix [for]="pickers"></mat-datepicker-toggle>
+                          <mat-datepicker #pickers></mat-datepicker>
+                    </mat-form-field>
+       </td>
+
+
+       <td class="grey wd-60">
+           <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput  disabled="disabled"> 
+                    </mat-form-field>
+       </td>
+
+       <td class="wd-60">
+           <mat-form-field class="example-full-width" appearance="outline">
+           <input matInput value="" > 
+           </mat-form-field>
+       </td>
+
+       <td class="wd-60">
+            <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)" > 
+                    </mat-form-field>
+       </td>
+
+       <td class="wd-60 name2">
+           <mat-form-field class="example-full-width" appearance="outline" class="name2">
+           <input matInput value=""  > 
+           </mat-form-field>
+       </td>
+
+       <td class="border-b-1 pd-10">   
+       <span class="material-icons green" (click)="addTable()">add_to_photos</span>
+
+       <span class="material-icons red" (click) = "deleteRow(i)">delete</span>
+   </td>
+   </tr>
+              
+
+                   <tr align="center" class="total-row">
+                    <td colspan="2" class="grey pd-10" align="left">Total</td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                </tr>
+            </table>
+
+    </div>
+        <button mat-raised-button align="center" class="sbmt-btn">Submit</button>
+    </mat-card>
+    
+    </div>
+    
+    
+    </div>
+

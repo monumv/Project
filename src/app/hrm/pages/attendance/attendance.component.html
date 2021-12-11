@@ -1,0 +1,42 @@
+<div class="content1">
+
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="breadcrumb">Attendance Reports</mat-toolbar>
+    
+    </div>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <h2 class="mat-h2">Attendance Reports</h2>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="33%" routerLink="/hrm/dailyattendance" class="">
+            <img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+            <mat-card-title>Daily Attendance </mat-card-title>
+        </mat-card>
+    
+        <mat-card fxFlex="33%" routerLink="/hrm/monthlyreport" class="">
+            <img mat-card-sm-image src="./assets/images/detailed-monthly.png" alt="Complaints">
+            <mat-card-title>Monthly Attendance</mat-card-title>
+        </mat-card>
+
+        <mat-card fxFlex="33%" routerLink="/hrm/gpslogs" class="">
+            <img mat-card-sm-image src="./assets/images/area.png" alt="Complaints">
+            <mat-card-title>GPS Logs</mat-card-title>
+        </mat-card>
+      
+    </div>
+
+     <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="33%" routerLink="/hrm/fieldforcetracker" class="">
+            <img mat-card-sm-image src="./assets/images/area.png" alt="Complaints">
+            <mat-card-title>Field Force Tracker </mat-card-title>
+        </mat-card>
+    
+    
+      
+    </div>
+    
+    
+    </div>
+    <router-outlet></router-outlet>

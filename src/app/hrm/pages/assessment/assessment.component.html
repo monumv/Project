@@ -1,0 +1,411 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Submit Assessment</h2>
+    </mat-toolbar>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+    
+    <mat-card class="mat-card2">
+    
+    
+    <div class="tabless table2 table3 table-1">
+      <strong>Goal Details</strong>
+    <table>
+            <tr class="border">
+                <td class="mat-header-cell cells">Select Employee</td>
+                <td class="pd-0 grey">  
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <input type="text"
+                           aria-label="Number"
+                           matInput disabled="disabled" 
+                           [formControl]="myControl"
+                           [matAutocomplete]="auto">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                   
+                  </mat-form-field>
+                </td>
+            </tr>
+
+
+            <tr class="border">
+                <td class="mat-header-cell cells">Goal Description</td>
+                <td class="pd-0 grey">
+                
+    <textarea matInput maxlength="220" disabled="disabled"></textarea>
+ 
+                </td>
+            </tr>
+
+  <tr class="border">
+                <td class="mat-header-cell cells">KRA</td>
+                <td class="pd-0 grey">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests" disabled="disabled">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+
+        </table>
+    
+        
+      <strong>Assesment Base</strong>
+    <table>
+            <tr class="border">
+                <td class="mat-header-cell cells">Assessment Unit</td>
+                <td class="pd-0 grey">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput disabled="disabled" 
+                           [formControl]="myControle"
+                           [matAutocomplete]="autoTeste">
+                    <mat-autocomplete #autoTeste="matAutocomplete">
+                      <mat-option *ngFor="let option of optionse" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+
+    <tr class="border">
+                <td class="mat-header-cell cells">Start Date</td>
+                <td class="pd-0 grey">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="picker" disabled="disabled">
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Target End Date</td>
+                <td class="pd-0 grey">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="pickers" disabled="disabled">
+                          <mat-datepicker-toggle matSuffix [for]="pickers"></mat-datepicker-toggle>
+                          <mat-datepicker #pickers></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+            <tr class="border">
+                <td class="mat-header-cell cells">Target Days</td>
+                <td class="pd-0 grey">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput  disabled="disabled"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+
+               <tr class="border">
+                <td class="mat-header-cell cells">Target Tasks</td>
+                <td class="pd-0 grey">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)" disabled="disabled" > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+         
+
+
+
+        </table>
+    
+        
+    
+       
+      <strong>Self Assessment</strong>
+    <table>
+
+
+
+
+            <tr class="border">
+                <td class="mat-header-cell cells">Self Assessment By</td>
+                <td class="pd-0 grey">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput  disabled="disabled"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+<tr class="border">
+                <td class="mat-header-cell cells">Self Remarks</td>
+                <td class="pd-0">
+                
+    <textarea matInput maxlength="200"></textarea>
+ 
+                </td>
+            </tr>
+
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Actual End Date</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="pickerses" >
+                          <mat-datepicker-toggle matSuffix [for]="pickerses"></mat-datepicker-toggle>
+                          <mat-datepicker #pickerses></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+
+
+               <tr class="border">
+                <td class="mat-header-cell cells">Actual Tasks Done</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)"  > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+  <tr class="border">
+                <td class="mat-header-cell cells">Actual Days</td>
+                <td class="pd-0 grey">
+                
+ <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)" disabled="disabled"> 
+                    </mat-form-field>
+ 
+                </td>
+            </tr>
+
+  
+            <tr class="border">
+                <td class="mat-header-cell cells">Self Assess Score</td>
+                <td class="pd-0 grey">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)" disabled="disabled" > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            
+
+
+
+        </table>
+    
+        
+    
+    
+        <button mat-raised-button align="center" class="sbmt-btn">Submit Self Assessment</button>
+    
+      <strong>Checker's Assessment</strong>
+    <table>
+
+
+
+
+            <tr class="border">
+                <td class="mat-header-cell cells">Checker</td>
+                <td class="pd-0 grey">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput  disabled="disabled"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+<tr class="border">
+                <td class="mat-header-cell cells">Checker's Remarks</td>
+                <td class="pd-0">
+                
+    <textarea matInput maxlength="200"></textarea>
+ 
+                </td>
+            </tr>
+
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Actual End Date</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="pickersese" >
+                          <mat-datepicker-toggle matSuffix [for]="pickersese"></mat-datepicker-toggle>
+                          <mat-datepicker #pickersese></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+
+
+               <tr class="border">
+                <td class="mat-header-cell cells">Actual Tasks Done</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)"  > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+
+  <tr class="border">
+                <td class="mat-header-cell cells">Actual Days</td>
+                <td class="pd-0 grey">
+                
+ <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)" disabled="disabled"> 
+                    </mat-form-field>
+ 
+                </td>
+            </tr>
+  
+            <tr class="border">
+                <td class="mat-header-cell cells">Checker's Score</td>
+                <td class="pd-0 grey">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)" disabled="disabled" > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            
+
+
+
+        </table>
+    
+        
+    
+    
+        <button mat-raised-button align="center" class="sbmt-btn">Submit Checker Score</button>
+    
+
+
+
+
+      <strong>Approver's Assessment</strong>
+    <table>
+
+
+
+
+            <tr class="border">
+                <td class="mat-header-cell cells">Approver </td>
+                <td class="pd-0 grey">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput  disabled="disabled"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+<tr class="border">
+                <td class="mat-header-cell cells">Approver's Remarks</td>
+                <td class="pd-0">
+                
+    <textarea matInput maxlength="200"></textarea>
+ 
+                </td>
+            </tr>
+
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Actual End Date</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="pickere" >
+                          <mat-datepicker-toggle matSuffix [for]="pickere"></mat-datepicker-toggle>
+                          <mat-datepicker #pickere></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+
+
+               <tr class="border">
+                <td class="mat-header-cell cells">Actual Tasks Done</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)"  > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+
+  <tr class="border">
+                <td class="mat-header-cell cells">Actual Days</td>
+                <td class="pd-0 grey">
+                
+ <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)" disabled="disabled"> 
+                    </mat-form-field>
+ 
+                </td>
+            </tr>
+  
+            <tr class="border">
+                <td class="mat-header-cell cells">Approver's Score</td>
+                <td class="pd-0 grey">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)" disabled="disabled" > 
+                    </mat-form-field>
+                </td>
+            </tr>
+     <tr class="border">
+                <td class="mat-header-cell cells">Task Weightage</td>
+                <td class="pd-0 grey">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput disabled="disabled" > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+               <tr class="border">
+                <td class="mat-header-cell cells">Weighted Score</td>
+                <td class="pd-0 grey">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput disabled="disabled" > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            
+
+
+
+        </table>
+    
+        
+    
+    
+        <button mat-raised-button align="center" class="sbmt-btn">Submit Approver Score</button>
+    
+
+
+    </div>
+    </mat-card>
+    
+    </div>
+    
+    
+    </div>

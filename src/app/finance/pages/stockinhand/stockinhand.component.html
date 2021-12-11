@@ -1,0 +1,34 @@
+<div class="content1">
+
+	<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+          <mat-toolbar class="crumb">
+              <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/finance">Finance Dashboard</a><span class="mv-18">/</span></span>
+                <span class="mv-17">Stock in Hand</span>
+              </div>
+          </mat-toolbar>
+      </div>
+	
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">Stock in Hand</h2>
+	</div>
+
+	
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+	<mat-card fxFlex="31.5%" class="" routerLink="/finance/viewitemstock/">
+		<img mat-card-sm-image src="./assets/images/employees.png" alt="Complaints">
+		<mat-card-title>Item Stock</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="31.5%" class="">
+		<img mat-card-sm-image src="./assets/images/department.png" alt="Complaints">
+		<mat-card-title>Item Group Stock</mat-card-title>
+	</mat-card>
+
+
+</div>
+
+
+	</div>
+	<router-outlet></router-outlet>

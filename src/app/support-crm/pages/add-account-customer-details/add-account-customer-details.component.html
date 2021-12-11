@@ -1,0 +1,583 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Add Account</h2>
+    </mat-toolbar>
+
+     <div fxLayout='row' fxLayout.xs='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+      <div class="content" fxFlex="100%">
+        <div class="mv-101">
+          <div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+           <button mat-stroked-button class="blue1">Add Society</button>
+           <button mat-stroked-button class="blue1">View Society</button>
+          </div>
+          <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+
+            <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+              
+
+              <button mat-stroked-button class="edit-open green1">Financial Ledger</button>
+
+              <button mat-stroked-button class="green1">Item Ledger</button>
+              <button mat-stroked-button class="green1">Rewards Ledger</button>
+              <button mat-stroked-button class="del1">Delete</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div><!-- row -->
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+    
+    <mat-card class="mat-card2">
+    
+    
+    <div class="tabless table2 table3 table-1">
+        <strong>Basic Details</strong>
+        <table class="">
+            <tr class="border">
+                <td class="mat-header-cell cells">Business Name</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput>
+                         <mat-icon class="n12">lock</mat-icon>
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+        
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Under Account Group</td>
+                <td class="pd-0">  
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControl"
+                           [matAutocomplete]="auto">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Alias Name</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Status</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+
+             <tr class="border">
+                <td class="mat-header-cell cells">Account ERP ID</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+
+             <tr class="border">
+                <td class="mat-header-cell cells">Created Date</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+
+              <tr class="border">
+                <td class="mat-header-cell cells">Account ERP Name</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+              <tr class="border">
+                <td class="mat-header-cell cells">Division</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+              <tr class="border">
+                <td class="mat-header-cell cells">Division</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+              <tr class="border">
+                <td class="mat-header-cell cells">Reports To</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+              <tr class="border">
+                <td class="mat-header-cell cells">Branch *</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+              <tr class="border">
+                <td class="mat-header-cell cells">Delivery Route</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+
+            <tr class="border">
+                <td class="mat-header-cell cells">Work Status</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+
+           <!--   <tr class="border">
+                <td class="mat-header-cell cells">Onboarded Date</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="picker">
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr> -->
+            <tr class="border">
+                <td class="mat-header-cell cells">Virtual Office Name</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+
+        </table>
+    
+    
+
+    
+    
+        <strong>Address Details</strong>
+        <table>
+            <tr class="border">
+                <td class="mat-header-cell cells">Pincode</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput
+                          inputmode="numeric"
+                          type="text" 
+                         (keypress)="numberOnly($event)"> 
+                         <mat-icon class="n13">arrow_right_alt</mat-icon>
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Country</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            <tr class="border">
+                <td class="mat-header-cell cells">State</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Address Line 1</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Address Line 2</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Landmark</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+        
+    
+        </table>
+    
+        
+    
+    
+    
+    
+        <strong>Tax Details</strong>
+        <table>
+            <tr class="border">
+                <td class="mat-header-cell cells">GST Number</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Pan Number</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            <tr class="border">
+                <td class="mat-header-cell cells">HSN/SAC</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            <tr class="border">
+                <td class="mat-header-cell cells">TAX %</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+    
+    
+        <strong>Personal Details</strong>
+        <table class="tabelee">
+            <tr class="border">
+                <td class="mat-header-cell cells">Contact Name</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+           
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Contact Mobile</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Contact Email</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+    
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Contact Password</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Contact Gender</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControle"
+                           [matAutocomplete]="autoTeste">
+                    <mat-autocomplete #autoTeste="matAutocomplete">
+                      <mat-option *ngFor="let option of optionse" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+    
+    
+        <tr class="border">
+                <td class="mat-header-cell cells">Contact DOB</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="picker">
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Contact Anniversary Date</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="pickers">
+                          <mat-datepicker-toggle matSuffix [for]="pickers"></mat-datepicker-toggle>
+                          <mat-datepicker #pickers></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+             <tr class="border">
+                <td class="mat-header-cell cells">Contact ERP ID</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+        </table>
+    
+    
+        <strong>Bank Details</strong>
+        <table>
+            <tr class="border">
+                <td class="mat-header-cell cells">Business Name In Bank</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Alias Name In Bank</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Bank Account No.</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Bank Name</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">IFSC Code</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Account Type</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControles"
+                           [matAutocomplete]="autoTestes">
+                    <mat-autocomplete #autoTestes="matAutocomplete">
+                      <mat-option *ngFor="let option of optionses" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Branch Name</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+    
+        </table>
+    
+    
+    
+    
+        <button mat-raised-button align="center" class="sbmt-btn">Submit</button>
+    
+    </div>
+    </mat-card>
+    
+    </div>
+    
+    
+    </div>
+
+    <router-outlet></router-outlet>

@@ -1,0 +1,82 @@
+<div *ngIf="data.dialogObj.dialogType=='addagent'">
+ <div fxLayout='row' class="action-bar" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="100%">
+        <div fxLayout='row' fxFlex="100%" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%">
+            <div fxFlex="100%" class="heading">
+                <h2 class="mat-h2">Add Agent</h2>
+            </div>
+    
+            <div fxFlex="100%" class="heading" >
+                <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+                    <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">add</mat-icon><small>Add</small></button>                  
+                    <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">delete_outline</mat-icon><small>Delete</small></button>    
+                    <button mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><span class="material-icons">
+                        close
+                        </span></button>
+                </div>
+    
+    
+    
+            </div>
+    
+        </div>
+        </mat-card>
+    </div>
+    
+
+<div mat-dialog-content>
+    <div class="table">         
+        
+        <table mat-table [dataSource]="datass" class="mat-elevation-z8">
+    
+            <!-- Checkbox Column -->
+            <ng-container matColumnDef="select">
+              <th mat-header-cell *matHeaderCellDef>
+                <mat-checkbox (change)="$event ? masterToggle() : null"
+                              [checked]="selection.hasValue() && isAllSelected()"
+                              [indeterminate]="selection.hasValue() && !isAllSelected()"
+                              [aria-label]="checkboxLabel()">
+                </mat-checkbox>
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()"
+                              (change)="$event ? selection.toggle(row) : null"
+                              [checked]="selection.isSelected(row)"
+                              [aria-label]="checkboxLabel(row)">
+                </mat-checkbox>
+              </td>
+            </ng-container>
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> Sr. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+      
+            <ng-container matColumnDef="document">
+              <th mat-header-cell *matHeaderCellDef  class="name3 name2">Agent Name</th>
+              <td mat-cell *matCellDef="let element" class="name3 name2 pd-0">
+                <mat-form-field class="example-full-width name2 align" appearance="outline">
+                <input matInput> 
+                </mat-form-field></td>
+            </ng-container>      
+            
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+                (click)="selection.toggle">
+            </tr>
+          </table>
+
+    </div>
+
+</div>
+
+<div mat-dialog-actions>
+      
+                       
+    <button mat-raised-button><small>Submit</small></button>
+           
+    </div>
+
+</div>

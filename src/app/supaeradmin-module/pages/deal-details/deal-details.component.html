@@ -1,0 +1,147 @@
+<div class="content1">
+<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+          <span class="mv-17"><a routerLink="">SuperAdmin Dashboard  </a><span class="mv-18">/</span></span>
+          <span class="mv-17"><a routerLink="../customers">Customers </a><span class="mv-18">/</span></span>
+          <span class="mv-17"><a routerLink="../subscribed">Subscribed </a><span class="mv-18">/</span></span>
+          <span class="mv-17">Deal Details</span>
+        </div>
+    </mat-toolbar>
+
+      </div><!-- row -->
+      <div fxLayout='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+      <div class="content" fxFlex="100%">
+        <mat-card class="mv-101">
+          <div  class="heading">
+            <h2 class="mat-h2">Deal Details</h2>
+          </div>
+          <div class="heading2">
+            <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+              <button mat-stroked-button routerLink="../rights">
+                <img class="rights-icon" src="assets/images/155.png">
+                <span class="mv-161">Rights</span></button>
+
+              <button mat-stroked-button [matMenuTriggerFor]="menu" class="edit-open"><mat-icon>edit</mat-icon><span class="mv-161">Edit</span></button>
+<mat-menu #menu="matMenu" [ngStyle]="{'margin-right':'0% !important'}">
+  <button mat-menu-item>Contact Info</button>
+  <button mat-menu-item>Address</button>
+  <button mat-menu-item>Deal Info</button>
+</mat-menu>
+              <button mat-stroked-button ><mat-icon>delete</mat-icon> <span class="mv-161">Delete</span></button>
+              <button mat-stroked-button ><mat-icon>thumb_down</mat-icon><span class="mv-161">Drop</span></button>
+                    </div>
+
+          </div>
+        </mat-card>
+
+      </div>
+    </div><!-- row -->
+    <div fxLayout='row' class="content mv-100" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+      <mat-card fxFlex="25%">
+        <div class="mv-51">
+          <img class="mv-52" src="assets/images/face5.jpg" alt="">
+          <h4><b>{{clientname}}</b></h4>
+        </div>
+        <div class="mv-51">
+          <h5>{{clientphone}}</h5>
+          <h5>{{clientemail}}</h5>
+        </div>
+        <div class="company-box border-bottom clearfix">
+          <div class="template-demo d-flex justify-content-between flex-nowrap">
+            <div class="row">
+              <img src="assets/images/icon/ic_call.svg" class="mv-35">
+              <img src="assets/images/icon/ic_msg.svg" class="mv-35">
+              <img src="assets/images/icon/ic_mail.svg" class="mv-35">
+              <img src="assets/images/icon/ic_whatsapp.svg" class="mv-35">
+            </div>  
+          </div>
+        </div>
+
+        <div class="mv-54">
+          <div class="row">
+            <h4><b>Pankaj Impex (223)</b> <span class="mv-53"><mat-icon> location_on</mat-icon></span>
+              <span class="mv-54-address">12/2, Sai Tower , Sector 37
+                Faridabad , Haryana - 121003
+              India</span>
+            </h4>
+          </div>
+        </div>
+
+        <div class="mv-55">
+          <div class="row">
+            <h4><b>Other Contacts</b> <span class="mv-53"><a href="#" class="mv-51"><mat-icon>person_add</mat-icon>
+            </a></span>
+
+          </h4>
+        </div>
+      </div>
+
+
+    </mat-card>
+    <mat-card fxFlex="50%">
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="To Do's (09)">To Do's (09)</mat-tab>
+        <mat-tab label="Reminder  (09)">Reminder  (09)</mat-tab>
+        <mat-tab label="Calender">Calender</mat-tab>
+        <mat-tab label="Proposal">Proposal</mat-tab>
+        <mat-tab label="Invoice">Invoice</mat-tab>
+        <mat-tab label="Timeline">Timeline</mat-tab>
+        <mat-tab label="Gallery">Gallery</mat-tab>
+        <mat-tab label="CRM Form">CRM Form</mat-tab>
+      </mat-tab-group>
+    </mat-card>
+    <mat-card fxFlex="25%">
+      <div class="mv-57">
+        <h4><b>Deal Stage</b></h4>
+        <span class="mv-53">
+          <b>125000 Amt</b></span>
+        </div>
+        <h5 class="mv-13"><mat-icon>thumb_up_alt</mat-icon>1%</h5>
+
+
+        <div class="mv-54">
+          <div class="row mv-16">
+            <h4 class="mv-15"><span class="mv-56">Contact Made</span> <button class="mv-14" style="cursor: pointer;">Change Stage</button></h4>
+            <mat-icon class="mv-color-o">star</mat-icon>
+            <mat-icon class="mv-color-o">star</mat-icon>
+            <mat-icon class="mv-color-o">star</mat-icon>
+            <mat-icon class="mv-color-o1">star_border</mat-icon>
+            <mat-icon class="mv-color-o1">star_border</mat-icon>
+
+          </div>
+          
+        </div>
+
+        <div class="py-3 mv-12">
+          <p class="clearfix">
+            <span class="float-left">Deal ID</span>
+            <span class="float-right">685
+            </span>
+          </p>
+          <p class="clearfix"><span class="float-left">Create Date</span>
+            <span class="float-right">15-Jun-2020 11:46</span></p>
+            <p class="clearfix"><span class="float-left">Deal Age</span>
+              <span class="float-right">10 Days</span></p>
+              <p class="clearfix"><span class="float-left">Lead Source</span>
+                <span class="float-right">IndiaMart</span></p>
+                <p class="clearfix"><span class="float-left">Lead Owner Name</span>
+                  <span class="float-right">Nitul Aggarwal 50005</span></p>
+                  <p class="clearfix"><span class="float-left">Expected Closure</span>
+                    <span class="float-right green">30-Jun-2020</span></p>
+                  </div>
+
+                  <div class="mv-55">
+                    <div class="row">
+                      <h4><b>Team</b> <span class="mv-53"><a href="#" class="mv-51"><mat-icon>person_add</mat-icon>
+                      </a></span>
+
+                    </h4>
+
+                    
+                  </div>
+                </div>
+              </mat-card>
+            </div><!-- row -->
+    </div>
+    <router-outlet></router-outlet>

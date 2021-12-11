@@ -1,0 +1,35 @@
+<div class="content1">
+
+	<div class="mv-26">
+		<mat-toolbar>
+			<div class="mv-19">
+				<span class="mv-17"><a routerLink="/salescrm">Sales CRM Dashboard  </a><span class="mv-18">/</span></span>
+				<span class="mv-17">CRM Settings</span>
+			</div>
+		</mat-toolbar>
+	</div><br>
+
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">CRM Settings</h2>
+	</div>
+
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+		<mat-card fxFlex="33%" routerLink="/salescrm/crm-template/" class="border">
+			<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+			<mat-card-title>CRM Pipelines</mat-card-title>
+		</mat-card>
+		<mat-card fxFlex="33%" routerLink="/salescrm/lead-source/" class="">
+			<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+			<mat-card-title>Lead Source</mat-card-title>
+		</mat-card>
+
+		<mat-card fxFlex="33%" routerLink="../leadplugins" class="border">
+			<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+			<mat-card-title>Lead Plugins</mat-card-title>
+		</mat-card>
+		
+	</div>
+
+
+</div>
+<router-outlet></router-outlet>

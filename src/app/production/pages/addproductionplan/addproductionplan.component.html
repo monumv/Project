@@ -1,0 +1,498 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Add Production Plan</h2>
+    </mat-toolbar>
+
+<div class="layout">
+
+
+    <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+    
+    <mat-card class="">
+        <div fxFlex="100%" fxLayout='row' class="tp-rw" fxLayoutGap="1%" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+        
+            <div fxFlex="50%" class="table" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutAlign="left">
+                <strong>Factory</strong>
+                <mat-form-field class="example-full-width align" appearance="outline">
+                    <input type="text"
+                            aria-label="Number"
+                            matInput
+                            [formControl]="myControl"
+                            [matAutocomplete]="auto">
+                     <mat-autocomplete #auto="matAutocomplete">
+                       <mat-option *ngFor="let option of options" [value]="option">
+                         {{option}}
+                       </mat-option>
+                     </mat-autocomplete>
+                   </mat-form-field>
+    
+                   <div class="non-edit" >
+                    <h2>CP Outlet</h2>
+                    <p><b> C-130, 2nd Floor, Noida Sect 2,UP - 201301, <br> State Code - 09</b></p>
+                    <p>Mobile : <b>+91-8802457896 </b></p>
+                    <p>Email : <b>abcpvtltd@gmail.com</b></p>
+                    <p>GSTIN :<b> ADJFN6889655O6</b></p>
+                    <p>Erp ID : <b> <a class="blue">6723</a></b></p>
+                    <p>Alias :<b> CP Outlet</b></p>
+                </div>
+            </div>
+    
+            <div fxFlex="50%" class="table" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutAlign="left">
+                <strong>Supervisor</strong>
+                <mat-form-field class="example-full-width align" appearance="outline">
+                    <input type="text"
+                            aria-label="Number"
+                            matInput
+                            [formControl]="myControl"
+                            [matAutocomplete]="auto">
+                     <mat-autocomplete #auto="matAutocomplete">
+                       <mat-option *ngFor="let option of options" [value]="option">
+                         {{option}}
+                       </mat-option>
+                     </mat-autocomplete>
+                   </mat-form-field>
+    
+                   <div class="non-edit" >
+                    <h2>CP Outlet</h2>
+                    <p><b> C-130, 2nd Floor, Noida Sect 2,UP - 201301, <br> State Code - 09</b></p>
+                    <p>Mobile : <b>+91-8802457896 </b></p>
+                    <p>Email : <b>abcpvtltd@gmail.com</b></p>
+                    <p>GSTIN :<b> ADJFN6889655O6</b></p>
+                    <p>Erp ID : <b> <a class="blue">6723</a></b></p>
+                    <p>Alias :<b> CP Outlet</b></p>
+                </div>
+            </div>
+    
+            
+    
+            
+          </div>
+    
+    </mat-card>
+    
+    </div>  
+      <div fxLayout='row' class="content" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+          <h2>Production Plan</h2>
+
+      </div>
+      <div fxLayout='column' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+
+    <div fxFlex="100%">
+
+        <div class="table">         
+            
+            <table class="table-2" cellpadding="0" cellspacing="0">
+                <tr>
+
+                    <th class="pd-10 wd-20">Sr.</th>
+                    <th>Item Name</th>
+                    <th class="wd-100">BOM Version</th>
+                    <th class="wd-80">MP Qty </th>
+                    <th class="wd-80 pd-5">Pack Qty  </th>
+                    <th class="wd-60">Item Qty</th>
+                    <th class="wd-60">Unit</th>
+                    <th class="wd-60">UOM Qty</th>
+                    <th class="wd-80">Daiy Capacity</th>
+                    <th class="wd-80">Start Date</th>
+                    <th class="wd-80">End Date</th>
+                    <th>Short Narration </th>
+                    <th class="pd-10 wd-60">Action</th>
+                </tr>
+                <tr *ngFor="let item of row; let i = index" class="sr-no">
+                     <td class="auto-t pd-10 grey border-b-1 wd-20">&nbsp;</td>
+                   
+                    <td class="">
+                        <mat-form-field class="example-full-width align" appearance="outline">
+                    <input type="text"
+                            aria-label="Number"
+                            matInput
+                            [formControl]="myControls"
+                            [matAutocomplete]="autos">
+                     <mat-autocomplete #autos="matAutocomplete">
+                       <mat-option *ngFor="let option of optionns" [value]="option">
+                         {{option}}
+                       </mat-option>
+                     </mat-autocomplete>
+                   </mat-form-field>
+                    </td>
+                    <td class="wd-100">
+                       <mat-form-field class="example-full-width align" appearance="outline">
+                    <input type="text"
+                            aria-label="Number"
+                            matInput
+                            [formControl]="myControl"
+                            [matAutocomplete]="auto">
+                     <mat-autocomplete #auto="matAutocomplete">
+                       <mat-option *ngFor="let option of optionn" [value]="option">
+                         {{option}}
+                       </mat-option>
+                     </mat-autocomplete>
+                   </mat-form-field>
+                    </td>
+                    <td class="wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="1"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="1" disabled > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-60">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="1" disabled  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-60">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="1" disabled > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="wd-60 grey">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="1" disabled > 
+                        </mat-form-field>
+                    </td>
+                    <td class="wd-80 grey">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="100" disabled > 
+                        </mat-form-field>
+                    </td> 
+                    <td class="wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="19-May-21" > 
+                        </mat-form-field>
+                    </td>
+                     <td class="wd-80 grey">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="19-May-21" disabled > 
+                        </mat-form-field>
+                    </td>
+
+                    <td>
+                        <mat-form-field class="example-full-width align" appearance="outline">
+                        <input matInput> 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="border-b-1 pd-10 wd-60">   
+                    <span class="material-icons green" (click)="addTable()">add_to_photos</span>
+
+                    <span class="material-icons red" (click) = "deleteRow(i)">delete</span>
+                </td>
+                </tr>
+
+
+                   <tr align="center" class="total-row">
+                    <td colspan="2" class="grey pd-10" align="left">Total</td>
+                    <td class="grey"></td>
+                    <td class="grey">5</td>
+                    <td class="grey">5</td>
+                    <td class="grey">5</td>
+                    <td class="grey">5</td>
+                    <td class="grey">5</td>
+                    <td class="grey">500</td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                </tr>
+            </table>
+
+        </div>
+
+
+        
+    </div>
+</mat-card>
+ <div fxFlex="100%" align="center"><button mat-raised-button color="primary">View Material</button><br><br></div>
+</div>
+
+
+  
+ <div fxLayout='row' class="content" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+          <h2>Material Required</h2>
+      </div>
+
+  <div fxLayout='row' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+
+    <div fxFlex="100%">
+
+        <div class="table">         
+            
+            <table class="table-2" cellpadding="0" cellspacing="0">
+                <tr>
+
+                    <th class="pd-10 wd-20">Mtr. Code</th>
+                    <th>Material</th>
+                    <th class="wd-100">Group</th>
+                    <th class="wd-80">Req Qty </th>
+                    <th class="wd-80 pd-5">Unit</th>
+                    <th class="wd-80">UOM Qty</th>
+                    <th class="wd-80">Stock Qty</th>
+                    <th class="wd-80">Short Qty</th>
+                    <th class="wd-80">Substitute</th>
+                </tr>
+                <tr class="">
+                     <td class="pd-10 grey border-b-1 wd-20">A</td>
+                   
+                    <td class="grey">
+                       <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="Material A" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-100">
+                      <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="Mtr Group" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="EA" disabled > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5 Kg" disabled  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="10" disabled > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="wd-80 grey">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="" disabled > 
+                        </mat-form-field>
+                    </td>
+
+
+                    <td class="wd-80 brd">
+                       <a color="primary">Change</a>
+                    </td>
+
+                 
+                </tr>
+
+ <tr class="red">
+                     <td class="pd-10 grey border-b-1 wd-20">B</td>
+                   
+                    <td class="grey">
+                       <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="Material B" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-100">
+                      <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="Mtr Group" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="EA" disabled > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5 Kg" disabled  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="0" disabled > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="wd-80 grey">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5" disabled > 
+                        </mat-form-field>
+                    </td>
+
+
+                    <td class="wd-80 brd">
+                       <a color="primary">Change</a>
+                    </td>
+
+                 
+                </tr>
+                 <tr class="">
+                     <td class="pd-10 grey border-b-1 wd-20">C</td>
+                   
+                    <td class="grey">
+                       <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="Material C" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-100">
+                      <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="Mtr Group" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="EA" disabled > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5 Kg" disabled  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="10" disabled > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="wd-80 grey">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="" disabled > 
+                        </mat-form-field>
+                    </td>
+
+
+                    <td class="wd-80 brd">
+                       <a color="primary">Change</a>
+                    </td>
+
+                 
+                </tr>
+
+
+ <tr class="">
+                     <td class="pd-10 grey border-b-1 wd-20">D</td>
+                   
+                    <td class="grey">
+                       <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="Material D" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-100">
+                      <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="Mtr Group" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="EA" disabled > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5 Kg" disabled  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="10" disabled > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="wd-80 grey">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="" disabled > 
+                        </mat-form-field>
+                    </td>
+
+
+                    <td class="wd-80 brd">
+                       <a color="primary">Change</a>
+                    </td>
+
+                 
+                </tr>
+
+
+
+ <tr class="red">
+                     <td class="pd-10 grey border-b-1 wd-20">E</td>
+                   
+                    <td class="grey">
+                       <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="Material E" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-100">
+                      <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="Mtr Group" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5" disabled="disabled"  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="EA" disabled > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="5 Kg" disabled  > 
+                        </mat-form-field>
+                    </td>
+                    <td class="grey wd-80">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="3" disabled > 
+                        </mat-form-field>
+                    </td>
+
+                    <td class="wd-80 grey">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="2" disabled > 
+                        </mat-form-field>
+                    </td>
+
+
+                    <td class="wd-80 brd">
+                       <a color="primary">Change</a>
+                    </td>
+
+                 
+                </tr>
+
+            </table>
+
+        </div>
+
+        
+    </div>
+ <div fxFlex="100%" align="center"><button mat-raised-button color="primary">Create</button></div>
+</mat-card>
+</div>
+
+    
+
+
+    </div>
+    
+    </div>

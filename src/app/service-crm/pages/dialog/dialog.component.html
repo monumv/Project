@@ -1,0 +1,263 @@
+<div *ngIf="data.dialogObj.dialogType=='close'">
+
+<div fxLayout='row' class="action-bar" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+    <mat-card fxFlex="100%">
+    <div fxLayout='row' fxFlex="100%" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%">
+        <div fxFlex="100%" class="heading">
+            <h2 class="mat-h2">Close Complaint</h2>
+        </div>
+
+       
+    </div>
+    </mat-card>
+</div>
+
+
+<div mat-dialog-content>
+
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Enter Happy Code" Value="HT907P">
+                </mat-form-field>
+
+                <mat-form-field>
+				  <mat-label>Select Solution Given</mat-label>
+				  <mat-select>
+				    <mat-option value="option1">Filter Repair</mat-option>
+				    <mat-option value="option2">Filter Repair (Part Replace)</mat-option>
+				  </mat-select>
+				</mat-form-field>
+
+
+				 <div fxLayout='row' fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+              <p class="grey">Bill Summary</p>
+              
+            </div>
+<div class="invoice">
+             <div fxLayout='row' fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+              <p>Service Charge</p>
+               <span class="example-spacer"></span>
+              <p>INR 500</p>
+            </div>
+
+             <div fxLayout='row' fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+              <p>Part 1</p>
+               <span class="example-spacer"></span>
+              <p>INR 2000</p>
+            </div>
+
+             <div fxLayout='row' fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+              <p>GST</p>
+               <span class="example-spacer"></span>
+              <p>INR 500</p>
+            </div>
+ 			<mat-divider></mat-divider>
+             <div fxLayout='row' fxLayout.xs='row' class="total"  fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+              <p>Total</p>
+               <span class="example-spacer"></span>
+              <p>INR 3000</p>
+            </div>
+ 			<mat-divider></mat-divider>
+            <div fxLayout='row' fxLayout.xs='row' class="paid" fxLayout.sm='row' fxLayout.md='row' fxLayoutAlign="center">
+              <p></p>
+               <span class="example-spacer"></span>
+              <p>Paid : INR 3000</p>
+            </div>
+
+        </div>
+
+
+</div>
+
+<div mat-dialog-actions>
+  
+                   
+<button mat-raised-button color="primary" mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Submit</small></button>
+                         
+<button mat-raised-button mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Cancel</small></button>
+   
+</div>
+</div>
+
+<div *ngIf="data.dialogObj.dialogType=='cancel'">
+
+<div fxLayout='row' class="action-bar" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+    <mat-card fxFlex="100%">
+    <div fxLayout='row' fxFlex="100%" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%">
+        <div fxFlex="100%" class="heading">
+            <h2 class="mat-h2">Cancel Complaint</h2>
+        </div>
+
+       
+    </div>
+    </mat-card>
+</div>
+
+
+<div mat-dialog-content>
+
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Enter Complaint Number" Value="200928-0001">
+                </mat-form-field>
+
+                <mat-form-field>
+                  <mat-label>Reason for close complaint</mat-label>
+                  <mat-select>
+                    <mat-option value="option1">Reason 1</mat-option>
+                    <mat-option value="option2">Reason 2</mat-option>
+                    <mat-option value="option1">Reason 3</mat-option>
+                    <mat-option value="option2">Reason 4</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                 <mat-form-field class="example-full-width">
+				    <mat-label>Remarks</mat-label>
+				    <textarea matInput></textarea>
+				  </mat-form-field>
+
+
+
+
+
+</div>
+
+<div mat-dialog-actions>
+  
+                   
+<button mat-raised-button color="primary" mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Submit</small></button>
+                         
+<button mat-raised-button mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Cancel</small></button>
+   
+</div>
+
+</div>
+
+
+<div *ngIf="data.dialogObj.dialogType=='transfer'">
+
+<div fxLayout='row' class="action-bar" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+    <mat-card fxFlex="100%">
+    <div fxLayout='row' fxFlex="100%" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%">
+        <div fxFlex="100%" class="heading">
+            <h2 class="mat-h2">Transfer</h2>
+        </div>
+
+       
+    </div>
+    </mat-card>
+</div>
+
+
+<div mat-dialog-content>
+
+ <mat-form-field class="example-full-width">
+    <input type="text"
+           placeholder="Select Service Center"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  	</mat-form-field>
+
+	  <mat-form-field class="example-full-width">
+	     <input type="text"
+          		 placeholder="Select Service Engineer"
+	           aria-label="Number"
+	           matInput
+	           [formControl]="myControls"
+	           [matAutocomplete]="autoTest">
+	    <mat-autocomplete #autoTest="matAutocomplete">
+	      <mat-option *ngFor="let option of optionss" [value]="option">
+	        {{option}}
+	      </mat-option>
+	    </mat-autocomplete>
+	  </mat-form-field>
+
+
+
+</div>
+
+<div mat-dialog-actions>
+  
+                   
+<button mat-raised-button color="primary" mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Submit</small></button>
+                         
+<button mat-raised-button mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Cancel</small></button>
+   
+</div>
+</div>
+
+
+
+<div *ngIf="data.dialogObj.dialogType=='edit'">
+
+<h3 mat-dialog-title align="center"><b>Complaint Groups Template</b></h3>
+<div mat-dialog-content>
+
+        <form class="example-form">
+
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Complaint Group Name">
+                </mat-form-field>
+
+                 <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Complaint Group Alias">
+                </mat-form-field>
+
+                 <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Under Complaint Group">
+                </mat-form-field>
+
+                 <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Has Children">
+                </mat-form-field>
+
+               
+        </form>
+
+</div>
+<div align="right">
+
+        <button mat-dialog-close mat-raised-button target="_blank">Submit</button>
+         <button mat-dialog-close mat-raised-button target="_blank">Cancel</button>
+</div>
+
+</div>
+
+
+<div *ngIf="data.dialogObj.dialogType=='complaintgroup'">
+<h3 mat-dialog-title align="center"><b>Complaint Groups Template</b></h3>
+<div mat-dialog-content>
+
+        <form class="example-form">
+
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Complaint Group Name">
+                </mat-form-field>
+
+                 <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Complaint Group Alias">
+                </mat-form-field>
+
+                 <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Under Complaint Group">
+                </mat-form-field>
+
+                 <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Has Children">
+                </mat-form-field>
+
+               
+        </form>
+
+</div>
+<div align="right">
+
+        <button mat-dialog-close mat-raised-button target="_blank">Submit</button>
+         <button mat-dialog-close mat-raised-button target="_blank">Cancel</button>
+</div>
+</div>

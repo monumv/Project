@@ -1,0 +1,738 @@
+<div class="content1">
+
+<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<mat-toolbar class="crumb">
+		<div class="mv-19">
+			<span class="mv-17" routerLink="/service-crm"><a>Service CRM</a><span class="mv-18">/</span></span>
+
+			<span class="mv-17" routerLink="/service-crm/complaint-management"><a>Complaint Management</a><span class="mv-18">/</span></span>
+
+			<span class="mv-17">Complaint Group</span>
+		</div>
+	</mat-toolbar>
+
+</div>
+
+
+<div fxLayout='row' fxLayout.xs='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+	<div class="content" fxFlex="100%">
+	<mat-card>
+		<div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+			<h2 class="mat-h2">Complaint Group</h2>
+		</div>
+
+		<div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+			<div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+			    <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">add</mat-icon><small>Add</small></button>
+			    <button mat-stroked-button><mat-icon  role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_upward</mat-icon><small>Import</small></button>
+			    <button mat-stroked-button ><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_downward</mat-icon><small>Export</small></button>
+			    <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">delete_outline</mat-icon><small>Delete</small></button>
+			    <button mat-stroked-button><span class="material-icons">filter_list</span></button>
+			</div>
+
+
+
+		</div>
+
+
+
+	</mat-card>
+
+	</div>
+</div>
+
+
+<div fxLayout='row' class="content content2" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="center">
+
+<mat-card fxFlex="100%">
+
+<div class="topbar" fxLayout='row' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="center" fxFlex="100%">
+
+<div class="paging" fxFlex="100%" layout-align="end" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="end" fxLayoutAlign.sm="start">
+  
+<mat-paginator style-paginator showFirstLastButtons
+              [length]="7130"
+              [pageSize]="10"
+              pageSizeOptions
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+
+
+  
+</div>
+
+</div>
+
+<div class="table">
+	<table class="table-responsive">
+  <thead>
+    <tr align="left">
+      <th><mat-checkbox></mat-checkbox></th>
+      <th>Sr.</th>
+      <th>ERP ID</th>
+      <th>Complaint Group Name</th>
+      <th>Under Group</th>
+      <th>Has Children</th>
+      <th>View Complaints</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+</table>
+	<mat-expansion-panel>
+  <mat-expansion-panel-header>
+   <table>
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>1</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Complaint Groups</td>
+      <td class="green">Y</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item (click)="openDialog('edit')">
+                    <mat-icon>create</mat-icon>
+                    <span>Edit Complaint </span>
+                  </button>
+
+                    <button mat-menu-item (click)="openDialog('complaintgroup')">
+                    <mat-icon>add</mat-icon>
+                    <span>Add Complaint </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </mat-expansion-panel-header>
+
+  <ng-template matExpansionPanelContent>
+    <table class="bold">
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>1.1</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Delivery complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu2" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu2="matMenu" class="action">
+            
+               
+                <button mat-menu-item (click)="openDialog('edit')">
+                    <mat-icon>create</mat-icon>
+                    <span>Edit Complaint </span>
+                  </button>
+
+                    <button mat-menu-item (click)="openDialog('complaintgroup')">
+                    <mat-icon>add</mat-icon>
+                    <span>Add Complaint </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+    <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>1.2</td>
+      <td>722</td>
+      <td>Delivery complaint</td>
+      <td>Complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu3" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu3="matMenu" class="action">
+            
+               
+                <button mat-menu-item  (click)="openDialog('edit')">
+                    <mat-icon>create</mat-icon>
+                    <span>Edit Complaint </span>
+                  </button>
+
+                    <button mat-menu-item (click)="openDialog('complaintgroup')">
+                    <mat-icon>add</mat-icon>
+                    <span>Add Complaint </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </ng-template>
+</mat-expansion-panel>
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+   <table>
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>2</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Complaint Groups</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+              
+                <button mat-menu-item>
+                    <mat-icon>create</mat-icon>
+                    <span>Edit Complaint </span>
+                  </button>
+
+                    <button mat-menu-item>
+                    <mat-icon>add</mat-icon>
+                    <span>Add Complaint </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </mat-expansion-panel-header>
+
+  
+</mat-expansion-panel>
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+   <table>
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>3</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Complaint Groups</td>
+      <td class="green">Y</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </mat-expansion-panel-header>
+
+  <ng-template matExpansionPanelContent>
+    <table class="bold">
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>3.1</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Delivery complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+    <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>3.2</td>
+      <td>722</td>
+      <td>Delivery complaint</td>
+      <td>Complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </ng-template>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+   <table>
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>4</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Complaint Groups</td>
+      <td class="green">Y</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </mat-expansion-panel-header>
+
+  <ng-template matExpansionPanelContent>
+    <table class="bold">
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>4.1</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Delivery complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+    <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>4.2</td>
+      <td>722</td>
+      <td>Delivery complaint</td>
+      <td>Complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </ng-template>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+   <table>
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>5</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Complaint Groups</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </mat-expansion-panel-header>
+
+  
+</mat-expansion-panel>
+
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+   <table>
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>6</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Complaint Groups</td>
+      <td class="green">Y</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </mat-expansion-panel-header>
+
+  <ng-template matExpansionPanelContent>
+    <table class="bold">
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>6.1</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Delivery complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+    <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>6.2</td>
+      <td>722</td>
+      <td>Delivery complaint</td>
+      <td>Complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </ng-template>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+   <table>
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>7</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Complaint Groups</td>
+      <td class="green">Y</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </mat-expansion-panel-header>
+
+  <ng-template matExpansionPanelContent>
+    <table class="bold">
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>7.1</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Delivery complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+    <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>7.2</td>
+      <td>722</td>
+      <td>Delivery complaint</td>
+      <td>Complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </ng-template>
+</mat-expansion-panel>
+
+
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+   <table>
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>8</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Complaint Groups</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </mat-expansion-panel-header>
+
+  
+</mat-expansion-panel>
+
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+   <table>
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>9</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Complaint Groups</td>
+      <td class="green">Y</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </mat-expansion-panel-header>
+
+  <ng-template matExpansionPanelContent>
+    <table class="bold">
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>9.1</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Delivery complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+    <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>9.2</td>
+      <td>722</td>
+      <td>Delivery complaint</td>
+      <td>Complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </ng-template>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+   <table>
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>10</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Complaint Groups</td>
+      <td class="green">Y</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </mat-expansion-panel-header>
+
+  <ng-template matExpansionPanelContent>
+    <table class="bold">
+      <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>10.1</td>
+      <td>722</td>
+      <td>Complaint</td>
+      <td>Delivery complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+    <tr align="left">
+      <td><mat-checkbox></mat-checkbox></td>
+      <td>10.2</td>
+      <td>722</td>
+      <td>Delivery complaint</td>
+      <td>Complaint</td>
+      <td class="red">N</td>
+      <td><a href="#">5</a></td>
+      <td> <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="action">
+            
+                <button mat-menu-item>
+                    <mat-icon>visibility</mat-icon>
+                    <span>View </span>
+                  </button>
+            </mat-menu>
+
+          </td>
+    </tr>
+   </table>
+  </ng-template>
+</mat-expansion-panel>
+
+
+</div>
+
+</mat-card>
+
+</div>
+
+
+
+</div>
+<router-outlet></router-outlet>

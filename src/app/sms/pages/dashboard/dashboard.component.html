@@ -1,0 +1,48 @@
+<div class="content1">
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<mat-toolbar class="breadcrumb">SMS Dashboard</mat-toolbar>
+
+</div>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">SMS Dashboard</h2>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="./smshistory" class="">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>SMS History</mat-card-title>
+	</mat-card>
+	<mat-card fxFlex="33%" routerLink="./quicksms" class="">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>Quick SMS</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="" class="">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>SMS Settings</mat-card-title>
+	</mat-card>
+
+	
+	
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+
+	<mat-card fxFlex="31.5%" routerLink="./dlt-management/" class="">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>DLT Management</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="31.5%" routerLink="./dlt-management/" class="">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>Route Management</mat-card-title>
+	</mat-card>
+	
+</div>
+
+
+</div>
+<router-outlet></router-outlet>

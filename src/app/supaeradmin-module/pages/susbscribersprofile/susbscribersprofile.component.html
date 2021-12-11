@@ -1,0 +1,421 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Client's Details</h2>
+    </mat-toolbar>
+    
+    <div fxLayout='column' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+     
+    <div fxLayout='row' fxLayout.xs='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        
+        <div class="content" fxFlex="100%">
+        <mat-card class="action-bar">
+            <div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+                <h2 class="mat-h2">Client's Details</h2>
+            </div>
+    
+            <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+                    
+                   <button  mat-stroked-button [matMenuTriggerFor]="menu">Gopaljee India Pvt Ltd</button>
+					<mat-menu #menu="matMenu">
+					  <button mat-menu-item>Roles & Rights</button>
+					  <button mat-menu-item>Employee List</button>
+					  <button mat-menu-item>SMS Recharge</button>
+					  <button mat-menu-item>Email Recharge</button>
+					  <button mat-menu-item>IVR Recharge</button>
+					  <button mat-menu-item>Card Transactions</button>
+					  <button mat-menu-item>Login Logs</button>
+					</mat-menu>
+                   
+                </div>
+    
+    
+    
+            </div>
+    
+    
+    
+        </mat-card>
+    
+        </div>
+    </div>
+    
+
+    <mat-card class="mat-card2">
+    
+    
+    <div class="tabless table2 table3 table-1">
+        <strong>Basic Details</strong>
+        <table class="">
+
+
+    
+        <tr class="border">
+                <td class="mat-header-cell cells">Created Date</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="picker">
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+  <tr class="border">
+                <td class="mat-header-cell cells">Client Id</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+
+            <tr class="border">
+                <td class="mat-header-cell cells">Business Name</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+        
+    
+          
+           
+        </table>
+    
+    
+        <strong>Subscription Details</strong>
+        <table>
+         <tr class="border">
+                <td class="mat-header-cell cells">License Status</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControlss"
+                           [matAutocomplete]="autoTests">
+                    <mat-autocomplete #autoTests="matAutocomplete">
+                      <mat-option *ngFor="let option of optionsss" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+
+              <tr class="border">
+                <td class="mat-header-cell cells">Start Date</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="pickers">
+                          <mat-datepicker-toggle matSuffix [for]="pickers"></mat-datepicker-toggle>
+                          <mat-datepicker #pickers></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+               <tr class="border">
+                <td class="mat-header-cell cells">End Date</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="pickerses">
+                          <mat-datepicker-toggle matSuffix [for]="pickerses"></mat-datepicker-toggle>
+                          <mat-datepicker #pickerses></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+ 			<tr class="border">
+                <td class="mat-header-cell cells">Days Left</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            <tr class="border">
+                <td class="mat-header-cell cells">User Licence</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            <tr class="border">
+                <td class="mat-header-cell cells">User Working</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+           
+        </table>
+    
+    
+        <strong>Contact  Details</strong>
+        <table class="tabelee">
+            <tr class="border">
+                <td class="mat-header-cell cells">Contact Name</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Mobile Country</td>
+                <td class="pd-0">
+                   <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Contact Mobile</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+     <tr class="border">
+                <td class="mat-header-cell cells">Contact Phone</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Login Email</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+    
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Login Pass</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            
+           <tr class="border">
+                <td class="mat-header-cell cells">Contact Designation
+</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+             <tr class="border">
+                <td class="mat-header-cell cells">Conatct Notes</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            
+    
+        </table>
+    
+    
+        <strong>Saved Card</strong>
+        <table>
+
+    
+        <tr class="border">
+                <td class="mat-header-cell cells">Date Added
+</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="pickerr">
+                          <mat-datepicker-toggle matSuffix [for]="pickerr"></mat-datepicker-toggle>
+                          <mat-datepicker #pickerr></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            <tr class="border">
+                <td class="mat-header-cell cells">Card Number</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+        <tr class="border">
+                <td class="mat-header-cell cells">Expiry
+</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="pickerre">
+                          <mat-datepicker-toggle matSuffix [for]="pickerre"></mat-datepicker-toggle>
+                          <mat-datepicker #pickerre></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">CVV</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Name on Card</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+          
+    
+        </table>
+    
+    
+        <strong>Billing Details</strong>
+        <table>
+            <tr class="border">
+                <td class="mat-header-cell cells">Pincode <span class="ash">*</span></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput
+                          inputmode="numeric"
+                          type="text" 
+                         (keypress)="numberOnly($event)" required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+         
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Address Line 1 <span class="ash">*</span></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Address Line 2</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Landmark</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+             <tr class="border">
+                <td class="mat-header-cell cells">City</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+             <tr class="border">
+                <td class="mat-header-cell cells">State</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+           <tr class="border">
+                <td class="mat-header-cell cells">Country</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+        </table>
+    
+       
+    
+        <strong>Tax Details</strong>
+        <table>
+            <tr class="border">
+                <td class="mat-header-cell cells">GST Number</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">PAN Number</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+            <tr class="border">
+                <td class="mat-header-cell cells">CIN Number</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+    
+    
+    
+    
+        <button mat-raised-button align="center" class="sbmt-btn">Submit</button>
+    
+    </div>
+    </mat-card>
+    
+    </div>
+    
+    
+    </div>

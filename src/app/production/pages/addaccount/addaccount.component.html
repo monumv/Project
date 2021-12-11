@@ -1,0 +1,255 @@
+
+<div fxLayout='row' class="action-bar" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+    <mat-card fxFlex="100%">
+    <div fxLayout='row' fxFlex="100%" fxLayout.xs='column' fxLayout.sm='column' fxLayoutWrap fxLayoutGap="3%">
+        <div fxFlex="100%" class="heading">
+            <h2 class="mat-h2">Add Account</h2>
+        </div>
+
+
+    </div>
+    </mat-card>
+</div>
+<br><br>
+
+<div mat-dialog-content>
+
+    
+    <div fxLayout='column' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+    
+    
+    
+    <div class="tabless table2 table3 table-1">
+
+        <strong>Personal Details</strong>
+        <table class="tabelee"> 
+        	  <tr class="border">
+                <td class="mat-header-cell cells">Select Country<sup>*</sup></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+         <tr class="border">
+                <td class="mat-header-cell cells">Contact Mobile<sup>*</sup></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr class="border">
+                <td class="mat-header-cell cells">Contact Name<sup>*</sup></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+      
+          
+    
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Contact Email</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+    
+            
+    
+        </table>
+    
+        <strong>Business Details</strong>
+        <table class="">
+            <tr class="border">
+                <td class="mat-header-cell cells">Business Name<sup>*</sup></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="ABC Pvt. Ltd." required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+        
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Account Group<sup>*</sup></td>
+                <td class="pd-0">  
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControl"
+                           [matAutocomplete]="auto"
+                            required="required">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Alias Name</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+        </table>
+    
+    
+    
+        <strong>Address Details</strong>
+        <table>
+            <tr class="border">
+                <td class="mat-header-cell cells">Pincode<sup>*</sup></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width pincode" appearance="outline">
+                        <input matInput required="required"
+                          inputmode="numeric"
+                          type="text" 
+                         (keypress)="numberOnly($event)"> 
+                         <button mat-mini-fab matSuffix class="">
+                         	<mat-icon>arrow_forward</mat-icon>
+</button>
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+           
+            <tr class="border">
+                <td class="mat-header-cell cells">Address Line 1<sup>*</sup></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput  required="required"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Address Line 2</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Landmark</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            <tr class="border">
+                <td class="mat-header-cell cells">City</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width disabled" appearance="outline">
+                        <input matInput disabled> 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            <tr class="border">
+                <td class="mat-header-cell cells">State</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width disabled" appearance="outline">
+                        <input matInput disabled> 
+                    </mat-form-field>
+                </td>
+            </tr>
+         <tr class="border">
+                <td class="mat-header-cell cells">Country</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width disabled" appearance="outline">
+                        <input matInput required="required" disabled> 
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+    
+        </table>
+    
+    
+    
+        <strong>Joining Details</strong>
+        <table>
+            <tr class="border">
+                <td class="mat-header-cell cells">Invite By Mobile</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput >   
+                        <button mat-mini-fab matSuffix class="">
+                         	<mat-icon>arrow_forward</mat-icon>
+</button>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+             <tr class="border">
+                <td class="mat-header-cell cells">Invite by Account</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput >   
+                        <button mat-mini-fab matSuffix class="">
+                         	<mat-icon>arrow_forward</mat-icon>
+</button>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+              <tr class="border">
+                <td class="mat-header-cell cells">Invite by Account Group</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput >   
+                       
+                    </mat-form-field>
+                </td>
+            </tr>
+
+             <tr class="border">
+                <td class="mat-header-cell cells">Invite by Address</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput >   
+                       
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+    
+    
+    
+    
+    </div>
+    
+    </div>
+    
+    
+    </div>
+
+<div align="right" class="butns">
+
+        
+<button mat-raised-button color="primary" mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Submit</small></button>
+    
+                          
+<button mat-raised-button mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Cancel</small></button>
+</div>

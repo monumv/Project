@@ -1,0 +1,95 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Checker's Assessment</h2>
+    </mat-toolbar>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+    
+    <mat-card class="mat-card2">
+    
+    
+    <div class="tabless table2 table3 table-1">
+
+      <strong>Checker's Assessment</strong>
+    <table>
+
+
+
+
+            <tr class="border">
+                <td class="mat-header-cell cells">Checker</td>
+                <td class="pd-0 grey">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput  disabled="disabled"> 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+<tr class="border">
+                <td class="mat-header-cell cells">Checker's Remarks</td>
+                <td class="pd-0">
+                
+    <textarea matInput maxlength="200"></textarea>
+ 
+                </td>
+            </tr>
+
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Actual End Date</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="pickersese" >
+                          <mat-datepicker-toggle matSuffix [for]="pickersese"></mat-datepicker-toggle>
+                          <mat-datepicker #pickersese></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+
+
+               <tr class="border">
+                <td class="mat-header-cell cells">Actual Task Done</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)"  > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+  
+            <tr class="border">
+                <td class="mat-header-cell cells">Checker's Score</td>
+                <td class="pd-0 grey">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput (keypress)="numberOnly($event)" disabled="disabled" > 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            
+
+
+
+        </table>
+    
+        
+    
+    
+        <button mat-raised-button align="center" class="sbmt-btn">Submit Checker Score</button>
+    
+
+
+
+
+
+    </div>
+    </mat-card>
+    
+    </div>
+    
+    
+    </div>

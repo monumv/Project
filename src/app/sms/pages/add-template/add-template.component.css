@@ -1,0 +1,5 @@
+.mat-form-field { width: 420px !important;}
+.mat-form-field { display:block !important;}
+@media only screen and (max-width:786px) {
+    .mat-form-field { width: 100% !important;}
+}

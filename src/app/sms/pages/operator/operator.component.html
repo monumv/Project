@@ -1,0 +1,136 @@
+<div class="content1">    
+    <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="crumb">
+            <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/sms/">SMS Dashboard</a><span class="mv-18">/</span></span>
+                <span class="mv-17"><a  routerLink="../dlt-management/">DLT Management</a><span class="mv-18">/</span></span>
+
+                
+                <span class="mv-17">Operator</span>
+            </div>
+        </mat-toolbar>
+    </div>
+        
+    <div fxLayout='row' fxLayout.xs='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+            <div class="content" fxFlex="100%">
+            <mat-card>
+                <div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+                    <h2 class="mat-h2">Operator</h2>
+                </div>
+        
+                <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                    <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+                        <button mat-stroked-button (click)="openDialog()"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">add</mat-icon><small>Add</small></button>
+                        <button mat-stroked-button><mat-icon  role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_upward</mat-icon><small>Import</small></button>
+                        <button mat-stroked-button ><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_downward</mat-icon><small>Export</small></button>
+                        <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">delete_outline</mat-icon><small>Delete</small></button>
+                        <button mat-stroked-button (click)="sidenav"><span class="material-icons">filter_list</span></button>
+                    </div>
+        		</div>
+        </mat-card>
+
+
+        
+            </div>
+        </div>
+        
+        
+        <div fxLayout='row' class="content content2" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="center">
+        
+        <mat-card fxFlex="100%">
+        	<mat-card>
+              <div class="topbar"> 
+                 
+                <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                    
+            <div class="paging" fxFlex="100%" layout-align="end" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="end" fxLayoutAlign.sm="start">
+              
+                <mat-paginator fxFlex="100%" style-paginator showFirstLastButtons
+                              [length]="7130"
+                              [pageSize]="10"
+                              pageSizeOptions
+                              [pageSizeOptions]="[5, 10, 25, 100]">
+                </mat-paginator>
+                
+            
+              
+            </div>
+        
+        
+        
+                </div>
+        </div>
+        
+        
+            </mat-card>
+        
+        
+        <div class="table">
+        <table mat-table [dataSource]="datass" class="mat-elevation-z8">
+        
+          
+        
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> Sr. </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+        
+          
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef class="date" >Operator Name</th>
+            <td mat-cell *matCellDef="let element" class="date" >{{element.date}} <br>
+            
+             </td>
+          </ng-container>
+   <!-- Symbol Column -->
+          <ng-container matColumnDef="document">
+            <th mat-header-cell *matHeaderCellDef  class="date">Company	</th>
+            <td mat-cell *matCellDef="let element"  class="date">{{element.document}} <br>
+            
+          </ng-container>
+
+          <ng-container matColumnDef="vch">
+            <th mat-header-cell *matHeaderCellDef  >Created By	</th>
+            <td mat-cell *matCellDef="let element" >{{element.vch}}  </td>
+          </ng-container>
+         
+       
+
+          
+        
+
+          <ng-container matColumnDef="icon">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element">
+
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" class="action">
+        
+            <button mat-menu-item>
+                <mat-icon>visibility</mat-icon>
+                <span>View Details</span>
+              </button>
+
+        
+        </mat-menu>
+        </td>
+      </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+              (click)="selection.toggle">
+          </tr>
+        </table>
+        </div>
+        
+        </mat-card>
+        
+        </div>
+        
+        
+        
+        </div>
+        <router-outlet></router-outlet>

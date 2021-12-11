@@ -1,0 +1,460 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Add Leads</h2>
+    </mat-toolbar>
+
+     
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+    
+    <mat-card class="mat-card2">
+    
+    <strong>PERSONAL DETAILS</strong>
+    <div class="tabless table2 table3 table-1">
+       
+        <table class="">
+            <tr class="border">
+                <td class="mat-header-cell cells">Mobile Number<span>*</span></td>
+                <td class="pd-0">
+                  <table class="" cellspacing="0" cellpadding="0" style="margin-bottom:0px">
+                     <tr>
+                       <td class="pd-0 countrycode">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required">
+                    </mat-form-field>
+                  </td>
+                    <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required" #message maxlength="10">
+                         <span matSuffix> <mat-hint align="end">{{message.value.length}} / 10</mat-hint></span>
+                        
+                    </mat-form-field>
+                  </td>
+                  </tr>
+                  </table>
+                </td>
+            </tr>
+    
+         <tr class="border">
+                <td class="mat-header-cell cells">Name<span>*</span></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required">
+                    </mat-form-field>
+                </td>
+            </tr>
+         <tr class="border">
+                <td class="mat-header-cell cells">Email</td>
+                <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+  
+    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+           placeholder="">
+   
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+                </td>
+            </tr>
+
+         <tr class="border">
+                <td class="mat-header-cell cells">Expected Deal Value<span>*</span></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="0" required="required">
+                    </mat-form-field>
+                </td>
+            </tr>
+
+              <tr class="border">
+                <td class="mat-header-cell cells">Expected Close Date<span>*</span></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput [matDatepicker]="picker" required="required" [formControl]="date">
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+            <tr class="border">
+                <td class="mat-header-cell cells">Lead Source</td>
+                <td class="pd-0">  
+                      <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="0" required="required">
+                    </mat-form-field>
+                </td>
+            </tr>
+
+           
+         </table>
+
+    </div>
+
+
+    <div class="pipeline">
+    <strong>Select Stage</strong>
+     <div class="tabless table2 table3 table-1">
+        <table class="">
+          <tr class="border">
+              <td class="mat-header-cell cells">Select Stage</td>
+              <td class="mat-header-cell cells">Pipeline 1</td>
+              <td class="mat-header-cell cells">Star Ratings</td>
+          </tr>
+
+          <tr class="border">
+               <td>
+                   <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">
+                    
+                        <span class="add-deal-icon">
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                      </span>
+                            </mat-radio-button>
+                  </mat-radio-group>
+               </td>
+               <td><span>Not Rated</span></td>
+               <td><span class="add-value">-1</span></td>
+          </tr>
+          <tr class="border">
+               <td>
+                   <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">
+                    
+                        <span class="add-deal-icon">
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                      </span>
+                            </mat-radio-button>
+                  </mat-radio-group>
+               </td>
+               <td><span>Not Contacted</span></td>
+               <td><span class="add-value">0</span></td>
+          </tr>
+          <tr class="border">
+               <td>
+                   <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">
+                    
+                        <span class="add-deal-icon">
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                      </span>
+                            </mat-radio-button>
+                  </mat-radio-group>
+               </td>
+               <td><span>Contact Made</span></td>
+               <td><span class="add-value">1</span></td>
+          </tr>
+          <tr class="border">
+               <td>
+                   <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">
+                    
+                        <span class="add-deal-icon">
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                      </span>
+                            </mat-radio-button>
+                  </mat-radio-group>
+               </td>
+               <td><span>Meeting</span></td>
+               <td><span class="add-value">2</span></td>
+          </tr>
+          <tr class="border">
+               <td>
+                   <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">
+                    
+                        <span class="add-deal-icon">
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                      </span>
+                            </mat-radio-button>
+                  </mat-radio-group>
+               </td>
+               <td><span>Proposal</span></td>
+               <td><span class="add-value">3</span></td>
+          </tr>
+          <tr class="border">
+               <td>
+                   <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">
+                    
+                        <span class="add-deal-icon">
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                      </span>
+                            </mat-radio-button>
+                  </mat-radio-group>
+               </td>
+               <td><span>Expected Win</span></td>
+               <td><span class="add-value">4</span></td>
+          </tr>
+          <tr class="border">
+               <td>
+                   <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">
+                    
+                        <span class="add-deal-icon">
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon class="star">star</mat-icon>
+                        <mat-icon class="star">star</mat-icon>
+                      </span>
+                            </mat-radio-button>
+                  </mat-radio-group>
+               </td>
+               <td><span>Won</span></td>
+               <td><span class="add-value">5</span></td>
+          </tr>
+        </table>
+
+
+
+
+
+      </div>
+
+
+</div>
+    
+
+
+    <strong>Follow up Details</strong>
+    <div class="tabless table2 table3 table-1">
+       
+        <table class="">
+            <tr class="border">
+                <td class="mat-header-cell cells">Next Followup Reason<span>*</span></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput required="required">
+                    </mat-form-field>
+                </td>
+            </tr>
+
+             <tr class="border">
+                <td class="mat-header-cell cells">Next Followup Date<span>*</span></td>
+                <td class="pd-0">
+                  <table class="" cellspacing="0" cellpadding="0" style="margin-bottom:0px">
+                     <tr>
+                       <td class="pd-0 dates">
+
+                        <mat-form-field appearance="outline" class="example-full-width">
+                          <input matInput [matDatepicker]="dp" [formControl]="date" required="required">
+                          <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                          <mat-datepicker #dp>
+                             
+                              
+                              
+
+                          </mat-datepicker>
+                        </mat-form-field>
+
+                  </td>
+                    <td class="pd-0">
+                      <mat-form-field appearance="outline" class="example-full-width timepicker">
+                        <input
+                          type="text"
+                          matInput
+                          [ngxMatTimepicker]="timepicker"
+                          format="24"
+                          [required]="required"
+                          readonly
+                          [formControl]="formControlItem"
+                        />
+
+                     
+                        <mat-icon matSuffix *ngIf="!formControlItem.disabled" (click)="openFromIcon(timepicker)">schedule</mat-icon>
+
+                      </mat-form-field>
+                      <ngx-mat-timepicker #timepicker></ngx-mat-timepicker>
+                  </td>
+                  </tr>
+                  </table>
+                </td>
+            </tr>
+
+
+    
+          
+            <tr class="border">
+                <td class="mat-header-cell cells">Remarks</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+     
+
+         <tr class="border">
+                <td class="mat-header-cell cells">Assign To<span>*</span></td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput value="Self" required="required">
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+           
+         </table>
+
+    </div>
+
+
+<mat-accordion class="bsdetails">
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title color="primary">
+      <mat-icon>add</mat-icon> Business Details
+      </mat-panel-title>
+     
+    </mat-expansion-panel-header>
+
+    
+    <div class="tabless table2 table3 table-1">
+       
+        <table class="">
+            <tr class="border">
+                <td class="mat-header-cell cells">Business Name</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput>
+                    </mat-form-field>
+                </td>
+            </tr>
+              <tr class="border">
+                <td class="mat-header-cell cells">PinCode</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput type="">
+  
+                    </mat-form-field>
+                </td>
+            </tr>
+    
+          
+            <tr class="border">
+                <td class="mat-header-cell cells">Add Line1</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+     
+
+          
+            <tr class="border">
+                <td class="mat-header-cell cells">Add Line2</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+          
+            <tr class="border">
+                <td class="mat-header-cell cells">Landmark</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+          
+            <tr class="border">
+                <td class="mat-header-cell cells">City</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+          
+            <tr class="border">
+                <td class="mat-header-cell cells">State</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+          
+            <tr class="border">
+                <td class="mat-header-cell cells">Country</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+          
+            <tr class="border">
+                <td class="mat-header-cell cells">Lattitude</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+          
+            <tr class="border">
+                <td class="mat-header-cell cells">Longitude</td>
+                <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput> 
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+           
+         </table>
+
+    </div>
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+
+
+
+        <button mat-raised-button align="center" class="sbmt-btn">Create Deal</button>
+    
+    </mat-card>
+    
+    </div>
+    
+    
+    </div>
+
+    <router-outlet></router-outlet>

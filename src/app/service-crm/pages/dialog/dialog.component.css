@@ -1,0 +1,16 @@
+.mat-dialog-content .mat-form-field { width: 420px !important;}
+.mat-dialog-content .mat-form-field { display:block !important;}
+
+.example-spacer {  flex: 1 1 auto;}
+.mat-typography p { margin-bottom: 5px }
+.total{ margin:8px 0px 2px 0px; }
+.paid { margin-top: 5px; }
+.invoice { background: #f2f2f2;
+    padding: 10px;
+    border-radius: 4px; }
+
+@media only screen and (max-width:786px) {  
+.mat-dialog-content  .mat-form-field { width: 100% !important;}
+}
+.mat-dialog-content{ margin-top: 20px; }
+mat-card { margin:0px 0px !important; }

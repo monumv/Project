@@ -1,0 +1,14 @@
+.menu .mat-list-base .mat-list-item { height: 30px; }
+.menu .mat-tree { background: transparent; padding-top: 20px}
+.menu .mat-tree-node button {width: 100% !important;text-align: left;padding: 0px 15px;
+color: #000 !important;}
+.menu .mat-tree-node .mat-icon-button { height:40px !important;    font-weight: 400; line-height: 40px !important}
+.menu .mat-tree-node button:hover { background-color: #f7f7f7 !important;
+border-radius: 0% !important; padding: 0px 15px;color: #262626!important;}
+.menu .example-tree ul { padding: 0px 0px !important;}
+.menu .mat-tree-node button .mat-icon {float: right; padding-top: 8px;}
+.menu .example-tree-invisible {display: none;}
+.menu .example-tree ul,.example-tree li { margin-top: 0; margin-bottom: 0;
+list-style-type: none;}
+.menu .mat-tree-node { min-height: 38px;}
+.menu .example-tree ul{ padding-left: 10px !important }

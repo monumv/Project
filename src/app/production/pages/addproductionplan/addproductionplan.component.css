@@ -1,0 +1,105 @@
+.mat-h2 { margin:0 auto !important; }
+.content { padding: 0px 20px; background:#f2f2f2; }
+.mat-card { width:100%; margin: 25px auto 20px auto; display: block !important }
+.fixed-header {position: fixed; top: 0; right: 0; left: 0; z-index: 9;
+    box-shadow: 0 2px 4px rgba(0,0,0,.24);}
+table { border-collapse: collapse; width: 100%; }
+.horiz-table .mat-header-cell {width:100px !important; font-weight: 600 !important; border-top:1px solid #d3d3d3; background: #fff !important;
+color: #000; border-left: 1px solid #d3d3d3; padding:8px 14px !important; }
+.horiz-table .mat-header-cell:last-child { border-right: 1px solid #d3d3d3;}
+.horiz-table .mat-header-cell th { border-left: 1px solid #d3d3d3 }
+.horiz-table td .mat-form-field { text-align: center; width: 100%; }
+.table { border-collapse: collapse !important;width:100%;}
+.table .mat-form-field-wrapper { padding-bottom: 0em !important }
+.table .mat-form-field-appearance-outline .mat-form-field-infix { line-height: 29px; padding:6px 0px 0px 0px; width: 60px; }
+.table .mat-form-field-infix { border-top: none; }
+.table input.mat-input-element { line-height: 30px; text-align:center; }
+.table .mat-form-field-appearance-outline .mat-form-field-wrapper { margin:0px 0px; }
+.table .mat-form-field-appearance-outline .mat-form-field-flex { margin-top: -5px !important; }
+.table .mat-form-field-appearance-outline .mat-form-field-outline  { right: -1px; bottom:-1px; top: .35em !important}
+.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-datepicker-toggle-default-icon, .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+width: 12px !important; height: 12px !important;}
+.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button {
+ width: 15px !important; height: 15px !important;}
+.table .mat-form-field-appearance-outline .mat-form-field-outline-start, .table .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    border-radius: 0px 0 0 0px;  }
+.table-2{ counter-reset: serial-number; border:1px solid #d3d3d3}
+.table-2 .sr-no td:first-child:before { counter-increment: serial-number; 
+ content: counter(serial-number); }
+.card { margin-top: 0px; }
+.table .pd-10 {padding: 0 10px!important;}
+.table-2 th {padding-top: 12px; padding-bottom: 12px;    text-align: center;
+    background-color: #f4f4f4;border-left: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;}
+.table-2 .mat-form-field { width: 100%; height: 30px; }
+.table .material-icons { font-size: 17px;position: relative;
+top: 3px;margin-left: 3px;}
+.grey { background:#f4f4f4}
+.green { color: green }
+.red { color: red; }
+.border-l-0 { border-left: none !important; }
+.border-b-1 { border-bottom: 1px solid #d3d3d3 }
+.total-row { border-bottom: 1px solid #d3d3d3 }
+.total-row td { padding: 5px 10px !important; font-weight: bold; }
+.textarea { width: 100%; }
+@media only screen and (max-width: 786px) {	
+.name2 .mat-form-field-infix { width: 479px !important; }
+	.layout { width:1300px; overflow-x: scroll;background: #f2f2f2; padding: 0 20px; }
+	.sale-table .mat-header-cell{width: 17%!important;}
+}                               
+
+@media only screen and (max-width: 1040px) {
+.name2 .mat-form-field-infix { width: 479px !important; }
+.layout { width:1300px; overflow-x: scroll;background: #f2f2f2; padding: 0 20px; }
+}
+.sale-table .mat-header-cell { width: 114px !important}
+.sale-table .mat-form-field-appearance-outline .mat-form-field-infix { width: 124px !important}
+@media only screen and (max-width: 1240px) {
+    .name .mat-form-field-infix{ width: 249px !important; }
+.name2 .mat-form-field-infix { width: 479px !important; }
+.layout { width:1300px; overflow-x: scroll;background: #f2f2f2; padding: 0 20px; }
+}
+.tables .pd-10 {text-align: center;}
+.mat-select-arrow {margin: 3px 4px !important; }
+.sale-table { margin-bottom: 20px; }
+.sale-table .mat-form-field { width: 100%; }
+.sale-table .mat-header-cell {height: 25px; font-size: 13px; padding: 0px 10px;
+color: #000;background: #dedede!important; width: 114px; }
+.cells {border-bottom: 1px solid #d3d3d3;}
+.table-2 .wd-60 .mat-form-field-infix, .table-2 th.wd-60  { width:43px;}
+.name .mat-form-field-infix{ width: 185px !important; }
+.table-2 .wd-80 .mat-form-field-infix, .table-2 th.wd-80{ width: 80px !important; }
+strong .mat-button { float: right }
+.card .mat-list-base .mat-list-item {height: 25px!important; margin-top: 5px!important;
+    border-bottom: 1px solid #e2e2e2;}
+.name2 .mat-form-field-infix { width: 662px !important; }
+.btns { padding-bottom: 20px;}
+.btns .example-button-row { width: 100%; text-align: right;}
+.name input.mat-input-element { text-align: left !important;}
+.add-buyer {height: 25px !important; line-height: 25px !important; margin-top: -5px !important;}
+.align input.mat-input-element{ text-align:left !important;}
+.mat-input-element:disabled { color: rgba(0,0,0,.99); }
+.total-row .grey { background:#d1cfcf !important;}
+.wd-20 { width:20px !important; text-align:center !important}
+.mat-form-field-appearance-outline .mat-form-field-suffix { top: 0 !important;}
+.mat-select { text-align: left;}
+.pd-5 { padding: 0px 5px;}
+.wd-30, .table .wd-30 .mat-form-field-appearance-outline .mat-form-field-infix { width:30px !important;}
+.c-t { text-align: center}
+.non-edit { text-align:left; margin-top:10px;}
+.non-edit p{ margin-bottom:0px; font-size:13px;} 
+.non-edit h2 { font-size:16px; margin-bottom:2px; line-height: 25px;}
+.blue {color: #4285F4; cursor:pointer}
+.deductions .mat-form-field-appearance-outline .mat-form-field-infix { padding:0px 0px !important; 
+    border-top: 5px solid transparent; }
+.deductions .mat-input-element { line-height: 23px;}
+.deductions .mat-form-field-infix { width: 40px !important;}
+.tx-ded { margin-top: -20px;}
+.mat-autocomplete-panel {overflow-x: scroll !important;}
+.mat-option { overflow:initial !important; display:block !important;}
+.mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled) {background: rgba(0,0,0,.00) !important;}
+.at-comp { padding-top: 65px; }
+.brd { border-left: 1px solid #e2e2e2;  border-bottom: 1px solid #e2e2e2;  border-right: 1px solid #e2e2e2; text-align: center }
+.brd a { color: blue }
+tr.red td, tr.red td input.mat-input-element { color: red; }
+.example-spacer { flex: 1 1 auto; }

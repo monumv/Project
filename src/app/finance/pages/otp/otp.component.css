@@ -1,0 +1,15 @@
+.mat-dialog-content .mat-form-field-infix { width: 180px !important;}
+.mat-dialog-content .mat-form-field { display:block !important; width: 180px !important;}
+.mat-dialog-content{
+	width: 500px;
+}
+.mat-dialog-title{
+	text-align: left;
+}
+.mat-dialog-title mat-card { width: auto !important }
+ @media only screen and (max-width:786px) { 
+}
+.mat-dialog-content{
+	width: auto !important;
+}
+ 	

@@ -1,0 +1,35 @@
+
+<div class="content1">
+
+    <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="crumb">
+              <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/hrm">HRM</a><span class="mv-18">/</span></span>
+                <span class="mv-17"><a  routerLink="/hrm/pms">PMS</a><span class="mv-18">/</span></span>
+                <span class="mv-17">Goal Settings</span>
+              </div>
+          </mat-toolbar>
+    
+    </div>
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <h2 class="mat-h2">Goals Settings</h2>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="33%" routerLink="/hrm/pending" class="">
+            <img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+            <mat-card-title>Goal Authority</mat-card-title>
+        </mat-card>
+    
+        <mat-card fxFlex="33%" class="">
+            <img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+            <mat-card-title>KRAs</mat-card-title>
+        </mat-card>
+
+    </div>
+  
+   
+  
+    </div>
+    <router-outlet></router-outlet>

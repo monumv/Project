@@ -1,0 +1,31 @@
+<div class="content1">
+
+	<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+            <span class="mv-17"><a  routerLink="/production">Production Dashboard</a><span class="mv-18">/</span></span>
+            <span class="mv-17">Production Planning</span>
+        </div>
+    </mat-toolbar>
+</div>
+	
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">Production Planning</h2>
+	</div>
+
+			
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="/production/planning/" class="" fxLayoutGap="3%">
+				<img mat-card-sm-image src="./assets/images/p-salary.png" alt="Complaints">
+				<mat-card-title>Production Plan</mat-card-title>
+			</mat-card>
+			
+		<mat-card fxFlex="33%" routerLink="" class="" fxLayoutGap="3%">
+			<img mat-card-sm-image src="./assets/images/paid-salary.png" alt="Complaints">
+			<mat-card-title>Production Management Tool</mat-card-title>
+		</mat-card>
+		</div>
+	
+	
+	</div>
+	<router-outlet></router-outlet>

@@ -1,0 +1,37 @@
+<div class="content1">
+
+	<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="crumb">
+            <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/distribution">Distribution</a><span class="mv-18">/</span></span>
+                
+                <span class="mv-17">Visit Management</span>
+            </div>
+        </mat-toolbar>
+    
+    </div>
+    <br>
+	
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">Visit Management</h2>
+	</div>
+	
+	<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+		<mat-card fxFlex="33%" routerLink="/distribution/visitplan" class="">
+			<img mat-card-sm-image src="./assets/images/salary-slip.png" alt="Complaints">
+			<mat-card-title>Visit Plan</mat-card-title>
+		</mat-card>
+	
+		<mat-card fxFlex="33%" routerLink="/distribution/visitschedule" class="">
+			<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+			<mat-card-title>Visit Schedule</mat-card-title>
+		</mat-card>
+	
+	
+	</div>
+
+	
+	</div>
+	<router-outlet></router-outlet>
+	

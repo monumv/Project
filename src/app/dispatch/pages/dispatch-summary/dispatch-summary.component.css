@@ -1,0 +1,157 @@
+.example-tree-invisible {
+  display: none;
+}
+
+.mat-tree {
+    background: transparent;
+    padding-top: 20px;
+}
+  .example-tree ul,
+  .example-tree li {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    list-style-type: none;
+}
+
+.mat-tree-node {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0px 0px;
+    flex: 1;
+    word-wrap: break-word;
+}
+.mat-tree-node button{
+    width: 100%;
+    text-align: left;
+    color: #262626;
+    height: 45px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0%;
+    padding: 0px 10px;
+    background-color: #f5f5f5;
+}
+.mat-tree-node button .mat-icon{
+    float: right;
+    padding-top: 8px;
+}
+
+.mv-23{
+    width: 100% !important;
+}
+.mv-23 ul li{
+    background-color: red;
+}
+.mat-tree-node button:hover{
+    border-radius: 0% !important;
+    padding: 0px 10px;
+    color: #262626;
+}
+
+
+.example-tree ul{
+    padding: 0px 0px !important;
+}
+.example-tree ul li{
+    padding: 0px 0px;
+}
+.example-tree ul li button{
+    border-radius: 0% !important;
+    padding:0px 20px;
+}
+.mv-110{
+	float: right;
+}
+tr.mat-header-row {
+    height: 44px;
+    font-size: 20px;
+    font-weight: bold !important;
+    background: #dedede;
+}
+.mv-111{
+    color: green;
+    padding-left: 10px;
+}
+.mv-112{
+    color: red;
+    padding-left: 10px;
+}
+.transport{
+    width: 100%;
+    height: auto;
+    padding: 15px 0px 15px 0px;
+    border: 1px solid #e7e6e6;
+}
+.transport .row{
+    padding: 0px 15px;
+}
+.transport h5{
+    font-size: 17px;
+    font-weight: 500;
+}
+.transport p{
+    font-size: 14px;
+}
+.transport h6 a{
+    font-size: 16px;
+    color: #4285F4;
+    text-decoration: none;
+}
+.transport mat-icon{
+    font-size: 16px;
+}
+
+
+.example-action-buttons {
+  padding-bottom: 20px;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
+    display: block;
+    flex-grow: 1;
+    margin-right: 16px;
+}
+.mat-expansion-panel-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 24px;
+    border-radius: inherit;
+    position: relative;
+}
+::ng-deep .example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description {
+    flex-basis: auto;
+}
+
+ @media screen and (min-width: 100px) and (max-width: 768px) { 
+.mat-expansion-panel-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 24px;
+    border-radius: inherit;
+    position: relative;
+}
+    }
+
+    .mv-141 {
+    margin-top: 20px;
+}
+.mat-raised-button {
+    margin-right: 15px;
+}

@@ -1,0 +1,60 @@
+.mat-dialog-content .mat-form-field { width: 100% !important; margin-top: -9px}
+.mat-dialog-content .mat-form-field { display:block !important;}
+
+@media only screen and (max-width:786px) {  
+.mat-dialog-content .mat-form-field { width: 100% !important;}
+
+}
+.mat-dialog-title { margin-bottom: 0px; }
+.mat-dialog-content {padding: 10px 24px;}
+.leadlist {width: 500px;}
+
+.leadlist .mat-list-item-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.leadlist .red { color: #ff0000 }
+
+.table-2{ counter-reset: serial-number;border-left: 1px solid #d3d3d3;}
+.table-2 .sr-no td:first-child:before { counter-increment: serial-number; 
+ content: counter(serial-number); }
+
+
+.table-2{
+	width: auto;
+	margin: 15px 0px;
+	box-shadow: none;
+}
+
+.table-2 input, .table-2 select{
+    margin: 0;
+    line-height: 0px;
+    border: none !important;width: 115px; color:#C0C0C0
+}
+.fieldnamee input { width:80px; }
+.table-2 .material-icons{font-size: 17px;}
+
+.table-2 th, .table-2 td {
+   
+    padding: 0 10px;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+}
+.table-2 th {background: #dedede !important;     padding: 3px 10px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 13px;}
+
+.action-btnn { height: 35px; margin-left:10px !important; }
+.example-form .mat-form-field { width: 100% }
+
+.heading { margin-bottom: 0px !important; }
+.example-button-row { display: flex; }
+.topbox { margin-top: 10px; }
+.stats, .dlaction { display: flex; }
+
+.stats p { padding-right: 10px; border-right: 1px solid #000; margin-right: 10px; }
+.stats p:last-child { border-right:none; }
+.red { color: red }
+.yellow{ color: yellow }

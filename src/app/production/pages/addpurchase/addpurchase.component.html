@@ -1,0 +1,431 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Purchase Order</h2>
+    </mat-toolbar>
+
+<div class="layout">
+
+
+    <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+    
+    <mat-card class="">
+      <div fxFlex="100%" fxLayout='row' class="tp-rw" fxLayoutGap="1%" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+        
+        <div fxFlex="50%" class="table" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutAlign="left">
+            <strong>Order From </strong>
+            <mat-form-field class="example-full-width align" appearance="outline">
+                <input type="text"
+                        aria-label="Number"
+                        matInput
+                        [formControl]="myControl"
+                        [matAutocomplete]="auto">
+                 <mat-autocomplete #auto="matAutocomplete">
+                   <mat-option *ngFor="let option of options" [value]="option">
+                     {{option}}
+                   </mat-option>
+                 </mat-autocomplete>
+               </mat-form-field>
+
+               <div class="non-edit" >
+                <h2>CP Outlet</h2>
+                <p><b> C-130, 2nd Floor, Noida Sect 2,UP - 201301, <br> State Code - 09</b></p>
+                <p>Mobile : <b>+91-8802457896 </b></p>
+                <p>Email : <b>abcpvtltd@gmail.com</b></p>
+                <p>GSTIN :<b> ADJFN6889655O6</b></p>
+                <p>Erp ID : <b> <a class="blue">6723</a></b></p>
+                <p>Alias :<b> CP Outlet</b></p>
+            </div>
+        </div>
+
+        <div fxFlex="50%" class="table" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutAlign="left">
+            <strong>Order To</strong>
+            <mat-form-field class="example-full-width align" appearance="outline">
+                <input type="text"
+                        aria-label="Number"
+                        matInput
+                        [formControl]="myControl"
+                        [matAutocomplete]="auto">
+                 <mat-autocomplete #auto="matAutocomplete">
+                   <mat-option *ngFor="let option of options" [value]="option">
+                     {{option}}
+                   </mat-option>
+                 </mat-autocomplete>
+               </mat-form-field>
+
+               <div class="non-edit" >
+                <h2>CP Outlet</h2>
+                <p><b> C-130, 2nd Floor, Noida Sect 2,UP - 201301, <br> State Code - 09</b></p>
+                <p>Mobile : <b>+91-8802457896 </b></p>
+                <p>Email : <b>abcpvtltd@gmail.com</b></p>
+                <p>GSTIN :<b> ADJFN6889655O6</b></p>
+                <p>Erp ID : <b> <a class="blue">6723</a></b></p>
+                <p>Alias :<b> CP Outlet</b></p>
+            </div>
+        </div>
+
+      </div>
+    
+    
+    <div fxFlex="100%">
+    <div class="table">
+      
+        <table class="horiz-table" cellpadding="0" cellspacing="0">
+             <tr class="border">
+
+                <th class="mat-header-cell">Voucher Number</th>
+
+                <th class="mat-header-cell">Order Date</th>
+
+
+                <th class="mat-header-cell">Delivery Schedule</th>
+
+                <th class="mat-header-cell">Order Against</th>   
+                <th class="mat-header-cell">Currency</th>
+                
+                <th class="mat-header-cell">Conversion</th>
+                <th class="mat-header-cell">Pay Mode</th>
+                <th class="mat-header-cell">Tax Inclusion</th> 
+             
+               
+            </tr>
+            <tr>
+
+                <td class="pd-0 grey">                    
+                 <div class="auto">                
+                  <mat-form-field class="example-full-width" appearance="outline">                    
+                    <input matInput value="Auto/FY20-21" disabled>
+                 </mat-form-field>
+                </div>
+                </td> 
+
+                 <td class="pd-0 dates">
+                    <mat-form-field class="example-full-width align" appearance="outline">
+                    <input matInput [matDatepicker]="picker">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                </td>
+
+
+                 <td class="pd-0">
+                    <mat-form-field class="example-full-width align" appearance="outline">                    
+                        <input matInput value="">
+                     </mat-form-field>
+                </td>
+                <td class="pd-0">
+                    <mat-form-field appearance="outline" class="align">
+                       <mat-select disableRipple>
+                         <mat-option value="1">Web</mat-option>
+                         <mat-option value="2">App</mat-option>
+                       </mat-select>
+                     </mat-form-field>
+                 </td>
+                <td class="pd-0 grey">  
+                 <mat-form-field class="example-full-width" appearance="outline">                    
+                    <input matInput value="INR" disabled>
+                 </mat-form-field>
+                </td>
+
+                <td class="pd-0 br-1 grey">
+                	 <mat-form-field class="example-full-width" appearance="outline">                    
+                    <input matInput value="1" disabled>
+                 </mat-form-field>
+
+                </td> 
+
+                <td class="pd-0">
+                     <mat-form-field appearance="outline" class="align">
+					  <mat-select disableRipple>
+					    <mat-option value="1">Cash</mat-option>
+					    <mat-option value="2">Wallet</mat-option>
+					  </mat-select>
+					</mat-form-field>
+                </td>
+                 <td class="pd-0">
+                    <mat-form-field appearance="outline" class="align">
+                       <mat-select disableRipple>
+                         <mat-option value="1">Inclusive Tax</mat-option>
+                         <mat-option value="2">Exclusive Tax</mat-option>
+                       </mat-select>
+                     </mat-form-field>
+                 </td>
+              
+              
+            </tr>
+
+        </table>
+
+        
+    </div>
+    </div>
+    </mat-card>
+    
+    </div>  
+   
+      <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+
+    <div fxFlex="100%">
+
+        <div class="table">         
+            
+            <table class="table-2" cellpadding="0" cellspacing="0">
+                <tr>
+
+                    <th class="pd-10 wd-20">Sr.</th>
+                    <th>Item Name</th>
+                    <th class="wd-60">UOM<br> Qty.</th>
+                    <th class="wd-60">Pack<br> Size</th>
+                    <th class="wd-60">MRP</th>
+                    <th class="wd-60">Qty</th>
+                    <th class="wd-60">Price <br> (INR)</th>
+                    <th class="wd-60">Tax (%)</th>
+                    <th class="wd-60">Net Amt.<br> (INR)</th>
+                    <th>Short Narration </th>
+                    <th class="pd-10">Action</th>
+                </tr>
+               
+
+       <tr *ngFor="let item of row; let i = index" class="sr-no">
+        <td class="auto-t pd-10 grey border-b-1 wd-20">&nbsp;</td>
+       <td class="">
+           <mat-form-field class="example-full-width name" appearance="outline">
+           <input matInput> 
+           </mat-form-field>
+       </td>
+
+       
+       <td class="grey wd-60">
+           <mat-form-field class="example-full-width" appearance="outline">
+           <input matInput disabled="disabled" > 
+           </mat-form-field>
+       </td>
+       <td class="grey wd-60">
+           <mat-form-field class="example-full-width" appearance="outline">
+           <input matInput value="1" disabled > 
+           </mat-form-field>
+       </td>
+
+       <td class="grey wd-60">
+           <mat-form-field class="example-full-width" appearance="outline">
+           <input matInput value="1" disabled > 
+           </mat-form-field>
+       </td>
+
+
+       <td class="wd-60">
+           <mat-form-field class="example-full-width" appearance="outline">
+           <input matInput value="1" > 
+           </mat-form-field>
+       </td>
+
+       <td class="wd-60">
+           <mat-form-field class="example-full-width" appearance="outline">
+           <input matInput value="0" > 
+           </mat-form-field>
+       </td>
+
+       <td class="grey wd-60">
+           <mat-form-field class="example-full-width" appearance="outline">
+           <input matInput value="0" disabled > 
+           </mat-form-field>
+       </td>
+
+      
+
+       <td class="grey wd-60">
+           <mat-form-field class="example-full-width" appearance="outline">
+           <input matInput value="1" disabled > 
+           </mat-form-field>
+       </td>
+
+
+       <td>
+           <mat-form-field class="example-full-width align" appearance="outline">
+           <input matInput> 
+           </mat-form-field>
+       </td>
+
+       <td class="border-b-1 pd-10">   
+       <span class="material-icons green" (click)="addTable()">add_to_photos</span>
+
+       <span class="material-icons red" (click) = "deleteRow(i)">delete</span>
+       <a class="material-icons blue" routerLink="/production/viewitem" target="_blank"> visibility </a>
+   </td>
+   </tr>
+              
+
+                   <tr align="center" class="total-row">
+                    <td colspan="2" class="grey pd-10" align="left">Total</td>
+                    <td class="grey"></td>
+                    <td class="grey">3</td>
+                    <td class="grey">3</td>
+                    <td class="grey">0</td>
+                    <td class="grey">3</td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                    <td class="grey"></td>
+                </tr>
+            </table>
+
+        </div>
+
+
+        
+    </div>
+</mat-card>
+</div>
+
+<div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+    <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+
+<div fxFlex="100%">
+
+    <div class="table">         
+        
+        <table class="table-2 tables" cellpadding="0" cellspacing="0">
+            <tr>
+
+                <th class="pd-10 wd-20">Sr.</th>
+                <th>Charge Name</th>
+                <th class="wd-60">Tax (%)</th>
+                <th class="wd-60">Net Amt. <br> (INR)</th>
+                <th>Short Narration </th>
+                <th class="pd-10">Action</th>
+            </tr>
+            <tr *ngFor="let item of row2; let i = index" class="sr-no">
+                 <td class="auto-t pd-10 grey border-b-1 wd-20">&nbsp;</td>
+                <td>
+                    <mat-form-field class="example-full-width name2 align" appearance="outline">
+                    <input matInput> 
+                    </mat-form-field>
+                </td>
+               
+
+
+                <td class="grey wd-60">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <input matInput value="1" disabled > 
+                    </mat-form-field>
+                </td>
+
+              
+
+                <td class="wd-60">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <input matInput value="1" > 
+                    </mat-form-field>
+                </td>
+
+
+                <td>
+                    <mat-form-field class="example-full-width align" appearance="outline">
+                    <input matInput> 
+                    </mat-form-field>
+                </td>
+
+                <td class="border-b-1 pd-10">   
+                <span class="material-icons green" (click)="addTable2()">add_to_photos</span>
+
+                <span class="material-icons red" (click) = "deleteRow2(i)">delete</span>
+            </td>
+            </tr>
+
+
+               <tr align="center" class="total-row">
+                <td colspan="2" class="grey pd-10" align="left">Total</td>
+                <td class="grey">3</td>
+                <td class="grey">3</td>
+                <td class="grey"></td>
+                <td class="grey"></td>
+            </tr>
+        </table>
+
+    </div>
+
+
+    
+</div>
+</mat-card>
+</div>
+
+
+  <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+ <div fxFlex="70%">
+ </div>
+    <div fxFlex="30%">
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center" class="card">
+    	<mat-list role="list">
+			  <mat-list-item role="listitem">
+			  	
+			  	<div fxLayout='row' fxFlex="100%">
+					<div fxFlex="70%"><b>Sub Total</b></div>
+					<div fxFlex="30%" align="right">00.00</div>
+			  	</div>
+
+			  </mat-list-item>
+			  <mat-list-item role="listitem">
+			  	
+			  	<div fxLayout='row' fxFlex="100%">
+					<div fxFlex="70%"><b>Total Bill Amt.	</b></div>
+					<div fxFlex="30%" align="right"><b>00.00</b></div>
+			  	</div>
+			  </mat-list-item>
+			  <mat-list-item role="listitem">
+			  	
+			  	<div fxLayout='row' fxFlex="100%">
+					<div fxFlex="70%"><b>CGST</b></div>
+					<div fxFlex="30%" align="right">00.00</div>
+			  	</div>
+			  </mat-list-item>
+			    <mat-list-item role="listitem">
+			  	
+			  	<div fxLayout='row' fxFlex="100%">
+					<div fxFlex="70%"><b>SGST </b></div>
+					<div fxFlex="30%" align="right">00.00</div>
+			  	</div>
+			  </mat-list-item>
+			</mat-list>
+</mat-card>
+    </div>
+
+</div>
+
+  <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+        <mat-card class="card" fxLayout='column' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='column' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+      <div fxFlex="100%">
+        <form class="example-form">
+        
+          <mat-form-field class="example-full-width textarea" appearance="outline">
+            <mat-label>Long Narration</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+    
+        </form>
+    
+    </div>
+    <div fxFlex="100%" fxLayout='row' class="tx-ded" fxLayout.xs='row'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%">
+   
+        <div fxFlex="100%" class="deductions">
+            <span>TDS
+                <mat-form-field class="example-full-width" appearance="outline">
+                <input matInput value="18%" > 
+                </mat-form-field> : 2,000
+            </span>
+        </div>
+        <div fxFlex="100%" align="right"><button mat-raised-button color="primary">Create</button></div>
+        
+    </div>
+
+    </mat-card>
+
+    </div>
+
+    
+
+
+    </div>
+    
+    </div>

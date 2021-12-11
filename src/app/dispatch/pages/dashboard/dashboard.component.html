@@ -1,0 +1,27 @@
+<div class="content1">
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<mat-toolbar class="breadcrumb">Logistic Dashboard</mat-toolbar>
+
+</div>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">Logistic Dashboard</h2>
+</div>
+
+<div fxLayout='row' fxLayoutGap="3%" class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="/dispatch/dispatch" class="border">
+		<img mat-card-sm-image src="./assets/images/salary-slip.png" alt="Complaints">
+		<mat-card-title>Dispatch</mat-card-title>
+	</mat-card>
+	<mat-card fxFlex="33%" routerLink="/dispatch/gatein" class="border">
+		<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+		<mat-card-title>Gate In</mat-card-title>
+	</mat-card>
+	<mat-card fxFlex="33%" routerLink="/dispatch/vehiclemanagement" class="border">
+		<img mat-card-sm-image src="./assets/images/assets.png" alt="Complaints">
+		<mat-card-title>Vehicle Management</mat-card-title>
+	</mat-card>
+</div>
+</div>
+<router-outlet></router-outlet>

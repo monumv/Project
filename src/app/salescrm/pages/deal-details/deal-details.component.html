@@ -1,0 +1,218 @@
+<div class="content1">
+<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+          <span class="mv-17"><a routerLink="/salescrm">Sales CRM Dashboard  </a><span class="mv-18">/</span></span>
+          <span class="mv-17"><a routerLink="../deals">Deals </a><span class="mv-18">/</span></span>
+          <span class="mv-17"><a routerLink="../open-deal">Open Deals </a><span class="mv-18">/</span></span>
+          <span class="mv-17">Deal Details</span>
+        </div>
+    </mat-toolbar>
+
+      </div><!-- row -->
+      <div fxLayout='row' fxLayout.xs='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+      <div class="content" fxFlex="100%">
+        <mat-card class="mv-101">
+          <div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+            <h2 class="mat-h2">Deal Details</h2>
+          </div>
+          <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+
+            <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+              
+
+              <button mat-stroked-button [matMenuTriggerFor]="menu" class="edit-open"><mat-icon>edit</mat-icon></button>
+<mat-menu #menu="matMenu" [ngStyle]="{'margin-right':'0% !important'}">
+  <button mat-menu-item>Contact Info</button>
+  <button mat-menu-item>Address</button>
+  <button mat-menu-item>Deal Info</button>
+</mat-menu>
+              <button mat-stroked-button ><mat-icon>delete</mat-icon> <span class="mv-16"></span></button>
+              <button mat-stroked-button><mat-icon>thumb_down</mat-icon><span class="mv-16"></span></button>
+              <button mat-stroked-button ><mat-icon> transfer_within_a_station</mat-icon><span class="mv-16"></span></button>
+            </div>
+
+          </div>
+        </mat-card>
+
+      </div>
+    </div><!-- row -->
+    <div fxLayout='row' class="content mv-100" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="left">
+      <mat-card fxFlex="25%">
+        <div class="mv-51">
+          <img class="mv-52" src="assets/images/face5.jpg" alt="">
+          <h4><b>{{clientname}}</b><span class="clientname-icon"><mat-icon>edit</mat-icon></span></h4>
+        </div>
+        <div class="mv-51">
+          <h5>{{clientphone}}</h5>
+          <h5>{{clientemail}}</h5>
+        </div>
+        <div class="company-box border-bottom clearfix">
+          <div class="template-demo d-flex justify-content-between flex-nowrap">
+            <div class="row">
+              <img src="assets/images/icon/ic_call.svg" class="mv-35">
+              <img src="assets/images/icon/ic_msg.svg" class="mv-35">
+              <img src="assets/images/icon/ic_mail.svg" class="mv-35">
+              <img src="assets/images/icon/ic_whatsapp.svg" class="mv-35">
+            </div>  
+          </div>
+        </div>
+
+        <div class="mv-54">
+          <div class="row">
+            <h4><b>Nisha Developers Realtech</b> <span class="mv-53"><mat-icon> location_on</mat-icon></span>
+              <span class="mv-54-address">12/2, Sai Tower , Sector 37
+                Faridabad , Haryana - 121003
+              India</span>
+            </h4>
+          </div>
+        </div>
+
+        <div class="mv-55">
+          <div class="row">
+            <h4><b>Other Contacts</b> <span class="mv-53"><a href="#" class="mv-51"><mat-icon>person_add</mat-icon>
+            </a></span>
+
+          </h4>
+        </div>
+      </div>
+
+
+    </mat-card>
+    <mat-card fxFlex="50%">
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="To Do's (09)">To Do's (09)</mat-tab>
+        <mat-tab label="Reminder  (09)">Reminder  (09)</mat-tab>
+        <mat-tab label="Calender">Calender</mat-tab>
+        <mat-tab label="Proposal">Proposal</mat-tab>
+        <mat-tab label="Invoice">Invoice</mat-tab>
+        <mat-tab label="Timeline">
+    <h2 class="border1">Timeline</h2>
+    <h3>Added</h3>
+  <div class="target">
+ <p><span class="amount">Created By</span> <span class="columme">:</span> <span class="amountvalue">System</span></p>
+
+   <p><span class="amount">Stage Name</span> <span class="columme">:</span> <span class="amountvalue red">Not Contacted</span></p>
+    <p><span class="amount">Expected Closure</span> <span class="columme">:</span> <span class="amountvalue"></span></p>
+   
+</div>
+
+
+<div class="target11">
+  <p><span class="amount">Created Date</span> <span class="columme">:</span> <span class="amountvalue">27-Aug-2020 14:19</span></p>
+
+   <p><span class="amount">Deal Value</span> <span class="columme">:</span> <span class="amountvalue"> 0 (0%)</span></p>
+    <p><span class="amount">Remarks</span> <span class="columme">:</span> <span class="amountvalue"></span></p>
+
+  </div>
+        </mat-tab>
+        <mat-tab label="Gallery">Gallery</mat-tab>
+        <mat-tab label="CRM Form">CRM Form</mat-tab>
+        <mat-tab label="Plugin Info">
+  <div class="target mv-pt-20">
+   <p><span class="amount">Query ID</span> <span class="columme">:</span> <span class="amountvalue">245471206</span></p>
+
+   <p><span class="amount">Query Type</span> <span class="columme">:</span> <span class="amountvalue">B</span></p>
+
+   <p><span class="amount">Name </span> <span class="columme">:</span> <span class="amountvalue red">Pawan</span></p>
+
+   <p><span class="amount">Mobile </span> <span class="columme">:</span> <span class="amountvalue"> +91-9350216635</span></p>
+
+    <p><span class="amount">Email </span> <span class="columme">:</span> <span class="amountvalue">pawan88choudhary@gmail.com</span></p>
+    <p><span class="amount">Subject </span> <span class="columme">:</span> <span class="amountvalue">Requirement for PF Esi Software
+</span></p>
+
+<p><span class="amount">Enquiry Message  </span> <span class="columme">:</span> <span class="amountvalue">I want to buy EPF ESI Software.</span></p>
+
+<p><span class="amount">Quantity  </span> <span class="columme">:</span> <span class="amountvalue">1</span></p>
+
+<p><span class="amount">Piece </span> <span class="columme">:</span> <span class="amountvalue">Need</span></p>
+
+<p><span class="amount">Demo  </span> <span class="columme">:</span> <span class="amountvalue">Yes</span></p>
+
+<p><span class="amount">Timeline  </span> <span class="columme">:</span> <span class="amountvalue">After a Week</span></p>
+
+<p><span class="amount">Address  </span> <span class="columme">:</span> <span class="amountvalue">Rewari, Haryana</span></p>
+
+<p><span class="amount">State  </span> <span class="columme">:</span> <span class="amountvalue">Haryana</span></p>
+
+<p><span class="amount">Date/Time </span> <span class="columme">:</span> <span class="amountvalue">27-Aug-2020 11:27:34 AM
+</span></p>
+
+
+</div>
+ <div class="target11 mv-pt-20">
+     <p><span class="amount">Date</span> <span class="columme">:</span> <span class="amountvalue">27-Aug-20</span></p>
+
+   <p><span class="amount">Log Time</span> <span class="columme">:</span> <span class="amountvalue"> 20200827112734</span></p>
+
+   <p><span class="amount">Company Name </span> <span class="columme">:</span> <span class="amountvalue red"></span></p>
+
+   <p><span class="amount">Product Name</span> <span class="columme">:</span> <span class="amountvalue"> PF Esi Software</span></p>
+
+    <p><span class="amount">Enquiry Call Duration</span> <span class="columme">:</span> <span class="amountvalue"></span></p>
+    <p><span class="amount">Enquiry Reciever Mobile</span> <span class="columme">:</span> <span class="amountvalue"></span></p>
+    <p><span class="amount">Alternate Mobile</span> <span class="columme">:</span> <span class="amountvalue"></span></p>
+    <p><span class="amount">Alternate Email ID</span> <span class="columme">:</span> <span class="amountvalue"></span></p>
+    <p><span class="amount">Phone No.</span> <span class="columme">:</span> <span class="amountvalue"></span></p>
+    <p><span class="amount">Alternate Phone No.</span> <span class="columme">:</span> <span class="amountvalue"></span></p>
+
+ </div>
+
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+    <mat-card fxFlex="25%">
+      <div class="mv-57">
+        <h4><b>Deal Stage</b></h4>
+        <span class="mv-53">
+          <b>125000 Amt</b></span>
+        </div>
+        <h5 class="mv-13"><mat-icon>thumb_up_alt</mat-icon>1%</h5>
+
+
+        <div class="mv-54">
+          <div class="row mv-16">
+            <h4 class="mv-15"><span class="mv-56">Contact Made</span> <button class="mv-14" style="cursor: pointer;">Change Stage</button></h4>
+            <mat-icon class="mv-color-o">star</mat-icon>
+            <mat-icon class="mv-color-o">star</mat-icon>
+            <mat-icon class="mv-color-o">star</mat-icon>
+            <mat-icon class="mv-color-o1">star_border</mat-icon>
+            <mat-icon class="mv-color-o1">star_border</mat-icon>
+
+          </div>
+          
+        </div>
+
+        <div class="py-3 mv-12">
+          <p class="clearfix">
+            <span class="float-left">Deal ID</span>
+            <span class="float-right">685
+            </span>
+          </p>
+          <p class="clearfix"><span class="float-left">Create Date</span>
+            <span class="float-right">15-Jun-2020 11:46</span></p>
+            <p class="clearfix"><span class="float-left">Deal Age</span>
+              <span class="float-right">10 Days</span></p>
+              <p class="clearfix"><span class="float-left">Lead Source</span>
+                <span class="float-right">IndiaMart</span></p>
+                <p class="clearfix"><span class="float-left">Lead Owner Name</span>
+                  <span class="float-right">Nitul Aggarwal 50005</span></p>
+                  <p class="clearfix"><span class="float-left">Expected Closure</span>
+                    <span class="float-right green">30-Jun-2020</span></p>
+                  </div>
+
+                  <div class="mv-55">
+                    <div class="row">
+                      <h4><b>Team</b> <span class="mv-53"><a href="#" class="mv-51"><mat-icon>person_add</mat-icon>
+                      </a></span>
+
+                    </h4>
+
+                    
+                  </div>
+                </div>
+              </mat-card>
+            </div><!-- row -->
+    </div>
+    <router-outlet></router-outlet>

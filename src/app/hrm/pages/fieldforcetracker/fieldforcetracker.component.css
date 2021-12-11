@@ -1,0 +1,251 @@
+agm-map {
+  height: 100%;
+}
+agm-map agm-marker label { background: #fff !important }
+.map { position: relative; width: 100%;
+    height: 100%;}
+   .map .example-sidenav-content{box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.75) !important;   
+    height: auto;   
+    background: #fff; 
+    margin-top: 9px;
+     border-radius: 0 8px 8px 0
+   }
+
+.map .example-sidenav-content .mat-button{    padding: 2px 10px; max-width: 39px !important;}
+    .employee-search .mat-form-field-infix, .date-form .mat-form-field-infix {
+    border-top: 0px !important;
+}
+@media only screen and (max-width:786px) {
+  .employee-search { width: 95% !important }
+  .map .mat-drawer-container, .map .mat-drawer { width: 100% !important }
+
+}
+.employee-search {
+    padding: 10px !important;
+    padding: 3px;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: 329px;z-index: 99;}
+    .employee-search .mat-form-field{
+    line-height: 38px;
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    height: 46px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 30%);}
+.employee-search .mat-form-field, .date-form .mat-form-field {
+    width: 100%;
+}
+.employee-search .mat-form-field-infix{    padding: 0px 0 !important;}
+.employee-search .mat-form-field-appearance-fill .mat-form-field-flex,
+.date-form .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: rgba(256,256,256,.04) !important;
+}
+.employee-search .mat-form-field-wrapper, .date-form .mat-form-field-wrapper {
+    padding-bottom:0px !important;
+}
+.employee-search .mat-form-field-appearance-outline .mat-form-field-wrapper,
+.date-form .mat-form-field-appearance-outline .mat-form-field-wrapper {
+    margin: 0px 0 !important;
+}
+
+.employee-search .mat-form-field-appearance-standard .mat-form-field-underline {
+    display: none !important;
+}
+
+.employee-search .mat-form-field-appearance-standard .mat-form-field-flex {
+    padding-top: 0 !important;
+}
+.employee-search input.mat-input-element {
+    margin-top: -0.0625em;
+    line-height:48px !important;
+}
+
+.date-form { position: absolute;z-index:1;    top: 8px;
+    right: 58px;
+    background: #fff;box-shadow: 6px 9px 23px -11px rgba(0,0,0,0.66);
+-webkit-box-shadow: 6px 9px 23px -11px rgba(0,0,0,0.66);
+-moz-box-shadow: 6px 9px 23px -11px rgba(0,0,0,0.66); }
+
+.green { color: green; }
+
+
+    .status{ display: inline-block !important; font-size: 12px; margin-bottom: 0px !important }
+    .mat-option { line-height: 12px !important; height: 109px !important;
+    border-bottom: 1px solid #eee !important; }
+    .block { display: block !important; }
+
+
+.btns { margin-top: 10px; }
+.btns button { margin-right: 10px !important }
+
+.show {display: block;}
+.map .mat-drawer-container {    width: auto;
+     background: transparent;
+    position: absolute;
+    top: 60px;
+    height: 100%;}
+
+    .map .mat-drawer-inner-container {
+overflow: hidden;
+
+    }
+.map table {
+  width: 100%;
+}
+
+.map .mat-form-field {
+    line-height: 38px;
+    font-size: 14px;
+    width: 100%;
+    height: 46px;
+}
+.map .mat-drawer {width: 350px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+   }
+
+td.mat-cell { 
+    outline: 0;
+    justify-content: space-between;   padding: 14px 10px !important;    color: #70757A;display: flex;}
+
+td small.seen { display: block !important; }
+.map table thead { display: none !important }
+
+.map .mat-stroked-button {
+    border: 1px solid currentColor;
+    padding: 0 9px !important;
+    line-height: 28px !important;
+    margin-right: 9px !important;
+}
+
+
+.map .mat-row:hover .mat-cell {
+ background-color: #F8F8F8 !important
+}
+
+.map .demo-row-is-clicked {
+ background-color: #eee !important
+}
+
+
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}
+.submenu {
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 30px;
+}
+.submenu.expanded {
+  transform: scaleY(1);
+}
+
+.icos {
+    height: 16px !important;
+    width: 16px !important;
+
+    margin-top:3px;
+    float: left;
+    font-size: 18px !important;}
+
+    
+.mat-row.hovered {
+    background: #eee;
+}
+
+.mat-row.highlighted {
+  background: #eee;
+}
+
+.emp-search {
+    height: 74px;
+    width: 100%; }
+.listingg {display: block; overflow-y: scroll; height: 100%}
+
+    td.mat-cell .name {   
+    line-height: 20px;
+    color: #202124;
+    white-space: normal;
+    text-align: left;
+    margin-bottom: 2px;font-weight: 600;
+}
+td.mat-cell small {
+    color: #70757A;
+    overflow: hidden;
+    direction: inherit;
+    line-height: 1.25rem;
+    font-size: .875rem;
+    letter-spacing: .0142857143em;}
+.map-ico { 
+    float: right;
+    color: #1A73E8;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%; }
+
+    .map-ico mat-icon { margin:0 auto; font-size: 30px; }
+     .ratings { display: block; }
+    .ratings mat-icon { color: #FAD02C; 
+    font-size: 19px;
+    width: 17px; }
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d3d3d3; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #eee; 
+}
+
+.employee-search matSuffix { display: flex; }
+
+.sfbtn{    min-width: 24px !important;
+    line-height: 38px !important;
+    height: 46px;
+    padding: 0px !important;}
+
+    .sfbtn:hover {background-color: rgb(256, 256, 256) !important;}
+
+    .chiplist {
+    padding: 16px 9px;
+    display: block;  border-bottom: 1px solid #e0e0e0 !important; }
+
+   .chiplist .mat-chip.mat-standard-chip {
+    background-color: #fff !important;
+    color: rgba(0,0,0,.87);
+    border: 1px solid #e0e0e0 !important;
+}
+.mtSuffix{ display: flex !important;padding-top: 10px; }
+.employee-search .mat-form-field-prefix .mat-icon, .employee-search .mat-form-field-suffix .mat-icon {
+    font-size: 150% !important;
+    line-height: 2.125 !important;
+}
+.listcnt { display: flex; }
+.imgbx img { width: 60px;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px; }

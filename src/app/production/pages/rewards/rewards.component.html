@@ -1,0 +1,49 @@
+<div class="content1">
+
+
+  <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+            <span class="mv-17"><a  routerLink="/production">Production Dashboard</a><span class="mv-18">/</span></span>
+            
+            <span class="mv-17">Rewards Management</span>
+        </div>
+    </mat-toolbar>
+</div>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">Rewards Management</h2>
+</div>
+
+<div class="contents" fxLayout.xs='column'  fxLayout.sm='column'fxLayoutGap="3%" fxLayoutAlign="left">
+	
+<div  class="card">
+	<mat-card routerLink="/production/coupon" class="border">
+		<img mat-card-sm-image src="./assets/images/assets.png" alt="Complaints">
+		<mat-card-title>Coupon Points Management</mat-card-title>
+	</mat-card>
+</div>
+<div  class="card">
+	<mat-card class="border" routerLink="/production/manual-points">
+		<img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+		<mat-card-title>Manual Points Management</mat-card-title>
+	</mat-card>
+</div>
+
+<div  class="card">
+	<mat-card class="" routerLink="/production/reedempoints">
+		<img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+		<mat-card-title>Points Redeemed</mat-card-title>
+	</mat-card>
+</div>
+	<div  class="card" (click)="openDialog('ledgers')">
+	<mat-card class="">
+		<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+		<mat-card-title>Account wise Rewards Ledgers</mat-card-title>
+	</mat-card>
+</div>
+
+</div>
+
+</div>
+<router-outlet></router-outlet>

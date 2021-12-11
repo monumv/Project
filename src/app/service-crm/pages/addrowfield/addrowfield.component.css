@@ -1,0 +1,118 @@
+.mat-dialog-content .mat-h2 {  margin:0px 0px 10px 0px !important; }
+.mat-dialog-content table, mat-table{  width: 100%; margin-bottom: 20px; box-shadow:none !important;}
+.mat-dialog-content .mat-card {  margin:0 !important; }
+.mat-dialog-content .mat-header-cell { height:25px; font-size: 13px;
+    white-space: nowrap; color: #000; background: #dedede !important;width: 86px !important;  }
+.grey { background-color: #f7f7f7 !important }
+@media only screen and (max-width: 786px) {
+ .mat-dialog-content .table { overflow-x: scroll; width: 100%}
+ .mat-card  { width: 95% !important; }
+ .mat-header-cell {width:58% !important;  }
+ .mat-dialog-content td.mat-cell {border-bottom-width: 1px !important; }
+ .mat-dialog-content .table { overflow-x: scroll !important}
+.example-full-width { margin-top: -1px !important }
+
+}
+.mat-dialog-content .mat-form-field-appearance-outline .mat-form-field-suffix {
+    top: 3px !important;
+}
+.mat-dialog-container { width: 650px !important }
+.butns { padding-top: 20px; }
+.disabled { background: #eee }
+sup { color: red }
+.action-bar .mat-card { margin:0px !important; }
+.mat-dialog-content { height: 90vh !important }
+.mat { margin-bottom: 40px; }
+.content { padding: 0px; background: #fff}
+.mat-dialog-content .table-1 table { border-collapse: collapse; border:1px solid #c7c8c9; }
+.mat-dialog-content .table-1 table tr { border-bottom:1px solid #c7c8c9 }
+.pd-0 { padding: 0px 0px !important }
+.mat-dialog-content .table-1 table td ~ td { padding: 0 20px; }
+example-form { min-width: 150px; max-width: 500px; width: 100%;}
+.mat-dialog-content .example-full-width { width: 100%; margin-bottom: 0px !important; margin-top: 2px;
+}
+.border { border-bottom: none !important; }
+.cells { border-bottom: 1px solid #D3D3D3 }
+.mat-dialog-content .mat-form-field-appearance-outline .mat-form-field-infix { padding: 0px 0px !important }
+.mat-dialog-content .table .mat-form-field-appearance-legacy .mat-form-field-underline {  display: none !important;  background-color: rgba(256,256,256,.42) !important}
+.mat-dialog-content .table .mat-form-field-appearance-outline .mat-form-field-flex { padding: 0px 0px !important;}
+.mat-dialog-content .table .mat-form-field-infix { border-top: 0px !important; width:auto !important; }
+.mat-dialog-content .table .mat-form-field-wrapper { height: 25px !important ; margin-bottom: 0px !important ; padding-bottom: 0px !important ; }
+.mat-dialog-content .table .mat-form-field-infix{ width: 38px !important; border-top: 0px !important }
+.mat-dialog-content .table th.mat-header-cell:last-of-type, .table td.mat-cell:last-of-type,
+.mat-dialog-content .table td.mat-footer-cell:last-of-type { text-align: center !important; border-bottom:1px solid #acacac; }
+.mat-dialog-content .table td.mat-cell:first-of-type { border-bottom:1px solid #acacac; }
+.mat-dialog-content table.mat-table{ border:1px solid #acacac;border-bottom: none;  }
+.mat-dialog-content input.mat-input-element { line-height: 29px !important; margin-top: 0px !important }
+@media only screen and (max-width: 786px) {
+ .mat-dialog-content .table { overflow-x: scroll !important}
+ .mat-dialog-content .example-full-width2{ width:270px !important }
+.mat-dialog-content .example-full-width { margin-top: -1px !important }
+.mat-dialog-content .tabless .mat-form-field-appearance-outline .mat-form-field-outline {
+    top: 4px !important;
+}
+}
+.mat-dialog-content .pincode { height: 27px !important; }
+.mat-dialog-content .example-full-width { width: 100%;  margin-bottom: 0px !important; margin-top:0px;}
+.mat-dialog-content table, mat-table{  width: 100%; box-shadow:none !important;}
+.mat-dialog-content .table-1 table td ~ td { padding: 0 20px; }
+.pd-20 { padding: 0px 15px; border-bottom: 1px solid #acacac }
+.mat-dialog-content tr.mat-row { height: 29px !important }.wd-70 { width: 90px !important }
+strong { display: block; margin-bottom: 5px; }
+.sbmt-btn { margin: 0 auto; display: block; margin-bottom: 20px; }
+.disabled { background-color: #f6f6f6; }
+.border{
+    border-bottom: none!important;
+}
+.mat-dialog-content .mat-mini-fab .mat-button-wrapper {
+    padding: 0px 0;
+    display: inline-block;
+    line-height: 24px;
+}
+.mat-dialog-content .mat-mini-fab {    width: 27px;
+    height: 27px;    margin-right: -8px !important;background: green;}
+    .mat-dialog-content .mat-mini-fab .mat-icon{color: #fff !important;}
+.mat-dialog-content .tabless .mat-form-field {
+    width:100% !important
+}
+.mat-dialog-content .tabless .mat-form-field-appearance-outline .mat-form-field-wrapper {
+    margin: 0 !important;
+}
+.mat-dialog-content .tabless .mat-form-field-wrapper { padding-bottom:0px !important}
+.mat-dialog-content .tabless .mat-form-field-appearance-outline .mat-form-field-flex {
+    line-height: 31px !important;
+}
+.mat-dialog-content .tabless .mat-form-field-appearance-outline .mat-form-field-outline {
+    top: 3px;
+    right: -1px !important;
+    height: 29px !important;
+}
+.mat-dialog-content .tabless .mat-form-field-appearance-outline .mat-form-field-outline-start,
+.mat-dialog-content .tabless .mat-form-field-appearance-outline .mat-form-field-outline-end{    border-radius: 0 0 0 0 !important;}
+.mat-dialog-content .tabless input.mat-input-element {
+    line-height: 29px!important;
+    margin-top: 0!important;
+}
+.pd-0 {
+    padding: 0!important;
+}
+
+.mat-dialog-content .tabless .mat-form-field-appearance-outline .mat-form-field-infix {
+    border-top: 0px !important;
+    padding: 0px !important;
+    width: auto !important;
+}
+.mat-dialog-content .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+    display: block;
+    width: 1.5em;
+    height: 15px !important;
+}
+.mat-dialog-content .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button, .mat-dialog-content .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button {
+  
+    width: 2.5em;
+    height: 0.5em !important;
+}
+.mat-dialog-content .country-select .mat-form-field-appearance-outline .mat-form-field-outline {
+    height: 30px!important;
+    width: 100%;
+}

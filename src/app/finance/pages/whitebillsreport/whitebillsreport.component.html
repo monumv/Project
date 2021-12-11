@@ -1,0 +1,68 @@
+<div class="content1">
+
+<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+            <span class="mv-17"><a  routerLink="/finance">Finance</a><span class="mv-18">/</span></span>
+            <span class="mv-17">Whitebills Reports</span>
+        </div>
+    </mat-toolbar>
+</div>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">Whitebills Reports</h2>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+	<mat-card fxFlex="33%" class="">
+		<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+		<mat-card-title>Top Selling Products</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" class="">
+		<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+		<mat-card-title>Top Selling Item Group</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" class="">
+		<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+		<mat-card-title>Top Buyer</mat-card-title>
+	</mat-card>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+	<mat-card fxFlex="31%" class="">
+		<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+		<mat-card-title>Top Seller</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="31%" class="">
+		<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+		<mat-card-title>Employee wise Sale</mat-card-title>
+	</mat-card>
+	<mat-card fxFlex="31%" class="">
+		<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+		<mat-card-title>Employee Wise Receipts</mat-card-title>
+	</mat-card>
+
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+	<mat-card fxFlex="31%" class="" routerLink="/finance/outstandingcollectionreport/">
+		<img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+		<mat-card-title>Outstanding Collection Report</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="31%" class="">
+		<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+		<mat-card-title>Outstanding Payments Report</mat-card-title>
+	</mat-card>
+	
+
+</div>
+
+</div>
+<router-outlet></router-outlet>

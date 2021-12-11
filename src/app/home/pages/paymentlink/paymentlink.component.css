@@ -1,0 +1,27 @@
+mat-card {padding: 8px;margin-right:3% !important; max-height: 100% !important}
+.row mat-card:last-child { margin-right: 0% !important}
+.title .sm-image { float: left; width: 50px !important; height: 50px !important;}
+mat-card-title { float: left; display: inline-block; font-size: 18px; 
+	font-weight: normal; line-height: 85px;
+    line-height: 19px;
+    margin-bottom: 0px; 
+    margin-left: 20px;
+    margin-top: 5px !important;
+    color: #000;}
+.mat-toolbar {margin-top: 23px; height: 45px !important;}
+.row { margin-bottom: 15px; }
+.border{ border-right: 8px solid #2a8605;}
+.content { padding: 20px 20px; background-color:#f2f2f2  }
+@media only screen and (max-width:786px) {
+	mat-card {margin-right:0% !important}
+	.center-block {
+    width: 100% !important;
+}
+}
+.title { background: #d3d3d3; color: #fff;
+    margin-bottom: 26px; }
+    .mat-raised-button { width: 100%  }
+.cards { 
+    width: 42%;
+    margin: 0 auto; }
+.center-block { width: 33%;  }

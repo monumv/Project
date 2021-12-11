@@ -1,0 +1,388 @@
+<div class="content1">
+
+    <mat-toolbar  class="mat-elevation-z6 fixed-header" align="center">
+        <h2 class="mat-h2">Add Complaint</h2>
+    </mat-toolbar>
+
+<div class="layout">
+	 <div fxLayout='row' class="content at-comp" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutAlign="left">
+    
+    <mat-card class="">
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Enter Your Mobile Number</ng-template>
+      <mat-form-field>
+        <mat-label>Mobile Number</mat-label>
+        <input matInput  formControlName="firstCtrl" required>
+         <button mat-raised-button matSuffix class="n14" (click)="openDialog4()">Go</button>
+      </mat-form-field>
+      <div>
+        <button mat-raised-button matStepperNext color="primary">Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Product Details</ng-template>
+
+
+  
+<!--   <mat-form-field class="example-full-width">
+    <input type="text"
+           placeholder="Select Product"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field> -->
+
+ <h2 class="register1">Select Product</h2>
+
+ <div class="table">         
+        
+        <table class="table-2 tables tb" cellpadding="0" cellspacing="0">
+            <tr class="mv-202">
+                <th class="pd-10 wd-20"></th>
+                <th class="wd-100">S/N.</th>
+                <th>Item</th>
+              
+                <th class="wd-60">Visit Address</th>
+
+                <th class="wd-100">Purchase Dt.</th>
+                <th>Status</th>
+                
+            </tr>
+
+              <tr class="sr-no">
+                <td class="auto-t pd-10 wd-20" align="center"> <mat-radio-button> 
+      </mat-radio-button></td>
+
+                 <td class="auto-t pd-10 wd-20"> 01</td>
+                <td class="wd-205">Bluemount RO 25 Ltr. Water Purifier
+                  <span class="green">Water Purifier</span>
+                </td>
+               
+                <td class="wd-180">C-130, 2nd Floor, Sector 2, Noida, Uttar Pradesh 201301
+                  <span class="maroon"l>Mr. Vivek Gupta</span>
+                  <span>9818222333</span>
+                </td>
+                
+                <td class="wd-100">29-Dec-2019</td>
+                <td class="wd-100 green">In Warranty</td>
+
+              
+            </tr>
+            
+          
+        </table>
+    </div>
+
+<h2 class="register1">Or Register New Product</h2>
+          
+ <div class="tabless table2 table3 table-1">
+            <table class="">
+              
+              <tr class="border">
+                  <td class="mat-header-cell cells">Item Sr.</td>
+                  <td class="pd-0">
+                      <mat-form-field class="example-full-width pincode" appearance="outline">
+                                <input matInput> 
+                                 <button mat-mini-fab matSuffix class="">
+                          <mat-icon>arrow_forward</mat-icon>
+</button>
+                            </mat-form-field>
+                  </td>
+              </tr>
+
+               <tr class="border">
+                  <td class="mat-header-cell cells">Item</td>
+                  <td class="pd-0">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControl"
+                           [matAutocomplete]="auto">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                  </td>
+              </tr>
+               <tr class="border">
+                  <td class="mat-header-cell cells">Item Group</td>
+                  <td class="pd-0">
+                     <mat-form-field class="example-full-width lock disabled" appearance="outline">
+                                <input matInput disabled> 
+                             
+                            </mat-form-field>
+                  </td>
+              </tr>
+
+                <tr class="border">
+                  <td class="mat-header-cell cells">Visit Address</td>
+                  <td class="pd-0">
+                     <mat-form-field appearance="outline" class="align selection">
+            <mat-select disableRipple>
+              <mat-option value="1">Ananda-new Delhi 110018</mat-option>
+              <mat-option value="2">Ananda-new Delhi 110018</mat-option>
+              <mat-option value="3" (click)="openDialog()">Add New Address</mat-option>
+            </mat-select>
+          </mat-form-field>
+                  </td>
+              </tr>
+                <tr class="border">
+                  <td class="mat-header-cell cells">Contact Person Name</td>
+                  <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                                <input matInput> 
+                            </mat-form-field>
+                  </td>
+              </tr>
+              <tr class="border">
+                  <td class="mat-header-cell cells">Contact Person Mobile</td>
+                  <td class="pd-0">
+                     <mat-form-field class="example-full-width" appearance="outline">
+                                <input matInput> 
+                            </mat-form-field>
+                  </td>
+              </tr>
+
+         
+
+                <tr class="border">
+                        <td class="mat-header-cell cells">Purchased Date</td>
+                        <td class="pd-0">
+                            <mat-form-field class="example-full-width align width-100" appearance="outline">
+                    <input matInput [matDatepicker]="pickersss">
+                      <mat-datepicker-toggle matSuffix [for]="pickersss"></mat-datepicker-toggle>
+                      <mat-datepicker #pickersss></mat-datepicker>
+                </mat-form-field>
+                        </td>
+                    </tr>
+
+                      <tr class="border">
+                        <td class="mat-header-cell cells">Status</td>
+                        <td class="pd-0">
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <input matInput> 
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+               
+
+                       
+            </table>
+           <button mat-raised-button color="primary">Submit</button>
+            </div>
+ 
+        
+            <div>
+        <br><br>
+        <button mat-raised-button matStepperPrevious>Back</button>
+        <button mat-raised-button matStepperNext color="primary">Next</button>
+      </div>
+</form>
+
+  
+  </mat-step>
+  
+
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Complaint Details</ng-template>
+<h2 class="register1">Enter Complaint Details</h2>
+      <form [formGroup]="firstFormGroup">
+      <div class="tabless table2 table3 table-1">
+            <table class="">
+              
+              <tr class="border">
+                            <td class="mat-header-cell cells">Problem</td>
+                            <td class="pd-0">
+                                <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControls"
+                           [matAutocomplete]="autoTest1">
+                    <mat-autocomplete #autoTest1="matAutocomplete">
+                      <mat-option *ngFor="let option of optionss1" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                            </td>
+                        </tr>
+
+                <tr class="border">
+                        <td class="mat-header-cell cells">Customer Remarks</td>
+                        <td class="pd-0">
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <input matInput> 
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    
+                          <tr class="border">
+                    <td class="mat-header-cell cells">Preferred Visit Date</td>
+                    <td class="pd-0">
+                        <mat-form-field class="example-full-width align width-100" appearance="outline">
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </td>
+                </tr>
+
+                   <tr class="border">
+                    <td class="mat-header-cell cells">Preferred Visit Slot</td>
+                    <td class="pd-0">
+                        <mat-form-field appearance="outline" class="align">
+            <mat-select disableRipple>
+              <mat-option value="1">9am - 10am</mat-option>
+              <mat-option value="2">10am - 11am</mat-option>
+              <mat-option value="1">11am - 12pm</mat-option>
+              <mat-option value="2">12pm - 1pm</mat-option>
+              <mat-option value="2">2pm - 3pm</mat-option>
+              <mat-option value="2">3pm - 4pm</mat-option>
+              <mat-option value="2">4pm - 5pm</mat-option>
+              <mat-option value="2">5pm - 6pm</mat-option>
+            </mat-select>
+          </mat-form-field>
+                    </td>
+                </tr>
+
+                       
+            </table>
+        
+            </div>
+
+
+
+  
+<!-- 	<mat-list role="list">
+	  <mat-list-item role="listitem">
+	  	<mat-radio-button value="1">		
+			  
+		<mat-card-title>Contact Person : Rajesh Kumar <span>Edit</span></mat-card-title>
+		<p>Mobile : +91-9475376345</p>
+		<p>Address : C-120, Noida Sec-02, Noida, Uttar Pradesh, 201301</p>
+		<br>
+	</mat-radio-button>
+
+	  </mat-list-item>
+
+</mat-list> -->    
+    </form>
+
+      <div>
+      	<br><br>
+        <button mat-raised-button matStepperPrevious>Back</button>
+          <button mat-raised-button matStepperNext color="primary">Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+<mat-step [stepControl]="fourthFormGroup">
+    <form [formGroup]="fourthFormGroup">
+      <ng-template matStepLabel>Assignment Details</ng-template>
+<h2 class="register1">Address</h2>
+      <div class="address">C-130, 2nd Floor, Sector 2, Noida, Uttar Pradesh 201301
+                  <span class="maroon">Mr. Vivek Gupta</span>
+                  <span>9818222333</span></div>
+
+
+<h2 class="register1">Assign To</h2>
+      <form [formGroup]="">
+      <div class="tabless table2 table3 table-1">
+            <table class="">
+             
+
+                <tr class="border">
+                        <td class="mat-header-cell cells">Service Engineer</td>
+                        <td class="pd-0">
+                            <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControls"
+                           [matAutocomplete]="autoTest11">
+                    <mat-autocomplete #autoTest11="matAutocomplete">
+                      <mat-option *ngFor="let option of optionss11" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                        </td>
+                    </tr>
+
+
+                   <tr class="border">
+                    <td class="mat-header-cell cells">Service Partner</td>
+                    <td class="pd-0">
+                      <mat-form-field class="example-full-width" appearance="outline">
+                     <input type="text"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControls"
+                           [matAutocomplete]="autoTest11">
+                    <mat-autocomplete #autoTest11="matAutocomplete">
+                      <mat-option *ngFor="let option of optionss11" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                    </td>
+                </tr>
+
+                       
+            </table>
+        
+            </div>
+
+
+
+  
+<!--  <mat-list role="list">
+    <mat-list-item role="listitem">
+      <mat-radio-button value="1">    
+        
+    <mat-card-title>Contact Person : Rajesh Kumar <span>Edit</span></mat-card-title>
+    <p>Mobile : +91-9475376345</p>
+    <p>Address : C-120, Noida Sec-02, Noida, Uttar Pradesh, 201301</p>
+    <br>
+  </mat-radio-button>
+
+    </mat-list-item>
+
+</mat-list> -->    
+    </form>
+
+      <div>
+        <br><br>
+        <button mat-raised-button matStepperPrevious>Back</button>
+        <button mat-raised-button matStepperNext color="primary" (click)="openDialog3()">Create Complaint</button>
+      </div>
+    </form>
+  </mat-step>
+
+
+
+</mat-vertical-stepper>
+</mat-card>
+
+</div>
+</div>
+</div>

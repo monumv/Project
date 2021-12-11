@@ -1,0 +1,89 @@
+<mat-sidenav-container class="example-container">
+ <mat-sidenav-content class="blk">
+  <div class="mv-26">
+    <mat-toolbar>
+      <div class="mv-19">
+        <span class="mv-17"><a routerLink="/">Dial ERP Dashboard <span class="mv-18">/</span> </a></span>
+        <span class="mv-17">Help Centre</span>
+      </div>
+    </mat-toolbar>
+  </div><br>
+
+
+  	<div fxLayout='row' fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' class="contentt" fxLayoutWrap fxLayoutAlign="center" fxFlex="100%">
+
+
+
+  	
+
+<div fxFlex="70%" class="help-block">
+<img src="./assets/images/helpcentre.png" class="hepcent" >
+<h2 class="mv-31">Help Centre
+   
+    </h2>
+    
+    <div class="mv-32">
+      <mat-card-content>
+        <p><b>Support Number</b></p>
+        <a class="mv-35">+91-9560444000</a>
+      </mat-card-content>
+      <mat-card-content>
+        <p><b>Support Email</b></p>
+        <a class="mv-35">support@dialerp.com</a>
+      </mat-card-content>
+    </div>
+</div>
+
+<div fxFlex="30%" class="help-block">
+
+  <mat-card class="example-card">
+
+	
+
+   <div class="mv-32">
+    <mat-card-content>
+    	<h2>What can we help with ?</h2>
+    	<br>
+     <form class="example-form">
+
+  	<mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput disabled value="Name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Mobile</mat-label>
+      <input matInput disabled value="+91-9999999999">
+    </mat-form-field>
+
+ 	<mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput disabled value="info@dialerp.com">
+    </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Company</mat-label>
+      <input matInput disabled value="Ananda">
+    </mat-form-field>
+
+<mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Remarks</mat-label>
+      <textarea matInput rows="8"></textarea>
+    </mat-form-field>
+  <div fxLayoutalign="center" class="align-btn"> <button mat-raised-button color="primary" (click)="openDialog('thankyou')">Submit</button></div>
+ 
+</form>
+
+    </mat-card-content>
+   
+  
+  </div>
+</mat-card>
+</div>
+
+</div>
+ 
+
+</mat-sidenav-content>
+</mat-sidenav-container>  
+<router-outlet></router-outlet>

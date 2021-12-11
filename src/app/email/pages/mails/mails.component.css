@@ -1,0 +1,132 @@
+
+.example-container {min-height:500px;overflow: auto; margin-top: 64px;position: fixed;
+    width: calc(100% - 215px); z-index: 999; max-height:3500px; }  
+table { width: 100% !important;  }
+.mat-elevation-z8 { box-shadow:none;}
+tr.mat-header-row { background:#dedede !important; font-weight: 600; }
+.mat-standard-chip { border-radius: 4px; min-height: 24px;}
+.mat-cell, th.mat-header-cell{font-weight:600; }
+.yellow { color: goldenrod}
+.blue { color: navy}
+.extra { float: left; line-height: 21px}
+th.mat-header-cell {font-size:15px !important; color: rgba(0,0,0,.99) !important}
+:focus {
+    outline: none !important;
+}
+.mat-standard-chip {
+    border-radius: 4px;
+    min-height: 20px;
+    font-weight: 300;
+    color: green;
+    font-size: 12px;
+}
+.bottom-bar { padding: 20px 20px; background: #fff !important; }
+.bottom-bar span { font-size: 12px; }
+ small {
+    font-weight: 400;
+}
+.bottom-bar span {
+    font-size: 12px;
+}
+
+.text-center {
+    text-align: center !important;
+}
+.text-right {
+    text-align: right !important;
+}
+
+tr.mat-header-row { height: 45px !important }
+tr.mat-row:hover {background: #ebf5fc;}
+tr.mat-row:hover .mat-cell{
+    color: #0056b3!important; }
+.description p { display:none;}
+
+@media only screen and (min-width:1366px) {
+
+    .example-container {min-height:500px;overflow: auto; margin-top: 0px;position: fixed;
+    width: calc(100% - 215px); z-index: 999; max-height:4500px; height: 900px }
+
+}
+
+@media only screen and (max-width:959px) {
+    td.mat-cell { border-bottom-color: #fff !important ;}
+ .bottom-bar, .extra, tr.mat-header-row { display:none !important; }
+ tr.mat-row { position: relative; }
+ .star { position: absolute; margin-top: 20px;color: grey;right: 4px;}
+.time { position: absolute; right: 0px; font-size: 12px;
+    font-weight: 300; margin-top: -88px}
+.subject, .description { width: 100%; display: block;  border-bottom-color: #fff !important ;}  
+td.mat-cell { border-bottom: none ; padding: 0px 10px !important }
+.description { font-weight: 500; margin-top: 6px; border-bottom: 1px solid #eee !important; }
+.description p { font-weight: 300; display: block; width: 85% !important; font-size: 12px;
+    margin-left: 63px; margin-top: 4px; }
+.extra .description { font-size: 21px; color: grey;}
+.example-container { width: 100% !important}
+.subject { margin-top: 7px !important; }
+table.mat-table {
+    margin-top: 47px !important;
+    padding-top: 8px !important;
+}
+ .mb-none2 { display: block; position: absolute; margin-top: 29px; }
+ .mb-none3 {display: block;
+    position: absolute;
+    margin-top: -90px;
+    right: 53px; }
+ .mb-none4 { display:none !important; }
+    .toolbar { width: 100% !important; display:block !important;}
+    .extoolbar { display: none !important; }
+}
+
+.toolbar {background:#dedede !important;min-height: 45px !important; 
+    position: fixed; top: 46px;  position: fixed;
+    width: calc(100% - 215px); z-index:1; display: none;}
+    .icons { font-size:12px; font-weight: 400;
+    margin-top: 16px; }
+    .icons span { margin-top:5px; }
+    .pagination { z-index: 999; }
+    .mat-paginator-page-size { display: none; }
+
+    tr.mat-footer-row {
+  font-weight: bold;
+}
+
+.mat-table-sticky {
+  border-top: 1px solid #e0e0e0;
+}
+.search .mat-form-field-appearance-outline .mat-form-field-infix { padding: 14px 0px 12px 0px !important;border-top: 0px!important; }
+.search .mat-form-field-appearance-outline .mat-form-field-flex { margin-top: 10px!important; }
+.search .mat-form-field-appearance-outline .mat-form-field-flex {
+    margin-top: 25px !important;}
+.search .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: rgba(0,0,0,.99) !important; background: #fff;}
+ .search .mat-form-field-suffix { top: 10px !important; }
+
+.searchbar {margin-left: -1px;
+    padding: 0px 12px;
+    margin-top:-21px;
+    max-width: 404px !important;
+    width: 404px !important;
+    position: absolute;}
+
+.searchbar .mat-form-field{ width: 100% } 
+table { width: 100%; }
+.mat-menu-item { height: 30px !important;    line-height: 20px !important; }
+.example-form .mat-form-field { font-size: 16px; }
+.mat-paginator{background: transparent !important;}
+    .mat-paginator-page-size { display: none !important; }
+    .extoolbar {
+    margin-top: 64px;
+    background: #fff;}
+.extoolbar .mat-button{
+     background: #fff !important;
+border: 1px solid #fff !important;
+}
+.extoolbar .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button, .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button {
+   
+    width: 2.5em;
+    height: 0.5em !important;
+}
+.extoolbar .mat-paginator {
+    margin-top: 20px !important;
+}

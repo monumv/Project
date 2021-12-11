@@ -1,0 +1,251 @@
+
+
+<mat-sidenav #sidenav1 id="rightFilterNav" mode="side" position="end" role="" class="sidenav-wv">
+    <div class="mv-6">
+        <form class="example-form">
+            <h2 class="mv-2">Filter</h2>
+  
+           
+          <span class="material-icons close-btn" (click)="sidenav1.toggle()"> close </span>
+  <div class="filter-text">
+    
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Search" appearance="outline" >
+              </mat-form-field>
+
+           
+            <mat-dialog-actions align="start">
+                <section>
+                    <div class="example-button-row mv-5">
+                        <button mat-button mat-dialog-close mat-raised-button color="white"
+                            (click)="sidenav1.toggle()" class="btn-primary">Apply</button>
+                        <button mat-button [mat-dialog-close]="true" cdkFocusInitial mat-raised-button
+                            color="white">Clear</button>
+                    </div>
+                </section>
+            </mat-dialog-actions>
+          </div>
+        </form>
+    </div>
+  </mat-sidenav>
+  
+  
+  <div class="content1">
+  
+  <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+       <mat-toolbar class="crumb">
+              <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/finance">Finance Dashboard</a><span class="mv-18">/</span></span>
+                 <span class="mv-17"><a  routerLink="/stockinhand">Stock in Hand</a><span class="mv-18">/</span></span>
+                <span class="mv-17">Stock in Hand (Item)</span>
+              </div>
+          </mat-toolbar>
+  
+  </div>
+      
+      
+      <div fxLayout='row' fxLayout.xs='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+          
+          <div class="content" fxFlex="100%">
+          <mat-card>
+              <div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+                  <h2 class="mat-h2">Stock in Hand (Item)</h2>
+              </div>
+      
+              <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                  <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+                      
+                  
+                    
+                      <button mat-stroked-button><mat-icon  role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_upward</mat-icon><small>Import</small></button>
+                      <button mat-stroked-button ><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_downward</mat-icon><small>Export</small></button>
+
+                   
+                      <button mat-stroked-button (click)="sidenav1.toggle()"><span class="material-icons">filter_list</span></button>
+                  </div>
+      
+      
+      
+              </div>
+      
+      
+      
+          </mat-card>
+      
+          </div>
+      </div>
+      
+      
+      <div fxLayout='row' class="content content2" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="center">
+      
+      <mat-card fxFlex="100%">
+      
+  
+          <mat-card>
+           <div class="topbar" fxLayout='row' fxLayout.xs='column' fxLayout.sm='column' fxLayout.md='row'
+                fxLayoutWrap fxLayoutGap="3%">
+              
+           
+      
+              <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                  
+          <div class="paging" fxFlex="100%" layout-align="end" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="end" fxLayoutAlign.sm="start">
+            
+              <mat-paginator style-paginator showFirstLastButtons
+                            [length]="7130"
+                            [pageSize]="10"
+                            pageSizeOptions
+                            [pageSizeOptions]="[5, 10, 25, 100]">
+              </mat-paginator>
+              
+          
+            
+          </div>
+      
+      
+      
+              </div>
+      </div>
+      
+      
+          </mat-card>
+      
+      
+      <div class="table">
+      <table mat-table [dataSource]="datass" class="mat-elevation-z8">
+      
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle() : null"
+                          [checked]="selection.hasValue() && isAllSelected()"
+                          [indeterminate]="selection.hasValue() && !isAllSelected()"
+                          [aria-label]="checkboxLabel()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()"
+                          (change)="$event ? selection.toggle(row) : null"
+                          [checked]="selection.isSelected(row)"
+                          [aria-label]="checkboxLabel(row)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+      
+        <!-- Position Column -->
+     <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> Sr </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+          <ng-container matColumnDef="dem" >
+            <th mat-header-cell *matHeaderCellDef >Items</th>
+            <td mat-cell *matCellDef="let element" class="name blue" >{{element.dem}}  </td>
+          </ng-container>
+
+      
+        <ng-container matColumnDef="stdate">
+            <th mat-header-cell *matHeaderCellDef class="">Unit Size</th>
+            <td mat-cell *matCellDef="let element" class="" >{{element.stdate}}  </td>
+          </ng-container>
+
+           <ng-container matColumnDef="etdate">
+            <th mat-header-cell *matHeaderCellDef class="br-right" >Item Group</th>
+            <td mat-cell *matCellDef="let element" class="br-right" >{{element.etdate}}  </td>
+          </ng-container>
+     
+        <ng-container matColumnDef="endate">
+          <th mat-header-cell *matHeaderCellDef class="" ><span>50</span>Opening (Qty)</th>
+          <td mat-cell *matCellDef="let element" class="">{{element.endate}} </td>
+        </ng-container>
+  
+      
+        
+
+          <ng-container matColumnDef="acname">
+            <th mat-header-cell *matHeaderCellDef class=""><span class="green">50</span> In (Qty)</th>
+            <td mat-cell *matCellDef="let element" class="green">{{element.acname}} </td>
+          </ng-container>
+
+         
+
+            <ng-container matColumnDef="status" class="">
+            <th mat-header-cell *matHeaderCellDef ><span class="red">1500</span> Out (Qty)</th>
+            <td mat-cell *matCellDef="let element" class="red sta" >{{element.status}}  </td>
+          </ng-container>
+
+              <ng-container matColumnDef="tasks">
+            <th mat-header-cell *matHeaderCellDef class="br-right"><span>1300</span> Closing (Qty)</th>
+            <td mat-cell *matCellDef="let element" class="br-right" ><b>{{element.tasks}} </b> </td>
+          </ng-container>
+
+
+              <ng-container matColumnDef="unit">
+            <th mat-header-cell *matHeaderCellDef class="" >Min Stock</th>
+            <td mat-cell *matCellDef="let element" class="" >{{element.unit}}  </td>
+          </ng-container>
+
+              <ng-container matColumnDef="self">
+            <th mat-header-cell *matHeaderCellDef >Max Stock</th>
+            <td mat-cell *matCellDef="let element" >{{element.self}}  </td>
+          </ng-container>
+
+              <ng-container matColumnDef="check">
+            <th mat-header-cell *matHeaderCellDef ><span class="red">120</span>  Short Fall</th>
+            <td mat-cell *matCellDef="let element" >{{element.check}}  </td>
+          </ng-container>
+
+              <ng-container matColumnDef="approve">
+            <th mat-header-cell *matHeaderCellDef class="br-right" ><span class="red">150</span> Surplus</th>
+            <td mat-cell *matCellDef="let element" class="br-right" >{{element.approve}}  </td>
+          </ng-container>
+
+              <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef ><span>650</span> UOM Qty</th>
+            <td mat-cell *matCellDef="let element" ><b>{{element.weight}} </b> </td>
+          </ng-container>
+
+              <ng-container matColumnDef="score">
+            <th mat-header-cell *matHeaderCellDef >Uom Unit</th>
+            <td mat-cell *matCellDef="let element" class="" >{{element.score}}  </td>
+          </ng-container>
+  
+      
+        <ng-container matColumnDef="icon">
+          <th mat-header-cell *matHeaderCellDef> Action </th>
+          <td mat-cell *matCellDef="let element">
+  
+              <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" class="action">
+          
+
+
+            <button mat-menu-item>
+                  <mat-icon>change_history</mat-icon>
+                  <a routerLink="/hrm/assessment" target="_blank"><span> Assesment</span></a>
+                </button>
+  
+             
+          </mat-menu>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+            (click)="selection.toggle" [ngClass]="{'make-gold': row.status == 'In Progress'}">
+        </tr>
+      </table>
+      </div>
+      
+      </mat-card>
+      
+      </div>
+      
+      
+      
+      </div>
+      <router-outlet></router-outlet>

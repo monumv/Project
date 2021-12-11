@@ -1,0 +1,90 @@
+<div class="content1">
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<mat-toolbar class="breadcrumb">HRM Dashboard</mat-toolbar>
+
+</div>
+
+<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+	<h2 class="mat-h2">HRM Dashboard</h2>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="33%" routerLink="/itemanagment" class="">
+		<img mat-card-sm-image src="./assets/images/salary.png" alt="Complaints">
+		<mat-card-title>Salary</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/hrm/expenses" class="border">
+		<img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+		<mat-card-title>Expenses Reimbursement</mat-card-title>
+	</mat-card>
+	<mat-card fxFlex="33%" routerLink="/hrm/attendance" class="border">
+		<img mat-card-sm-image src="./assets/images/attendance.png" alt="Complaints">
+		<mat-card-title>Attendance Reports</mat-card-title>
+	</mat-card>
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="31%" routerLink="/hrm/hrsettings" class="border">
+		<img mat-card-sm-image src="./assets/images/settings.png" alt="Complaints">
+		<mat-card-title>HR Settings</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/hrm/hr-master" class="border">
+		<img mat-card-sm-image src="./assets/images/masters.png" alt="Complaints">
+		<mat-card-title>HR Masters</mat-card-title>
+	</mat-card>
+	<mat-card fxFlex="33%" routerLink="/itemanagment" class="">
+		<img mat-card-sm-image src="./assets/images/joining.png" alt="Complaints">
+		<mat-card-title>Joining</mat-card-title>
+	</mat-card>
+</div>
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="31%" routerLink="/itemanagment" class="">
+		<img mat-card-sm-image src="./assets/images/relieving.png" alt="Complaints">
+		<mat-card-title>Relieving</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/itemanagment" class="">
+		<img mat-card-sm-image src="./assets/images/assets.png" alt="Complaints">
+		<mat-card-title>Assets Management</mat-card-title>
+	</mat-card>
+	<mat-card fxFlex="33%" routerLink="/hrm/areaplanner" class="border">
+		<img mat-card-sm-image src="./assets/images/area.png" alt="Complaints">
+		<mat-card-title>Area Planner</mat-card-title>
+	</mat-card>
+</div>
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="31%" routerLink="/hrm/countryplanner" class="">
+		<img mat-card-sm-image src="./assets/images/country.png" alt="Complaints">
+		<mat-card-title>Country Planner</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="31.5%" routerLink="/hrm/rolesrights" class="border">
+		<img mat-card-sm-image src="./assets/images/designation-level.png" alt="Complaints">
+		<mat-card-title>Roles & Rights</mat-card-title>
+	</mat-card>   
+	<mat-card fxFlex="31.5%" routerLink="/hrm/virtualofc" class="">
+            <img mat-card-sm-image src="./assets/images/relieving.png" alt="Complaints">
+            <mat-card-title>Virtual Office</mat-card-title>
+        </mat-card>
+
+</div>
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="31%" routerLink="/hrm/leave-management" class="border">
+		<img mat-card-sm-image src="./assets/images/detailed-monthly.png" alt="Complaints">
+		<mat-card-title>Leave Management</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="31%" routerLink="/hrm/pms" class="border">
+		<img mat-card-sm-image src="./assets/images/detailed-monthly.png" alt="Complaints">
+		<mat-card-title>PMS</mat-card-title>
+	</mat-card>
+
+	
+</div>
+
+</div>
+<router-outlet></router-outlet>

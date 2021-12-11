@@ -1,0 +1,63 @@
+<mat-sidenav-container class="example-container">
+	<mat-sidenav-content>
+		<div class="mv-26">
+			<mat-toolbar>
+				<div class="mv-19">
+					<span class="mv-17"><a routerLink="/dispatch">Dispatch Dashboard  </a><span class="mv-18">/</span></span>
+					<span class="mv-17">Dispatch</span>
+				</div>
+			</mat-toolbar>
+		</div>
+		<br>
+
+		<div fxLayout='row' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="" fxLayoutAlign="left">
+			<div class="content mv-20" fxFlex="100%">
+				<mat-card>
+					<div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+						<h2 class="mat-h2">Dispatch</h2>
+					</div>
+				</mat-card>
+			</div>
+		</div>
+
+		<div fxLayout='row' class="content" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+			<mat-card fxFlex="100%">
+				<mat-vertical-stepper [linear]="" #stepper>
+					<mat-step [stepControl]="firstFormGroup">
+							<ng-template matStepLabel>Select Vehical</ng-template>
+							<app-select-vehical></app-select-vehical>
+					</mat-step>
+
+					<mat-step [stepControl]="secondFormGroup">
+							<ng-template matStepLabel>Select Items to Load</ng-template>
+								<app-select-items></app-select-items>
+		</mat-step>
+
+		<!-- <mat-step [stepControl]="thirdFormGroup">
+				<ng-template matStepLabel>Preview Loaded Vehical</ng-template>
+				<app-preview-loaded-vehical></app-preview-loaded-vehical>
+		</mat-step> -->
+
+		<mat-step [stepControl]="fourFormGroup">
+				<ng-template matStepLabel>Issue Packing Material </ng-template>
+			<app-issue-packaging-material></app-issue-packaging-material>
+		</mat-step>
+
+		
+		<mat-step>
+			<ng-template matStepLabel>Dispatch Summary</ng-template>
+			<app-dispatch-summary></app-dispatch-summary>
+		</mat-step>
+	</mat-vertical-stepper>
+
+
+</mat-card>
+
+
+</div>
+
+
+
+</mat-sidenav-content>
+</mat-sidenav-container>  
+<router-outlet></router-outlet>

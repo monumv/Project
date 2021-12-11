@@ -1,0 +1,57 @@
+<div class="content1">
+
+	<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+       	<div class="mv-19">
+            <span class="mv-17"><a  routerLink="/supaeradmin-module">SuperAdmin</a><span class="mv-18">/</span></span>
+            <span class="mv-17"><a  routerLink="/supaeradmin-module/accmanagement">Account Management</a><span class="mv-18">/</span></span>
+            <span class="mv-17">Accounts</span>
+          </div>
+    </mat-toolbar>
+</div>
+	
+	<div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+		<h2 class="mat-h2">Accounts</h2>
+	</div>
+
+	
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+	<mat-card fxFlex="33%" routerLink="/supaeradmin-module/customeraccount/" class="">
+		<img mat-card-sm-image src="./assets/images/employees.png" alt="Complaints">
+		<mat-card-title>Customer Account</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/supaeradmin-module/supplieraccount/" class="">
+		<img mat-card-sm-image src="./assets/images/department.png" alt="Complaints">
+		<mat-card-title>Supplier Account</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="33%" routerLink="/supaeradmin-module/branchaccount/" class="">
+		<img mat-card-sm-image src="./assets/images/city.png" alt="Complaints">
+		<mat-card-title>Branch Account</mat-card-title>
+	</mat-card>
+
+
+
+</div>
+
+
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	
+	<mat-card fxFlex="31.5%" routerLink="/supaeradmin-module/bankaccount/" class="">
+		<img mat-card-sm-image src="./assets/images/joining.png" alt="Complaints">
+		<mat-card-title>Bank Account</mat-card-title>
+	</mat-card>
+
+	<mat-card fxFlex="31.5%" routerLink="/supaeradmin-module/employee/" class="">
+		<img mat-card-sm-image src="./assets/images/designation-level.png" alt="Complaints">
+		<mat-card-title>Employee Account</mat-card-title>
+	</mat-card>
+
+
+</div>
+  
+
+	</div>
+	<router-outlet></router-outlet>

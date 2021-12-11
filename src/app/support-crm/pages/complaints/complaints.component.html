@@ -1,0 +1,46 @@
+<div class="content1">
+
+    <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <mat-toolbar class="crumb">
+            <div class="mv-19">
+                <span class="mv-17"><a  routerLink="/support-crm">Support CRM Dashboard</a><span class="mv-18">/</span></span>
+                
+                <span class="mv-17">Complaints</span>
+            </div>
+        </mat-toolbar>
+    
+    </div>
+    <br>
+
+    
+    <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+        <h2 class="mat-h2">Complaints</h2>
+    </div>
+    
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="33%" routerLink="/support-crm/open" class="">
+            <img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+            <mat-card-title>Open Complaints</mat-card-title>
+        </mat-card>
+        <mat-card fxFlex="33%" routerLink="/support-crm/closed" class="">
+            <img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+            <mat-card-title>Closed Complaints</mat-card-title>
+        </mat-card>
+        <mat-card fxFlex="33%" routerLink="/support-crm/feedback" class="">
+            <img mat-card-sm-image src="./assets/images/leave.png" alt="Complaints">
+            <mat-card-title>Feedback Closed Complaints</mat-card-title>
+        </mat-card>
+        
+    </div>
+
+    <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        <mat-card fxFlex="31%" routerLink="/support-crm/allcomplaints" class="">
+            <img mat-card-sm-image src="./assets/images/complaints.png" alt="Complaints">
+            <mat-card-title>All Complaints</mat-card-title>
+        </mat-card>
+      
+        
+    </div>
+    
+    </div>
+    <router-outlet></router-outlet>

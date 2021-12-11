@@ -1,0 +1,160 @@
+
+
+<div class="content1">
+
+<div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+            <span class="mv-17"><a  routerLink="/finance">Finance</a><span class="mv-18">/</span></span>
+            <span class="mv-17"><a  routerLink="/finance/itemmanagement/">Item Management</a><span class="mv-18">/</span></span>
+             <span class="mv-17"><a  routerLink="/finance/items/">Items</a><span class="mv-18">/</span></span>
+            <span class="mv-17">Item Images</span>
+        </div>
+    </mat-toolbar>
+
+</div>
+    
+    
+    <div fxLayout='row' fxLayout.xs='column' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+        
+        <div class="content" fxFlex="100%">
+        <mat-card>
+            <div fxFlex="100%" class="heading" fxLayout.xs='column' fxLayout.sm='column'>
+                <h2 class="mat-h2">Item Images</h2>
+            </div>
+    
+            <div fxFlex="100%" class="heading" fxLayout.xs='column'  fxLayout.sm='column'>
+                <div class="example-button-row" fxLayoutGap="1%" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxLayoutAlign.md="start" fxLayoutAlign.sm="start">
+                   
+                  
+                  <button mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">delete_outline</mat-icon><small>Delete</small></button>
+
+                  <a mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">add</mat-icon><small>Add video Url</small></a>
+
+                  <a mat-stroked-button><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">add</mat-icon><small>Add Document</small></a>
+                     <button mat-stroked-button ><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_downward</mat-icon><small>Make Default</small></button>
+                </div>
+    
+    
+    
+            </div>
+    
+    
+    
+        </mat-card>
+    
+        </div>
+    </div>
+    
+    
+    <div fxLayout='row' class="content content2" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="center">
+    
+    <mat-card fxFlex="100%">
+    
+<h4>Image Gallery</h4>
+<div class="contents" id="gallery">
+<a href="#img1">
+<ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true" (removed)="onRemove(f)" >
+<ngx-dropzone-label>
+
+<span>18-03-2021 | 12:11Pm</span>
+  
+ <mat-radio-button value="1" class="default">Make Default</mat-radio-button>
+
+</ngx-dropzone-label>
+	</ngx-dropzone-image-preview>
+</a>
+
+<div class="custom-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)">
+	<ngx-dropzone-label>
+		<div>
+			<h2>Browse Images <br>or <br> <span>Drag & Drop Images</span></h2>
+		</div>
+	</ngx-dropzone-label>
+	
+</div>
+
+
+<!-- lightbox container hidden with CSS -->
+<div class="lightbox" id="img1">
+  <a class="close_out" href="#"></a>
+  <div class="box">
+	<a class="close" href="#">X</a>
+    
+    <div class="content">
+    	<img src="http://media-cache-ec0.pinimg.com/736x/d6/f3/ea/d6f3ea3207ced5d18138680bee59f535.jpg">        
+    </div>
+    <a class="prev" href="#img3"><span class="material-icons">
+keyboard_arrow_left
+</span></a>
+    <a class="next" href="#img2"><span class="material-icons">
+keyboard_arrow_right
+</span></a>
+    <div class="clear"></div>
+  </div>
+</div>    
+    
+<div class="lightbox" id="img2">
+  <a class="close_out" href="#"></a>
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <div class="content">
+    	<img src="http://media-cache-ec0.pinimg.com/736x/6b/69/f8/6b69f80d5cd5b735f88326ba534d0d85.jpg"> 
+    </div>
+    <a class="prev" href="#img2"><span class="material-icons">
+keyboard_arrow_left
+</span></a>
+    <a class="next" href="#img3"><span class="material-icons">
+keyboard_arrow_right
+</span></a>
+    <div class="clear"></div>
+  </div>
+</div>  
+
+<div class="lightbox" id="img3">
+  <a class="close_out" href="#"></a>
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <div class="content">
+    	<img src="http://media-cache-ec0.pinimg.com/736x/d6/f3/ea/d6f3ea3207ced5d18138680bee59f535.jpg">  
+    </div>
+    <a class="prev" href="#img2"><span class="material-icons">
+keyboard_arrow_left
+</span></a>
+    <a class="next" href="#img4"><span class="material-icons">
+keyboard_arrow_right
+</span></a>
+    <div class="clear"></div>
+  </div>
+</div> 
+
+
+<div class="lightbox" id="img4">
+  <a class="close_out" href="#"></a>
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <div class="content">
+    	<img src="http://media-cache-ec0.pinimg.com/736x/6b/69/f8/6b69f80d5cd5b735f88326ba534d0d85.jpg"> 
+    </div>
+    <a class="prev" href="#img3"><span class="material-icons">
+keyboard_arrow_left
+</span></a>
+    <a class="next" href="#img1"><span class="material-icons">
+keyboard_arrow_right
+</span></a>
+    <div class="clear"></div>
+  </div>
+</div>  
+
+
+
+</div>
+    
+    </mat-card>
+    
+    </div>
+    
+    
+    
+    </div>
+    <router-outlet></router-outlet>

@@ -1,0 +1,148 @@
+<div *ngIf="data.dialogObj.dialogType=='coupon'">
+<h3 mat-dialog-title align="center"><b>Add Coupon</b></h3>
+<div mat-dialog-content>
+
+        <form class="example-form">
+
+            <mat-form-field class="example-full-width">
+                <input type="text"
+                       placeholder="Select HO/BO"
+                       aria-label="Number"
+                       matInput
+                       [formControl]="myControl"
+                       [matAutocomplete]="auto">
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                  <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+
+               <mat-form-field class="example-full-width">
+                <input type="text"
+                       placeholder="Work Order"
+                       aria-label="Number"
+                       matInput
+                       [formControl]="myControl"
+                       [matAutocomplete]="auto">
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                  <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Item Name" disabled >
+                </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Item Qty" disabled >
+                </mat-form-field>
+
+  				<mat-form-field class="example-full-width">
+                        <input matInput placeholder="Pack Qty." disabled >
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Master Pack Qty." disabled >
+                </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Points" disabled >
+                </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Valid Till" disabled >
+                </mat-form-field>
+
+
+        </form>
+
+
+</div>
+<div align="right" class="action-btn">
+
+                    
+<button mat-raised-button color="primary" mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Submit</small></button>
+                         
+<button mat-raised-button mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Cancel</small></button>
+</div>
+
+</div>
+
+
+<div *ngIf="data.dialogObj.dialogType=='upload'">
+
+<h3 mat-dialog-title align="center"><b>Upload Data</b></h3>
+<div mat-dialog-content>
+<a>Download Template</a>
+        <form class="example-form">
+
+                <mat-form-field class="example-full-width">
+                        <input matInput type="file"  >
+                </mat-form-field>
+
+        </form>
+
+
+</div>
+<div align="right" class="action-btn">
+
+                      
+<button mat-raised-button color="primary" mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Upload</small></button>
+                         
+<button mat-raised-button mat--button [mat-dialog-close]="true" cdkFocusInitial class="close"><small>Cancel</small></button>
+</div>
+
+</div>
+
+
+<div *ngIf="data.dialogObj.dialogType=='ledgers'">
+<h3 mat-dialog-title align="center"><b>Account Wise Rewards</b></h3>
+<div mat-dialog-content>
+
+        <form class="example-form">
+
+            <mat-form-field class="example-full-width">
+                <input type="text"
+                       placeholder="Select Account"
+                       aria-label="Number"
+                       matInput
+                       [formControl]="myControls"
+                       [matAutocomplete]="autoTest">
+                <mat-autocomplete autoActiveFirstOption #autoTest="matAutocomplete">
+                  <mat-option *ngFor="let option of optionss | async" [value]="option">
+                    {{option}}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+
+              
+
+                <mat-form-field class="example-full-width">
+                        <mat-label>From Date</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+
+                <mat-form-field class="example-full-width">
+                        <mat-label>To Date</mat-label>
+                        <input matInput [matDatepicker]="pickers">
+                        <mat-datepicker-toggle matSuffix [for]="pickers"></mat-datepicker-toggle>
+                        <mat-datepicker #pickers></mat-datepicker>
+                </mat-form-field>
+
+
+        </form>
+
+
+</div>
+<div align="right">
+
+        <button (click)="closeDialog()" mat-raised-button routerLink="/production/rewardslist"
+        target="_blank">Submit</button>
+</div>
+
+</div>

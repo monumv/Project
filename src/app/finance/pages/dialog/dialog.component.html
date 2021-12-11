@@ -1,0 +1,118 @@
+<div *ngIf="data.dialogObj.dialogType=='video'">
+
+<mat-card><h2 mat-dialog-title>Video</h2></mat-card>
+<div mat-dialog-content>
+	<video controls autoplay="autoplay">
+  		<source src="https://dialerpstorage.blob.core.windows.net/40046/40046%2Femail-attachments%2Fblob40046T202103161406Vid-40046-1884-20210316140635.mp4">
+  </video>
+</div>
+<div mat-dialog-actions>
+  <button (click)="closeDialog()" mat-raised-button mat-dialog-close>Close</button>
+</div>
+
+
+</div>
+
+<div *ngIf="data.dialogObj.dialogType=='kyc'">
+
+<mat-card><h2 mat-dialog-title>Add/Update Pan Card</h2></mat-card>
+<div mat-dialog-content>
+
+<mat-form-field class="example-full-width">
+      <mat-label>Account</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Pan Number</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>PanPicUrl</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+  <mat-label>Status</mat-label>
+  <mat-select disableRipple>
+    <mat-option value="1">Pending</mat-option>
+    <mat-option value="2">Verified</mat-option>
+    <mat-option value="3">Approved</mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+<div class="block"><img src="./assets/images/credit.png" style="width: 300px;" ></div>
+</div>
+<div mat-dialog-actions>
+  <button color="primary" mat-raised-button mat-dialog-close
+   >Submit</button>
+</div>
+
+</div>
+
+
+<div *ngIf="data.dialogObj.dialogType=='terms'" style="width: 500px;" class="terms">
+
+<mat-card><h2 mat-dialog-title>Select Terms and Conditions</h2></mat-card>
+<div mat-dialog-content>
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="favoriteSeason">
+  <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+    {{season}}
+  </mat-radio-button>
+</mat-radio-group>
+</div>
+<div mat-dialog-actions>
+   <button (click)="closeDialog()" mat-raised-button mat-dialog-close color="primary">Save</button>
+  <button (click)="closeDialog()" mat-raised-button mat-dialog-close>Close</button>
+</div>
+
+
+</div>
+
+
+
+
+<div *ngIf="data.dialogObj.dialogType=='gallery'" class="gallery">
+
+<img src="https://www.gstatic.com/webp/gallery/1.jpg">
+</div>
+
+
+<div *ngIf="data.dialogObj.dialogType=='category'">
+
+<mat-card><h2 mat-dialog-title>Edit Category</h2></mat-card>
+<div mat-dialog-content>
+
+<mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput required="">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Slug</mat-label>
+      <input matInput required="">
+    </mat-form-field>
+    <div class="file">
+      <label class="ico">Current Icon</label>
+      <input type="file" id="file" />
+  <label for="file" class="btn-1">upload Icon</label>
+</div>
+
+<mat-checkbox class="example-margin">Allow featured category</mat-checkbox>
+
+
+
+</div>
+<div mat-dialog-actions>
+  <button color="primary" mat-raised-button mat-dialog-close
+   >Submit</button>
+</div>
+
+</div>

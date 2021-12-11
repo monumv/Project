@@ -1,0 +1,83 @@
+
+ <mat-toolbar class="toolbars">
+
+  <mat-toolbar-row> 
+
+     <div fxLayout='row' fxFlex="100%" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+
+     <div class="icons" fxFlex="100%" fxLayoutAlign="left">
+      <span>New Message</span>
+  </div> 
+
+  <div class="icons" fxFlex="100%" fxLayoutAlign="end">
+      <span class="material-icons">minimize</span>
+      <span class="material-icons">open_in_full</span>
+      <span class="material-icons" [mat-dialog-close]="true">clear</span>
+  </div>   
+  
+
+ </div>
+
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<div class="body">
+<mat-form-field class="example-full-width">
+      <input matInput Value="To">
+        <span matSuffix class="grey" (click)="show=!show">CC</span>
+        <span matSuffix class="grey" (click)="show2=!show2"> BCC</span>
+</mat-form-field>
+
+ <div *ngIf="show">
+       <mat-form-field class="example-full-width">
+      <input matInput Value="CC">
+      
+</mat-form-field>
+    </div>
+
+    <div *ngIf="show2">
+       <mat-form-field class="example-full-width">
+      <input matInput Value="BCC">
+      
+</mat-form-field>
+    </div>
+
+<mat-form-field class="example-full-width">
+      <input matInput Value="Subject">
+       
+</mat-form-field>
+
+<div class="mail-body">
+    <mat-form-field class="example-full-width ">
+            
+            <textarea matInput></textarea>
+          </mat-form-field>
+
+</div>
+
+ <mat-toolbar class="tool-bar">
+
+  <mat-toolbar-row> 
+
+     <div fxLayout='row' fxFlex="100%" fxLayout.xs='row'  fxLayout.sm='row' fxLayout.md='row'>
+
+     <div class="icons" fxFlex="100%" fxLayoutAlign="left">
+      <button mat-raised-button color="primary" [mat-dialog-close]="true">Send</button>
+
+      <span class="material-icons">text_format</span>
+      <span class="material-icons">attachment</span>
+      <span class="material-icons">wallpaper</span>
+  </div> 
+
+  <div class="icons" fxFlex="100%" fxLayoutAlign="end">
+      <span class="material-icons">delete_outline</span>
+  </div>   
+  
+
+ </div>
+
+  </mat-toolbar-row>
+
+</mat-toolbar>
+</div>
