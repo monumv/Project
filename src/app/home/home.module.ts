@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
-
 import { HomeMasterComponent } from './master/home-master/home-master.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
