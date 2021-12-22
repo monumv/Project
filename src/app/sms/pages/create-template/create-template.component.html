@@ -1,6 +1,10 @@
 <mat-card><h2 mat-dialog-title>Create Template</h2></mat-card><br>
 <div mat-dialog-content>
 	
+<mat-form-field class="example-full-width">
+      <mat-label>Client ID*</mat-label>
+      <input matInput>
+    </mat-form-field>
 
 <mat-form-field appearance="">
   <mat-label>Select Entity ID*</mat-label>
@@ -10,6 +14,11 @@
     </mat-option>
   </mat-select>
 </mat-form-field>
+
+<mat-form-field class="example-full-width">
+      <mat-label>Entity Name*</mat-label>
+      <input matInput>
+    </mat-form-field>
 
 <mat-form-field class="example-full-width">
       <mat-label>Template ID*</mat-label>
@@ -37,10 +46,11 @@
 
     <mat-form-field class="example-full-width" appearance="">
     <mat-label>Template Enable Unicode*</mat-label>
-    <input matInput #message maxlength="256" placeholder="Ex. I need help with...">
-    <mat-hint align="start"><strong>Template Enable Unicode</strong> </mat-hint>
-    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+    <textarea matInput placeholder="Template Enable Unicode..."></textarea>
   </mat-form-field>
+
+
+    
 
 
 
@@ -48,5 +58,5 @@
 </div>
 <div mat-dialog-actions>
   <button mat-raised-button mat-dialog-close>Cancel</button>
-  <button color="primary" mat-raised-button mat-dialog-close>Save Entity</button>
+  <button color="primary" mat-raised-button mat-dialog-close>Save</button>
 </div>

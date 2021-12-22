@@ -18,6 +18,8 @@ import { AddEntityIdComponent } from './pages/add-entity-id/add-entity-id.compon
 import { AddSenderIdComponent } from './pages/add-sender-id/add-sender-id.component';
 import { CreateTemplateComponent } from './pages/create-template/create-template.component';
 import { AddOperatorComponent } from './pages/add-operator/add-operator.component';
+import { RouteManagementComponent } from './pages/route-management/route-management.component';
+import { AddRouteManagementComponent } from './pages/add-route-management/add-route-management.component';
 
 
 const routes: Routes = [
@@ -36,7 +38,8 @@ const routes: Routes = [
    { path: 'add-sender-id', component: AddSenderIdComponent},
    { path: 'create-template', component: CreateTemplateComponent},
    { path: 'add-operator', component: AddOperatorComponent},
-
+   { path: 'route-management', component: RouteManagementComponent},
+   { path: 'add-route-management', component: AddRouteManagementComponent},
 
  ],
  

@@ -110,10 +110,17 @@ import { CreatesaleComponent } from './pages/createsale/createsale.component';
 import { AddsaleorderComponent } from './pages/addsaleorder/addsaleorder.component';
 import { PaymentlinkComponent } from './pages/paymentlink/paymentlink.component';
 import { SuccessComponent } from './pages/success/success.component';
+import { DiscountComponent } from './pages/discount/discount.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import { AddProductComponent } from './pages/add-product/add-product.component';
+import { AddCountriesComponent } from './pages/add-countries/add-countries.component';
+import { AddCollectionsComponent } from './pages/add-collections/add-collections.component';
+import { CreateDiscountComponent } from './pages/create-discount/create-discount.component';
+import { ViewDiscountComponent } from './pages/view-discount/view-discount.component';
 
 
 @NgModule({
-  declarations: [FinanceMasterComponent, DashboardComponent, MediaGalleryComponent, VouchersComponent, PaymenManagementComponent, PaymentsComponent, ProposedPaymentsComponent, IciciPayComponent, OtpComponent, ThankyouComponent, SaleComponent, PurchaselistComponent, SalesreturncrComponent, PurchasereturndrComponent, ReceiptComponent, JournalComponent, DebitNoteWithoutItemComponent, CreditNoteWithoutItemComponent, IssuedtopartyComponent, ReceivedfrompartyComponent, AccountManagementComponent, AccountsComponent, CustomeraccountComponent, SupplieraccountComponent, BranchaccountComponent, BankaccountComponent, EmployeeComponent, AccountgroupComponent, ManualrechargesComponent, ItemmanagementComponent, ItemsComponent, ItemvariantsComponent, ItemgroupsComponent, UnitComponent, UnirgroupsComponent, ItemsizeComponent, ItemcolorComponent, PackmanagementComponent, PacksComponent, MasterpackComponent, PricesettingsComponent, PricelistComponent, OldpricelistComponent, HsnlistComponent, BrandsComponent, RegisteredItemComponent, StockinhandComponent, ItempartyComponent, FinancesettingsComponent, GlistComponent, ProposalsComponent, DialogComponent, GalleryComponent, VideoGalleryComponent, MediaGalleryVideoComponent, WhitebillsreportComponent, OutstandingcollectionreportComponent, SalemanagementComponent, SaleorderindirectComponent, AllsubscriptionComponent, SubscriptionscheduleComponent,  ReceiptmanagementComponent, ProposdreceiptComponent, ProposedpaymentComponent, PurchasemanagementComponent, AcceptedComponent, SaleinvoiceComponent, MarkdeleveredComponent, CancelComponent, CreatejournalComponent, ViewjournalComponent, ViewitemstockComponent, ItemstockgroupComponent, ItemstockComponent, ReportsComponent, PrimarysaleComponent, VisitsComponent, SecondaryordersComponent, CreatesaleComponent, AddsaleorderComponent, PaymentlinkComponent, SuccessComponent],
+  declarations: [FinanceMasterComponent, DashboardComponent, MediaGalleryComponent, VouchersComponent, PaymenManagementComponent, PaymentsComponent, ProposedPaymentsComponent, IciciPayComponent, OtpComponent, ThankyouComponent, SaleComponent, PurchaselistComponent, SalesreturncrComponent, PurchasereturndrComponent, ReceiptComponent, JournalComponent, DebitNoteWithoutItemComponent, CreditNoteWithoutItemComponent, IssuedtopartyComponent, ReceivedfrompartyComponent, AccountManagementComponent, AccountsComponent, CustomeraccountComponent, SupplieraccountComponent, BranchaccountComponent, BankaccountComponent, EmployeeComponent, AccountgroupComponent, ManualrechargesComponent, ItemmanagementComponent, ItemsComponent, ItemvariantsComponent, ItemgroupsComponent, UnitComponent, UnirgroupsComponent, ItemsizeComponent, ItemcolorComponent, PackmanagementComponent, PacksComponent, MasterpackComponent, PricesettingsComponent, PricelistComponent, OldpricelistComponent, HsnlistComponent, BrandsComponent, RegisteredItemComponent, StockinhandComponent, ItempartyComponent, FinancesettingsComponent, GlistComponent, ProposalsComponent, DialogComponent, GalleryComponent, VideoGalleryComponent, MediaGalleryVideoComponent, WhitebillsreportComponent, OutstandingcollectionreportComponent, SalemanagementComponent, SaleorderindirectComponent, AllsubscriptionComponent, SubscriptionscheduleComponent,  ReceiptmanagementComponent, ProposdreceiptComponent, ProposedpaymentComponent, PurchasemanagementComponent, AcceptedComponent, SaleinvoiceComponent, MarkdeleveredComponent, CancelComponent, CreatejournalComponent, ViewjournalComponent, ViewitemstockComponent, ItemstockgroupComponent, ItemstockComponent, ReportsComponent, PrimarysaleComponent, VisitsComponent, SecondaryordersComponent, CreatesaleComponent, AddsaleorderComponent, PaymentlinkComponent, SuccessComponent, DiscountComponent, AddProductComponent, AddCountriesComponent, AddCollectionsComponent, CreateDiscountComponent, ViewDiscountComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -142,6 +149,7 @@ import { SuccessComponent } from './pages/success/success.component';
     MatExpansionModule,MatAutocompleteModule,
     MatDatepickerModule,
     MatNativeDateModule,ChartsModule,
+    MatStepperModule,
   ],
    entryComponents: [IciciPayComponent, OtpComponent, ThankyouComponent,DialogComponent ]
 })

@@ -1,0 +1,105 @@
+<div class="content1">
+  <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb"><br>
+        <div class="mv-19">
+            <span class="mv-17"><a routerLink="/finance/">Finance Dashboard  </a><span class="mv-18">/</span></span>
+					<span class="mv-17"><a routerLink="/finance/itemmanagement/">Item Management  </a><span class="mv-18">/</span></span>
+					<span class="mv-17"><a routerLink="/finance/pricesettings/">Price Settings
+  </a><span class="mv-18">/</span></span>
+<span class="mv-17"><a routerLink="/finance/discount/">Discount
+  </a><span class="mv-18">/</span></span>
+  <span class="mv-17"><a routerLink="/finance/create-discount/">Create Discount
+  </a><span class="mv-18">/</span></span>
+					<span class="mv-17">View Discount</span>
+        </div>
+    </mat-toolbar>
+</div><br>
+  
+  <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <h2 class="mat-h2">View Discount</h2>
+  </div><br>
+	
+
+	
+<div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+	<mat-card fxFlex="100%" class="">
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- Checkbox Column -->
+  <ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef>
+      <mat-checkbox (change)="$event ? masterToggle() : null"
+                    [checked]="selection.hasValue() && isAllSelected()"
+                    [indeterminate]="selection.hasValue() && !isAllSelected()"
+                    [aria-label]="checkboxLabel()">
+      </mat-checkbox>
+    </th>
+    <td mat-cell *matCellDef="let row">
+      <mat-checkbox (click)="$event.stopPropagation()"
+                    (change)="$event ? selection.toggle(row) : null"
+                    [checked]="selection.isSelected(row)"
+                    [aria-label]="checkboxLabel(row)">
+      </mat-checkbox>
+    </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef>Sr No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Coupan Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+ 
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="weight">
+    <th mat-header-cell *matHeaderCellDef> Created by </th>
+    <td mat-cell *matCellDef="let element"><b>{{element.symbol}}</b><br> {{element.weight}} </td>
+  </ng-container>
+
+  
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="date1">
+    <th mat-header-cell *matHeaderCellDef> Start Date  </th>
+    <td mat-cell *matCellDef="let element"> {{element.date1}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="date2">
+    <th mat-header-cell *matHeaderCellDef> End Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.date2}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="active">
+    <th mat-header-cell *matHeaderCellDef> Status </th>
+    <td mat-cell *matCellDef="let element"> {{element.active}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="usage">
+    <th mat-header-cell *matHeaderCellDef> Usage Limits </th>
+    <td mat-cell *matCellDef="let element"> {{element.usage}} </td>
+  </ng-container>
+  <ng-container matColumnDef="usage1">
+    <th mat-header-cell *matHeaderCellDef> Account Group </th>
+    <td mat-cell *matCellDef="let element"> {{element.usage1}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+      (click)="selection.toggle(row)">
+  </tr>
+</table>
+
+</mat-card>
+</div><!-- row -->
+</div> 
+<router-outlet></router-outlet>

@@ -7,8 +7,7 @@ import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import {MatDialog} from '@angular/material/dialog';
-import { AddEntityIdComponent } from '../add-entity-id/add-entity-id.component';
-
+import { AddRouteManagementComponent } from '../add-route-management/add-route-management.component';
 
 export interface PeriodicElement {
   position: number;
@@ -17,12 +16,16 @@ export interface PeriodicElement {
   document: string;
   demo:string
   icon: string;
-  created:string;
-  cname:string;
+  sender:string;
+  template:string;
+  approval1:string;
+  approval2:string;
+  Priority1:string;
+  Priority2:string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-{position: 1, date:'abc@getoninfotech.com', document: '101', vch:'GetOn Infotech', created: 'abc@getoninfotech.com', demo:'2021-12-10 16:32:26', cname: 'Geton Infotech', icon:'chevron_right'}, 
+{position: 1, date:'11005', document: '101', vch:'GetOn Infotech', demo:'Promotional', sender: '005', template: '201012', approval1:'Yes', approval2: 'Update', Priority1: '1', Priority2: 'Update',  icon:'chevron_right'}, 
  
 
  ];
@@ -31,20 +34,13 @@ interface Number {
   value: string;
   viewValue: string;
 }
-
 @Component({
-  selector: 'app-operator',
-  templateUrl: './operator.component.html',
-  styleUrls: ['./operator.component.css']
+  selector: 'app-route-management',
+  templateUrl: './route-management.component.html',
+  styleUrls: ['./route-management.component.css']
 })
-@Component({
-  selector: 'app-dlt-entity',
-  templateUrl: './dlt-entity.component.html',
-  styleUrls: ['./dlt-entity.component.css']
-})
-export class DltEntityComponent implements OnInit {
-
-  displayedColumns: string[] = ['position', 'date', 'document', 'vch', 'demo', 'created', 'icon' ];
+export class RouteManagementComponent implements OnInit {
+ displayedColumns: string[] = ['position', 'date', 'document', 'vch', 'demo', 'sender', 'template', 'approval1', 'approval2', 'Priority1', 'Priority2', 'icon' ];
 
   datass = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
@@ -87,7 +83,7 @@ export class DltEntityComponent implements OnInit {
 constructor(public dialog: MatDialog) {}
 
   openDialog() {
-    this.dialog.open(AddEntityIdComponent,{
+    this.dialog.open(AddRouteManagementComponent,{
       panelClass: 'form-dialog'}
       );
     

@@ -1,0 +1,23 @@
+<button mat-button mat-dialog-close style="float: right;">
+	<mat-icon class="close-icon" color="black">close</mat-icon>
+</button>
+<mat-form-field>
+  <mat-label>Add Collections</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Search Product" #input>
+</mat-form-field>
+
+<div class="example-table-container">
+<mat-list>
+  <mat-list-item *ngFor="let folder of folders">
+  	<mat-checkbox class="example-margin">{{folder.name}}</mat-checkbox>
+  </mat-list-item>
+
+  
+</mat-list>
+
+</div>
+
+<div class="mv-141">
+	<button mat-raised-button mat-dialog-close color="basic">Cancel</button>
+ <button mat-raised-button color="accent">Save</button>
+</div>

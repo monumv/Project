@@ -86,6 +86,12 @@ import { AddsaleorderComponent } from './pages/addsaleorder/addsaleorder.compone
 import { CreatesaleComponent } from './pages/createsale/createsale.component';
 import { PaymentlinkComponent } from './pages/paymentlink/paymentlink.component';
 import { SuccessComponent } from './pages/success/success.component';
+import { DiscountComponent } from './pages/discount/discount.component';
+import { AddProductComponent } from './pages/add-product/add-product.component';
+import { AddCountriesComponent } from './pages/add-countries/add-countries.component';
+import { AddCollectionsComponent } from './pages/add-collections/add-collections.component';
+import { CreateDiscountComponent } from './pages/create-discount/create-discount.component';
+import { ViewDiscountComponent } from './pages/view-discount/view-discount.component';
 
 
 const routes: Routes = [
@@ -165,10 +171,15 @@ const routes: Routes = [
    { path: 'reports', component: ReportsComponent}, 
    { path: 'primarysale', component: PrimarysaleComponent  }, 
    { path: 'visits', component: VisitsComponent   }, 
-   { path: 'secondaryorders', component: SecondaryordersComponent   },  
+   { path: 'secondaryorders', component: SecondaryordersComponent   }, 
+   { path: 'discount', component: DiscountComponent   }, 
+   { path: 'add-product', component: AddProductComponent   }, 
+   { path: 'add-countries', component: AddCountriesComponent   }, 
+   { path: 'add-collections', component: AddCollectionsComponent   },
+   { path: 'create-discount', component: CreateDiscountComponent   },
+   { path: 'view-discount', component: ViewDiscountComponent   }, 
  ],
  
-  
   }, 
 
    { path: 'createsale', component: CreatesaleComponent}, 

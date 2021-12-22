@@ -79,20 +79,20 @@
         
           
           <ng-container matColumnDef="date">
-            <th mat-header-cell *matHeaderCellDef class="date" >Client ID</th>
+            <th mat-header-cell *matHeaderCellDef class="date" >Client ID*</th>
             <td mat-cell *matCellDef="let element" class="date" >{{element.date}} <br>
             
              </td>
           </ng-container>
    <!-- Symbol Column -->
           <ng-container matColumnDef="document">
-            <th mat-header-cell *matHeaderCellDef  class="date">Entity ID	</th>
+            <th mat-header-cell *matHeaderCellDef  class="date">Entity ID*	</th>
             <td mat-cell *matCellDef="let element"  class="date">{{element.document}} <br>
             
           </ng-container>
 
           <ng-container matColumnDef="vch">
-            <th mat-header-cell *matHeaderCellDef  >Entity Name	</th>
+            <th mat-header-cell *matHeaderCellDef  >Entity Name*	</th>
             <td mat-cell *matCellDef="let element" >{{element.vch}}  </td>
           </ng-container>
          
@@ -105,8 +105,10 @@
 
           <ng-container matColumnDef="created">
             <th mat-header-cell *matHeaderCellDef  >Created By</th>
-            <td mat-cell *matCellDef="let element" >{{element.created}}  </td>
+            <td mat-cell *matCellDef="let element" ><b>{{element.cname}}</b><br>{{element.created}}  </td>
           </ng-container>
+
+         
         
 
           <ng-container matColumnDef="icon">

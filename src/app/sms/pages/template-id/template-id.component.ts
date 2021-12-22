@@ -18,10 +18,12 @@ export interface PeriodicElement {
   icon: string;
   sender:string;
   template:string;
+  client:string;
+  ename:string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-{position: 1, date:'11005', document: '101', vch:'GetOn Infotech', demo:'Promotional', sender: '005', template: '201012', icon:'chevron_right'}, 
+{position: 1, date:'11005', ename: 'Geton', document: '101', vch:'GetOn Infotech', demo:'Promotional', sender: '005', template: '201012', client: '05', icon:'chevron_right'}, 
  
 
  ];
@@ -44,7 +46,7 @@ interface Number {
 export class TemplateIdComponent implements OnInit {
 
  
-  displayedColumns: string[] = ['position', 'date', 'document', 'vch', 'demo', 'sender', 'template', 'icon' ];
+  displayedColumns: string[] = ['position', 'client', 'date', 'ename', 'document', 'vch', 'demo', 'sender', 'template', 'icon' ];
 
   datass = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);

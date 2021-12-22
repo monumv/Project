@@ -20,7 +20,7 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-{position: 1, date:'Airtel', document: 'Airtel', vch:'GetOn Infotech', icon:'chevron_right'}, 
+{position: 1, date:'Airtel', document: 'Airtel', vch:'GetOn Infotech', demo:'11', icon:'chevron_right'}, 
  
 
  ];

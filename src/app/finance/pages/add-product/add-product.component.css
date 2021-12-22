@@ -1,0 +1,234 @@
+.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding-bottom: 1.25em;
+}
+
+.mat-grid-list {
+    display: block;
+    position: relative;
+    width: 96%;
+    margin: auto;
+}
+mat-grid-tile{
+	left: 0px;
+    width: calc((33.3333% - 0.666667px) * 1 + 0px);
+    margin-top: 0px;
+    padding-top: calc((8.33333% - 0.666667px) * 1 + 0px);
+    width: 32%;
+    background-color: red;
+}
+
+
+.mat-grid-tile .mat-figure { align-items:start !important; }
+.logo{
+	width: 14%;
+}
+.mat-toolbar .mat-menu-trigger {
+    font-size: 15px;
+    float: right !important;
+    margin-left: 10px !important;
+    margin-top: 0px !important;
+    border-radius: 5px;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: rgb(0, 0, 0) !important;
+    border-image: initial !important;
+    background: rgb(255, 255, 255) !important;
+}
+.mv-1{
+	width: 100%;
+}
+.container{
+	padding: 15px 30px;
+}
+
+mat-grid-tile { background:#f2f2f2; margin-top: 64px; }
+mat-card {padding: 8px; margin:0px 20px 15px !important;user-select: none;}
+mat-card img { float: left }
+mat-card-title { float: left; display: inline-block; font-size: 17px; 
+	font-weight: normal; line-height: 85px; }
+    .mat-grid-tile .mat-figure { align-items:start !important; }
+    mat-grid-tile[_ngcontent-bje-c98]{
+        margin:10px;
+    }
+    .mat-drawer-container{
+        height: 100%;
+    }
+    @media screen and (min-width: 960px) and (max-width: 1027px) { 
+        mat-card-title{
+            width: 160px;
+            line-height: 25px;
+            padding-top: 25px;
+        }
+    }
+
+    .mat-h2, .mat-title, .mat-typography h2 {
+        font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+        letter-spacing: normal;
+        margin: 0px 0 0px !important;
+    }
+    .mv-20 mat-card{
+        box-shadow: none !important;
+        border-right: none;
+    }
+
+    .mv-17{
+        padding:0px;
+        font-size: 13px;
+    }
+    .mv-17 a{
+        text-decoration: none;
+        font-size: 13px;
+        color: #4285F4;
+    }
+    .mv-17 a:hover{
+        color:#000;
+    }
+    .mv-18{
+        padding: 0px 5px;
+    }
+    .mv-19{
+        padding-left: 15px;
+    }
+
+    .mat-h2, .mat-title, .mat-typography h2 {
+        font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+        letter-spacing: normal;
+        margin: 0px 0 0px;
+    }
+    .mv-20 mat-card{
+        box-shadow: none !important;
+        background: transparent;
+    }
+
+    .mat-drawer-container {
+        background-color: #f2f2f2!important;
+        color: rgba(0,0,0,.87);
+    }
+
+    .mv-26 mat-toolbar{
+        background: #e9e9e9 !important;
+        height: 45px;
+    }
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  display: block;
+}
+.mat-radio-button {
+    padding: 15px 0;
+    width: 60% !important;
+    display: block;
+}
+.mv-105{
+    float: right;
+}
+:host ::ng-deep .mat-radio-label-content {
+    width: 100% !important;
+}
+mat-radio-label-content {
+    -webkit-user-select: auto;
+    width: 100% !important;
+}
+
+::ng-deep .mat-radio-container {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 30px !important;
+    flex-shrink: 0;
+}
+::ng-deep .mat-radio-container:hover{
+    background-color: none;
+}
+::ng-deep .mat-form-field{
+    width: 100%;
+}
+table.mat-table {
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+}
+
+::ng-deep .mat-accordion .mat-expansion-panel {
+    border-radius: 0px !important;
+}
+.mv-141{
+    margin-top: 20px;
+}
+.mat-expansion-panel-header-description {
+    flex-grow: 2;
+    text-align: right;
+}
+
+::ng-deep .mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
+    display: block;
+    flex-grow: 1;
+    margin-right: 16px;
+}
+
+
+
+.mv-107{
+    display: block;
+    color: #262626;
+    font-size: 12px;
+}
+.mat-raised-button{
+    margin-right: 15px;
+}
+
+mat-input-element{
+	border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.mv-108{
+	text-decoration: none;
+	color: #4285F4;
+}
+tr.mat-header-row {
+    height: 44px;
+    font-size: 20px;
+    font-weight: bold !important;
+    background: #dedede;
+}
+th.mat-header-cell{
+    font-size: 16px;
+    color: #000;
+    padding: 0px 20px;
+}
+td.mat-cell{
+    padding: 0px 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.example-table-container {
+  position: relative;
+  max-height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+.mv-141{
+	color: red;
+}
+
+
+ ::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+        opacity: 0.5 !important;     /*click effect color change*/
+        background-color: transparent !important;
+        position:relative;
+        top: -5px;
+  }
+
+

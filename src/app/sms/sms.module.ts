@@ -44,9 +44,11 @@ import { AddSenderIdComponent } from './pages/add-sender-id/add-sender-id.compon
 import { EateTemplatesComponent } from './pages/eate-templates/eate-templates.component';
 import { CreateTemplateComponent } from './pages/create-template/create-template.component';
 import { AddOperatorComponent } from './pages/add-operator/add-operator.component';
+import { RouteManagementComponent } from './pages/route-management/route-management.component';
+import { AddRouteManagementComponent } from './pages/add-route-management/add-route-management.component';
 
 @NgModule({
-  declarations: [DashboardComponent, SmsMasterComponent, SmsLogsComponent, ComposeComponent, SenderIdComponent, TemplateComponent, PreviewComponent, DialogComponent, AddTemplateComponent, DltManagementComponent, DltEntityComponent, TemplateIdComponent, OperatorComponent, AddEntityIdComponent, AddSenderIdComponent, EateTemplatesComponent, CreateTemplateComponent, AddOperatorComponent],
+  declarations: [DashboardComponent, SmsMasterComponent, SmsLogsComponent, ComposeComponent, SenderIdComponent, TemplateComponent, PreviewComponent, DialogComponent, AddTemplateComponent, DltManagementComponent, DltEntityComponent, TemplateIdComponent, OperatorComponent, AddEntityIdComponent, AddSenderIdComponent, EateTemplatesComponent, CreateTemplateComponent, AddOperatorComponent, RouteManagementComponent, AddRouteManagementComponent],
   imports: [
     CommonModule,
     SmsRoutingModule,

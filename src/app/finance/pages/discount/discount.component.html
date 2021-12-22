@@ -1,0 +1,47 @@
+<div class="content1">
+
+  <div fxLayout='row' class="" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <mat-toolbar class="crumb">
+        <div class="mv-19">
+            <span class="mv-17"><a routerLink="/finance/">Finance Dashboard  </a><span class="mv-18">/</span></span>
+          <span class="mv-17"><a routerLink="/finance/itemmanagement/">Item Management  </a><span class="mv-18">/</span></span>
+          <span class="mv-17"><a routerLink="/finance/pricesettings/">Price Settings
+  </a><span class="mv-18">/</span></span>
+          <span class="mv-17">Discount</span>
+        </div>
+    </mat-toolbar>
+</div>
+  
+  <div fxLayout='row' class="content" fxLayout.xs='column' fxLayoutWrap fxLayoutAlign="left">
+    <h2 class="mat-h2">Discount <span><a routerLink="/finance/create-discount/" href="" class="create1">Create Discount</a></span></h2>
+  </div>
+
+	
+
+  <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+  <mat-card fxFlex="33%" routerLink="/finance/view-discount/" class="">
+        <img mat-card-sm-image src="./assets/images/expenses.png" alt="Complaints">
+        <mat-card-title>All</mat-card-title>
+      </mat-card>
+      <mat-card fxFlex="33%" routerLink="/finance/view-discount/" class="">
+        <img mat-card-sm-image src="./assets/images/approved-salary.png" alt="Complaints">
+        <mat-card-title>Active</mat-card-title>
+      </mat-card>
+  
+      
+    <mat-card fxFlex="33%" routerLink="/finance/view-discount/" class="">
+      <img mat-card-sm-image src="./assets/images/assets.png" alt="Complaints">
+      <mat-card-title>Scheduled</mat-card-title>
+    </mat-card>
+    </div><br>
+  
+  <div fxLayout='row' class="content row" fxLayout.xs='column'  fxLayout.sm='column' fxLayout.md='row' fxLayoutWrap fxLayoutGap="3%" fxLayoutAlign="left">
+    
+    <mat-card fxFlex="31.5%" routerLink="/finance/view-discount/" class="">
+      <img mat-card-sm-image src="./assets/images/detailed-monthly.png" alt="Complaints">
+      <mat-card-title> Expired</mat-card-title>
+    </mat-card>
+  </div>
+
+</div>
+<router-outlet></router-outlet>

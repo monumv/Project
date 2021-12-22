@@ -1,0 +1,75 @@
+<mat-card><h2 mat-dialog-title>Add Route Management</h2></mat-card><br>
+<div mat-dialog-content>
+	
+<mat-form-field class="example-full-width">
+      <mat-label>Login ID</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Sender Name ID</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Route</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Operator Name</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Sender ID</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>CDT</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+<mat-form-field appearance="">
+  <mat-label>Approval Option</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+      <mat-label>	Approval</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    
+
+<mat-form-field appearance="">
+  <mat-label>Priority Option</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food1 of foods1" [value]="food1.value">
+      {{food1.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Priority Update</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+   
+
+
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close>Cancel</button>
+  <button color="primary" mat-raised-button mat-dialog-close>Save</button>
+</div>

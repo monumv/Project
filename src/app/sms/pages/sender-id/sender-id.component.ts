@@ -17,10 +17,12 @@ export interface PeriodicElement {
   document: string;
   demo:string;
   icon: string;
+  entity1: string;
+  entity2: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-{position: 1, date:'abc@getoninfotech.com', document: '101', demo:'2021-12-10 16:32:26', vch:'Approved', icon:'chevron_right'}, 
+{position: 1, date:'abc@getoninfotech.com', entity1: '005', entity2:'Geton', document: '101', demo:'2021-12-10 16:32:26', vch:'Approved', icon:'chevron_right'}, 
 
  
 
@@ -40,7 +42,7 @@ interface Number {
 })
 export class SenderIdComponent implements OnInit {
 
- displayedColumns: string[] = ['position', 'date', 'document', 'demo', 'vch', 'icon' ];
+ displayedColumns: string[] = ['position', 'date', 'entity1', 'entity2', 'document', 'demo', 'vch', 'icon' ];
 
   datass = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
